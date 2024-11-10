@@ -1,0 +1,5 @@
+textboxes:
+  - title: Torrent Ticker
+    rate-ms: 1000      # sampling rate, default = 1000
+    sample: ~/.dotfiles/shells/torrent-ticker
+    border: true

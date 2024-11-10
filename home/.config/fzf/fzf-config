@@ -1,0 +1,27 @@
+--color=fg:#AFD2E9
+--color=fg+:#AFD2E9
+--color=bg:#3b3228
+--color=bg+:#2E1503
+--color=hl:#E68D53
+--color=hl+:#E86045
+--color=info:#C1A387
+--color=marker:#3ECCBE
+--color=prompt:#AFD2E9
+--color=spinner:#92a650
+--color=pointer:#92a650
+--color=header:#ace1af
+--color=border:#C1A387
+--color=separator:#C1A387
+--color=scrollbar:#C1A387
+--color=preview-label:#3ECCBE
+--color=label:#3ECCBE
+--color=query:#AFD2E9
+--border="rounded"
+--preview-window="border-rounded"
+--border-label-pos="5"
+--prompt="󰝾 "
+--marker=""
+--pointer=""
+--separator=""
+--scrollbar=""
+

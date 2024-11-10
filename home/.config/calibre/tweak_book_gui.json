@@ -1,0 +1,230 @@
+{
+  "check-book-splitter-state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAAARgAAAEYA/////wEAAAABAA=="
+  },
+  "custom_colors_for_color_dialog": [
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ]
+  ],
+  "find-widget-state": {
+    "case_sensitive": false,
+    "direction": "down",
+    "dot_all": false,
+    "mode": "normal",
+    "where": "current",
+    "wrap": true
+  },
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 310,
+      "width": 964,
+      "x": 19,
+      "y": 19
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 291,
+      "width": 964,
+      "x": 19,
+      "y": 38
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 291,
+      "width": 964,
+      "x": 19,
+      "y": 38
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAATAAAAEwAAA9YAAAFIAAAAEwAAACYAAAPWAAABSAAAAAAAAAAABqsAAAATAAAAJgAAA9YAAAFI"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.5,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1707,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL AW2723DF",
+      "name": "DP-0",
+      "serial": "JPMMNP3",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1707
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1707,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "main_window_geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAAZAAAABgAABOYAAAKTAAAAGQAAABQAAATmAAACkwAAAAAAAAAABQAAAAAZAAAAFAAABOYAAAKT"
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAAA0fwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAADwAAADRAAAAVwD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFcA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHcA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIcA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfUA////AAAAAQAAAaoAAADR/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAANEAAABOAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABXAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAyAP///wAAAQ4AAADRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+  },
+  "recent-books": [
+    "/home/ricka/Calibre Library/Asato Asato/Vol. 11- Dies Passionis (625)/Vol. 11- Dies Passionis - Asato Asato.epub",
+    "/home/ricka/Calibre Library/Qntm/Ra (615)/Ra - Qntm.epub",
+    "/home/ricka/Calibre Library/Cori McCarthy/Once & Future (603)/Once & Future - Cori McCarthy.epub",
+    "/home/ricka/Calibre Library/Greene, Robert/48 Laws of Power (159)/48 Laws of Power - Greene, Robert.epub",
+    "/home/ricka/Calibre Library/Mishima Yomu/The World of Otome Games is Tough for Mobs, Vol. 7 (521)/The World of Otome Games is Tough for Mobs - Mishima Yomu.epub",
+    "/home/ricka/Calibre Library/Tappei Nagatsuki/[WN] Re_ Starting Life in Another World from Zero - Volume 19 (335)/[WN] Re_ Starting Life in Another World fr - Tappei Nagatsuki.epub"
+  ],
+  "reports-dialog-geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAACbAAAAAAAABFAAAAJlAAAAmwAAAA4AAARQAAACZQAAAAAAAAAABQAAAACbAAAADgAABFAAAAJl"
+  },
+  "reports-ui-state": {
+    "all-files-table": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAAAAAABAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAEAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAEAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAAAA"
+    },
+    "chars-table": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAEAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAEAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAAAA"
+    },
+    "classes-sort-ascending": true,
+    "classes-sort-on-counts": true,
+    "css-sort-ascending": true,
+    "css-sort-on-counts": true,
+    "image-files-table": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAEAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAEAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAAAA"
+    },
+    "links-table": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAAAAAABAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAlgAAAAGAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAGAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAAAA"
+    },
+    "links-view-splitter": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA=="
+    },
+    "report-page": -1,
+    "splitter-state": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAEAAAACAAABAAABJdkA/////wEAAAABAA=="
+    },
+    "words-table": {
+      "__class__": "bytearray",
+      "__value__": "AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAASwAAAADAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAADAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAAAA"
+    }
+  },
+  "saved_seaches_state": {
+    "direction": "down",
+    "where": "current",
+    "wrap": true
+  },
+  "search-panel-visible": false,
+  "text_search_widget_state": {
+    "case_sensitive": false,
+    "dot_all": true,
+    "mode": "normal",
+    "where": "current"
+  }
+}

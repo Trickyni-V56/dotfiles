@@ -1,0 +1,6 @@
+layout fat
+launch dooit
+launch bash -c 'sampler -c ~/.dotfiles/configs/sampler/config.yml'
+launch --location before
+launch --location before
+focus

@@ -1,0 +1,360 @@
+{
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 659,
+      "width": 857,
+      "x": 57,
+      "y": 80
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 640,
+      "width": 857,
+      "x": 57,
+      "y": 99
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 640,
+      "width": 857,
+      "x": 57,
+      "y": 99
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAA5AAAAUAAAA5EAAALiAAAAOQAAAGMAAAORAAAC4gAAAAAAAAAABqsAAAA5AAAAYwAAA5EAAALi"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.5,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1707,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL AW2723DF",
+      "name": "DP-0",
+      "serial": "JPMMNP3-",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1707
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1707,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-viewer_image_popup_geometry": {
+    "frame_geometry": {
+      "height": 143,
+      "width": 880,
+      "x": 405,
+      "y": 252
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 124,
+      "width": 880,
+      "x": 405,
+      "y": 271
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 124,
+      "width": 880,
+      "x": 405,
+      "y": 271
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAGVAAAA/AAABQQAAAGKAAABlQAAAQ8AAAUEAAABigAAAAAAAAAABqsAAAGVAAABDwAABQQAAAGK"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.5,
+      "geometry_in_logical_pixels": {
+        "height": 960,
+        "width": 1707,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "Dell Inc.",
+      "model": "DELL AW2723DF",
+      "name": "DP-0",
+      "serial": "JPMMNP3-",
+      "size_in_logical_pixels": {
+        "height": 960,
+        "width": 1707
+      },
+      "virtual_geometry": {
+        "height": 960,
+        "width": 1707,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "main_window_geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAArAAAAKwAAAtoAAAIYAAAAKwAAADkAAALaAAACGAAAAAAAAAAABQAAAAArAAAAOQAAAtoAAAIY"
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEbAAACgPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAABtAAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAQAAAboAAADGAAAAkwD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB4AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOEA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMUA////AAACOAAAAoAAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "saved-search-settings": {
+    "eleven": {
+      "case_sensitive": false,
+      "mode": "normal"
+    }
+  },
+  "session_data": {
+    "base_font_size": 17,
+    "controls_help_shown_count": 2,
+    "controls_help_shown_count_rtl_page_progression": 2,
+    "current_color_scheme": "sepia-light",
+    "read_mode": "flow",
+    "standalone_font_settings": {},
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": false,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "authors": [
+          "Machiavelli, Niccolo"
+        ],
+        "key": "/home/ricka/Calibre Library/Machiavelli, Niccolo/The Prince (624)/The Prince - Machiavelli, Niccolo.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Machiavelli, Niccolo/The Prince (624)/The Prince - Machiavelli, Niccolo.epub",
+        "timestamp": "2024-10-30T10:31:39.986Z",
+        "title": "The Prince"
+      },
+      {
+        "authors": [
+          "Shirakome Ryo"
+        ],
+        "key": "/home/ricka/Calibre Library/Shirakome Ryo/Arifureta_ From Commonplace to World's Strongest Vol. 1 (335)/Arifureta_ From Commonplace to World's Str - Shirakome Ryo.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Shirakome Ryo/Arifureta_ From Commonplace to World's Strongest Vol. 1 (335)/Arifureta_ From Commonplace to World's Str - Shirakome Ryo.epub",
+        "timestamp": "2024-10-29T19:50:51.199Z",
+        "title": "Arifureta: From Commonplace to World's Strongest Vol. 1"
+      },
+      {
+        "authors": [
+          "ryan conrad"
+        ],
+        "key": "/home/ricka/Calibre Library/Ryan Conrad/Against Equality -  Queer Revolution Not Mere Inclusion (241)/Against Equality -  Queer Revolution Not M - Ryan Conrad.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Ryan Conrad/Against Equality -  Queer Revolution Not Mere Inclusion (241)/Against Equality -  Queer Revolution Not M - Ryan Conrad.epub",
+        "timestamp": "2024-10-26T05:29:09.088Z",
+        "title": "against equality queer revolution not mere inclusion"
+      },
+      {
+        "authors": [
+          "ryan conrad"
+        ],
+        "key": "/home/ricka/Calibre Library/ryan conrad/against equality queer revolution not mere inclusion (241)/against equality queer revolution not mere - ryan conrad.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/ryan conrad/against equality queer revolution not mere inclusion (241)/against equality queer revolution not mere - ryan conrad.epub",
+        "timestamp": "2024-10-26T04:08:28.919Z",
+        "title": "against equality queer revolution not mere inclusion"
+      },
+      {
+        "authors": [
+          "Hungry"
+        ],
+        "key": "/home/ricka/Pictures/Necroepilogos.epub",
+        "pathtoebook": "/home/ricka/Pictures/Necroepilogos.epub",
+        "timestamp": "2024-10-24T10:06:22.733Z",
+        "title": "Necroepilogos"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ricka/Calibre Library/calibre/Necroepilogos [Thu, 24 Oct 2024] (616)/Necroepilogos [Thu, 24 Oct 2024] - calibre.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/calibre/Necroepilogos [Thu, 24 Oct 2024] (616)/Necroepilogos [Thu, 24 Oct 2024] - calibre.epub",
+        "timestamp": "2024-10-24T10:01:35.385Z",
+        "title": "Necroepilogos [Thu, 24 Oct 2024]"
+      },
+      {
+        "authors": [
+          "Hungry"
+        ],
+        "key": "/home/ricka/Calibre Library/Hungry/Necroepilogos (617)/Necroepilogos - Hungry.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Hungry/Necroepilogos (617)/Necroepilogos - Hungry.epub",
+        "timestamp": "2024-10-24T09:59:21.866Z",
+        "title": "Necroepilogos"
+      },
+      {
+        "authors": [
+          "Uno Bokuto"
+        ],
+        "key": "/home/ricka/Calibre Library/Uno Bokuto/Alderamin on the Sky v03 (595)/Alderamin on the Sky v03 - Uno Bokuto.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Uno Bokuto/Alderamin on the Sky v03 (595)/Alderamin on the Sky v03 - Uno Bokuto.epub",
+        "timestamp": "2024-10-19T11:47:59.382Z",
+        "title": "Alderamin on the Sky v03"
+      },
+      {
+        "authors": [
+          "Uno Bokuto"
+        ],
+        "key": "/home/ricka/Calibre Library/Uno Bokuto/Alderamin on the Sky v02 (600)/Alderamin on the Sky v02 - Uno Bokuto.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Uno Bokuto/Alderamin on the Sky v02 (600)/Alderamin on the Sky v02 - Uno Bokuto.epub",
+        "timestamp": "2024-10-19T11:46:23.173Z",
+        "title": "Alderamin on the Sky v02"
+      },
+      {
+        "authors": [
+          "Uno Bokuto"
+        ],
+        "key": "/home/ricka/Calibre Library/Uno Bokuto/Alderamin on the Sky v01 (575)/Alderamin on the Sky v01 - Uno Bokuto.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Uno Bokuto/Alderamin on the Sky v01 (575)/Alderamin on the Sky v01 - Uno Bokuto.epub",
+        "timestamp": "2024-10-19T11:43:21.567Z",
+        "title": "Alderamin on the Sky v01"
+      },
+      {
+        "authors": [
+          "Zo d’Axa"
+        ],
+        "key": "/home/ricka/Calibre Library/Zo d'Axa/Any Opportunity (160)/Any Opportunity - Zo d'Axa.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Zo d'Axa/Any Opportunity (160)/Any Opportunity - Zo d'Axa.epub",
+        "timestamp": "2024-10-13T17:17:29.688Z",
+        "title": "Any Opportunity"
+      },
+      {
+        "authors": [
+          "Joe Abercrombie"
+        ],
+        "key": "/home/ricka/Calibre Library/Joe Abercrombie/The Trouble With Peace_ Book Two (The Age of Madness) (574)/The Trouble With Peace_ Book Two (The Age - Joe Abercrombie.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Joe Abercrombie/The Trouble With Peace_ Book Two (The Age of Madness) (574)/The Trouble With Peace_ Book Two (The Age - Joe Abercrombie.epub",
+        "timestamp": "2024-10-13T03:22:12.664Z",
+        "title": "The Trouble With Peace: Book Two (The Age of Madness)"
+      },
+      {
+        "authors": [
+          "Steven Raichlen"
+        ],
+        "key": "/home/ricka/Calibre Library/Steven Raichlen/How to Grill Vegetables (542)/How to Grill Vegetables - Steven Raichlen.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Steven Raichlen/How to Grill Vegetables (542)/How to Grill Vegetables - Steven Raichlen.epub",
+        "timestamp": "2024-09-23T19:19:22.582Z",
+        "title": "How to Grill Vegetables"
+      },
+      {
+        "authors": [
+          "רותם ברוכין"
+        ],
+        "key": "/home/ricka/Calibre Library/rvtm brvkyn/shvmry h`rym (534)/shvmry h`rym - rvtm brvkyn.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/rvtm brvkyn/shvmry h`rym (534)/shvmry h`rym - rvtm brvkyn.epub",
+        "timestamp": "2024-09-21T03:42:26.979Z",
+        "title": "שומרי הערים"
+      },
+      {
+        "authors": [
+          "Zielonka, Mateo;"
+        ],
+        "key": "/home/ricka/Calibre Library/Zielonka, Mateo;/Pasta Masterclass (530)/Pasta Masterclass - Zielonka, Mateo;.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Zielonka, Mateo;/Pasta Masterclass (530)/Pasta Masterclass - Zielonka, Mateo;.epub",
+        "timestamp": "2024-09-19T11:07:45.559Z",
+        "title": "Pasta Masterclass"
+      },
+      {
+        "authors": [
+          "Lloyd Alexander"
+        ],
+        "key": "/home/ricka/Calibre Library/Lloyd Alexander/The High King (142)/The High King - Lloyd Alexander.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Lloyd Alexander/The High King (142)/The High King - Lloyd Alexander.epub",
+        "timestamp": "2024-09-19T07:42:15.431Z",
+        "title": "The High King"
+      },
+      {
+        "authors": [
+          "Ernst Haeckel"
+        ],
+        "key": "/home/ricka/Calibre Library/Ernst Haeckel/Art Forms in Nature (502)/Art Forms in Nature - Ernst Haeckel.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Ernst Haeckel/Art Forms in Nature (502)/Art Forms in Nature - Ernst Haeckel.epub",
+        "timestamp": "2024-09-19T07:38:25.605Z",
+        "title": "Art Forms in Nature"
+      },
+      {
+        "authors": [
+          "Marie Kondo"
+        ],
+        "key": "/home/ricka/Calibre Library/Marie Kondo/The Life-Changing Manga of Tidying Up_ A Magical Story (623)/The Life-Changing Manga of Tidying Up_ A M - Marie Kondo.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Marie Kondo/The Life-Changing Manga of Tidying Up_ A Magical Story (623)/The Life-Changing Manga of Tidying Up_ A M - Marie Kondo.epub",
+        "timestamp": "2024-09-17T18:17:55.735Z",
+        "title": "The Life-Changing Manga of Tidying Up: A Magical Story"
+      },
+      {
+        "authors": [
+          "Qntm",
+          "Sam Hughes"
+        ],
+        "key": "/home/ricka/Calibre Library/Qntm/Ra (615)/Ra - Qntm.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Qntm/Ra (615)/Ra - Qntm.epub",
+        "timestamp": "2024-08-30T09:10:10.218Z",
+        "title": "Ra"
+      },
+      {
+        "authors": [
+          "Drew Hayes"
+        ],
+        "key": "/home/ricka/Calibre Library/Drew Hayes/Corpies (594)/Corpies - Drew Hayes.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Drew Hayes/Corpies (594)/Corpies - Drew Hayes.epub",
+        "timestamp": "2024-08-22T06:40:26.519Z",
+        "title": "Corpies"
+      },
+      {
+        "authors": [
+          "Claudia Roden"
+        ],
+        "key": "/home/ricka/Calibre Library/Claudia Roden/The Book of Jewish Food (586)/The Book of Jewish Food - Claudia Roden.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Claudia Roden/The Book of Jewish Food (586)/The Book of Jewish Food - Claudia Roden.epub",
+        "timestamp": "2024-07-26T11:32:22.237Z",
+        "title": "The Book of Jewish Food"
+      },
+      {
+        "authors": [
+          "Shirakome Ryo"
+        ],
+        "key": "/home/ricka/Calibre Library/Shirakome Ryo/Arifureta_ From Commonplace to World's Strongest Vol. 1 (285)/Arifureta_ From Commonplace to World's Str - Shirakome Ryo.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Shirakome Ryo/Arifureta_ From Commonplace to World's Strongest Vol. 1 (285)/Arifureta_ From Commonplace to World's Str - Shirakome Ryo.epub",
+        "timestamp": "2024-07-17T03:47:36.846Z",
+        "title": "Arifureta: From Commonplace to World's Strongest Vol. 1"
+      },
+      {
+        "authors": [
+          "Mishima Yomu"
+        ],
+        "key": "/home/ricka/Calibre Library/Mishima Yomu/The World of Otome Games is Tough for Mobs, Vol. 7 (521)/The World of Otome Games is Tough for Mobs - Mishima Yomu.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Mishima Yomu/The World of Otome Games is Tough for Mobs, Vol. 7 (521)/The World of Otome Games is Tough for Mobs - Mishima Yomu.epub",
+        "timestamp": "2024-07-17T03:36:08.070Z",
+        "title": "The World of Otome Games is Tough for Mobs, Vol. 7"
+      },
+      {
+        "authors": [
+          "Tad Williams"
+        ],
+        "key": "/home/ricka/Calibre Library/Tad Williams/The Very Best of Tad Williams (504)/The Very Best of Tad Williams - Tad Williams.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Tad Williams/The Very Best of Tad Williams (504)/The Very Best of Tad Williams - Tad Williams.epub",
+        "timestamp": "2024-07-02T05:28:29.239Z",
+        "title": "The Very Best of Tad Williams"
+      },
+      {
+        "key": "/home/ricka/Calibre Library/Unknown/Tier 8 (503)/Tier 8 - Unknown.epub",
+        "pathtoebook": "/home/ricka/Calibre Library/Unknown/Tier 8 (503)/Tier 8 - Unknown.epub",
+        "timestamp": "2024-06-19T04:30:02.596Z",
+        "title": "Tier 8"
+      }
+    ]
+  },
+  "viewer-search-case-sensitive": false,
+  "viewer-search-mode": "normal"
+}

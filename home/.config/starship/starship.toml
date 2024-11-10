@@ -1,0 +1,25 @@
+# ~/.config/starship.toml
+
+format='''
+[┌]()${custom.glyphs}()
+[ ]()$directory()
+[└󰝾  ]()'''
+
+
+
+add_newline = true
+[directory]
+style='cyan'
+read_only=' '
+read_only_style='red'
+truncation_length=3
+truncation_symbol='.../'
+
+[custom.glyphs]
+format="[$output]($style)"
+command='python3 ~/.dotfiles/home/.config/starship/glyphs.py'
+
+style='white'
+shell = ["bash", "--noprofile", "--norc"]
+when=true
+
