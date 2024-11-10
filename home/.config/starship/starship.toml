@@ -17,7 +17,7 @@ truncation_symbol='.../'
 
 [custom.glyphs]
 format="[$output]($style)"
-command='python3 ~/.dotfiles/home/.config/starship/glyphs.py'
+command='python3 ~/.config/starship/glyphs.py'
 
 style='white'
 shell = ["bash", "--noprofile", "--norc"]

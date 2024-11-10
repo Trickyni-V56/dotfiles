@@ -35,7 +35,7 @@ alias ytdlp='ytdlp'
 alias ytmp3='cd ~/Music && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
 alias ytmp4='yt-dlp -f ba'
 #   CLI aliases (if it runs something- put it here)
-alias sampler='sampler -c ~/.dotfiles/configs/sampler/config.yml'
+alias sampler='sampler -c ~/.config/sampler/config.yml'
 alias matrix="unimatrix -s 95 -a -f -c magenta"
 alias {hyfetch,neofetch}="hyfetch --ascii-file ~/logo.txt"
 alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc.sh
@@ -69,7 +69,6 @@ alias polybar-restart='/home/ricka/.dotfiles/configs/polybar/launch.sh'
 alias {bashr,bashrc}="kate ~/.bash_aliases"
 alias bashrc-edit='kate ~/.bashrc'
 alias cheat-edit="kate ~/.dotfiles/ricka.cheat"
-#alias jmp_targets="kate ~/.dotfiles/bash/jmp/jmp_targets.conf"
 
 #   Shortcuts
 alias dino="GDK_DPI_SCALE=1.5 dino-im"
@@ -77,9 +76,6 @@ alias calculator='gnome-calculator'
 alias vol="pavucontrol &"
 alias {blut,bluetooth}='bluetoothctl'
 alias betterdiscord-update='~/.ricka/utils/BetterDiscord.AppImage'
-
-#   Sway
-alias sway='sway --unsupported-gpu'
 
 #   Firefox
 alias photopea='firefox photopea.com'
@@ -91,10 +87,6 @@ alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
 
 #silly
 alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ -f'
-git() {
-    [ "$1" == "init" ] && echo "innit bruv?"
-    command git $@
-}
 
 
 

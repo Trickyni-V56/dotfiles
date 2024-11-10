@@ -86,9 +86,10 @@ function ttsserver() {
 eval "$(fzf --bash)"
 
 eval "$(starship init bash)"
-export STARSHIP_CONFIG=~/.dotfiles/home/.config/starship/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 . "$HOME/.cargo/env"
 #export TAB_PAL_FILE=/home/ricka/.dotfiles/configs/tab-pal/Preferences.tsp
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+printf '\nhomeshick --quiet refresh' >> $HOME/.bashrc
