@@ -55,7 +55,6 @@ alias play='mpv'
 alias open='xdg-open'
 alias suspend='systemctl suspend'
 alias syscuddle="systemctl"
-alias cheat='navi -q ricka '
 alias symlink='echo -e "\e[31muse '"'"'ln -s'"'"' baaaka\e[0m | \033[31mL\033[0mi\033[31mn\033[0mk (-\033[31mS\033[0mymbolic)"'
 alias python='python3'
 alias nano='micro'
@@ -68,7 +67,6 @@ alias polybar-restart='/home/ricka/.dotfiles/configs/polybar/launch.sh'
 #   list edits
 alias {bashr,bashrc}="kate ~/.bash_aliases"
 alias bashrc-edit='kate ~/.bashrc'
-alias cheat-edit="kate ~/.dotfiles/ricka.cheat"
 
 #   Shortcuts
 alias dino="GDK_DPI_SCALE=1.5 dino-im"

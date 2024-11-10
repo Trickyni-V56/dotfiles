@@ -56,7 +56,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$PATH:~/.software"
 export PATH="$PATH:~/.dotfiles/shells"
-export PYTHONPATH="${PYTHONPATH}:~/.ricka/shells"
+export PYTHONPATH="${PYTHONPATH}:~/.dotfiles/shells"
 export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzf-config
 
 if [ -f ~/.bash_aliases ]; then
