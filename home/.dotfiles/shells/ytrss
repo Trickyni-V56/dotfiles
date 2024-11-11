@@ -1,4 +1,0 @@
-#!/bin/bash
-echo -e "\nhttps://www.youtube.com/feeds/videos.xml?channel_id=$1"
-echo -n "└─── COPIED!"
-echo "https://www.youtube.com/feeds/videos.xml?channel_id=$1" | xsel -ib

@@ -92,4 +92,8 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 #export TAB_PAL_FILE=/home/ricka/.dotfiles/configs/tab-pal/Preferences.tsp
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-printf '\nhomeshick --quiet refresh' >> $HOME/.bashrc
+homeshick --quiet refresh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
