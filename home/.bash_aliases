@@ -23,7 +23,8 @@ alias ls='lsd'
 alias lt='lsd --tree'
 alias ll='lsd --long'
 alias la='lsd --all'
-alias list='echo -e "\e[31m'ls' is quicker\e[0m"'
+alias list='echo -e "\e[31m'ls' is quicker\e[0m"'alias dooit='dooit-wrapper'
+
 
 #   fzf
 alias playlist='mpv $(fzf -e -q ".mkv$ ")'

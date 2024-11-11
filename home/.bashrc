@@ -55,8 +55,8 @@ fi
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$PATH:~/.software"
-export PATH="$PATH:~/.dotfiles/shells"
-export PYTHONPATH="${PYTHONPATH}:~/.dotfiles/shells"
+export PATH="$PATH:~/.shells"
+export PYTHONPATH="${PYTHONPATH}:~/.shells"
 export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzf-config
 
 if [ -f ~/.bash_aliases ]; then
@@ -83,13 +83,12 @@ function ttsserver() {
 }
 # epub2tts end
 ######################################################
-eval "$(fzf --bash)"
+eval "$(fzf --bash)"import
 
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 . "$HOME/.cargo/env"
-#export TAB_PAL_FILE=/home/ricka/.dotfiles/configs/tab-pal/Preferences.tsp
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 homeshick --quiet refresh
