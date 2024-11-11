@@ -1,0 +1,34 @@
+	Creation
+shotcut
+OBS
+losslesscut
+Audacity
+kolorpaint
+
+	Gaming
+Steam
+lutris
+
+	Comms
+discord
+Dino
+
+	Files
+Nemo
+bulky
+Calibre
+Syncthing
+Audiobookshelf
+pix
+
+	IDE
+Kate
+
+	screenshots
+flameshots
+
+	Others
+qbittorent
+Obsidian
+Bitwarden
+virt-manager
