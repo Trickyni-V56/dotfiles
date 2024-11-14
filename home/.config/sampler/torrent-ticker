@@ -1,4 +1,1 @@
-#!/bin/bash
-file=~/.local/share/qBittorrent/logs/qbittorrent.log
-#echo -e "\e[32mFinished: \e[0m"
-rg '.+Torrent download finished. Torrent: "(.+)"' --replace '$1' $file | tail -n3
+/home/ricka/.homesick/repos/castle/home/.shells/torrent-ticker

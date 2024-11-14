@@ -1,7 +1,16 @@
 #!/bin/bash
 
-#####################___aliases___#####################################################################
 
+#####################__void-linux__######################
+# alias invoke='sudo xbps-install'
+# alias commune='sudo xbps-install -SU'
+# alias scry='sudo xbps-query'
+
+#####################__ubuntu-linux__######################
+alias invoke='sudo apt install'
+alias commune='sudo apt update'
+alias purge='sudo apt remove'
+#####################___aliases___#####################################################################
 #   jmp
 jmp(){ #go to specified path and list its contents
     cd $1 && lsd
@@ -47,7 +56,7 @@ text(){
     cfonts $1 -c candy -f tiny
 }
 alias cfonts='text'
-alias mapscii='telnet mapscii.me'
+
 
 
 #   command aliases (renames and setups go here!)
@@ -79,6 +88,12 @@ alias betterdiscord-update='~/.ricka/utils/BetterDiscord.AppImage'
 #   Firefox
 alias photopea='firefox photopea.com'
 alias chatgpt='firefox chatgpt.com'
+
+#   connect to stuff
+alias mapscii='telnet mapscii.me'
+alias weather='curl wttr.in?0Q'
+alias forecast='curl wttr.in?FQ2n'
+alias moonphase='curl wttr.in/moon?QFT'
 
 # Connects to Jupiter of the Monkey and sets it to the right audio profile
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
