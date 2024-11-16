@@ -20,8 +20,10 @@ complete -o default -F _cd jmp # uses the output of the 'cd' function as the aut
 # dir shortcuts
 alias dotfiles='jmp ~/.dotfiles'
 alias anime='jmp ~/Videos/anime'
+alias seasonal='cd ~/Videos/anime/seasonal'
 alias downloads='jmp ~/Downloads'
 alias configs='jmp ~/.config'
+
 
 # cd
 alias {bk,back}='cd .. && lsd'
@@ -37,13 +39,13 @@ alias list='echo -e "\e[31m'ls' is quicker\e[0m"'alias dooit='dooit-wrapper'
 
 #   fzf
 alias playlist='mpv $(fzf -e -q ".mkv$ ")'
-alias seasonal='cd ~/Videos/anime/seasonal && clear && mpv $(fzf -e -q ".mkv$ " --border-label "/Videos/anime")'
-alias downime='cd ~/Downloads && nyaasi-normalizer && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
+alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
 
 #   yt-dlp
 alias ytdlp='ytdlp'
 alias ytmp3='cd ~/Music && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
 alias ytmp4='yt-dlp -f ba'
+
 #   CLI aliases (if it runs something- put it here)
 alias sampler='sampler -c ~/.config/sampler/config.yml'
 alias matrix="unimatrix -s 95 -a -f -c magenta"
@@ -56,7 +58,7 @@ text(){
     cfonts $1 -c candy -f tiny
 }
 alias cfonts='text'
-
+alias time='tuime -c candy -f tiny'
 
 
 #   command aliases (renames and setups go here!)

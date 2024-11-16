@@ -3,3 +3,7 @@ textboxes:
     rate-ms: 1000      # sampling rate, default = 1000
     sample: ~/.config/sampler/torrent-ticker
     border: true
+  - title: weather
+    rate-ms: 50000      # sampling rate, default = 1000
+    sample: curl wttr.in?0Q
+    border: true
