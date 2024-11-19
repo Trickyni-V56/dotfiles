@@ -99,7 +99,7 @@ permission: octal
 sorting:
   # Specify what to sort by.
   # Possible values: extension, name, time, size, version
-  column: name
+  column: extension
   # Whether to reverse the sorting.
   # Possible values: false, true
   reverse: false

@@ -1,12 +1,19 @@
 #!/bin/bash
 
+#######################################################################################################
+################################___TMP___##############################################################
 
-#####################__void-linux__######################
+alias resolve='resolvectl dns enp12s0 8.8.8.8'
+
+#######################################################################################################
+
+
+#####################__void-linux__####################################################################
 # alias invoke='sudo xbps-install'
 # alias commune='sudo xbps-install -SU'
 # alias scry='sudo xbps-query'
 
-#####################__ubuntu-linux__######################
+#####################__ubuntu-linux__##################################################################
 alias invoke='sudo apt install'
 alias commune='sudo apt update'
 alias purge='sudo apt remove'
@@ -38,13 +45,12 @@ alias list='echo -e "\e[31m'ls' is quicker\e[0m"'alias dooit='dooit-wrapper'
 
 
 #   fzf
-alias playlist='mpv $(fzf -e -q ".mkv$ ")'
+alias playlist='mpv $(fzf -e -q ".mkv$ | .webm%")'
 alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
 
 #   yt-dlp
-alias ytdlp='ytdlp'
-alias ytmp3='cd ~/Music && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
-alias ytmp4='yt-dlp -f ba'
+alias ytdlp='cd ~/Downloads && yt-dlp'
+alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
 
 #   CLI aliases (if it runs something- put it here)
 alias sampler='sampler -c ~/.config/sampler/config.yml'
@@ -74,7 +80,10 @@ alias cat='bat'
 alias btop="btop --utf-force"
 alias dust='dust -riC'
 alias grep='grep --color=auto'
-alias polybar-restart='/home/ricka/.dotfiles/configs/polybar/launch.sh'
+alias polybar='/home/ricka/.config/polybar/launch.sh'
+radio(){
+mpv $1 --no-video
+}
 
 #   list edits
 alias {bashr,bashrc}="kate ~/.bash_aliases"

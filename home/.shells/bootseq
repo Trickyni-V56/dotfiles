@@ -5,15 +5,15 @@ wmctrl -i -r $WINDOW_ID -b add,above       #keeps terminal window on top
 
 bootlist() { #launch each program in the background, disconnected from the terminal
 
-    nohup discord &
-    nohup qbitorrent &
-    bluetoothctl connect 28:11:A5:72:F0:1E # connects to Jupiter of the Monkey
-	pw-cli s 56 Profile '{ index: 5, save: true }' # Connects to the correct audio profile
+    #[INSERT BOOT SEQUENCE ITEMS HERE]
+
 }
 
 extended-bootlist() {
     gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/kitty #sets default terminal to kitty
     gsettings set org.cinnamon.desktop.peripherals.keyboard repeat true #makes sure holding keyboard keys results in repeated input
+    pw-cli s 56 Profile '{ index: 5, save: true }' # Connects to the correct audio profile
+
 }
 
 quit(){     #unlocking the window and prompting to exit
