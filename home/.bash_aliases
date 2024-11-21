@@ -1,39 +1,33 @@
 #!/bin/bash
 
 #######################################################################################################
-################################___TMP___##############################################################
 
+
+#--------------___TMP___-------------------------------------------------------------------------------
 alias resolve='resolvectl dns enp12s0 8.8.8.8'
+#------------------------------------------------------------------------------------------------------
 
-#######################################################################################################
 
-
-#####################__void-linux__####################################################################
+###############___void-linux___########################################################################
 # alias invoke='sudo xbps-install'
 # alias commune='sudo xbps-install -SU'
 # alias scry='sudo xbps-query'
-
-#####################__ubuntu-linux__##################################################################
+# alias banish='sudo xbps-remove'
+###############___ubuntu-linux___######################################################################
 alias invoke='sudo apt install'
 alias commune='sudo apt update'
-alias purge='sudo apt remove'
-#####################___aliases___#####################################################################
+alias scry='sudo apt search'
+alias banish='sudo apt remove'
+
+###############___aliases___###########################################################################
 #   jmp
-jmp(){ #go to specified path and list its contents
+jmp(){ #  go to specified path and list its contents
     cd $1 && lsd
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 
-# dir shortcuts
-alias dotfiles='jmp ~/.dotfiles'
-alias anime='jmp ~/Videos/anime'
-alias seasonal='cd ~/Videos/anime/seasonal'
-alias downloads='jmp ~/Downloads'
-alias configs='jmp ~/.config'
-
-
 # cd
-alias {bk,back}='cd .. && lsd'
+alias bk='cd .. && lsd'
 alias home='clear && cd $HOME'
 
 # ls command replacement
@@ -41,11 +35,11 @@ alias ls='lsd'
 alias lt='lsd --tree'
 alias ll='lsd --long'
 alias la='lsd --all'
-alias list='echo -e "\e[31m'ls' is quicker\e[0m"'alias dooit='dooit-wrapper'
-
+alias list='echo -e "\e[31m'ls' is quicker\e[0m"'
+alias tree='echo -e "\e[31m'lt' is quicker\e[0m"'
 
 #   fzf
-alias playlist='mpv $(fzf -e -q ".mkv$ | .webm%")'
+alias lp='mpv $(fzf -e -q ".mkv$ | .webm$")'
 alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
 
 #   yt-dlp
@@ -54,22 +48,16 @@ alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac 
 
 #   CLI aliases (if it runs something- put it here)
 alias sampler='sampler -c ~/.config/sampler/config.yml'
-alias matrix="unimatrix -s 95 -a -f -c magenta"
-alias {hyfetch,neofetch}="hyfetch --ascii-file ~/logo.txt"
+alias matrix="unimatrix -s 95 -a -f -c blue"
 alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc.sh
 alias F5='echo "savescum :3" && sudo timeshift --create'
-alias {diskspace,disk}='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
+alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias audioprofile='wpctl set-profile 91 139'
-text(){
-    cfonts $1 -c candy -f tiny
-}
-alias cfonts='text'
-alias time='tuime -c candy -f tiny'
+alias polybar='/home/ricka/.config/polybar/launch.sh'
 
 
 #   command aliases (renames and setups go here!)
 alias rm='rm -i'
-alias play='mpv'
 alias open='xdg-open'
 alias suspend='systemctl suspend'
 alias syscuddle="systemctl"
@@ -80,9 +68,21 @@ alias cat='bat'
 alias btop="btop --utf-force"
 alias dust='dust -riC'
 alias grep='grep --color=auto'
-alias polybar='/home/ricka/.config/polybar/launch.sh'
+alias anicli='ani-cli'
+alias time='tuime -c candy -f tiny'
+
+text(){
+    cfonts $1 -c candy -f tiny
+}
+alias cfonts='text'
+countill(){
+    clear && countdown $1 && text $2
+}
+
+#   mpv
+alias play='mpv'
 radio(){
-mpv $1 --no-video
+    mpv $1 --no-video
 }
 
 #   list edits
@@ -115,7 +115,7 @@ alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ 
 
 
 
-#################___Trash_function___##################################################################
+###############___Trash_function___####################################################################
 trashbin ()
 {
 trash "$1"

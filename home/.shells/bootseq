@@ -1,11 +1,13 @@
 #!/bin/bash
 
-WINDOW_ID=$(xdotool getactivewindow)       #gets the ID of this terminal window
-wmctrl -i -r $WINDOW_ID -b add,above       #keeps terminal window on top
+# WINDOW_ID=$(xdotool getactivewindow)       #gets the ID of this terminal window
+# wmctrl -i -r $WINDOW_ID -b add,above       #keeps terminal window on top
 
 bootlist() { #launch each program in the background, disconnected from the terminal
 
     #[INSERT BOOT SEQUENCE ITEMS HERE]
+    ~/.config/polybar/launch.sh
+    resolvectl dns enp12s0 8.8.8.8
 
 }
 
@@ -40,7 +42,7 @@ prompt() { #the whole y/n prompt
 
 
 bootseq() { #all the fanfare and ui around making the bootlist boot
-    unimatrix -s 99 -a -c magenta -f &     #runs the matrix visuals
+    unimatrix -s 99 -a -c blue -f &     #runs the matrix visuals
     UNIMATRIX_PID=$!        #get unimatrix's process ID
 
     bootlist #boots all the software in bootlist()

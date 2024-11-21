@@ -20,8 +20,8 @@
 --preview-window="border-rounded"
 --border-label-pos="5"
 --prompt="󰝾 "
---marker=""
---pointer=""
+--marker="𖦹"
+--pointer="𖨀"
 --separator=""
---scrollbar=""
+--scrollbar="𖢔"
 
