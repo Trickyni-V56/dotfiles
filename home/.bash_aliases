@@ -14,11 +14,11 @@ alias resolve='resolvectl dns enp12s0 8.8.8.8'
 # alias scry='sudo xbps-query'
 # alias banish='sudo xbps-remove'
 ###############___ubuntu-linux___######################################################################
-alias invoke='sudo apt install'
+alias {summon,invoke}='sudo apt install'
 alias commune='sudo apt update'
 alias scry='sudo apt search'
-alias banish='sudo apt remove'
-
+alias {banish,harae}='sudo apt remove'
+alias misogi='sudo apt autoremove'
 ###############___aliases___###########################################################################
 #   jmp
 jmp(){ #  go to specified path and list its contents
@@ -30,11 +30,12 @@ complete -o default -F _cd jmp # uses the output of the 'cd' function as the aut
 alias bk='cd .. && lsd'
 alias home='clear && cd $HOME'
 
-# ls command replacement
+#   ls command replacement
 alias ls='lsd'
 alias lt='lsd --tree'
 alias ll='lsd --long'
 alias la='lsd --all'
+alias mkv='ls | grep mkv'
 alias list='echo -e "\e[31m'ls' is quicker\e[0m"'
 alias tree='echo -e "\e[31m'lt' is quicker\e[0m"'
 
@@ -70,12 +71,13 @@ alias dust='dust -riC'
 alias grep='grep --color=auto'
 alias anicli='ani-cli'
 alias time='tuime -c candy -f tiny'
+alias nyaa='nyaasi-normalizer'
 
 text(){
     cfonts $1 -c candy -f tiny
 }
 alias cfonts='text'
-countill(){
+timer(){
     clear && countdown $1 && text $2
 }
 
@@ -118,8 +120,13 @@ alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ 
 ###############___Trash_function___####################################################################
 trashbin ()
 {
-trash "$1"
-echo -e "\e[31m \e[9m$1\e[0m";
+    FILENAME=${1:-$(fzf)}
+    if [ -z "$FILENAME" ]; then
+        echo -en "\e[36m«TRASHING ABORTED»\e[0m"
+        return
+    fi
+    trash $FILENAME
+    echo -e "\e[31m \e[9m$FILENAME\e[0m";
 }
 alias trash='trashbin'
 
