@@ -2,12 +2,6 @@
 
 #######################################################################################################
 
-
-#--------------___TMP___-------------------------------------------------------------------------------
-alias resolve='resolvectl dns enp12s0 8.8.8.8'
-#------------------------------------------------------------------------------------------------------
-
-
 ###############___void-linux___########################################################################
 # alias invoke='sudo xbps-install'
 # alias commune='sudo xbps-install -SU'
@@ -38,10 +32,14 @@ alias la='lsd --all'
 alias mkv='ls | grep mkv'
 alias list='echo -e "\e[31m'ls' is quicker\e[0m"'
 alias tree='echo -e "\e[31m'lt' is quicker\e[0m"'
+# alias downime='cd ~/Downloads && ls | grep mkv'
 
 #   fzf
 alias lp='mpv $(fzf -e -q ".mkv$ | .webm$")'
 alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
+
+#   git
+alias git-push='git push origin master'
 
 #   yt-dlp
 alias ytdlp='cd ~/Downloads && yt-dlp'
