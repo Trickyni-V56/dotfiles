@@ -38,9 +38,6 @@ alias tree='echo -e "\e[31m'lt' is quicker\e[0m"'
 alias lp='mpv $(fzf -e -q ".mkv$ | .webm$")'
 alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
 
-#   git
-alias git-push='git push origin master'
-
 #   yt-dlp
 alias ytdlp='cd ~/Downloads && yt-dlp'
 alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
