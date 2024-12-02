@@ -13,6 +13,7 @@ alias commune='sudo apt update'
 alias scry='sudo apt search'
 alias {banish,harae}='sudo apt remove'
 alias misogi='sudo apt autoremove'
+# # alias BANISH='sudo apt remove $1 && echo -e "\e[31mBY THE WILL OF ODIN I SMITE THEE\e[0m"'
 ###############___aliases___###########################################################################
 #   jmp
 jmp(){ #  go to specified path and list its contents
@@ -23,6 +24,7 @@ complete -o default -F _cd jmp # uses the output of the 'cd' function as the aut
 # cd
 alias bk='cd .. && lsd'
 alias home='clear && cd $HOME'
+alias dls='cd ~/Downloads'
 
 #   ls command replacement
 alias ls='lsd'
