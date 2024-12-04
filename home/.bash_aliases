@@ -8,12 +8,17 @@
 # alias scry='sudo xbps-query'
 # alias banish='sudo xbps-remove'
 ###############___ubuntu-linux___######################################################################
-alias {summon,invoke}='sudo apt install'
+alias invoke='sudo apt install'
 alias commune='sudo apt update'
 alias scry='sudo apt search'
 alias {banish,harae}='sudo apt remove'
 alias misogi='sudo apt autoremove'
 # # alias BANISH='sudo apt remove $1 && echo -e "\e[31mBY THE WILL OF ODIN I SMITE THEE\e[0m"'
+
+###############___devices___###########################################################################
+#   Connects to Jupiter of the Monkey and sets it to the right audio profile
+alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
+
 ###############___aliases___###########################################################################
 #   jmp
 jmp(){ #  go to specified path and list its contents
@@ -24,7 +29,7 @@ complete -o default -F _cd jmp # uses the output of the 'cd' function as the aut
 # cd
 alias bk='cd .. && lsd'
 alias home='clear && cd $HOME'
-alias dls='cd ~/Downloads'
+alias dls='cd ~/Downloads && lsd'
 
 #   ls command replacement
 alias ls='lsd'
@@ -45,13 +50,15 @@ alias ytdlp='cd ~/Downloads && yt-dlp'
 alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
 
 #   CLI aliases (if it runs something- put it here)
+alias trash='trashbin.sh'
+alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc.sh
+alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
+alias F5='echo "savescum :3" && sudo timeshift --create'
+alias polybar='/home/ricka/.config/polybar/launch.sh'
 alias sampler='sampler -c ~/.config/sampler/config.yml'
 alias matrix="unimatrix -s 95 -a -f -c blue"
-alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc.sh
-alias F5='echo "savescum :3" && sudo timeshift --create'
-alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias audioprofile='wpctl set-profile 91 139'
-alias polybar='/home/ricka/.config/polybar/launch.sh'
+
 
 
 #   command aliases (renames and setups go here!)
@@ -69,9 +76,10 @@ alias grep='grep --color=auto'
 alias anicli='ani-cli'
 alias time='tuime -c candy -f tiny'
 alias nyaa='nyaasi-normalizer'
+alias get_recipe='get_recipe.sh'
 
 text(){
-    cfonts $1 -c candy -f tiny
+    cfonts "$1" -c candy -f tiny
 }
 alias cfonts='text'
 timer(){
@@ -89,15 +97,10 @@ alias {bashr,bashrc}="kate ~/.bash_aliases"
 alias bashrc-edit='kate ~/.bashrc'
 
 #   Shortcuts
-alias dino="GDK_DPI_SCALE=1.5 dino-im"
 alias calculator='gnome-calculator'
 alias vol="pavucontrol &"
 alias {blut,bluetooth}='bluetoothctl'
 alias betterdiscord-update='~/.ricka/utils/BetterDiscord.AppImage'
-
-#   Firefox
-alias photopea='firefox photopea.com'
-alias chatgpt='firefox chatgpt.com'
 
 #   connect to stuff
 alias mapscii='telnet mapscii.me'
@@ -105,30 +108,12 @@ alias weather='curl wttr.in?0Q'
 alias forecast='curl wttr.in?FQ2n'
 alias moonphase='curl wttr.in/moon?QFT'
 
-# Connects to Jupiter of the Monkey and sets it to the right audio profile
-alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
-
-
-#silly
+#   misc
 alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ -f'
-
-
+alias strawb='cat ~/celeste'
 
 ###############___Trash_function___####################################################################
-trashbin ()
-{
-    FILENAME=${1:-$(fzf)}
-    if [ -z "$FILENAME" ]; then
-        echo -en "\e[36m«TRASHING ABORTED»\e[0m"
-        return
-    fi
-    trash $FILENAME
-    echo -e "\e[31m \e[9m$FILENAME\e[0m";
-}
-alias trash='trashbin'
 
 #######################################################################################################
-get_recipe(){ #scrapes a recipe from a blog and displays only the instructions
-curl -sG "https://plainoldrecipe.com/recipe" -d "url=${1}" | pandoc -f html -t markdown
-}
-#######################################################################################################
+
+

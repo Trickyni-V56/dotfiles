@@ -1,0 +1,14 @@
+#!/bin/bash
+#xdotool  search Guilty windowactivate #swaps to the GGST window
+#
+# xdotool keyup ALT
+xdotool key a
+# xdotool key a+s
+# xdotool key s
+# xdotool key s+d
+# xdotool key d
+# xdotool key x
+sleep 1
+#DSADZ
+
+

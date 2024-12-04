@@ -32,3 +32,9 @@
 .mask-2Me5HY > rect { 
     display: none !important;
 }
+
+/* (re)Center the discovery button at the bottom left */
+
+.wrapper_fea3ef .listItem_c96c45 {
+    margin-right: 0px !important;
+}

@@ -12,7 +12,8 @@
         "settings": {
             "editor": false,
             "window": true,
-            "addons": true
+            "addons": true,
+            "developer": true
         }
     }
 }

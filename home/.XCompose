@@ -1,0 +1,191 @@
+# UTF-8 (Unicode) compose sequence
+<Multi_key> <d> <e> <g>             	: "°"   degree # DEGREE SIGN
+
+# Quotation marks
+
+<Multi_key> <less> <less>        	: "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <greater> <greater>  	: "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+
+# Currencies
+<Multi_key> <n> <i> <s>			: "₪" 	# Shekel
+<Multi_key> <e> <u> <r>         : "€"   # Euro
+<Multi_key> <y> <e> <n> 		: "¥"   # Yen
+<Multi_key> <g> <b> <p> 		: "£"   # Pound Sterling
+
+# Dashes
+<Multi_key> <minus> <minus> <space> 	: "–"   U2013 # EN DASH
+<Multi_key> <minus> <minus> <minus> 	: "—"   U2014 # EM DASH
+
+# Other
+<Multi_key> <s> <exclam> 		: "§"   section # SECTION SIGN
+<Multi_key> <l> <m>                     : "λ"    # lambda!
+
+# {Sub,super}script letters
+<Multi_key> <asciicircum> <a>           : "ᵃ"
+<Multi_key> <asciicircum> <b>           : "ᵇ"
+<Multi_key> <asciicircum> <c>           : "ᶜ"
+<Multi_key> <asciicircum> <d>           : "ᵈ"
+<Multi_key> <asciicircum> <e>           : "ᵉ"
+<Multi_key> <asciicircum> <f>           : "ᶠ"
+<Multi_key> <asciicircum> <g>           : "ᵍ"
+<Multi_key> <asciicircum> <h>           : "ʰ"
+<Multi_key> <asciicircum> <i>           : "ᶦ"
+<Multi_key> <asciicircum> <j>           : "ʲ"
+<Multi_key> <asciicircum> <k>           : "ᵏ"
+<Multi_key> <asciicircum> <l>           : "ˡ"
+<Multi_key> <asciicircum> <m>           : "ᵐ"
+<Multi_key> <asciicircum> <n>           : "ⁿ"
+<Multi_key> <asciicircum> <o>           : "ᵒ"
+<Multi_key> <asciicircum> <p>           : "ᵖ"
+<Multi_key> <asciicircum> <q>           : "ᵠ"
+<Multi_key> <asciicircum> <r>           : "ʳ"
+<Multi_key> <asciicircum> <s>           : "ˢ"
+<Multi_key> <asciicircum> <t>           : "ᵗ"
+<Multi_key> <asciicircum> <u>           : "ᵘ"
+<Multi_key> <asciicircum> <v>           : "ᵛ"
+<Multi_key> <asciicircum> <w>           : "ʷ"
+<Multi_key> <asciicircum> <x>           : "ˣ"
+<Multi_key> <asciicircum> <y>           : "ʸ"
+<Multi_key> <asciicircum> <z>           : "ᶻ"
+<Multi_key> <asciicircum> <A>           : "ᴬ"
+<Multi_key> <asciicircum> <B>           : "ᴮ"
+<Multi_key> <asciicircum> <C>           : "ᶜ"
+<Multi_key> <asciicircum> <D>           : "ᴰ"
+<Multi_key> <asciicircum> <E>           : "ᴱ"
+<Multi_key> <asciicircum> <F>           : "ᶠ"
+<Multi_key> <asciicircum> <G>           : "ᴳ"
+<Multi_key> <asciicircum> <H>           : "ᴴ"
+<Multi_key> <asciicircum> <I>           : "ᴵ"
+<Multi_key> <asciicircum> <J>           : "ᴶ"
+<Multi_key> <asciicircum> <K>           : "ᴷ"
+<Multi_key> <asciicircum> <L>           : "ᴸ"
+<Multi_key> <asciicircum> <M>           : "ᴹ"
+<Multi_key> <asciicircum> <N>           : "ᴺ"
+<Multi_key> <asciicircum> <O>           : "ᴼ"
+<Multi_key> <asciicircum> <P>           : "ᴾ"
+<Multi_key> <asciicircum> <Q>           : "ᵠ"
+<Multi_key> <asciicircum> <R>           : "ᴿ"
+<Multi_key> <asciicircum> <S>           : "ˢ"
+<Multi_key> <asciicircum> <T>           : "ᵀ"
+<Multi_key> <asciicircum> <U>           : "ᵁ"
+<Multi_key> <asciicircum> <V>           : "ⱽ"
+<Multi_key> <asciicircum> <W>           : "ᵂ"
+<Multi_key> <asciicircum> <X>           : "ˣ"
+<Multi_key> <asciicircum> <Y>           : "ʸ"
+<Multi_key> <asciicircum> <Z>           : "ᶻ"
+<Multi_key> <underscore> <A>           : "ₐ"
+<Multi_key> <underscore> <B>           : "B"
+<Multi_key> <underscore> <C>           : "C"
+<Multi_key> <underscore> <D>           : "D"
+<Multi_key> <underscore> <E>           : "ₑ"
+<Multi_key> <underscore> <F>           : "F"
+<Multi_key> <underscore> <G>           : "G"
+<Multi_key> <underscore> <H>           : "ₕ"
+<Multi_key> <underscore> <I>           : "ᵢ"
+<Multi_key> <underscore> <J>           : "ⱼ"
+<Multi_key> <underscore> <K>           : "ₖ"
+<Multi_key> <underscore> <L>           : "ₗ"
+<Multi_key> <underscore> <M>           : "ₘ"
+<Multi_key> <underscore> <N>           : "ₙ"
+<Multi_key> <underscore> <O>           : "ₒ"
+<Multi_key> <underscore> <P>           : "ₚ"
+<Multi_key> <underscore> <Q>           : "Q"
+<Multi_key> <underscore> <R>           : "ᵣ"
+<Multi_key> <underscore> <S>           : "ₛ"
+<Multi_key> <underscore> <T>           : "ₜ"
+<Multi_key> <underscore> <U>           : "ᵤ"
+<Multi_key> <underscore> <V>           : "ᵥ"
+<Multi_key> <underscore> <W>           : "W"
+<Multi_key> <underscore> <X>           : "ₓ"
+<Multi_key> <underscore> <Y>           : "Y"
+<Multi_key> <underscore> <Z>           : "Z"
+<Multi_key> <underscore> <A>           : "ₐ"
+<Multi_key> <underscore> <B>           : "ᵦ"
+<Multi_key> <underscore> <C>           : "�"
+<Multi_key> <underscore> <D>           : "�"
+<Multi_key> <underscore> <E>           : "�"
+<Multi_key> <underscore> <F>           : "�"
+<Multi_key> <underscore> <G>           : "ₑ"
+<Multi_key> <underscore> <H>           : "�"
+<Multi_key> <underscore> <I>           : "�"
+<Multi_key> <underscore> <J>           : "�"
+<Multi_key> <underscore> <K>           : "�"
+<Multi_key> <underscore> <L>           : "ₕ"
+<Multi_key> <underscore> <M>           : "ᵢ"
+<Multi_key> <underscore> <N>           : "ⱼ"
+<Multi_key> <underscore> <O>           : "ₖ"
+<Multi_key> <underscore> <P>           : "ₗ"
+<Multi_key> <underscore> <Q>           : "ₘ"
+<Multi_key> <underscore> <R>           : "ₙ"
+<Multi_key> <underscore> <S>           : "ₒ"
+<Multi_key> <underscore> <T>           : "ₚ"
+<Multi_key> <underscore> <U>           : "ᵩ"
+<Multi_key> <underscore> <V>           : "ᵣ"
+<Multi_key> <underscore> <W>           : "ₛ"
+<Multi_key> <underscore> <X>           : "ₜ"
+<Multi_key> <underscore> <Y>           : "ᵤ"
+<Multi_key> <underscore> <Z>           : "ᵥ"
+
+# emojis
+<Multi_key> <less> <3>              : "❤️"   # <3
+<Multi_key> <plus> <1> 		        : "👍"  # THUMBS UP
+<Multi_key> <s> <p> <r> <k>		    : "✨"  # SPARKLES
+<Multi_key> <t> <r> <a> <n> <s>		: "🏳️‍⚧️"
+#   Fractions
+
+<Multi_key> <1> <slash> <2>              	: "½" # Half
+<Multi_key> <1> <slash> <3>              	: "⅓" # Third
+<Multi_key> <2> <slash> <3>              	: "⅔" # Two Thirds
+<Multi_key> <1> <slash> <4>              	: "¼" # Quarter
+<Multi_key> <3> <slash> <4>              	: "¾" #three quarters
+<Multi_key> <1> <slash> <5>              	: "⅕" # Fifth
+<Multi_key> <1> <slash> <6>              	: "⅙" # Sixth
+<Multi_key> <1> <slash> <8>              	: "⅛" # Eighth
+
+# Hebrew letters with accents
+<Multi_key> <U05B4> <hebrew_yod> 	: "יִ"   UFB1D # HEBREW LETTER YOD WITH HIRIQ
+<Multi_key> <U05B7> <U05F2> 		: "ײַ"   UFB1F # HEBREW LIGATURE YIDDISH YOD YOD PATAH
+<Multi_key> <U05C1> <hebrew_shin> 	: "שׁ"   UFB2A # HEBREW LETTER SHIN WITH SHIN DOT
+<Multi_key> <U05C2> <hebrew_shin> 	: "שׂ"   UFB2B # HEBREW LETTER SHIN WITH SIN DOT
+<Multi_key> <U05C1> <UFB49> 			: "שּׁ"   UFB2C # HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT
+<Multi_key> <U05C1> <U05BC> <hebrew_shin> 	: "שּׁ"   UFB2C # HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT
+<Multi_key> <U05C2> <UFB49> 			: "שּׂ"   UFB2D # HEBREW LETTER SHIN WITH DAGESH AND SIN DOT
+<Multi_key> <U05C2> <U05BC> <hebrew_shin> 	: "שּׂ"   UFB2D # HEBREW LETTER SHIN WITH DAGESH AND SIN DOT
+<Multi_key> <U05B7> <hebrew_aleph> 	: "אַ"   UFB2E # HEBREW LETTER ALEF WITH PATAH
+<Multi_key> <U05B8> <hebrew_aleph> 	: "אָ"   UFB2F # HEBREW LETTER ALEF WITH QAMATS
+<Multi_key> <U05BC> <hebrew_aleph> 	: "אּ"   UFB30 # HEBREW LETTER ALEF WITH MAPIQ
+<Multi_key> <U05BC> <hebrew_bet> 	: "בּ"   UFB31 # HEBREW LETTER BET WITH DAGESH
+<Multi_key> <U05BC> <hebrew_beth> 	: "בּ"   UFB31 # HEBREW LETTER BET WITH DAGESH
+<Multi_key> <U05BC> <hebrew_gimel> 	: "גּ"   UFB32 # HEBREW LETTER GIMEL WITH DAGESH
+<Multi_key> <U05BC> <hebrew_gimmel> 	: "גּ"   UFB32 # HEBREW LETTER GIMEL WITH DAGESH
+<Multi_key> <U05BC> <hebrew_dalet> 	: "דּ"   UFB33 # HEBREW LETTER DALET WITH DAGESH
+<Multi_key> <U05BC> <hebrew_daleth> 	: "דּ"   UFB33 # HEBREW LETTER DALET WITH DAGESH
+<Multi_key> <U05BC> <hebrew_he> 	: "הּ"   UFB34 # HEBREW LETTER HE WITH MAPIQ
+<Multi_key> <U05BC> <hebrew_waw> 	: "וּ"   UFB35 # HEBREW LETTER VAV WITH DAGESH
+<Multi_key> <U05BC> <hebrew_zain> 	: "זּ"   UFB36 # HEBREW LETTER ZAYIN WITH DAGESH
+<Multi_key> <U05BC> <hebrew_zayin> 	: "זּ"   UFB36 # HEBREW LETTER ZAYIN WITH DAGESH
+<Multi_key> <U05BC> <hebrew_tet> 	: "טּ"   UFB38 # HEBREW LETTER TET WITH DAGESH
+<Multi_key> <U05BC> <hebrew_teth> 	: "טּ"   UFB38 # HEBREW LETTER TET WITH DAGESH
+<Multi_key> <U05BC> <hebrew_yod> 	: "יּ"   UFB39 # HEBREW LETTER YOD WITH DAGESH
+<Multi_key> <U05BC> <hebrew_finalkaph> 	: "ךּ"   UFB3A # HEBREW LETTER FINAL KAF WITH DAGESH
+<Multi_key> <U05BC> <hebrew_kaph> 	: "כּ"   UFB3B # HEBREW LETTER KAF WITH DAGESH
+<Multi_key> <U05BC> <hebrew_lamed> 	: "לּ"   UFB3C # HEBREW LETTER LAMED WITH DAGESH
+<Multi_key> <U05BC> <hebrew_mem> 	: "מּ"   UFB3E # HEBREW LETTER MEM WITH DAGESH
+<Multi_key> <U05BC> <hebrew_nun> 	: "נּ"   UFB40 # HEBREW LETTER NUN WITH DAGESH
+<Multi_key> <U05BC> <hebrew_samech> 	: "סּ"   UFB41 # HEBREW LETTER SAMEKH WITH DAGESH
+<Multi_key> <U05BC> <hebrew_samekh> 	: "סּ"   UFB41 # HEBREW LETTER SAMEKH WITH DAGESH
+<Multi_key> <U05BC> <hebrew_finalpe> 	: "ףּ"   UFB43 # HEBREW LETTER FINAL PE WITH DAGESH
+<Multi_key> <U05BC> <hebrew_pe> 	: "פּ"   UFB44 # HEBREW LETTER PE WITH DAGESH
+<Multi_key> <U05BC> <hebrew_zade> 	: "צּ"   UFB46 # HEBREW LETTER TSADI WITH DAGESH
+<Multi_key> <U05BC> <hebrew_zadi> 	: "צּ"   UFB46 # HEBREW LETTER TSADI WITH DAGESH
+<Multi_key> <U05BC> <hebrew_kuf> 	: "קּ"   UFB47 # HEBREW LETTER QOF WITH DAGESH
+<Multi_key> <U05BC> <hebrew_qoph> 	: "קּ"   UFB47 # HEBREW LETTER QOF WITH DAGESH
+<Multi_key> <U05BC> <hebrew_resh> 	: "רּ"   UFB48 # HEBREW LETTER RESH WITH DAGESH
+<Multi_key> <U05BC> <hebrew_shin> 	: "שּ"   UFB49 # HEBREW LETTER SHIN WITH DAGESH
+<Multi_key> <U05BC> <hebrew_taf> 	: "תּ"   UFB4A # HEBREW LETTER TAV WITH DAGESH
+<Multi_key> <U05BC> <hebrew_taw> 	: "תּ"   UFB4A # HEBREW LETTER TAV WITH DAGESH
+<Multi_key> <U05B9> <hebrew_waw> 	: "וֹ"   UFB4B # HEBREW LETTER VAV WITH HOLAM
+<Multi_key> <U05BF> <hebrew_bet> 	: "בֿ"   UFB4C # HEBREW LETTER BET WITH RAFE
+<Multi_key> <U05BF> <hebrew_beth> 	: "בֿ"   UFB4C # HEBREW LETTER BET WITH RAFE
+<Multi_key> <U05BF> <hebrew_kaph> 	: "כֿ"   UFB4D # HEBREW LETTER KAF WITH RAFE
+<Multi_key> <U05BF> <hebrew_pe> 	: "פֿ"   UFB4E # HEBREW LETTER PE WITH RAFE

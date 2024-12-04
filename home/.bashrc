@@ -87,16 +87,12 @@ function ttsserver() {
 # epub2tts end
 ######################################################
 eval "$(fzf --bash)"import
-
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-. "$HOME/.cargo/env"
-
+source "$HOME/.cargo/env"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-homeshick --quiet refresh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval $(thefuck --alias)
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
