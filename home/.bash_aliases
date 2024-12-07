@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #######################################################################################################
-
+alias meittp='cd /media/ricka/ARCHV && caddy file-server --listen 0:8000 --browse'
 ###############___void-linux___########################################################################
 # alias invoke='sudo xbps-install'
 # alias commune='sudo xbps-install -SU'
@@ -36,7 +36,7 @@ alias ls='lsd'
 alias lt='lsd --tree'
 alias ll='lsd --long'
 alias la='lsd --all'
-alias mkv='ls | grep mkv'
+alias mkv='ls *.mkv'
 alias list='echo -e "\e[31m'ls' is quicker\e[0m"'
 alias tree='echo -e "\e[31m'lt' is quicker\e[0m"'
 # alias downime='cd ~/Downloads && ls | grep mkv'
@@ -77,7 +77,7 @@ alias anicli='ani-cli'
 alias time='tuime -c candy -f tiny'
 alias nyaa='nyaasi-normalizer'
 alias get_recipe='get_recipe.sh'
-
+alias enkidu='ncdu'
 text(){
     cfonts "$1" -c candy -f tiny
 }

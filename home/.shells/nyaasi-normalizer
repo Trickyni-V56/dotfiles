@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 for FILE in *; do
    if [[ "$FILE" == *.mkv ]]; then
       if [[ "$FILE" == "[SubsPlease]"* || "$FILE" == "[Erai-raws]"* ]]; then

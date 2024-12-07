@@ -20,6 +20,7 @@
 
 # Currencies
 <Multi_key> <n> <i> <s> 		: "₪" 	# Shekel
+<Multi_key> <i> <l> <s> 		: "₪" 	# Shekel
 <Multi_key> <e> <u> <r> 		: "€"   # Euro
 <Multi_key> <y> <e> <n> 		: "¥"   # Yen
 <Multi_key> <g> <b> <p> 		: "£"   # Pound Sterling

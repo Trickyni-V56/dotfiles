@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # WINDOW_ID=$(xdotool getactivewindow)       #gets the ID of this terminal window
 # wmctrl -i -r $WINDOW_ID -b add,above       #keeps terminal window on top
