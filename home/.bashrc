@@ -53,15 +53,17 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+# case-insensitive completion
+bind -s 'set completion-ignore-case on'
 
 #####################___paths___#######################################################################
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export PATH="$PATH:~/.cargo/bin"
-export PATH="$PATH:~/.software"
-export PATH="$PATH:~/.shells"
-export PYTHONPATH="${PYTHONPATH}:~/.shells"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# export PATH="$PATH:~/.cargo/bin"
+# export PATH="$PATH:~/.software"
+export PATH="$PATH:~/.shells/"
+export PYTHONPATH="${PYTHONPATH}:~/.shells/"
 export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzf-config
-
+export EDITOR='/usr/bin/micro'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -89,7 +91,6 @@ function ttsserver() {
 eval "$(fzf --bash)"import
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-source "$HOME/.cargo/env"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 eval $(thefuck --alias)
 

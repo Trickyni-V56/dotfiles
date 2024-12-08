@@ -1,34 +1,44 @@
-	Creation
-shotcut
+	~~Creation~~
+~~shotcut~~
 OBS
 losslesscut
 Audacity
 kolorpaint
 
-	Gaming
-Steam
-lutris
+	~~Gaming~~
+~~Steam~~
+~~lutris~~
 
-	Comms
-discord
+	~~Comms~~
+~~discord~~
+~~betterdiscord~~
 Dino
+profanity?
+weechat?
 
-	Files
-Nemo
+
+	~~Files~~
+~~Nemo~~
+~~Nemo Fileroller~~
+~~Calibre~~
+pix
 bulky
-Calibre
+
+	selfhost
 Syncthing
 Audiobookshelf
-pix
+Immich
 
-	IDE
-Kate
 
-	screenshots
-flameshots
+	~~IDE~~
+~~Kate~~
 
-	Others
-qbittorent
-Obsidian
-Bitwarden
+	~~screenshots~~
+~~flameshots~~
+
+	~~Others~~
+~~qbittorent~~
+~~Obsidian~~
+~~Bitwarden~~
 virt-manager
+
