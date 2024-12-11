@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -60,8 +60,9 @@ bind -s 'set completion-ignore-case on'
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # export PATH="$PATH:~/.cargo/bin"
 # export PATH="$PATH:~/.software"
-export PATH="$PATH:~/.shells/"
-export PYTHONPATH="${PYTHONPATH}:~/.shells/"
+export XBPS_DISTDIR=~trickyni/code/void-packages
+export PATH="$PATH:~/.shells"
+export PYTHONPATH="${PYTHONPATH}:~/.shells"
 export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzf-config
 export EDITOR='/usr/bin/micro'
 if [ -f ~/.bash_aliases ]; then

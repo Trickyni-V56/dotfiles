@@ -1,27 +1,58 @@
 # ~/.config/starship.toml
 
 format='''
-[┌]()${custom.glyphs}()
-[ ]()$directory()
+[┌]()${custom.glyphs}
+[ ]()$username$directory$git_branch$git_status$docker_context$python
 [└󰝾  ]()'''
 
 
 
 add_newline = true
+
 [directory]
 style='cyan'
 read_only=' '
 read_only_style='red'
 truncation_length=3
 truncation_symbol='.../'
+truncate_to_repo = true # truncates directory to root folder if in github repo
+
+[git_branch]
+symbol = '𖣂 '
+always_show_remote = true
+format='[$symbol$branch]($style)'
+style = 'blue'
+
+[git_status]
+format = '([󰝾 $conflicted$stashed$deleted$renamed$modified$typechanged$untracked$staged]($style) )'
+style = 'cyan'
+conflicted = '[!](red)'
+#ahead = '[](bold blue)'
+#behind = '[🝒](red)'
+#diverged = '!'
+#up_to_date = '[](bold blue)'
+untracked = '[?](green)'
+stashed = '[ ](yellow)'
+modified = '[?](green)'
+renamed = '[!](red)'
+deleted = '[!](red)'
+staged = '[++\($count\)](blue)'
+
+[docker_context]
+format = '$context]'
+symbol = '   '
+style = 'yellow'
+
+[python]
+symbol = '󰳗 '
+style = 'bold blue'
 
 [custom.glyphs]
-format="[$output]($style)"
-command='python3 ~/.config/starship/glyphs.py'
-
-style='white'
+format="[$output](white)"
+command='python3 ~/.config/starship/glyphs_long.py'
 shell = ["bash", "--noprofile", "--norc"]
 when=true
+
 
 
 #𖢊𖦋𖢏𖢴𖤲𖤱𖦹𖧻

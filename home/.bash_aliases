@@ -6,16 +6,11 @@ alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0
 alias invoke='sudo xbps-install'
 alias banish='sudo xbps-remove'
 alias BANISH='sudo xbps-remove && echo -e "\e[31mHELLFIRE TAKES THEE!!!\e[0m"'
-alias commune='sudo xbps-install -SU'
+alias commune='sudo xbps-install -Su'
 alias scry='sudo xbps-query'
 alias misogi='sudo xbps-remove -oO'
-daemon(){
-if [ -e /etc/sv/$1 ]; then
-    sudo ln -s /etc/sv/$1 /var/service/
-else
-    echo -e "\e[31mservice \e[36m\"$1\"\e[31m does not exist\e[0m" >&2
-fi
-}
+alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
+
 ###############___devices___###########################################################################
 #   Connects to Jupiter of the Monkey and sets it to the right audio profile
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
@@ -52,14 +47,14 @@ alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac 
 
 #   CLI aliases (if it runs something- put it here)
 alias trash='trashbin.sh'
-alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc.sh
+alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc
 alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias F5='echo "savescum :3" && sudo timeshift --create'
 alias polybar='~/.config/polybar/launch.sh'
 alias sampler='sampler -c ~/.config/sampler/config.yml'
 alias matrix="unimatrix -s 95 -a -f -c blue"
 alias audioprofile='wpctl set-profile 91 139'
-
+alias untar='sudo tar -xvzf'
 
 
 #   command aliases (renames and setups go here!)
