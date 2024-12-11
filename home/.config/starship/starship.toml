@@ -24,19 +24,12 @@ format='[$symbol$branch]($style)'
 style = 'blue'
 
 [git_status]
-format = '([󰝾 $conflicted$stashed$deleted$renamed$modified$typechanged$untracked$staged]($style) )'
+format = '([ 󰝾 $staged$modified$untracked$stashed]($style) )'
 style = 'cyan'
-conflicted = '[!](red)'
-#ahead = '[](bold blue)'
-#behind = '[🝒](red)'
-#diverged = '!'
-#up_to_date = '[](bold blue)'
-untracked = '[?](green)'
+untracked = '[!](green)'
 stashed = '[ ](yellow)'
 modified = '[?](green)'
-renamed = '[!](red)'
-deleted = '[!](red)'
-staged = '[++\($count\)](blue)'
+staged = '[+$count](blue)'
 
 [docker_context]
 format = '$context]'
