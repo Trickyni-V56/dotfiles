@@ -1,41 +1,35 @@
 #!/bin/bash
 
-#######################################################################################################
 alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
-###############___void-linux___########################################################################
+
+#   devices
+alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
+
+#   void-linux
 alias invoke='sudo xbps-install'
 alias banish='sudo xbps-remove'
-alias BANISH='sudo xbps-remove && echo -e "\e[31mHELLFIRE TAKES THEE!!!\e[0m"'
 alias commune='sudo xbps-install -Su'
 alias scry='sudo xbps-query'
 alias misogi='sudo xbps-remove -oO'
 alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
 
-###############___devices___###########################################################################
-#   Connects to Jupiter of the Monkey and sets it to the right audio profile
-alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
-
-###############___aliases___###########################################################################
-#   jmp
-jmp(){ #  go to specified path and list its contents
-    cd $1 && lsd
-}
-complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
+#   ls command replacement
+alias {eza,ls}='eza -1 --group-directories-first'
+alias lt='eza -T'
+alias ll='eza -lao --no-time --no-permissions --no-user --group-directories-first'
+alias la='eza -1a --all --group-directories-first'
+alias mkv='eza -1 *.mkv '
 
 # cd
-alias bk='cd .. && lsd'
+alias bk='cd .. && eza'
 alias home='clear && cd $HOME'
-alias dls='cd ~/Downloads && lsd'
+alias dls='cd ~/Downloads && eza'
 
-#   ls command replacement
-alias ls='lsd'
-alias lt='lsd --tree'
-alias ll='lsd --long'
-alias la='lsd --all'
-alias mkv='ls *.mkv'
-alias list='echo -e "\e[31m'ls' is quicker\e[0m"'
-alias tree='echo -e "\e[31m'lt' is quicker\e[0m"'
-# alias downime='cd ~/Downloads && ls | grep mkv'
+#   jmp
+jmp(){ #  go to specified path and list its contents
+    cd $1 && eza
+}
+complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 
 #   fzf
 alias lp='mpv $(fzf -e -q ".mkv$ | .webm$")'
@@ -66,7 +60,6 @@ alias symlink='echo -e "\e[31muse '"'"'ln -s'"'"' baaaka\e[0m | \033[31mL\033[0m
 alias python='python3'
 alias nano='micro'
 alias cat='bat'
-alias btop="btop --utf-force"
 alias dust='dust -riC'
 alias grep='grep --color=auto'
 alias anicli='ani-cli'
@@ -74,12 +67,11 @@ alias time='tuime -c candy -f tiny'
 alias nyaa='nyaasi-normalizer'
 alias get_recipe='get_recipe.sh'
 alias enkidu='ncdu'
-text(){
+cfonts-tiny(){
     cfonts "$1" -c candy -f tiny
 }
-alias cfonts='text'
 timer(){
-    clear && countdown $1 && text $2
+    clear && countdown $1 && cfonts-tiny $2
 }
 
 #   mpv

@@ -69,8 +69,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-#####################___themes___######################################################################
-source ~/.config/lsd/LS_COLORS.sh #invokes LS_colors, sets item colors when listing
+#####################___eza___########################################################################
+export EZA_ICONS_AUTO=always
 #######################################################################################################
 
 # The whole epub2TTS thing

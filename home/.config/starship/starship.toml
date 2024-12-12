@@ -5,12 +5,10 @@ format='''
 [ ]()$username$directory$git_branch$git_status$docker_context$python
 [└󰝾  ]()'''
 
-
-
 add_newline = true
 
 [directory]
-style='cyan'
+style='bright-black'
 read_only=' '
 read_only_style='red'
 truncation_length=3
@@ -21,24 +19,25 @@ truncate_to_repo = true # truncates directory to root folder if in github repo
 symbol = '𖣂 '
 always_show_remote = true
 format='[$symbol$branch]($style)'
-style = 'blue'
+style = 'green'
 
 [git_status]
-format = '([ 󰝾 $staged$modified$untracked$stashed]($style) )'
-style = 'cyan'
-untracked = '[!](green)'
-stashed = '[ ](yellow)'
-modified = '[?](green)'
-staged = '[+$count](blue)'
+format = '([ $staged$deleted$modified$untracked$stashed]($style) )'
+style = 'green'
+untracked = '[!](yellow)'
+stashed = '[ ](bright-white)'
+modified = '[*$count|](yellow)'
+staged = '[+$count|](green)'
+deleted = '[-$count|](red)'
 
 [docker_context]
 format = '$context]'
 symbol = '   '
-style = 'yellow'
+style = 'bright-white'
 
 [python]
 symbol = '󰳗 '
-style = 'bold blue'
+style = 'bright-green'
 
 [custom.glyphs]
 format="[$output](white)"

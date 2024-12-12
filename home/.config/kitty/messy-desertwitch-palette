@@ -1,0 +1,25 @@
+# Colors
+        # Black
+color0              #3b3228
+color8              #3b3228
+        # Red
+color1              #E86045
+color9              #E86045
+        # Green
+color2              #E68D53
+color10             #E68D53
+        # Yellow
+color3              #3ECCBE
+color11             #3ECCBE
+        # Blue
+color4              #92a650
+color12             #ace1af
+        # Magenta
+color5              #f8e2a0
+color13             #f8e2a0
+        # Cyan
+color6              #C1A387
+color14             #C1A387
+        # White
+color7              #AFD2E9
+color15             #AFD2E9
