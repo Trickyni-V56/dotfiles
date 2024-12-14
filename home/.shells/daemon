@@ -7,7 +7,7 @@ case "$1" in
         else
             if [ -e /etc/sv/"$1" ]; then
                 sudo ln -s /etc/sv/"$1" /var/service/
-                echo -e "\e[33m$1\e[36m is bound to your service, lady witch.\e[0m"
+                echo -e "\e[33m$1\e[90m is bound to your service, lady witch.\e[0m"
             else
                 echo -e "\e[36m\"$1\"\e[31m does not exist in any codecies we posess, o witch\e[0m" >&2
             fi
@@ -22,7 +22,7 @@ case "$1" in
                 ls -1 /etc/sv/
             ;;
             *)
-            echo -e "\e[36mI may \e[33mlist active\e[36m daemons, or I could \e[33mlist available\e[36m daemons."
+            echo -e "\e[90mI may \e[33mlist active\e[90m daemons, or I could \e[33mlist available\e[90m daemons.\e[0m"
         esac
     ;;
 esac

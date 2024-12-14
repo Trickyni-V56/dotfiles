@@ -2,33 +2,44 @@
 
 format='''
 [┌]()${custom.glyphs}
-[ ]()$username$directory$git_branch$git_status$docker_context$python
-[└󰝾  ]()'''
+[ ]()$directory$git_branch$git_status$docker_context$python
+[└]()$status'''
 
 add_newline = true
+[status]
+format = '$symbol'
+symbol = '[󰝾](red) '
+not_executable_symbol = '[󰝾](red) '
+success_symbol = '[󰝾](white) '
+not_found_symbol = '[󰝾](white) '
+signal_symbol = '[󰝾](white) '
+sigint_symbol = '[󰝾](white) '
+map_symbol = true
+disabled = false
 
 [directory]
 style='bright-black'
-read_only=' '
+read_only=''
 read_only_style='red'
 truncation_length=3
 truncation_symbol='.../'
 truncate_to_repo = true # truncates directory to root folder if in github repo
 
 [git_branch]
-symbol = '𖣂 '
+symbol = '𖣂'
 always_show_remote = true
-format='[$symbol$branch]($style)'
+format='[$symbol $branch ]($style)'
 style = 'green'
 
 [git_status]
-format = '([ $staged$deleted$modified$untracked$stashed]($style) )'
+format = '([$ahead_behind$staged$deleted$modified$untracked$stashed]($style))'
 style = 'green'
 untracked = '[!](yellow)'
 stashed = '[ ](bright-white)'
 modified = '[*$count|](yellow)'
 staged = '[+$count|](green)'
 deleted = '[-$count|](red)'
+up_to_date = '[󰺕](bright-green)'
 
 [docker_context]
 format = '$context]'
@@ -46,5 +57,5 @@ shell = ["bash", "--noprofile", "--norc"]
 when=true
 
 
-
+#󰝾
 #𖢊𖦋𖢏𖢴𖤲𖤱𖦹𖧻

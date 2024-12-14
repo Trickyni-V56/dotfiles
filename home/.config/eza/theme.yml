@@ -1,38 +1,38 @@
+---
+colourful: true
 filekinds:
-    normal: {foreground: White}
-    directory: {foreground: Yellow}
-    symlink: {foreground: "#C1A387"}
-    executable: {foreground: "#ace1af"}
-#   # pipe: {foreground: "#FFFFFF"}
-#   # block_device: {foreground: "#FFFFFF"}
-#   # char_device: {foreground: "#FFFFFF"}
-#   # socket: {foreground: "#FFFFFF"}
-#   # special: {foreground: "#FFFFFF"}
-#   # mount_point: {foreground: "#FFFFFF"}
-
+  normal:
+    foreground: "#AFD2E9"
+  directory:
+    foreground: "#E68D53"
+  symlink:
+    foreground: "#C1A387"
+  executable:
+    foreground: "#ace1af"
+    is_underline: true
 file_type:
-    image: {foreground: "#92a650"}
-    video: {foreground: "#3ECCBE"}
-    music: {foreground: "#f8e2a0"}
-    document: {foreground: "#AFD2E9"}
-    compressed: {foreground: "#E86045"}
-#   # temp: {foreground: "#FFFFFF"}
-#   # compiled: {foreground: "#FFFFFF"}
-#   # build: {foreground: "#FFFFFF"}
-#   # source: {foreground: "#FFFFFF"}
-
-extentions:
-    yml: {icon: {glyph: 🐪}}
-
-
-octal: {foreground: "#C1A387"}
-punctuation: { foreground: "#AFD2E9" }
-blocks: { foreground: "#51ff00" }
-flags: { foreground: "#ffe203" }
-symlink_path: { foreground: "#C1A387" }
-broken_symlink:
+  image:
+    foreground: "#92a650"
+  video:
+    foreground: "#3ECCBE"
+  music:
+    foreground: "#f8e2a0"
+  document:
+    foreground: "#AFD2E9"
+  compressed:
     foreground: "#E86045"
-    is_strikethrough: true
-broken_path_overlay: { foreground: "#E86045" }
-
-
+octal:
+  foreground: "#C1A387"
+punctuation:
+  foreground: "#AFD2E9"
+blocks:
+  foreground: "#51ff00"
+flags:
+  foreground: "#ffe203"
+symlink_path:
+  foreground: "#C1A387"
+broken_symlink:
+  foreground: "#E86045"
+  is_strikethrough: true
+broken_path_overlay:
+  foreground: "#E86045"

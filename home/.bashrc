@@ -1,21 +1,12 @@
-# # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
+#   bash history stuff
 HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
 shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
@@ -43,6 +34,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # export PAGER='glow'
 export LESS="-R"
 
+#--------------
+#   completion stuff
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -55,22 +49,36 @@ if ! shopt -oq posix; then
 fi
 # case-insensitive completion
 bind -s 'set completion-ignore-case on'
+#--------------
 
-#####################___paths___#######################################################################
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# export PATH="$PATH:~/.cargo/bin"
-# export PATH="$PATH:~/.software"
-export XBPS_DISTDIR=~trickyni/code/void-packages
+#   paths
+export XBPS_DISTDIR=~trickyni/git/void-packages
 export PATH="$PATH:~/.shells"
 export PYTHONPATH="${PYTHONPATH}:~/.shells"
-export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzf-config
 export EDITOR='/usr/bin/micro'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-#####################___eza___########################################################################
+#   eza
 export EZA_ICONS_AUTO=always
+
+#   FZF
+export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/fzf-config
+eval "$(fzf --bash)"import
+
+#   starship
+eval "$(starship init bash)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+#   homeshick
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+#   thefuck
+eval $(thefuck --alias)
+
+
+
 #######################################################################################################
 
 # The whole epub2TTS thing
@@ -89,11 +97,8 @@ function ttsserver() {
 }
 # epub2tts end
 ######################################################
-eval "$(fzf --bash)"import
-eval "$(starship init bash)"
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-eval $(thefuck --alias)
+
+
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

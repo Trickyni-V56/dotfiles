@@ -32,7 +32,7 @@ jmp(){ #  go to specified path and list its contents
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 
 #   fzf
-alias lp='mpv $(fzf -e -q ".mkv$ | .webm$")'
+alias playlist='mpv $(fzf -e -q ".mkv$ | .webm$")'
 alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% --border-label "Downloads")'
 
 #   yt-dlp
@@ -49,7 +49,6 @@ alias sampler='sampler -c ~/.config/sampler/config.yml'
 alias matrix="unimatrix -s 95 -a -f -c blue"
 alias audioprofile='wpctl set-profile 91 139'
 alias untar='sudo tar -xvzf'
-
 
 #   command aliases (renames and setups go here!)
 alias rm='rm -i'
