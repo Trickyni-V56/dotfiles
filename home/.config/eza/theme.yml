@@ -26,9 +26,9 @@ octal:
 punctuation:
   foreground: "#AFD2E9"
 blocks:
-  foreground: "#51ff00"
+  foreground: "#8688ff"
 flags:
-  foreground: "#ffe203"
+  foreground: "#7bff00"
 symlink_path:
   foreground: "#C1A387"
 broken_symlink:
@@ -36,3 +36,10 @@ broken_symlink:
   is_strikethrough: true
 broken_path_overlay:
   foreground: "#E86045"
+extensions:
+  flac:
+    filename:
+      foreground: "#f8e2a0"
+    icon:
+      style:
+        foreground: "#f8e2a0"

@@ -1,7 +1,7 @@
 # ~/.config/starship.toml
 
 format='''
-[┌]()${custom.glyphs}
+[┌](white)${custom.glyphs}
 [ ]()$directory$git_branch$git_status$docker_context$python
 [└]()$status'''
 
@@ -34,12 +34,15 @@ style = 'green'
 [git_status]
 format = '([$ahead_behind$staged$deleted$modified$untracked$stashed]($style))'
 style = 'green'
-untracked = '[!](yellow)'
+untracked = '[?](yellow)'
 stashed = '[ ](bright-white)'
-modified = '[*$count|](yellow)'
-staged = '[+$count|](green)'
-deleted = '[-$count|](red)'
+modified = '[*$count](yellow)'
+staged = '[+$count](green)'
+deleted = '[-$count](red)'
 up_to_date = '[󰺕](bright-green)'
+ahead = '[⇡$count](green)'
+behind = '[⇣$count|](red)'
+conflicted = '[!!](red)'
 
 [docker_context]
 format = '$context]'

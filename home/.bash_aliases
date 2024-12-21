@@ -1,7 +1,5 @@
 #!/bin/bash
-
 alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
-
 #   devices
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
 
@@ -41,12 +39,13 @@ alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac 
 
 #   CLI aliases (if it runs something- put it here)
 alias trash='trashbin.sh'
-alias reload='source ~/.bashrc && echo "ka-clunk~"' #reloads .bashrc
+alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias F5='echo "savescum :3" && sudo timeshift --create'
 alias polybar='~/.config/polybar/launch.sh'
 alias sampler='sampler -c ~/.config/sampler/config.yml'
-alias matrix="unimatrix -s 95 -a -f -c blue"
+#alias matrix="unimatrix -s 95 -a -f -c blue"
+alias matrix='cmatrix -abcsx -u 3'
 alias audioprofile='wpctl set-profile 91 139'
 alias untar='sudo tar -xvzf'
 
@@ -56,7 +55,6 @@ alias open='xdg-open'
 alias suspend='systemctl suspend'
 alias syscuddle="systemctl"
 alias symlink='echo -e "\e[31muse '"'"'ln -s'"'"' baaaka\e[0m | \033[31mL\033[0mi\033[31mn\033[0mk (-\033[31mS\033[0mymbolic)"'
-alias python='python3'
 alias nano='micro'
 alias cat='bat'
 alias dust='dust -riC'
@@ -80,14 +78,8 @@ radio(){
 }
 
 #   list edits
-alias {bashr,bashrc}="kate ~/.bash_aliases"
+alias bashr="kate ~/.bash_aliases"
 alias bashrc-edit='kate ~/.bashrc'
-
-#   Shortcuts
-alias calculator='gnome-calculator'
-alias vol="pavucontrol &"
-alias {blut,bluetooth}='bluetoothctl'
-alias betterdiscord-update='~/.ricka/utils/BetterDiscord.AppImage'
 
 #   connect to stuff
 alias mapscii='telnet mapscii.me'
@@ -98,9 +90,4 @@ alias moonphase='curl wttr.in/moon?QFT'
 #   misc
 alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ -f'
 alias strawb='cat ~/celeste'
-
-###############___Trash_function___####################################################################
-
-#######################################################################################################
-
 
