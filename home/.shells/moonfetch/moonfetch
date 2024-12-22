@@ -1,29 +1,23 @@
 #!/usr/bin/env bash
+touch /tmp/fetchmethemoon.txt /tmp/linecount.txt
 temp=/tmp/fetchmethemoon.txt
+linecount=/tmp/linecount
+info=./details
+infolength=$(wc -l $info | cut -f1 -d ' ')
 chmod 755 $temp
 phoon -q > $temp
 phoon -q
-linecount=/tmp/linecount
-awk '{print length($0)}' $temp > $linecount
+awk '{print length}' $temp > $linecount
 awk '{print}' $linecount > $temp
-echo -e "\033[23A"
-line=$(awk 'NR==2' $temp)
-echo -en "\033[$((line+3))C"
-echo -e "\033[33mOS: \033[32m \033[37mVoid Linux"
-line=$(awk 'NR==3' $temp)
-echo -en "\033[$((line+3))C"
-echo -e "\033[33mFont: \033[37mProggyClean SZ"
-echo
-line=$(awk 'NR==5' $temp)
-echo -en "\033[$((line+4))C"
-for i in {30..37}; do
-    echo -en "\033[${i}m██"
-done
-echo
-echo -en "\033[$((line+4))C"
-for i in {90..97}; do
-    echo -en "\033[${i}m██"
-done
-echo -e "\033[21B"
+moonlength=$(wc -l $temp | cut -f1 -d ' ')
+echo -e "\033[${moonlength}A"
 
+for i in $(seq 1 "$infolength"); do #find how many lines in details.txt
+    xpos=$(sed -n "$((i+1))p" $temp) # finds the X-axis position for the new line
+    xpos=$((xpos+2))
+    infoline=$(sed -n "${i}p" $info)
+    echo -e "\033[${xpos}C$infoline"
+done
 
+jumpspace=$(($moonlength-$infolength))
+echo -e "\033[${jumpspace}B"
