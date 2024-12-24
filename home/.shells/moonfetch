@@ -2,7 +2,7 @@
 touch /tmp/fetchmethemoon.txt /tmp/linecount.txt
 temp=/tmp/fetchmethemoon.txt
 linecount=/tmp/linecount
-info=./details
+info=~/.config/moonfetch/moonfetch.conf
 infolength=$(wc -l $info | cut -f1 -d ' ')
 chmod 755 $temp
 phoon -q > $temp

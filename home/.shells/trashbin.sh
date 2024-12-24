@@ -1,13 +1,25 @@
 #!/usr/bin/env bash
+trashit(){
+    trash "$file"
+    echo -e "\e[31m \e[9m$file\e[0m"
+}
 
-FILENAME=${1:-$(fzf)}
-if [ -z "$FILENAME" ]; then
-    echo -e "\e[90m«TRASHING ABORTED»\e[0m" >&2
-    exit 1
-fi
-if [ -e "$FILENAME" ]; then
-    trash "$FILENAME"
-    echo -e "\e[31m \e[9m$FILENAME\e[0m"
-else
-    echo -e "\e[90m«\e[31m$FILENAME \e[90mDOES NOT EXIST»\e[0m" >&2
-fi
+case "$1" in
+    "")
+        file=$(fzf)
+        if [ -z "$file" ]; then # argument nonexistent check
+            echo -e "\e[90m«TRASHING ABORTED»\e[0m" >&2
+            exit 1
+        else
+           trashit
+        fi
+    ;;
+    *)
+        file=$1
+        if [ ! -e "$file" ]; then
+            echo -e "\e[90m«\e[31m$file \e[90mDOES NOT EXIST»\e[0m" >&2
+        else
+            trashit
+        fi
+    ;;
+esac
