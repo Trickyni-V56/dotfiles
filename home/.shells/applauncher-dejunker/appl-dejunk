@@ -8,7 +8,7 @@ case "$1" in
     list)
         xargs -a "$JUNKLIST" -n 1
         ;;
-     append)
+    append)
         if [ -z "$2" ]; then
             echo "you didn't say which .desktop, birdbrain" >&2
         else

@@ -74,7 +74,7 @@ timer(){
 #   mpv
 alias play='mpv'
 radio(){
-    mpv $1 --no-video
+    mpv "$1" --no-video
 }
 
 #   list edits
