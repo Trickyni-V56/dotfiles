@@ -1,0 +1,14 @@
+Removes unecessary .dekstop entries from /usr/share/applications, and thus removes them from the application launcher.
+
+SUBCOMMANDS
+    run
+        removes every .dekstop entry in junklist from /usr/share/applications/
+
+    list
+        lists every item in junklist
+
+    append [APPLICATION.desktop]
+        adds [APPLICATION.desktop] to junklist
+
+    remove [APPLICATION.desktop]
+        deletes [APPLICATION.desktop] from junklist

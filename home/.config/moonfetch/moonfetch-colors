@@ -1,0 +1,7 @@
+for i in {30..37}; do
+    echo -en "\033[${i}m██"
+done
+echo
+for i in {90..97}; do
+    echo -en "\033[${i}m██"
+done
