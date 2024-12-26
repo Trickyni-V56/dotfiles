@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-JUNKLIST="$(dirname "$(realpath "$0")")"/junklist
+JUNKLIST=$XDG_CONFIG_HOME/applauncher-dejunker/junklist.txt
 
 case "$1" in
     run)

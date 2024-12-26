@@ -14,6 +14,11 @@ case "$1" in
            trashit
         fi
     ;;
+    play)
+        file=$2
+        echo -en "\033[1A\033[2K"
+        trashit
+    ;;
     *)
         file=$1
         if [ ! -e "$file" ]; then
@@ -22,4 +27,5 @@ case "$1" in
             trashit
         fi
     ;;
+
 esac
