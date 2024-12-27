@@ -37,6 +37,12 @@ alias downime='cd ~/Downloads && clear && mpv $(fzf -e -q ".mkv$ " --height 40% 
 alias ytdlp='cd ~/Downloads && yt-dlp'
 alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
 
+#   mpv
+alias play='mpv'
+radio(){
+    mpv "$1" --no-video
+}
+
 #   CLI aliases (if it runs something- put it here)
 alias trash='trashbin.sh'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
@@ -64,17 +70,8 @@ alias time='tuime -c candy -f tiny'
 alias nyaa='nyaasi-normalizer'
 alias get_recipe='get_recipe.sh'
 alias enkidu='ncdu'
-cfonts-tiny(){
-    cfonts "$1" -c candy -f tiny
-}
 timer(){
-    clear && countdown $1 && cfonts-tiny $2
-}
-
-#   mpv
-alias play='mpv'
-radio(){
-    mpv "$1" --no-video
+    clear && countdown $1 && cfonts "$2" -c candy -f tiny
 }
 
 #   list edits

@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
-JUNKLIST=$XDG_CONFIG_HOME/applauncher-dejunker/junklist.txt
+JUNKLIST=${XDG_CONFIG_HOME:-.config}/applauncher-dejunker/junklist.txt
 
 case "$1" in
-    run)
+    "")
         xargs -a "$JUNKLIST" -I{} rm /usr/share/applications/{}
         ;;
     list)
-        xargs -a "$JUNKLIST" -n 1
+        case "$2" in
+        junk)
+            xargs -a "$JUNKLIST" -n 1
         ;;
+        known)
+            ls /usr/share/applications
+        ;;
+        esac
+    ;;
     append)
         if [ -z "$2" ]; then
             echo "you didn't say which .desktop, birdbrain" >&2
