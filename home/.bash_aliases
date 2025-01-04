@@ -9,7 +9,7 @@ alias banish='sudo xbps-remove'
 alias commune='sudo xbps-install -Su'
 alias scry='sudo xbps-query'
 alias misogi='sudo xbps-remove -oO'
-alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
+# alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
 
 #   ls command replacement
 alias {eza,ls}='eza -1 --group-directories-first'
@@ -25,7 +25,7 @@ alias dls='cd ~/Downloads && eza'
 
 #   jmp
 jmp(){ #  go to specified path and list its contents
-    cd $1 && eza
+    cd "$1" && eza
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 
@@ -65,8 +65,6 @@ alias nano='micro'
 alias cat='bat'
 alias dust='dust -riC'
 alias grep='grep --color=auto'
-alias anicli='ani-cli'
-alias time='tuime -c candy -f tiny'
 alias nyaa='nyaasi-normalizer'
 alias get_recipe='get_recipe.sh'
 alias enkidu='ncdu'

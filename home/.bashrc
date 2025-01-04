@@ -93,7 +93,7 @@ function ttsserver() {
 # epub2tts end
 ######################################################
 
-
+echo -e -n "\x1b[\x35 q" # changes to blinking bar
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

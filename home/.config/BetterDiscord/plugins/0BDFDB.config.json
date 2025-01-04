@@ -1,7 +1,7 @@
 {
 	"all": {
 		"changeLogs": {
-			"BDFDB": "3.8.6",
+			"BDFDB": "3.8.7",
 			"BetterFriendList": "1.5.5",
 			"FriendNotifications": "2.0.3",
 			"ReadAllNotificationsButton": "1.7.8"
@@ -12,12 +12,13 @@
 		"general": {
 			"shareData": true,
 			"showToasts": true,
+			"checkForUpdates": false,
 			"showSupportBadges": false,
 			"useChromium": false
 		},
 		"hashes": {
-			"0BDFDB.data.json": "5c8a7f3a090786109c0efc7fd556f1e592f269e1",
-			"0BDFDB.raw.css": "73a3192c633a7900fd5b0a7536eaeef6769d4b62"
+			"0BDFDB.data.json": "8e5417059085246a8fc5bdcb2f40b7165fe226f1",
+			"0BDFDB.raw.css": "fde7e8b8df310932810caf46a52458defb7beea7"
 		}
 	}
 }

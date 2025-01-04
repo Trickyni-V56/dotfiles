@@ -13,20 +13,18 @@ case "$1" in
         known)
             ls /usr/share/applications
         ;;
-        esac
-    ;;
-    append)
-        if [ -z "$2" ]; then
-            echo "you didn't say which .desktop, birdbrain" >&2
-        else
-            if grep -q "$2" "$JUNKLIST"; then
-                echo "it already exists, dingus" >&2
+        add)
+            if [ -z "$3" ]; then
+                echo "you didn't say which .desktop, birdbrain" >&2
             else
-                echo "$2" >> "$JUNKLIST"
+                if grep -q "$3" "$JUNKLIST"; then
+                    echo "it already exists, dingus" >&2
+                else
+                    echo "$3" >> "$JUNKLIST"
+                fi
             fi
-        fi
         ;;
-    remove)
+        unjunk)
         if [ -z "$2" ]; then
             echo "you didn't say which .desktop, birdbrain" >&2
         else
@@ -37,4 +35,5 @@ case "$1" in
             fi
         fi
         ;;
+        esac
 esac

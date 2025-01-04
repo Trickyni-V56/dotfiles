@@ -19,5 +19,8 @@ for i in $(seq 1 "$infolength"); do #find how many lines in details.txt
     echo -e "\033[${xpos}C$infoline"
 done
 
+#color
+
+
 jumpspace=$(($moonlength-$infolength))
 echo -e "\033[${jumpspace}B"

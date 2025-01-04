@@ -33,7 +33,7 @@ hover-select: false;
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-combi-modes: "filebrowser,drun";
+combi-modes: "run,drun";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
