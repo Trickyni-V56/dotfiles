@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-file=~/.local/share/qBittorrent/logs/qbittorrent.log
+temp=/tmp/torrent-ticker.txt
+rg finished ~/.local/share/qBittorrent/logs/qbittorrent.log > $temp
+sed -i 's/.*Torrent: //g' /tmp/torrent-ticker.txt
+sed -i 's/"//g' /tmp/torrent-ticker.txt
+cat $temp
+
+#file=~/.local/share/qBittorrent/logs/qbittorrent.log
 #echo -e "\e[32mFinished: \e[0m"
-rg '.+Torrent download finished. Torrent: "(.+)"' --replace '$1' $file | tail -n3
+#rg '.+Torrent download finished. Torrent: "(.+)"' --replace '$1' $file | tail -n3

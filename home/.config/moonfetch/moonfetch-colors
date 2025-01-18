@@ -7,4 +7,5 @@ colorblocks(){
     for i in {90..97}; do
         echo -en "\033[${i}m██"
     done
+    echo -en "\033[0m"
 }

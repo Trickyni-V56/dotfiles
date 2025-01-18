@@ -8,7 +8,7 @@ alias invoke='sudo xbps-install'
 alias banish='sudo xbps-remove'
 alias commune='sudo xbps-install -Su'
 alias scry='sudo xbps-query'
-alias misogi='sudo xbps-remove -oO'
+alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
 # alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
 
 #   ls command replacement
@@ -43,12 +43,15 @@ radio(){
     mpv "$1" --no-video
 }
 
+#   launchcodes (specifically for launch wrapper-scripts)
+alias polybar='~/.config/polybar/polybar-launch.sh'
+alias wired='~/.config/wired/wired-launch.sh'
+
 #   CLI aliases (if it runs something- put it here)
 alias trash='trashbin.sh'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias F5='echo "savescum :3" && sudo timeshift --create'
-alias polybar='~/.config/polybar/launch.sh'
 alias sampler='sampler -c ~/.config/sampler/config.yml'
 #alias matrix="unimatrix -s 95 -a -f -c blue"
 alias matrix='cmatrix -abcsx -u 3'
@@ -58,19 +61,19 @@ alias untar='sudo tar -xvzf'
 #   command aliases (renames and setups go here!)
 alias rm='rm -i'
 alias open='xdg-open'
-alias suspend='systemctl suspend'
-alias syscuddle="systemctl"
+alias suspend='loginctl suspend'
 alias symlink='echo -e "\e[31muse '"'"'ln -s'"'"' baaaka\e[0m | \033[31mL\033[0mi\033[31mn\033[0mk (-\033[31mS\033[0mymbolic)"'
 alias nano='micro'
 alias cat='bat'
 alias dust='dust -riC'
 alias grep='grep --color=auto'
-alias nyaa='nyaasi-normalizer'
 alias get_recipe='get_recipe.sh'
 alias enkidu='ncdu'
 timer(){
     clear && countdown $1 && cfonts "$2" -c candy -f tiny
 }
+
+alias tor=~/.shells/torrent-ticker
 
 #   list edits
 alias bashr="kate ~/.bash_aliases"
