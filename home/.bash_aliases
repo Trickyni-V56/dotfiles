@@ -1,4 +1,5 @@
 #!/bin/bash
+alias shut='sudo poweroff'
 alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
 #   devices
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
@@ -68,7 +69,9 @@ alias cat='bat'
 alias dust='dust -riC'
 alias grep='grep --color=auto'
 alias get_recipe='get_recipe.sh'
+alias watch='viddy'
 alias enkidu='ncdu'
+alias diff='delta'
 timer(){
     clear && countdown $1 && cfonts "$2" -c candy -f tiny
 }

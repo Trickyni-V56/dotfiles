@@ -53,7 +53,7 @@ layout_blocks: [
             offset: Vec2(x: 0.0, y: 0.0),
             // https://github.com/Toqozz/wired-notify/wiki/TextBlock
             params: TextBlock((
-                text: 150"%s",
+                text: "%s",
                 font: "ProggyCleanSZ Nerd Font Mono 22",
                 ellipsize: Middle,
                 color: Color(hex: "#E68D53"),
