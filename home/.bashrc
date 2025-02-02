@@ -73,28 +73,7 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 eval $(thefuck --alias)
 
 
-
-#######################################################################################################
-
-# The whole epub2TTS thing
-function epub2tts() {
-	OLD_IFS=$IFS
-	IFS=$'\n' sudo docker run --rm -e COQUI_TOS_AGREED=1 -v /home/ricka:/home/ricka -v "$PWD:$PWD" -v ~/.local/share/tts:/root/.local/share/tts -w "$PWD" ghcr.io/aedocw/epub2tts:release "$@" "$(zenity --file-selection)"
-	IFS=$OLD_IFS
-}
-
-function ttsserver() {
-	if [ $# -eq 0 ]; then
-		sudo docker run --rm -it -p 5002:5002 --entrypoint 'python3' ghcr.io/coqui-ai/tts-cpu TTS/server/server.py --list_models 
-	else
-		sudo docker run --rm -it -p 5002:5002 --entrypoint 'python3' ghcr.io/coqui-ai/tts-cpu TTS/server/server.py --model_name $1
-	fi
-}
-# epub2tts end
-######################################################
-
 echo -e -n "\x1b[\x35 q" # changes to blinking bar
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export RESTIC_REPOSITORY=~/restic-repo
+# export RESTIC_PASSWORD=reallystrongpassword

@@ -2,9 +2,16 @@
 JUNKLIST=${XDG_CONFIG_HOME:-.config}/applauncher-dejunker/junklist.txt
 
 case "$1" in
+    help)
+    echo -e "appjunk: Removes all .desktop entries listed for junking"
+    echo -e "appjunk list junk: Displays apps listed for junking"
+    echo -e "appjunk list known: Displays apps NOT listed for junking"
+    echo -e "appjunk list add [.DESKTOP ENTRY]: adds an entry to the junk list"
+    echo -e "appjunk list unjunk [.DESKTOP ENTRY]: removes an entry from the junk list"
+    ;;
     "")
         xargs -a "$JUNKLIST" -I{} rm /usr/share/applications/{}
-        ;;
+    ;;
     list)
         case "$2" in
         junk)

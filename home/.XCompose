@@ -1,5 +1,6 @@
 # UTF-8 (Unicode) compose sequence
 <Multi_key> <d> <e> <g>             	: "°"   degree # DEGREE SIGN
+<Multi_key> <plus> <minus>  	: "±"    # Plus minus
 
 #   Quotation marks
 
@@ -33,7 +34,7 @@
 <Multi_key> <less> <3>              : "❤️"   # <3
 <Multi_key> <plus> <1> 		        : "👍"  # THUMBS UP
 <Multi_key> <s> <p> <r> <k>		    : "✨"  # SPARKLES
-<Multi_key> <s> <t> <a> <r> 	    : "★" # Trans flag (doesn't work)
+<Multi_key> <s> <t> <a> <r> 	    : "★" # star
 
 
 
