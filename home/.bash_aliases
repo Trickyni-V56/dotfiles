@@ -1,6 +1,8 @@
 #!/bin/bash
+
 alias shut='sudo poweroff'
 alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
+
 #   devices
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
 

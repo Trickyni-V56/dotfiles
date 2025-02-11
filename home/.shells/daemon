@@ -1,28 +1,33 @@
 #!/usr/bin/env bash
 
 case "$1" in
+    help)
+        echo -e "\e[91mI ANSWER, O WYTCH\n\e[90mwith a whisper—\e[97mdaemon bind\e[90m—for your service I'll entwine—"
+        echo -e "\e[90mpotent spirits—I shall seek— \e[97mscry \e[90mthe \e[97mcodecies \e[90mand pick!"
+        echo -e "\e[90mfinally, I'd \e[97mscry \e[90mthe \e[97mstable\e[90m— and see which scum dines at your table."
+    ;;
     bind)
         if [ -z "$2" ]; then
             echo -e "\e[31mName the daemon you wish to bind to your service, oh mistress.\e[0m" >&2
         else
-            if [ -e /etc/sv/"$1" ]; then
-                sudo ln -s /etc/sv/"$1" /var/service/
-                echo -e "\e[33m$1\e[90m is bound to your service, lady witch.\e[0m"
+            if [ -e /etc/sv/"$2" ]; then
+                sudo ln -s /etc/sv/"$2" /var/service/
+                echo -e "\e[33m$2\e[90m is bound to your service, lady witch.\e[0m"
             else
-                echo -e "\e[36m\"$1\"\e[31m does not exist in any codecies we posess, o witch\e[0m" >&2
+                echo -e "\e[36m\"$2\"\e[31m does not exist in any codecies we posess, o witch\e[0m" >&2
             fi
         fi
     ;;
-    list)
+    scry)
         case "$2" in
-            active)
+            stable)
                 sv s /var/service/*
             ;;
-            available)
+            codecies)
                 ls -1 /etc/sv/
             ;;
             *)
-            echo -e "\e[90mI may \e[33mlist active\e[90m daemons, or I could \e[33mlist available\e[90m daemons.\e[0m"
+            echo -e "\e[90mI may \e[97mscry stable\e[90m for daemons bound in service,\nOr I could \e[97 mscry codecies\e[90m for daemons we could bind tonight, should you wish it so.\e[0m"
         esac
     ;;
 esac
