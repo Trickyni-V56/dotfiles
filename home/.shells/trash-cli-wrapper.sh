@@ -3,7 +3,6 @@ trashit(){
     trash "$file"
     echo -e "\e[31m \e[9m$file\e[0m"
 }
-
 case "$1" in
     "")
         file=$(fzf)
@@ -27,5 +26,4 @@ case "$1" in
             trashit
         fi
     ;;
-
 esac

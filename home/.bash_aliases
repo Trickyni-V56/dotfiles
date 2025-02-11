@@ -2,7 +2,7 @@
 
 alias shut='sudo poweroff'
 alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
-
+alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE — \033[31mDEPLOYED\033[0m"'
 #   devices
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
 
@@ -45,13 +45,15 @@ alias play='mpv'
 radio(){
     mpv "$1" --no-video
 }
+#   git
+alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"'
 
 #   launchcodes (specifically for launch wrapper-scripts)
 alias polybar='~/.config/polybar/polybar-launch.sh'
 alias wired='~/.config/wired/wired-launch.sh'
 
 #   CLI aliases (if it runs something- put it here)
-alias trash='trashbin.sh'
+alias trash='trash-cli-wrapper.sh'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias F5='echo "savescum :3" && sudo timeshift --create'

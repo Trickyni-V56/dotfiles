@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"
