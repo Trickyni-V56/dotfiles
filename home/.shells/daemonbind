@@ -1,19 +1,8 @@
 #!/usr/bin/env bash
+
 if [ -e /etc/sv/"$1" ]; then
     sudo ln -s /etc/sv/"$1" /var/service/
     echo -e "\e[33m$1\e[90m is bound to your service, o witch.\e[0m"
 else
     echo -e "\e[36m\"$1\"\e[31m does not exist in the codecies we posess, o witch\e[0m" >&2
 fi
-
-
-# if [ -z "$1" ]; then
-#     echo -e "\e[31mName the daemon you wish to bind to your service, oh mistress.\e[0m" >&2
-# else
-#     if [ -e /etc/sv/"$2" ]; then
-#         sudo ln -s /etc/sv/"$2" /var/service/
-#         echo -e "\e[33m$2\e[90m is bound to your service, lady witch.\e[0m"
-#     else
-#         echo -e "\e[36m\"$2\"\e[31m does not exist in any codecies we posess, o witch\e[0m" >&2
-#     fi
-# fi
