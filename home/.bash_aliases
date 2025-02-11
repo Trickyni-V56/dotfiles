@@ -14,6 +14,10 @@ alias scry='sudo xbps-query'
 alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
 # alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
 
+#   daemons
+alias daemonlist-active='sv s /var/service/*'
+alias daemonlist-available='ls -1 /etc/sv/'
+
 #   ls command replacement
 alias {eza,ls}='eza -1 --group-directories-first'
 alias lt='eza -T'
