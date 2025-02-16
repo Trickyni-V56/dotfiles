@@ -39,5 +39,18 @@ data.location=~/.local/share/task
 #include solarized-light-256.theme
 #include no-color.theme
 include /home/trickyni/.config/task/themes/DesertWitch-16.theme
-uda.priority.values=H,M,,L,@
-urgency.uda.priority.@.coefficient=-3.0
+
+report.next.columns = id,project,depends,priority,description,tags,due,urgency
+report.next.labels = ID,Project,Deps,P,Description,Tag,Due,Urg
+
+
+# user-defined attributes
+uda.priority.values=H,M,L,@
+urgency.uda.priority.@.coefficient=-15.0
+uda.priority.default=M
+
+uda.effort.type=string
+uda.effort.label=Effort
+uda.effort.values=EZ,HRD
+urgency.uda.effort.E.coefficient=6.0
+urgency.uda.effort.H.coefficient=1.8

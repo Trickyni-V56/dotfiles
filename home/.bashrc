@@ -72,6 +72,8 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 #   thefuck
 eval $(thefuck --alias)
 
+#   zoxide
+eval "$(zoxide init bash)"
 
 echo -e -n "\x1b[\x35 q" # changes to blinking bar
 

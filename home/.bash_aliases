@@ -32,7 +32,7 @@ alias dls='cd ~/Downloads && eza'
 
 #   jmp
 jmp(){ #  go to specified path and list its contents
-    cd "$1" && eza
+    z "$1" && eza
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 
@@ -89,6 +89,7 @@ alias tor=~/.shells/torrent-ticker
 #   list edits
 alias bashr="kate ~/.bash_aliases"
 alias bashrc-edit='kate ~/.bashrc'
+alias taskr='kate ~/.config/task/taskrc'
 
 #   connect to stuff
 alias mapscii='telnet mapscii.me'
@@ -99,4 +100,5 @@ alias moonphase='curl wttr.in/moon?QFT'
 #   misc
 alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ -f'
 alias strawb='cat ~/celeste'
+alias [fukc,fcuk,fucj]='fuck'
 
