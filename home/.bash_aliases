@@ -32,6 +32,7 @@ alias dls='cd ~/Downloads && eza'
 
 #   jmp
 jmp(){ #  go to specified path and list its contents
+    pwd
     z "$1" && eza
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
@@ -68,6 +69,7 @@ alias audioprofile='wpctl set-profile 91 139'
 alias untar='sudo tar -xvzf'
 
 #   command aliases (renames and setups go here!)
+alias sunset='sunwait list set 32.19N 34.82E'
 alias rm='rm -i'
 alias open='xdg-open'
 alias suspend='loginctl suspend'
