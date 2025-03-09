@@ -21,7 +21,7 @@
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
 
 data.location=~/.local/share/task
-#hooks.location=~/.config/task/hooks
+hooks.location=~/.config/task/hooks
 
 # Color theme (uncomment one to use)
 #include light-16.theme
@@ -40,17 +40,55 @@ data.location=~/.local/share/task
 #include no-color.theme
 include /home/trickyni/.config/task/themes/DesertWitch-16.theme
 
-report.next.columns = id,project,depends,priority,description,tags,due,urgency
-report.next.labels = ID,Project,Deps,P,Description,Tag,Due,Urg
+#   coefficient mods
+urgency.tags.coefficient = 0.0
+urgency.annotations.coefficient = 0.0
+urgency.project.coefficient = 0.0
 
+
+#   report now
+report.now.description = "Current unblocked mainburner tasks"
+report.now.columns=id,project,priority,description,due.countdown,urgency
+report.now.labels=,Project,,Description,Due,Urg
+report.now.sort = urgency-
+report.now.filter=status:pending pri.not:x +UNBLOCKED
+
+#   report next
+report.next.description = ""
+report.next.columns = id,project,depends,priority,description,tags,due.countdown,urgency
+report.next.labels = ID,Project,Deps,P,Description,Tag,Due,Urg
+report.next.sort = urgency-
+report.next.filter=status:pending
+
+#   report unblocked
+report.unblocked.columns = id,project,priority,description,tags,due,urgency
+report.unblocked.labels = ID,Project,P,Description,Tag,Due,Urg
+report.unblocked.sort = urgency-
+
+#  report group
+report.group.columns=project.indented,id,depends,priority,description,tags,due,urgency
+report.group.labels=Project,ID,Deps,P,Description,Tag,Due,Urg
+report.group.sort=project+/,urgency-
+report.group.filter=status:pending proj.not:
+report.group.description = "Shows only projects, groups by project"
+
+#  report due
+report.due.columns=project.indented,id,depends,priority,description,due.countdown,urgency
+report.due.labels=Project,ID,Deps,P,Description,Due,Urg
+report.due.sort=due+,urgency-
+report.due.filter=status:pending due.not:
+report.due.description = "Timeline view of only tasks with due dates, sorted by due date"
+
+
+#  report plate
+report.plate.columns=project.indented,id,depends,priority,description,due.countdown,urgency
+report.plate.labels=Project,ID,Deps,P,Description,Due,Urg
+report.plate.sort=due+,urgency-
+report.plate.filter=status:pending pri.not:x
 
 # user-defined attributes
-uda.priority.values=H,M,L,@
+uda.priority.values=x,@
+urgency.uda.priority.x.coefficient=-7.0
 urgency.uda.priority.@.coefficient=-15.0
-uda.priority.default=M
 
-uda.effort.type=string
-uda.effort.label=Effort
-uda.effort.values=EZ,HRD
-urgency.uda.effort.E.coefficient=6.0
-urgency.uda.effort.H.coefficient=1.8
+

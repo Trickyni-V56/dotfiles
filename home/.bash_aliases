@@ -1,5 +1,6 @@
 #!/bin/bash
-
+alias lockdown='sudo rfkill block all'
+alias lockdown-lift='sudo rfkill unblock all'
 alias shut='sudo poweroff'
 alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
 alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE — \033[31mDEPLOYED\033[0m"'
@@ -30,10 +31,13 @@ alias bk='cd .. && eza'
 alias home='clear && cd $HOME'
 alias dls='cd ~/Downloads && eza'
 
+#   sun
+alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'
+
 #   jmp
 jmp(){ #  go to specified path and list its contents
-    pwd
-    z "$1" && eza
+
+    z "$1" && pwd && eza
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 
@@ -52,6 +56,16 @@ radio(){
 }
 #   git
 alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"'
+
+# docker
+alias whale='sudo docker compose'
+alias whaleup='sudo docker compose up -d'
+alias whaledown='sudo docker compose down'
+
+#   taskwarrior
+alias todo='task add'
+alias now='task now'
+
 
 #   launchcodes (specifically for launch wrapper-scripts)
 alias polybar='~/.config/polybar/polybar-launch.sh'

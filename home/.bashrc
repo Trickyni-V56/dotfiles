@@ -79,3 +79,7 @@ echo -e -n "\x1b[\x35 q" # changes to blinking bar
 
 # export RESTIC_REPOSITORY=~/restic-repo
 # export RESTIC_PASSWORD=reallystrongpassword
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

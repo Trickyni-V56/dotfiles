@@ -35,6 +35,8 @@
 <Multi_key> <plus> <1> 		        : "👍"  # THUMBS UP
 <Multi_key> <s> <p> <r> <k>		    : "✨"  # SPARKLES
 <Multi_key> <s> <t> <a> <r> 	    : "★" # star
+<Multi_key> <m> <e> <i> 	    : "👉👈" # star
+
 
 
 
