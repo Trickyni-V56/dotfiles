@@ -44,12 +44,13 @@ include /home/trickyni/.config/task/themes/DesertWitch-16.theme
 urgency.tags.coefficient = 0.0
 urgency.annotations.coefficient = 0.0
 urgency.project.coefficient = 0.0
+urgency.age.coefficient = 0.0
 
 
 #   report now
 report.now.description = "Current unblocked mainburner tasks"
-report.now.columns=id,project,priority,description,due.countdown,urgency
-report.now.labels=,Project,,Description,Due,Urg
+report.now.columns=id,project,priority,description.truncated,tags,due.countdown,urgency
+report.now.labels=,Project,,Description,Tags,Due,Urg
 report.now.sort = urgency-
 report.now.filter=status:pending pri.not:x +UNBLOCKED
 
@@ -90,5 +91,3 @@ report.plate.filter=status:pending pri.not:x
 uda.priority.values=x,@
 urgency.uda.priority.x.coefficient=-7.0
 urgency.uda.priority.@.coefficient=-15.0
-
-

@@ -1841,13 +1841,14 @@ function seek_state(_, enabled)
         seek_state_timer:resume()
     else
         state.lastvisibility = user_opts.visibility
+	local last = state.lastvisibility
         state.paused = true
         visibility_mode("always", true)
         show_osc()
 
         seek_state_timer = mp.add_timeout(user_opts.seek_visibility_time, function()
             state.paused = false
-            visibility_mode(state.lastvisibility, true)
+            visibility_mode(last, true)
             state.osd:update()
             seek_state_timer = nil
         end)
