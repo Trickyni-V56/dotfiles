@@ -33,20 +33,18 @@ alias ll='eza -lao --no-time --no-permissions --no-user --group-directories-firs
 alias la='eza -1a --all --group-directories-first'
 alias mkv='eza -1 *.mkv '
 
-# cd
-alias bk='cd .. && eza'
-alias home='clear && cd $HOME'
-alias dls='cd ~/Downloads && eza'
+
+
 
 #   sun
-alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'
 
-#   jmp
+#   jmp (cd replacement)
 jmp(){ #  go to specified path and list its contents
 
     z "$1" && pwd && eza
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
+alias bk='cd .. && eza'
 
 #   fzf
 alias playlist='mpv $(fzf -e -q ".mkv$ | .webm$")'
@@ -63,6 +61,7 @@ radio(){
 }
 #   git
 alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"'
+alias homescum='homeshick cd dotfiles && gitscum'
 
 # docker
 alias whale='sudo docker compose'
@@ -73,7 +72,6 @@ alias whaledown='sudo docker compose down'
 alias todo='task add'
 alias now='task now'
 alias plate='task plate'
-
 
 #   launchcodes (specifically for launch wrapper-scripts)
 alias polybar='~/.config/polybar/polybar-launch.sh'
@@ -91,16 +89,14 @@ alias audioprofile='wpctl set-profile 91 139'
 alias untar='sudo tar -xvzf'
 
 #   command aliases (renames and setups go here!)
-alias sunset='sunwait list set 32.19N 34.82E'
+
+alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'\
 alias rm='rm -i'
 alias open='xdg-open'
 alias suspend='loginctl suspend'
-alias symlink='echo -e "\e[31muse '"'"'ln -s'"'"' baaaka\e[0m | \033[31mL\033[0mi\033[31mn\033[0mk (-\033[31mS\033[0mymbolic)"'
-alias nano='micro'
 alias cat='bat'
 alias dust='dust -riC'
 alias grep='grep --color=auto'
-alias get_recipe='get_recipe.sh'
 alias watch='viddy'
 alias enkidu='ncdu'
 alias diff='delta'
