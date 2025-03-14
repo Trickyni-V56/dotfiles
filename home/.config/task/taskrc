@@ -46,46 +46,47 @@ urgency.annotations.coefficient = 0.0
 urgency.project.coefficient = 0.0
 urgency.age.coefficient = 0.0
 
+#   report next
+report.next.description = ""
+report.next.columns = id,project,depends,priority,description,tags,scheduled.relative,until.relative,due.countdown,urgency
+report.next.labels = ID,Project,Deps,P,Description,Tag,Sched,Until,Due,Urg
+report.next.sort = urgency-
+report.next.filter=status:pending
 
 #   report now
 report.now.description = "Current unblocked mainburner tasks"
-report.now.columns=id,project,priority,description.truncated,tags,due.countdown,urgency
-report.now.labels=,Project,,Description,Tags,Due,Urg
+report.now.columns=id,project,priority,description,tags,scheduled.relative,until.relative,due.countdown,urgency
+report.now.labels=,Project,,Description,Tags,Sched,Until,Due,Urg
 report.now.sort = urgency-
 report.now.filter=status:pending pri.not:x +UNBLOCKED
 
-#   report next
-report.next.description = ""
-report.next.columns = id,project,depends,priority,description,tags,due.countdown,urgency
-report.next.labels = ID,Project,Deps,P,Description,Tag,Due,Urg
-report.next.sort = urgency-
-report.next.filter=status:pending
+#  report plate
+report.plate.columns=project.indented,id,depends,priority,description,tags,scheduled.relative,until.relative,due.countdown,urgency
+report.plate.labels=Project,ID,Deps,P,Description,Tags,Sched,Until,Due,Urg
+report.plate.sort=scheduled+,due+,urgency-
+report.plate.filter= -DELETED -COMPLETED +SCHEDULED or +YEAR
 
 #   report unblocked
 report.unblocked.columns = id,project,priority,description,tags,due,urgency
 report.unblocked.labels = ID,Project,P,Description,Tag,Due,Urg
 report.unblocked.sort = urgency-
 
-#  report group
-report.group.columns=project.indented,id,depends,priority,description,tags,due,urgency
-report.group.labels=Project,ID,Deps,P,Description,Tag,Due,Urg
-report.group.sort=project+/,urgency-
-report.group.filter=status:pending proj.not:
-report.group.description = "Shows only projects, groups by project"
+#  report groups
+report.groups.columns=project.indented,id,priority,description.truncated,tags,urgency
+report.groups.labels=Project,ID,P,Description,Tag,Urg
+report.groups.sort=project+/,urgency-
+report.groups.filter=-DELETED -COMPLETED proj.not:
+report.groups.description = "Shows only projects, groups by project"
 
-#  report due
+#  report sched
 report.due.columns=project.indented,id,depends,priority,description,due.countdown,urgency
 report.due.labels=Project,ID,Deps,P,Description,Due,Urg
 report.due.sort=due+,urgency-
-report.due.filter=status:pending due.not:
-report.due.description = "Timeline view of only tasks with due dates, sorted by due date"
+report.due.filter=status:pending sched.not:
+report.due.description = "Timeline view"
 
 
-#  report plate
-report.plate.columns=project.indented,id,depends,priority,description,due.countdown,urgency
-report.plate.labels=Project,ID,Deps,P,Description,Due,Urg
-report.plate.sort=due+,urgency-
-report.plate.filter=status:pending pri.not:x
+
 
 # user-defined attributes
 uda.priority.values=x,@

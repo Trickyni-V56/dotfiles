@@ -8,16 +8,23 @@ alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE —
 alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
 
 #   void-linux
-alias invoke='sudo xbps-install'
-alias banish='sudo xbps-remove'
-alias commune='sudo xbps-install -Su'
-alias scry='sudo xbps-query'
-alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
-# alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
-
+if grep void /etc/os-release >/dev/null; then
+    alias invoke='sudo xbps-install'
+    alias banish='sudo xbps-remove'
+    alias commune='sudo xbps-install -Su'
+    alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
+    # alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
 #   daemons
-alias daemonlist-active='sv s /var/service/*'
-alias daemonlist-available='ls -1 /etc/sv/'
+    alias daemonlist-active='sv s /var/service/*'
+    alias daemonlist-available='ls -1 /etc/sv/'
+fi
+#   Arch linux
+if grep arch /etc/os-release >/dev/null; then
+    alias invoke='sudo pacman -S'
+    alias banish='sudo pacman -R'
+    alias commune='sudo pacman -Syu'
+    #alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
+fi
 
 #   ls command replacement
 alias {eza,ls}='eza -1 --group-directories-first'
@@ -65,6 +72,7 @@ alias whaledown='sudo docker compose down'
 #   taskwarrior
 alias todo='task add'
 alias now='task now'
+alias plate='task plate'
 
 
 #   launchcodes (specifically for launch wrapper-scripts)
