@@ -2,7 +2,7 @@
 
 format='''
 [┌](white)${custom.glyphs}
-[ ]()$directory$git_branch$git_status$docker_context$python
+[ ]()$directory$hostname$git_branch$git_status$docker_context$python
 [└]()$status'''
 
 add_newline = true
@@ -25,6 +25,11 @@ truncation_length=3
 truncation_symbol='.../'
 truncate_to_repo = true # truncates directory to root folder if in github repo
 
+[hostname]
+ssh_only = true
+format = '[$hostname]($style) in '
+style = 'bright-white'
+aliases = {"hachiko" = "󰩄"}
 [git_branch]
 symbol = '𖣂'
 always_show_remote = true
