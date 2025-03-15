@@ -46,6 +46,7 @@ jmp(){ #  go to specified path and list its contents
 }
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 alias bk='cd .. && eza'
+alias cd='z'
 
 # docker
 alias whale='sudo docker compose'
@@ -71,7 +72,7 @@ radio(){
 }
 #   git
 alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"'
-alias homescum='homeshick cd dotfiles && gitscum'
+alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
 
 #   launchcodes (specifically for launch wrapper-scripts)
 alias polybar='~/.config/polybar/polybar-launch.sh'
