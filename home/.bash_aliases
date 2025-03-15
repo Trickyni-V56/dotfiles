@@ -56,7 +56,7 @@ alias whaleseesaw='sudo docker compose down && docker compose up -d'
 
 #-------   home setup   ----------------------------------------------------------------------
 
-if [[ "$(hostname)" == "IrregularNotes" ]]; then
+if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
 #   Baseline
 alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE — \033[31mDEPLOYED\033[0m"'
 alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'

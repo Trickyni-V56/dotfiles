@@ -47,7 +47,9 @@ bind -s 'set completion-ignore-case on' > /dev/null
 #--------------
 
 #   paths
-export XBPS_DISTDIR=~trickyni/git/void-packages
+if grep void /etc/os-release >/dev/null; then
+  export XBPS_DISTDIR=~trickyni/git/void-packages
+fi
 export PATH="$PATH:~/.shells"
 export PYTHONPATH="${PYTHONPATH}:~/.shells"
 export EDITOR='/usr/bin/micro'
