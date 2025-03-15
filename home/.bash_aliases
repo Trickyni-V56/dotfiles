@@ -2,10 +2,10 @@
 alias lockdown='sudo rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
 alias shut='sudo poweroff'
-alias meittp='cd /run/media/trickyni/ARCHV && caddy file-server --listen 0.0.0.0:8000 --browse'
 alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE — \033[31mDEPLOYED\033[0m"'
 #   devices
-alias jotm='bluetoothctl connect 28:11:A5:72:F0:1E'
+alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
+alias bashr="kate ~/.bash_aliases"
 
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
@@ -13,6 +13,7 @@ if grep void /etc/os-release >/dev/null; then
     alias banish='sudo xbps-remove'
     alias commune='sudo xbps-install -Su'
     alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
+    alias scry='xbps-query -R -p homepage -s'
     # alias daemon='sudo ~trickyni/.shells/daemon/daemon.sh'
 #   daemons
     alias daemonlist-active='sv s /var/service/*'
@@ -32,11 +33,6 @@ alias lt='eza -T'
 alias ll='eza -lao --no-time --no-permissions --no-user --group-directories-first'
 alias la='eza -1a --all --group-directories-first'
 alias mkv='eza -1 *.mkv '
-
-
-
-
-#   sun
 
 #   jmp (cd replacement)
 jmp(){ #  go to specified path and list its contents
@@ -67,6 +63,7 @@ alias homescum='homeshick cd dotfiles && gitscum'
 alias whale='sudo docker compose'
 alias whaleup='sudo docker compose up -d'
 alias whaledown='sudo docker compose down'
+alias whaleseesaw='sudo docker compose down && docker compose up -d'
 
 #   taskwarrior
 alias todo='task add'
@@ -103,13 +100,6 @@ alias diff='delta'
 timer(){
     clear && countdown $1 && cfonts "$2" -c candy -f tiny
 }
-
-alias tor=~/.shells/torrent-ticker
-
-#   list edits
-alias bashr="kate ~/.bash_aliases"
-alias bashrc-edit='kate ~/.bashrc'
-alias taskr='kate ~/.config/task/taskrc'
 
 #   connect to stuff
 alias mapscii='telnet mapscii.me'
