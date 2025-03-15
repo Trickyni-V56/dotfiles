@@ -6,8 +6,8 @@ alias open='xdg-open'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias cat='bat'
-alias bashr="kate ~/.bash_aliases"
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
+alias bashr="kate ~/.bash_aliases"
 
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
@@ -77,6 +77,9 @@ alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git p
 #   launchcodes (specifically for launch wrapper-scripts)
 alias polybar='~/.config/polybar/polybar-launch.sh'
 alias wired='~/.config/wired/wired-launch.sh'
+
+#	misc
+alias matrix='cmatrix -abcsx -u 3'
 fi
 
 #   taskwarrior
@@ -89,17 +92,12 @@ alias trash='trash-cli-wrapper.sh'
 alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
 alias F5='echo "savescum :3" && sudo timeshift --create'
 alias sampler='sampler -c ~/.config/sampler/config.yml'
-#alias matrix="unimatrix -s 95 -a -f -c blue"
-alias matrix='cmatrix -abcsx -u 3'
 alias audioprofile='wpctl set-profile 91 139'
 alias untar='sudo tar -xvzf'
 
 #   command aliases (renames and setups go here!)
-alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'\
-
-
+alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'
 alias dust='dust -riC'
-
 alias watch='viddy'
 alias enkidu='ncdu'
 alias diff='delta'
