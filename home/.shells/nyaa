@@ -9,7 +9,6 @@ changeflag=True
 parser = argparse.ArgumentParser()
 parser.add_argument('-e','--ext', default="mkv")
 parser.add_argument('-f','--force', action='store_true', default=False)
-parser.add_argument('-m','--fancy','--emdash', action='store_true', default=False)
 args = parser.parse_args()
 
 ext="."+args.ext
@@ -19,8 +18,7 @@ def sanitize(file):
     rename = re.sub(r'\s?(?:\(.*?\)|\[.*?\])\s?', '', file)
     rename = re.sub(r'[\',]', '', rename)
     rename = re.sub(r'\s', '-', rename)
-    if args.fancy:
-        rename = re.sub(r'---', '—', rename)
+    rename = rename.lower()
     if rename != file:
         print ("\033[33m"+file+"\033[0m"+" ---> "+"\033[97m"+rename+"\033[0m")
         changeflag=False

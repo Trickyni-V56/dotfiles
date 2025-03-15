@@ -47,6 +47,7 @@ jmp(){ #  go to specified path and list its contents
 complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 alias bk='cd .. && eza'
 alias cd='z'
+alias dls='cd ~/Downloads'
 
 # docker
 alias whale='sudo docker compose'
