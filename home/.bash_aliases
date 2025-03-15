@@ -52,7 +52,7 @@ alias cd='z'
 alias whale='sudo docker compose'
 alias whaleup='sudo docker compose up -d'
 alias whaledown='sudo docker compose down'
-alias whaleseesaw='sudo docker compose down && docker compose up -d'
+alias whaleseesaw='sudo docker compose down && sudo docker compose up -d'
 
 #-------   home setup   ----------------------------------------------------------------------
 
