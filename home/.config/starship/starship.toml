@@ -26,10 +26,10 @@ truncation_symbol='.../'
 truncate_to_repo = true # truncates directory to root folder if in github repo
 
 [hostname]
-ssh_only = false
-format = '[$hostname]($style) '
-style = 'bright-white'
-aliases = {"hachiko" = "󰩄", "IrregularNotes" = "󰎌"}
+ssh_only = true
+format = '$hostname '
+aliases = {"hachiko" = "\u001B[97m󰩄", "IrregularNotes" = "\u001B[90m󰎌"}
+
 [git_branch]
 symbol = '𖣂'
 always_show_remote = true
