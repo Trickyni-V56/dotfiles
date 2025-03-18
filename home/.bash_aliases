@@ -7,7 +7,8 @@ alias grep='grep --color=auto'
 alias rm='rm -i'
 alias cat='bat'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
-alias bashr="kate ~/.bash_aliases"
+alias bashr='which kate &>/dev/null && kate ~/.bash_aliases || micro ~/.bash_aliases'
+
 
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
