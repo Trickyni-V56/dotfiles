@@ -39,7 +39,7 @@ color.debug=
 # Task state
 color.completed=white
 color.deleted=color6 on red
-color.active=black on yellow
+color.active=black on color11
 color.recurring=
 color.scheduled=black on color15
 color.until=
@@ -53,7 +53,7 @@ color.project.none=
 color.uda.priority.@=color6
 
 # Tags
-color.tag.next=yellow on black
+color.tag.next=black on yellow
 color.tag.none=
 color.tagged=
 

@@ -44,7 +44,7 @@ jmp(){ #  go to specified path and list its contents
 
     z "$1" && pwd && eza
 }
-complete -o default -F _cd jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
+complete -F __zoxide_z_complete -o filenames -- jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 alias bk='cd .. && eza'
 alias cd='z'
 alias dls='cd ~/Downloads'

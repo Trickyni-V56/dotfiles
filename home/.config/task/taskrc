@@ -41,10 +41,17 @@ hooks.location=~/.config/task/hooks
 include /home/trickyni/.config/task/themes/DesertWitch-16.theme
 
 #   coefficient mods
+urgency.user.tag.buy.coefficient = 5.0
 urgency.tags.coefficient = 0.0
 urgency.annotations.coefficient = 0.0
 urgency.project.coefficient = 0.0
 urgency.age.coefficient = 0.0
+
+# user-defined attributes
+uda.priority.values=x,@
+urgency.uda.priority.x.coefficient=-7.0
+urgency.uda.priority.@.coefficient=-15.0
+
 
 #   report next
 report.next.description = ""
@@ -88,7 +95,3 @@ report.due.description = "Timeline view"
 
 
 
-# user-defined attributes
-uda.priority.values=x,@
-urgency.uda.priority.x.coefficient=-7.0
-urgency.uda.priority.@.coefficient=-15.0
