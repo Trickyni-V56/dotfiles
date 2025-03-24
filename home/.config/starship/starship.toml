@@ -2,7 +2,7 @@
 
 format='''
 [┌](white)${custom.glyphs}
-[ ]()$hostname$directory$git_branch$git_status$docker_context$python
+[ ]()$hostname$directory$git_branch$git_status
 [└]()$status'''
 
 add_newline = true
@@ -48,15 +48,6 @@ up_to_date = '[󰺕](bright-green)'
 ahead = '[⇡$count](green)'
 behind = '[⇣$count|](red)'
 conflicted = '[!!](red)'
-
-[docker_context]
-format = '[$symbol$context](bright-white)'
-symbol = '   '
-style = ''
-
-[python]
-symbol = '󰳗 '
-style = 'bright-green'
 
 [custom.glyphs]
 format="[$output](white)"
