@@ -50,9 +50,9 @@ behind = '[⇣$count|](red)'
 conflicted = '[!!](red)'
 
 [docker_context]
-format = '$context]'
+format = '[$symbol$context](bright-white)'
 symbol = '   '
-style = 'bright-white'
+style = ''
 
 [python]
 symbol = '󰳗 '
