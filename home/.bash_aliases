@@ -62,6 +62,7 @@ if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
 #   Baseline
 alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE — \033[31mDEPLOYED\033[0m"'
 alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
+alias hachisync='ssh -L 8385:localhost:8384 hachiko'
 
 #   yt-dlp
 alias ytdlp='cd ~/Downloads && yt-dlp'
@@ -101,7 +102,7 @@ alias untar='sudo tar -xvzf'
 alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'
 alias dust='dust -riC'
 alias watch='viddy'
-alias enkidu='ncdu'
+alias enkidu='ncdu --color dark'
 alias diff='delta'
 timer(){
     clear && countdown $1 && cfonts "$2" -c candy -f tiny

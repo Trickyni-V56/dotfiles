@@ -67,6 +67,13 @@ report.now.labels=,Project,,Description,Tags,Sched,Until,Due,Urg
 report.now.sort = urgency-
 report.now.filter=status:pending pri.not:x +UNBLOCKED
 
+#   report agenda
+report.agenda.description = "Current unblocked mainburner tasks"
+report.agenda.columns=id,project,priority,description,tags,scheduled.relative,until.relative,due.countdown,urgency
+report.agenda.labels=,Project,,Description,Tags,Sched,Until,Due,Urg
+report.agenda.sort = urgency-
+report.agenda.filter=status:pending pri.not:x and ( +ACTIVE or +TODAY or +next )
+
 #  report plate
 report.plate.columns=project.indented,id,depends,priority,description,tags,scheduled.relative,until.relative,due.countdown,urgency
 report.plate.labels=Project,ID,Deps,P,Description,Tags,Sched,Until,Due,Urg
