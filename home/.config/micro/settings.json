@@ -1,4 +1,5 @@
 {
     "colorscheme": "simple",
-    "savehistory": false
+    "savehistory": false,
+    "clipboard": "terminal"
 }

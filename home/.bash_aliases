@@ -50,11 +50,14 @@ alias bk='cd .. && eza'
 alias cd='z'
 alias dls='cd ~/Downloads'
 
-# docker
+#	docker
 alias whale='sudo docker compose'
 alias whaleup='sudo docker compose up -d'
 alias whaledown='sudo docker compose down'
 alias whaleseesaw='sudo docker compose down && sudo docker compose up -d'
+
+#	git
+alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"'
 
 #-------   home setup   ----------------------------------------------------------------------
 
@@ -73,8 +76,13 @@ radio(){
     mpv "$1" --no-video
 }
 #   git
-alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgit successfully scummed\033[0m"'
 alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
+
+#   CLI aliases (if it runs something- put it here)
+alias trash='trash-cli-wrapper.sh'
+alias F5='echo "savescum :3" && sudo timeshift --create'
+alias sampler='sampler -c ~/.config/sampler/config.yml'
+alias untar='sudo tar -xvzf'
 
 #   launchcodes (specifically for launch wrapper-scripts)
 alias polybar='~/.config/polybar/polybar-launch.sh'
@@ -89,13 +97,7 @@ alias todo='task add'
 alias now='task now'
 alias plate='task plate'
 
-#   CLI aliases (if it runs something- put it here)
-alias trash='trash-cli-wrapper.sh'
-alias disk='df -h | grep -E "Filesystem|/dev/nvme0n1p2"' #displays available disk space.
-alias F5='echo "savescum :3" && sudo timeshift --create'
-alias sampler='sampler -c ~/.config/sampler/config.yml'
-alias audioprofile='wpctl set-profile 91 139'
-alias untar='sudo tar -xvzf'
+
 
 #   command aliases (renames and setups go here!)
 alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'
