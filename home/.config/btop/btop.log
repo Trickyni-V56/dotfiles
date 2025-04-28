@@ -256,3 +256,6 @@ btop++ needs an interactive shell to run.
 
 2025/03/16 (21:25:32) | ===> btop++ v.1.4.0
 2025/03/16 (21:25:32) | ERROR: Couldn't determine
+2025/04/27 (10:08:47) | ===> btop++ v.1.4.0
+2025/04/27 (10:08:47) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
