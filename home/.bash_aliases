@@ -8,7 +8,7 @@ alias rm='rm -i'
 alias cat='bat'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || micro ~/.bash_aliases'
-
+alias lock='XSECURELOCK_AUTH_WARNING_COLOR=#E86045 XSECURELOCK_AUTH_BACKGROUND_COLOR=#3b3228 XSECURELOCK_AUTH_FOREGROUND_COLOR=#AFD2E9 xsecurelock'
 
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
@@ -32,8 +32,6 @@ if grep arch /etc/os-release >/dev/null; then
     alias suspend='systemctl suspend'
     #alias misogi='sudo xbps-remove -oO' #(autoremoves junk)
 fi
-
-alias cpdt='date -I | xclip -sel c -in && echo -e "\033[90m[COPIED] \033[33m$(date -I)\033[0m"'
 
 #   ls command replacement
 alias {eza,ls}='eza -1 --group-directories-first'

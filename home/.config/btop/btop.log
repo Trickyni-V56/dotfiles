@@ -259,3 +259,21 @@ btop++ needs an interactive shell to run.
 2025/04/27 (10:08:47) | ===> btop++ v.1.4.0
 2025/04/27 (10:08:47) | ERROR: No tty detected!
 btop++ needs an interactive shell to run.
+
+2025/05/03 (09:58:33) | ===> btop++ v.1.4.0
+2025/05/03 (09:58:33) | WARNING: Failed to join _runner thread on exit!
+
+2025/05/03 (11:57:30) | ===> btop++ v.1.4.0
+2025/05/03 (11:57:30) | WARNING: Failed to join _runner thread on exit!
+
+2025/05/03 (11:57:33) | ===> btop++ v.1.4.0
+2025/05/03 (11:57:33) | WARNING: Failed to join _runner thread on exit!
+
+2025/05/03 (12:05:40) | ===> btop++ v.1.4.0
+2025/05/03 (12:05:40) | WARNING: Failed to join _runner thread on exit!
+
+2025/05/03 (12:51:50) | ===> btop++ v.1.4.0
+2025/05/03 (12:51:50) | WARNING: Failed to join _runner thread on exit!
+
+2025/05/03 (12:54:24) | ===> btop++ v.1.4.0
+2025/05/03 (12:54:24) | WARNING: Failed to join _runner thread on exit!
