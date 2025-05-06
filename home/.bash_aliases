@@ -2,7 +2,8 @@
 alias lockdown='sudo rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
 alias shut='sudo poweroff'
-alias open='xdg-open .'
+alias o='xdg-open'
+alias files="xdg-open ."
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias cat='bat'
@@ -55,7 +56,7 @@ alias whaleseesaw='sudo docker compose down && sudo docker compose up -d'
 if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
 #   Baseline
 alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
-alias hachisync='ssh -L 8385:localhost:8384 hachiko'
+
 
 #   yt-dlp
 alias ytdlp='yt-dlp'
@@ -94,3 +95,6 @@ timer(){
     clear && countdown $1 && cfonts "$2" -c candy -f tiny
 }
 
+#   hachiko
+alias hachisync='ssh -L 8385:localhost:8384 hachiko'
+alias hachiko-login='ssh root@192.168.0.3'
