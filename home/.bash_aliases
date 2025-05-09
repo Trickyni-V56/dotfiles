@@ -2,13 +2,14 @@
 alias lockdown='sudo rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
 alias shut='sudo poweroff'
-alias open='xdg-open'
+alias o='xdg-open'
+alias files="xdg-open ."
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias cat='bat'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || micro ~/.bash_aliases'
-
+alias lock='XSECURELOCK_AUTH_WARNING_COLOR=#E86045 XSECURELOCK_AUTH_BACKGROUND_COLOR=#3b3228 XSECURELOCK_AUTH_FOREGROUND_COLOR=#AFD2E9 xsecurelock'
 
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
@@ -38,13 +39,7 @@ alias {eza,ls}='eza -1 --group-directories-first'
 alias lt='eza -T'
 alias ll='eza -lao --no-time --no-permissions --no-user --group-directories-first'
 alias la='eza -1a --all --group-directories-first'
-alias mkv='eza -1 *.mkv '
 
-#   jmp (cd replacement)
-jmp(){ #  go to specified path and list its contents
-
-    z "$1" && pwd && eza
-}
 complete -F __zoxide_z_complete -o filenames -- jmp # uses the output of the 'cd' function as the autocomplete for 'jmp()'
 alias bk='cd .. && eza'
 alias cd='z'
@@ -63,31 +58,16 @@ alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgi
 
 if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
 #   Baseline
-alias linguini='setxkbmap us,il ,, grp:alt_shift_toggle && echo -e "LANGUAGE — \033[31mDEPLOYED\033[0m"'
 alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
-alias hachisync='ssh -L 8385:localhost:8384 hachiko'
+
 
 #   yt-dlp
-alias ytdlp='cd ~/Downloads && yt-dlp'
-alias ytmp3='cd ~/Downloads && yt-dlp -f ba --extract-audio --audio-format flac --audio-quality 0'
+alias ytdlp='yt-dlp'
+alias ytmp3='yt-dlp --config-location ~/.config/yt-dlp/mp3'
 
-#   mpv
-alias play='mpv'
-radio(){
-    mpv "$1" --no-video
-}
+
 #   git
 alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
-
-#   CLI aliases (if it runs something- put it here)
-alias trash='trash-cli-wrapper.sh'
-alias F5='echo "savescum :3" && sudo timeshift --create'
-alias sampler='sampler -c ~/.config/sampler/config.yml'
-alias untar='sudo tar -xvzf'
-
-#   launchcodes (specifically for launch wrapper-scripts)
-alias polybar='~/.config/polybar/polybar-launch.sh'
-alias wired='~/.config/wired/wired-launch.sh'
 
 #	misc
 alias matrix='cmatrix -abcsx -u 3'
@@ -98,9 +78,16 @@ alias todo='task add'
 alias now='task now'
 alias plate='task plate'
 
+#   connect to stuff
+alias mapscii='telnet mapscii.me'
+alias weather='curl wttr.in?0Q'
+alias forecast='curl wttr.in?FQ2n'
+alias moonphase='curl wttr.in/moon?QFT'
 
-
-#   command aliases (renames and setups go here!)
+#   other
+alias trash='trash-cli-wrapper.sh'
+alias untar='sudo tar -xvzf'
+alias [fukc,fcuk,fucj]='fuck'
 alias sundown='echo $(sunwait list set $(cat ~/.location) civil)":00"'
 alias dust='dust -riC'
 alias watch='viddy'
@@ -110,14 +97,6 @@ timer(){
     clear && countdown $1 && cfonts "$2" -c candy -f tiny
 }
 
-#   connect to stuff
-alias mapscii='telnet mapscii.me'
-alias weather='curl wttr.in?0Q'
-alias forecast='curl wttr.in?FQ2n'
-alias moonphase='curl wttr.in/moon?QFT'
-
-#   misc
-alias aaa='unimatrix -s 99 -c red -u=aAäåÄÄÀàα₳ⱯℵӐɅⱭあアÂâ -f'
-alias strawb='cat ~/celeste'
-alias [fukc,fcuk,fucj]='fuck'
-
+#   hachiko
+alias hachisync='ssh -L 8385:localhost:8384 hachiko'
+alias hachiko-login='ssh root@192.168.0.3'
