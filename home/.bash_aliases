@@ -3,6 +3,7 @@ alias lockdown='sudo rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
 alias shut='sudo poweroff'
 alias o='xdg-open'
+alias e='micro'
 alias files="xdg-open ."
 alias grep='grep --color=auto'
 alias rm='rm -i'
