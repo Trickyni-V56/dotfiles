@@ -1,0 +1,31 @@
+(defwidget bar []
+  (box :class "bar"
+    (time)
+  )
+)
+
+
+(defwidget time []
+)
+
+(defpoll time :interval "1s"
+  "date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry :x "0"
+                      :y "0"
+                      :width "100%"
+                      :height "34"
+                      :anchor "top center")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+  (bar)
+)
+
+
+
+
+
+

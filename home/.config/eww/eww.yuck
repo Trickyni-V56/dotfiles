@@ -1,0 +1,35 @@
+(defwidget bar []
+  (centerbox :orientation "h"
+    (sidestuff)
+    (blank1)
+    (blank2)))
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    time))
+(defwidget blank1 []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    time))
+(defwidget blank2 []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    time))
+
+
+
+
+
+
+
+(defpoll time :interval "10s"
+  "date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "90%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "4%")
+  (bar))
