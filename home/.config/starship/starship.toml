@@ -51,7 +51,7 @@ conflicted = '[!!](red)'
 
 [custom.glyphs]
 format="[$output](white)"
-command='python3 ~/.config/starship/glyphs_long.py'
+command='python3 ~/.config/starship/glyphs_short.py'
 shell = ["bash", "--noprofile", "--norc"]
 when=true
 
