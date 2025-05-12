@@ -19,7 +19,7 @@
                       :height "34"
                       :anchor "top center")
   :stacking "fg"
-  :exclusive false
+  :exclusive true
   :focusable false
   (status)
 )

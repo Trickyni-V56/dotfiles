@@ -7,6 +7,7 @@ alias bk='cd ..'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || micro ~/.bash_aliases'
 
+
 #   security
 alias lockdown='sudo rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
@@ -22,7 +23,7 @@ alias cd='z'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias untar='sudo tar -xvzf'
-
+# alias {lock,swaylock}='swaylock'
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
     alias invoke='sudo xbps-install'
@@ -32,7 +33,7 @@ if grep void /etc/os-release >/dev/null; then
 fi
 #   Arch linux
 if grep arch /etc/os-release >/dev/null; then
-    alias invoke='sudo pacman -S'
+    alias invoke='sudo pacman -Su'
     alias banish='sudo pacman -R'
     alias commune='sudo pacman -Syu'
 fi

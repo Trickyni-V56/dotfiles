@@ -62,7 +62,7 @@ input type:touchpad {
 input type:keyboard {
 	xkb_options "altgr:space"
 	xkb_options "caps:escape,grp:alt_shift_toggle"
-	xkb_layout us,jp,il
+	xkb_layout us
 
 }
 
@@ -226,31 +226,7 @@ bindsym $mod+r mode "resize"
     # Screenshot
     bindsym $mod+shift+s exec flameshot
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-	font "ProggyCleanSZNerdFontMono 16"
-	separator_symbol |
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
-    colors {
-        statusline #AFD2E9
-        background #3b3228
-        inactive_workspace #32323200 #32323200 #C1A387
-        #focused_background #E68D53
-        separator #C1A387
-        focused_workspace #C1A387 #E68D53 #3b3228
-        inactive_workspace #3b3228 #3b3228 #AFD2E9
-    }
-
-    clock {
-    	
-    }
-}
 
 include /etc/sway/config.d/*
+include ~/.config/sway/bar
