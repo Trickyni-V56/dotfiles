@@ -45,20 +45,8 @@ output eDP-1 scale 1.5
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-input type:touchpad {
-	natural_scroll enabled
-}
+
+
 input type:keyboard {
 	xkb_options "altgr:space"
 	xkb_options "caps:escape,grp:alt_shift_toggle"
@@ -230,3 +218,4 @@ bindsym $mod+r mode "resize"
 
 include /etc/sway/config.d/*
 include ~/.config/sway/bar
+include ~/.config/sway/touchpad

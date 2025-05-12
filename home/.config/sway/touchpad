@@ -1,0 +1,6 @@
+input type:touchpad {
+	natural_scroll enabled
+	dwt enabled
+	 tap enabled
+	middle_emulation enabled
+}

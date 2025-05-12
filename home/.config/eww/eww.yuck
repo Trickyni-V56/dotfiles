@@ -11,7 +11,7 @@
 
 (defpoll sun
     :interval "10s"
-'~/.shells/suntime.sh')
+"~/.shells/suntime.sh")
 
 
 (defwindow bar
