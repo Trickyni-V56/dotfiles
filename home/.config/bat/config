@@ -1,2 +1,2 @@
 --theme="ansi"
---map-syntax='*.yuck:lisp'
+--map-syntax='*.yuck:Lisp'
