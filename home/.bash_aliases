@@ -11,7 +11,8 @@ alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || micro ~/.bas
 #   security
 alias lockdown='sudo rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
-alias lock='XSECURELOCK_AUTH_WARNING_COLOR=#E86045 XSECURELOCK_AUTH_BACKGROUND_COLOR=#3b3228 XSECURELOCK_AUTH_FOREGROUND_COLOR=#AFD2E9 xsecurelock'
+alias lock='swaylock'
+#alias lock='XSECURELOCK_AUTH_WARNING_COLOR=#E86045 XSECURELOCK_AUTH_BACKGROUND_COLOR=#3b3228 XSECURELOCK_AUTH_FOREGROUND_COLOR=#AFD2E9 xsecurelock'
 
 #   renames
 alias dust='dust -riC'

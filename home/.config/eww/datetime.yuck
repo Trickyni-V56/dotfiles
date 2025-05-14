@@ -1,0 +1,15 @@
+(defpoll time :interval "2s" "date '+%H:%M'")
+(defpoll date :interval "2s" "date '+%b %d'")
+
+(defwidget datetime []
+  (box
+    :class "status"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :valign "center"
+    "${date}"
+    (separator)
+    "${time}"
+  )
+)

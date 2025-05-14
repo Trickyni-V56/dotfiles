@@ -1,0 +1,19 @@
+exec_always swaybg -c 3b3228
+output eDP-1 resolution 1440x2560
+output eDP-1 scale 1.5
+
+
+default_border pixel 2
+titlebar_border_thickness 0
+default_floating_border pixel 0
+hide_edge_borders none
+smart_borders on
+smart_gaps on
+client.focused #3b3228 #E68D53 #3b3228
+client.unfocused #3b3228 #C1A387 #3b3228
+client.urgent #3b3228 #E86045 #3b3228
+client.focused_inactive #3b3228 #C1A387 #3b3228
+hide_edge_borders none
+gaps inner 8
+gaps top -99
+gaps bottom -99

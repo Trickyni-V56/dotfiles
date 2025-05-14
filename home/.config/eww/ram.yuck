@@ -1,0 +1,14 @@
+(defwidget RAM []
+  (box
+    :class "status"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    (label :class "icon" :text "󰍛" :yalign 0.5)
+    (label
+        :text {EWW_RAM.used_mem_perc}
+        :limit-width 2
+        :show-truncated false)
+    "%"
+  )
+)

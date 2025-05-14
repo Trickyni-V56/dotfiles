@@ -1,0 +1,2 @@
+#exec_always eww close-all
+#exec_always eww open-many topbar bottombar

@@ -1,0 +1,7 @@
+(defwidget sunset-icon []
+  (label
+    :class "icon"
+    :orientation "h"
+    :text "󰖚 "
+  )
+)

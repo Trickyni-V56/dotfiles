@@ -1,0 +1,11 @@
+(defpoll moonphase :interval "100s" "curl -s wttr.in/Hod_Hasharon?format=%m")
+
+(defwidget moon []
+  (box
+    :class "moon"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    moonphase
+  )
+)

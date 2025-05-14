@@ -1,28 +1,109 @@
-(defwidget status []
-  (box :orientation "h"
-    (sidestuff)))
+(include "datetime.yuck")
+(include "sunclock.yuck")
+(include "battery.yuck")
+(include "separator.yuck")
+(include "ram.yuck")
+;(include "volume.yuck")
+(include "phones.yuck")
+(include "moon.yuck")
 
-(defwidget sidestuff []
-  (box :class "status" :orientation "h" :space-evenly false :halign "end" sun time))
-
-
-(defpoll time :interval "10s"
-  "date '+%b %d, %Y | %H:%M '")
-
-(defpoll sun
-    :interval "10s"
-"~/.shells/suntime.sh")
-
-
-(defwindow bar
+(defwindow topbar
   :monitor 0
-  :geometry (geometry :x "0"
-                      :y "0"
-                      :width "100%"
-                      :height "34"
-                      :anchor "top center")
+  :geometry (geometry
+    :x "0"
+    :y "0"
+    :width "100%"
+    :height "1%"
+    :anchor "top center")
   :stacking "fg"
   :exclusive true
   :focusable false
-  (status)
+  (topstatus)
 )
+
+(defwindow bottombar
+  :monitor 0
+  :geometry (geometry
+    :x "0"
+    :y "0"
+    :width "100%"
+    :height "1%"
+    :anchor "bottom center")
+  :stacking "fg"
+  :exclusive true
+  :focusable false
+  (bottom-status)
+)
+
+(defwidget topstatus []
+  (box
+    :class "bar"
+    :valign "center"
+      ;(workspaces)
+       (top-right)
+  )
+)
+
+(defwidget bottom-status []
+  (box
+    :class "bar"
+    ;:valign "center"
+    (bottom-right)
+
+  )
+)
+
+(defwidget top-right []
+  (box
+    :class "status"
+    :space-evenly false
+    :halign "end"
+    :valign "center"
+    (separator)
+    (RAM)
+    (separator)
+    ;(vol)
+    ;(separator)
+    (sunclock)
+    (separator)
+    (moon)
+    (separator)
+    (datetime)
+  )
+)
+
+(defwidget bottom-right []
+  (box
+    :class "status"
+    :space-evenly false
+    :halign "end"
+    :valign "center"
+    (label :text "${phonesconnected}")
+    (separator)
+    (phones
+      :ten "󰤾"
+      :twenty "󰤿"
+      :thirty "󰥀"
+      :fourty "󰥁"
+      :fifty "󰥂"
+      :sixty "󰥃"
+      :seventy "󰥄"
+      :eighty "󰥅"
+      :ninety "󰥆"
+      :hundred "󰥈")
+    (separator)
+    (battery)
+  )
+)
+
+
+
+
+
+
+
+
+
+
+
+

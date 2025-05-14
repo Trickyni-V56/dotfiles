@@ -1,0 +1,18 @@
+(defpoll sunset :interval "10s" "~/.shells/suntime.sh")
+
+(defwidget sunclock []
+  (box
+    :class "status"
+    :space-evenly false
+    :orientation "h"
+    (label
+      :text '󰖚'
+      :class "icon"
+      :yalign 0.5
+      :halign "end"
+      :space-evenly false
+      )
+    "${sunset}"
+  )
+)
+;;TODO: change icon after sundown
