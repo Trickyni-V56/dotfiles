@@ -1,5 +1,5 @@
 exec_always swaybg -c 3b3228
-output eDP-1 resolution 1440x2560
+output eDP-1 resolution 2560x1440
 output eDP-1 scale 1.5
 
 
