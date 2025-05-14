@@ -303,3 +303,6 @@ btop++ needs an interactive shell to run.
 2025/05/03 (12:54:24) | ===> btop++ v.1.4.0
 2025/05/03 (12:54:24) | WARNING: Failed to join _runner thread on exit!
 >>>>>>> refs/remotes/origin/master
+
+2025/05/13 (12:02:05) | ===> btop++ v.1.4.0
+2025/05/13 (12:02:05) | WARNING: Failed to join _runner thread on exit!

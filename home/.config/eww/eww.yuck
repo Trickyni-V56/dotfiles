@@ -7,7 +7,23 @@
 (include "phones.yuck")
 (include "moon.yuck")
 
+<<<<<<< Updated upstream
 (defwindow topbar
+=======
+(defwidget sidestuff []
+  (box :class "status" :orientation "h" :space-evenly false :halign "end"
+    sun
+    time))
+
+
+(defpoll time :interval "10s"
+  "date '+%b %d, %Y | %H:%M '")
+
+(defpoll sun :interval "10s"
+  "scripts/suntime.sh")
+
+(defwindow bar
+>>>>>>> Stashed changes
   :monitor 0
   :geometry (geometry
     :x "0"
