@@ -19,8 +19,8 @@ tooltip {
     font-size: 18px;
     border-radius: 0px;
     border-width: 2px;
-    border-color: #C1A387 #C1A387 #3b3228;
     margin: -3px 3px -3px;
+    border-color: #C1A387 #C1A387 #3b3228;
 }
 tooltip label{
     font-size: 24px;
@@ -30,7 +30,7 @@ tooltip label{
 .icon {
     color: #E68D53;
     font-family: "Symbols Nerd Font Mono";
-    // font-size: 34px;
+    // font-family: "Phosphor-Light";
     font-size: 18px;
     padding-right: 6px;
     // margin-top: -99px;
@@ -38,18 +38,31 @@ tooltip label{
 }
 .moon {
     color: #f8e2a0;
-    font-size: 16px;
+    font-size: 20px;
     margin-top: -99px;
     margin-bottom: -99px;
-    font-family: "ProggyCleanSZ Nerd Font Mono";
-    // font-family: "Symbols Nerd Font Mono";
+    font-family: "Symbols Nerd Font Mono";
 
 }
 .icon-display {
     color: #AFD2E9;
     font-family: "Symbols Nerd Font Mono";
     font-size: 18px;
-    padding-right: 6px;
     margin-top: -99px;
     margin-bottom: -99px;
+}
+.phosphor-fill {
+    color: #AFD2E9;
+    font-family: "Phosphor-Fill";
+    font-size: 18px;
+    margin-top: -99px;
+    margin-bottom: -99px;
+}
+.phosphor {
+    color: #E68D53;
+    font-family: "Phosphor-Fill";
+    font-size: 18px;
+    padding-right: 6px;
+    // margin-top: -99px;
+    // margin-bottom: -99px;
 }

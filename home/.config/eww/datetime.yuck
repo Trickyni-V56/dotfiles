@@ -8,8 +8,9 @@
     :space-evenly false
     :halign "center"
     :valign "center"
+    (---)
     "${date}"
-    (separator)
+    (---)
     "${time}"
   )
 )

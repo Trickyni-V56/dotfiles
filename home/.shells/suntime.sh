@@ -12,7 +12,6 @@ if [ "$(sunwait poll $coordinates)" == DAY ]; then
     output=$(qalc -t $sun - $now to time)
     echo "+"$output
 else
-    echo "-"
     exit 1
 fi
 
