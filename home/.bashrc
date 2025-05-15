@@ -52,6 +52,7 @@ if grep void /etc/os-release >/dev/null; then
 fi
 export PATH="$PATH:~/.shells"
 export PYTHONPATH="${PYTHONPATH}:~/.shells"
+export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR='/usr/bin/micro'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -99,3 +100,4 @@ export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export XDG_FILE_MANAGER=nemo
+

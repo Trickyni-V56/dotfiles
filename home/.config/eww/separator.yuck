@@ -1,4 +1,4 @@
-(defwidget separator []
+(defwidget --- []
   (label
     :class "separator"
     :text "|"

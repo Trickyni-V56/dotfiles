@@ -1,19 +1,15 @@
-
-;(defpoll batlvl
-;    :interval "10s"
-;    "acpi | rg --only-matching '\d+%'"
-;)
+(defpoll laptop_batlvl :interval "10s" :initial 100 "bash ~/.config/eww/scripts/laptop-battery.sh")
 
 (defwidget battery []
-  (box
-    :class "status"
-    :orientation "h"
-    :space-evenly false
-    :halign "end"
-    (label :class "icon" :text "" :yalign 0.5)
-    (label :text {EWW_BATTERY.BAT0.capacity})
-    "%"
-  )
+    (box
+      :visible {laptop_batlvl != 404}
+      :class "status"
+      :orientation "h"
+      :space-evenly false
+      :halign "end"
+      (---)
+      (label :class "icon" :text "")
+      (label :class "status" :text laptop_batlvl)
+    )
 )
-
 

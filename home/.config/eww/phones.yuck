@@ -1,29 +1,25 @@
-;; (defpoll phonesbat :interval "10s" "bluetoothctl info AC:80:0A:2E:C9:07 | awk -F'[(|%)]' '/Battery/ {print $2}'")
-(defpoll phonesbat :interval "10s" "bluetoothctl info AC:80:0A:2E:C9:07 | grep Battery | grep -oP '\(\K[0-9]+')")
-
-
-;; (defpoll phonesconnected :interval "10s" "[ "$((defpoll phonesconnected :interval "10s" "[ \"$(bluetoothctl info AC:80:0A:2E:C9:07 | grep Connected | cut -f 2 --delimiter=' ' )\" == \"yes\" ] && echo \"True\" || echo \"False\"")"")
-(defpoll phonesconnected :interval "10s" "scripts/phonesconnected.sh")
-
+(defpoll phones_batlvl :initial 404 :interval "3s" 'bash jotm-battery.sh')
 
 (defwidget phones [ten twenty thirty fourty fifty sixty seventy eighty ninety hundred]
   (box
+    :visible {phones_batlvl != 404}
     :class "status"
     :orientation "h"
     :space-evenly false
     :halign "end"
-    :tooltip "${phonesbat}%"
+    :tooltip "${phones_batlvl}%"
+    (---)
     (label :class "icon" :text "")
     (label :class "icon-display" :text {
-    phonesbat < 11 ? ten :
-    phonesbat < 21 ? twenty :
-    phonesbat < 31 ? thirty :
-    phonesbat < 41 ? fourty :
-    phonesbat < 51 ? fifty :
-    phonesbat < 61 ? sixty :
-    phonesbat < 71 ? seventy :
-    phonesbat < 81 ? eighty :
-    phonesbat < 91 ? ninety : hundred})
+    phones_batlvl < 11 ? ten :
+    phones_batlvl < 21 ? twenty :
+    phones_batlvl < 31 ? thirty :
+    phones_batlvl < 41 ? fourty :
+    phones_batlvl < 51 ? fifty :
+    phones_batlvl < 61 ? sixty :
+    phones_batlvl < 71 ? seventy :
+    phones_batlvl < 81 ? eighty :
+    phones_batlvl < 91 ? ninety : hundred})
   )
 )
 ;;TODO:hide when phones aren't connected

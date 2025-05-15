@@ -24,7 +24,7 @@ alias cd='z'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias untar='sudo tar -xvzf'
-# alias {lock,swaylock}='swaylock'
+
 #   void-linux
 if grep void /etc/os-release >/dev/null; then
     alias invoke='sudo xbps-install'
@@ -42,7 +42,7 @@ fi
 #   ls
 alias {eza,ls}='eza -1 --group-directories-first'
 alias lt='eza -T'
-alias ll='eza -lao --no-time --no-permissions --no-user --group-directories-first'
+alias ll='eza -laohb --no-time --no-permissions --group-directories-first'
 alias la='eza -1a --all --group-directories-first'
 
 #   docker

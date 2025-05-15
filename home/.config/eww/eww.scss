@@ -1,12 +1,11 @@
 .bar {
     background-color: #3b3228;
     padding: 2px 12px;
-    //background-size: 24px
 }
 .status {
     background-color: #3b3228;
     color: #AFD2E9;
-    font-size: 22px;
+    font-size: 32px;
     font-family: "ProggyCleanSZ Nerd Font Mono";
 }
 .separator {
@@ -15,11 +14,9 @@
     font-size: 26px;
     font-family: "ProggyCleanSZ Nerd Font Mono";
 }
-
-/** tooltip!! **/
-tooltip{
+tooltip {
     background-color: #3b3228;
-    font-size: 18;
+    font-size: 18px;
     border-radius: 0px;
     border-width: 2px;
     border-color: #C1A387 #C1A387 #3b3228;
@@ -32,22 +29,27 @@ tooltip label{
 }
 .icon {
     color: #E68D53;
-    font-size: 34px;
-    margin-top: -99px;
-    margin-bottom: -99px;
+    font-family: "Symbols Nerd Font Mono";
+    // font-size: 34px;
+    font-size: 18px;
     padding-right: 6px;
-    font-family: "ProggyCleanSZ Nerd Font Mono";
+    // margin-top: -99px;
+    // margin-bottom: -99px;
 }
 .moon {
+    color: #f8e2a0;
     font-size: 16px;
     margin-top: -99px;
     margin-bottom: -99px;
+    font-family: "ProggyCleanSZ Nerd Font Mono";
+    // font-family: "Symbols Nerd Font Mono";
+
 }
 .icon-display {
     color: #AFD2E9;
-    font-size: 34px;
+    font-family: "Symbols Nerd Font Mono";
+    font-size: 18px;
+    padding-right: 6px;
     margin-top: -99px;
     margin-bottom: -99px;
-    padding-right: 6px;
-    font-family: "ProggyCleanSZ Nerd Font Mono";
 }
