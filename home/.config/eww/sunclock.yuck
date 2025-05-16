@@ -8,13 +8,13 @@
     :tooltip "time till sunset"
     :orientation "h"
     (---)
-    (label
-      :text "󰖚"
-      :class "icon"
-    )
-    (label
-      :text sunset
-      :class "status"
+    (label :text "󰖚" :class "icon")
+    (image :path "icons/sun-horizon-fill.svg"
+           :image-width 18
+           :fill-svg "#E68D53")
+    (label :text "󰖚" :class "phosphor-icon")
+
+    (label :text sunset :class "status"
     )
   )
 )

@@ -1,5 +1,6 @@
-(include "time.yuck")
+;; (include "time.yuck")
 (include "date.yuck")
+(include "time.yuck")
 (include "sunclock.yuck")
 (include "battery.yuck")
 (include "separator.yuck")

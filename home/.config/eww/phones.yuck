@@ -23,8 +23,8 @@
         phones_batlvl < 81 ? "󰥅" :
         phones_batlvl < 91 ? "󰥆" : "󰥈"}
       :style {
-        phones_batlvl < 20 ? "color: #E86045;" :
-        phones_batlvl < 50 ? "color: #f8e2a0;" : "color: #ace1af;"}
+        phones_batlvl < 21 ? "color: #E86045;" :
+        phones_batlvl < 51 ? "color: #f8e2a0;" : "color: #ace1af;"}
     )
   )
 )
