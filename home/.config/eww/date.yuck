@@ -1,0 +1,48 @@
+(defpoll day :interval "10s" "date '+%d'")
+(defpoll month :interval "100s" "date '+%m'")
+(defpoll month-name :interval "100s" "date '+%b'")
+(defpoll weekday :interval "10s" "date '+%a'")
+
+(defwidget date []
+  (box
+    :class "status"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :valign "center"
+    (---)
+    (label :text "${month-name} ${day}")
+  )
+)
+
+(defwidget jp_date []
+  (box
+    :class "status"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :valign "center"
+    (---)
+    (label :text month)
+    (label :text "月" :class "status_jp")
+    (label :text day)
+    (label :text "日" :class "status_jp")
+  )
+)
+
+(defwidget en_date []
+  (box
+    :class "status"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :valign "center"
+    (---)
+    (label :text "${weekday}, ${month-name} ${day}")
+    (label :text {
+      day == 3 || day == 13 ||  day ==23 ? "rd" :
+      day == 2 || day == 22 ? "nd" :
+      day == 1 || day == 21 || day == 31 ? "st" : "th"}
+    )
+  )
+)

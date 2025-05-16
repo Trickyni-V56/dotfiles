@@ -3,6 +3,7 @@
     :class "status"
     :orientation "h"
     :space-evenly false
+    :tooltip "ram"
     :halign "end"
     (---)
     (label :class "icon" :text "󰍛")

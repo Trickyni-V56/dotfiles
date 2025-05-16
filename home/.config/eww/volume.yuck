@@ -6,6 +6,7 @@
     :orientation "h"
     :space-evenly false
     :halign "end"
+    (---)
     (label :class "icon" :text "")
     (label
         :text "${volume}")

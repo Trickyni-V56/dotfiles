@@ -1,9 +1,10 @@
-(include "datetime.yuck")
+(include "time.yuck")
+(include "date.yuck")
 (include "sunclock.yuck")
 (include "battery.yuck")
 (include "separator.yuck")
 (include "ram.yuck")
-;(include "volume.yuck")
+(include "volume.yuck")
 (include "phones.yuck")
 (include "moon.yuck")
 
@@ -38,18 +39,17 @@
 (defwidget topstatus []
   (box
     :class "bar"
-    :valign "center"
-      ;(workspaces)
-       (top-right)
+    (top-left)
+    (top-center)
+    (top-right)
+
   )
 )
 
 (defwidget bottom-status []
   (box
     :class "bar"
-    ;:valign "center"
     (bottom-right)
-
   )
 )
 
@@ -58,14 +58,31 @@
     :class "status"
     :space-evenly false
     :halign "end"
-    :valign "center"
     (phones)
     (RAM)
-    ;(vol)
-    ;(---)
+    ;;(vol)
     (sunclock)
     (moon)
-    (datetime)
+    (date)
+    (time)
+  )
+)
+
+(defwidget top-left []
+  (box
+    :class "status"
+    :space-evenly false
+    :halign "start"
+      (label :text "[[[workspaces WIP]]]")
+  )
+)
+
+(defwidget top-center []
+  (box
+    :class "status"
+    :space-evenly false
+    :halign "center"
+      (label :text "[[[???]]]")
   )
 )
 
@@ -79,7 +96,10 @@
     (battery)
   )
 )
-
+;; TODO add phosphor icons
+;; TODO workspaces
+;; TODO Taskwarrior
+;; TODO Volume
 
 
 

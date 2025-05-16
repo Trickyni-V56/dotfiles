@@ -1,17 +1,33 @@
+    // text-shadow: 4px 4px 1px red, -4px -4px 1px blue, -2px -2px 1px teal, 2px 2px 1px orange; chromatic abbaration
+    // text-shadow: 3px 3px black, 2px 2px #444444; 3d shadow
+    // box-shadow: inset 3px 3px black, 2px 2px #444444;
+// TODO:consider using 3D effect on selected workspaces
+
 .bar {
     background-color: #3b3228;
     padding: 2px 12px;
+    color: #AFD2E9;
+    font-family: "ProggyCleanSZ Nerd Font Mono";
+    font-size: 32px;
 }
 .status {
     background-color: #3b3228;
     color: #AFD2E9;
     font-size: 32px;
     font-family: "ProggyCleanSZ Nerd Font Mono";
+    // text-shadow:3px 3px black, 2px 2px #444444;
 }
+.status_jp {
+    background-color: #3b3228;
+    color: #AFD2E9;
+    font-size: 24px;
+    font-family: "LanaPixel";
+}
+
 .separator {
     color: #C1A387;
     margin: -99px 8px;
-    font-size: 26px;
+    font-size: 32px;
     font-family: "ProggyCleanSZ Nerd Font Mono";
 }
 tooltip {
@@ -21,6 +37,8 @@ tooltip {
     border-width: 2px;
     margin: -3px 3px -3px;
     border-color: #C1A387 #C1A387 #3b3228;
+    //     TODO: differentiate up/down tooltip.
+    //     TODO: make tooltip match widget width
 }
 tooltip label{
     font-size: 24px;
@@ -30,19 +48,8 @@ tooltip label{
 .icon {
     color: #E68D53;
     font-family: "Symbols Nerd Font Mono";
-    // font-family: "Phosphor-Light";
     font-size: 18px;
     padding-right: 6px;
-    // margin-top: -99px;
-    // margin-bottom: -99px;
-}
-.moon {
-    color: #f8e2a0;
-    font-size: 20px;
-    margin-top: -99px;
-    margin-bottom: -99px;
-    font-family: "Symbols Nerd Font Mono";
-
 }
 .icon-display {
     color: #AFD2E9;
@@ -50,19 +57,5 @@ tooltip label{
     font-size: 18px;
     margin-top: -99px;
     margin-bottom: -99px;
-}
-.phosphor-fill {
-    color: #AFD2E9;
-    font-family: "Phosphor-Fill";
-    font-size: 18px;
-    margin-top: -99px;
-    margin-bottom: -99px;
-}
-.phosphor {
-    color: #E68D53;
-    font-family: "Phosphor-Fill";
-    font-size: 18px;
-    padding-right: 6px;
-    // margin-top: -99px;
-    // margin-bottom: -99px;
+
 }

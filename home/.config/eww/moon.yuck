@@ -4,10 +4,12 @@
   (box  :class "status"
         :orientation "h"
         :space-evenly false
+        :tooltip "moonphase"
         :halign "end"
     (---)
     (label  :text moonphase
-            :class "moon"
+            :class "icon-display"
+            :style "color: #f8e2a0; font-size: 20px;"
     )
   )
 )

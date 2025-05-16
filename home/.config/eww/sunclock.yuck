@@ -4,6 +4,8 @@
   (box
     :visible {sunset != "night"}
     :class "status"
+    :space-evenly false
+    :tooltip "time till sunset"
     :orientation "h"
     (---)
     (label
