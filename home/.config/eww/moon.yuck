@@ -9,7 +9,6 @@
     (---)
     (label  :text moonphase
             :class "moon"
-            :style "color: #f8e2a0; font-size: 20px;"
     )
   )
 )

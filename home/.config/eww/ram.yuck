@@ -1,3 +1,5 @@
+(defpoll _ram :interval "1s" "bash scripts/ram.sh")
+
 (defwidget RAM []
   (box
     :class "status"
@@ -8,9 +10,7 @@
     (---)
     (label :class "icon" :text "󰍛")
     (label
-        :text {EWW_RAM.used_mem_perc}
-        :limit-width 2
-        :show-truncated false)
-    "%"
+        :text "${_ram}%"
+    )
   )
 )

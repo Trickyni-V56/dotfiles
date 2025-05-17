@@ -1,0 +1,15 @@
+input type:touchpad {
+	natural_scroll enabled
+	dwt disabled
+	tap enabled
+	#middle_emulation enabled
+}
+
+input type:pointer {
+    accel_profile flat
+    pointer_accel 0.1 # set mouse sensitivity (between -1 and 1)
+}
+
+seat * hide_cursor when-typing disable
+focus_follows_mouse no
+

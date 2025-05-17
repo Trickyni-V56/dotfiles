@@ -1,4 +1,5 @@
-(defpoll time :interval "2s" "date '+%H:%M'")
+(defpoll timevar :interval "2s" "date '+%H:%M'")
+
 (defwidget time []
   (box
     :class "status"
@@ -6,6 +7,6 @@
     :space-evenly false
     :halign "center"
     (---)
-    "${time}"
+    timevar
   )
 )

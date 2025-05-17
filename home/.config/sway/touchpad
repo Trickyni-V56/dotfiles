@@ -1,7 +1,0 @@
-input type:touchpad {
-	natural_scroll enabled
-	dwt disabled
-	tap enabled
-	#middle_emulation enabled
-}
-focus_follows_mouse no
