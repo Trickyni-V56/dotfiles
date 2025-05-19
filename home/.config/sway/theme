@@ -1,9 +1,9 @@
-output * bg #3b3228 solid_color
+
 output eDP-1 resolution 2560x1440
 output eDP-1 scale 1.5
 output DP-1 resolution 2560x1440@239.970Hz
 output DP-1 scale 1.5
-
+output * bg #3b3228 solid_color
 
 default_border pixel 2
 titlebar_border_thickness 0

@@ -1,7 +1,5 @@
-;; (defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
+(defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
 
-
-(defpoll laptop_batlvl :interval "10s" :initial 404 "echo 100")
 
 (defwidget battery []
     (box  :visible {laptop_batlvl != 404}

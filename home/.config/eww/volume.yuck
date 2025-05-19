@@ -1,4 +1,4 @@
-(defpoll volume :interval "1s" "qalc -t $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2) to percent")
+(defpoll volume :interval "100ms" "qalc -t $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2) to percent")
 
 (defwidget vol []
   (box
@@ -12,3 +12,6 @@
         :text "${volume}")
   )
 )
+
+;; TODO: make variable only poll on que
+;; TODO: change icons

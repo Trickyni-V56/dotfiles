@@ -1,0 +1,64 @@
+(defpoll wsf :interval "50ms" :initial "1" "scripts/workspace-focus.sh")
+(defpoll wse :interval "50ms" :initial "1" "scripts/workspace-exist.sh")
+(defvar ws3 false)
+(defwidget workspaces []
+  (box
+    :space-evenly false
+    :orientation "h"
+    (revealer :transition "slideright" :reveal {matches(wse, "1")} :duration "100ms"
+      (label :text "1" :class {wsf == 1 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "2")} :duration "100ms"
+      (label :text "2" :class {wsf == 2 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "3")} :duration "100ms"
+      (label :text "3" :class {wsf == 3 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "4")} :duration "100ms"
+      (label :text "4" :class  {wsf == 4 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "5")} :duration "100ms"
+      (label :text "5" :class  {wsf == 5 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "6")} :duration "100ms"
+      (label :text "6" :class  {wsf == 6 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "7")} :duration "100ms"
+      (label :text "7" :class  {wsf == 7 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "8")} :duration "100ms"
+      (label :text "8" :class  {wsf == 8 ? "focused ws-text" : "workspace ws-text"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "9")} :duration "100ms"
+      (label :text "󰗣 " :class {wsf == 9 ? "focused ws-icon" : "workspace ws-icon"})
+    )
+
+    (revealer :transition "slideright" :reveal {matches(wse, "0")} :duration "100ms"
+     (label :text " " :class {wsf == 0 ? "focused ws-icon" : "workspace ws-icon"})
+    )
+
+  )
+)
+
+
+
+;;"","󰺕","","󱥔","","󰀘","","🜨","🜔","🜕","🜖","🜗","𖢨","𖣐","𖣠","𖢵","𖢨","𖤪","𖤞","𖣨","𖣵","𖤊","𖤪","𖥚","𖥞","𖥕","𐀤","𐃏"
+;;𖤗 𖦙 𖦚𖦹𖥥𖢨
+
+;;:style "font-family: Symbols Nerd Font Mono; font-size: 12;")
+
+;; TODO: remove CSS class repetition (learn to multiclass)
+;; TODO: remove empties (revealer)
+;; TODO: positional arguments
+;; TODO: one variable/optimize/only on update
+;; TODO: jq?
+;; TODO: urgent marker
+;; TODO: onclick

@@ -1,0 +1,16 @@
+.progbar > trough {
+    background-color: #3b3228;
+    min-height: 2px;
+    border-radius: 100px;
+    border: 1px solid #AFD2E9;
+    min-width: 40px;
+}
+.progbar > trough > progress {
+    background-color: #AFD2E9;
+    min-height: 2px;
+    border-radius: 0px;
+    border: 0px;
+}
+.progbar.low > trough > progress {
+    background-color: #E86045;
+}

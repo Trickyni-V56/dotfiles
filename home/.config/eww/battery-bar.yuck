@@ -1,0 +1,21 @@
+(defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
+
+
+(defwidget battery []
+  (box
+ :visible {laptop_batlvl != 404}
+    :class "status"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    :tooltip "${laptop_batlvl}%"
+    (progress
+      :class "progbar"
+      :flipped true
+      :value laptop_batlvl
+      :class {
+        laptop_batlvl < 21 ? "progbar low" : "progbar"}
+      )
+    )
+)
+;;TODO: add charging iconset

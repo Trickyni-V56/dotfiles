@@ -1,4 +1,7 @@
 #!/bin/bash
+
+alias obsidian='obsidian --ozone-platform=wayland'
+
 #   core
 alias shut='sudo poweroff'
 alias o='xdg-open'

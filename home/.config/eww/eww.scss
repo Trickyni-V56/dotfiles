@@ -2,10 +2,11 @@
     // text-shadow: 3px 3px black, 2px 2px #444444; 3d shadow
     // box-shadow: inset 3px 3px black, 2px 2px #444444;
 // TODO:consider using 3D effect on selected workspaces
-
+@import "progressbar.scss"
+@import "workspaces.scss"
 .bar {
     background-color: #3b3228;
-    padding: 2px 16px;
+    padding: 2px 16px 1px;
     color: #AFD2E9;
     font-family: "ProggyCleanSZ Nerd Font Mono";
     font-size: 16px;
@@ -17,13 +18,6 @@
     font-family: "ProggyCleanSZ Nerd Font Mono";
     // text-shadow:3px 3px black, 2px 2px #444444;
 }
-// .status_jp {
-//     background-color: #3b3228;
-//     color: #AFD2E9;
-//     font-size: 16px;
-//     font-family: "LanaPixel";
-// }
-
 .separator {
     color: #C1A387;
     margin: -99px 8px;
@@ -49,12 +43,21 @@ tooltip label{
     color: #E68D53;
     font-family: "Symbols Nerd Font Mono";
     font-size: 16px;
+    padding: 0px;
     padding-right: 12px;
+}
+.indicator {
+    color: #3b3228;
+    background: #E86045;
+    font-family: "Symbols Nerd Font Mono";
+    font-size: 16px;
+    padding: 2px 8px 2px;
 }
 .icon-display {
     color: #AFD2E9;
     font-family: "Symbols Nerd Font Mono";
     font-size: 16px;
+    padding-right: 8px;
     // margin-top: -99px;
     // margin-bottom: -99px;
 }

@@ -1,17 +1,15 @@
 (defpoll sunset :interval "10s" "~/.shells/suntime.sh || echo night")
 
 (defwidget sunclock []
-  (box
-    :visible {sunset != "night"}
-    :class "status"
-    :space-evenly false
-    :tooltip "time till sunset"
-    :orientation "h"
-    (---)
-    (label :text "󰖚" :class "icon")
-    ;;(label :text "sun-horizon" :class "phosphor-icon")
-
-    (label :text sunset :class "status"
+  (revealer :transition "slideleft" :reveal {sunset != "night"}
+    (box
+      :class "status"
+      :space-evenly false
+      :orientation "h"
+      :tooltip "time till sunset"
+      (---)
+      (label :text "󰖚" :class "icon")
+      (label :text sunset :class "status")
     )
   )
 )
