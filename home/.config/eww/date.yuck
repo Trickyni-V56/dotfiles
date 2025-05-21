@@ -6,22 +6,16 @@
 (defwidget date []
   (box
     :class "status"
-    :orientation "h"
     :space-evenly false
-    :halign "center"
-    :valign "center"
     (---)
-    (label :text "${month-name} ${day}")
+    (label :text "${month-name} ${day}" :truncate false)
   )
 )
 
 (defwidget jp_date []
   (box
     :class "status"
-    :orientation "h"
     :space-evenly false
-    :halign "center"
-    :valign "center"
     (---)
     (label :text month)
     (label :text "月" :class "status_jp")
@@ -33,10 +27,7 @@
 (defwidget en_date []
   (box
     :class "status"
-    :orientation "h"
     :space-evenly false
-    :halign "center"
-    :valign "center"
     (---)
     (label :text "${weekday}, ${month-name} ${day}")
     (label :text {

@@ -1,21 +1,25 @@
 (defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
-
+(defpoll laptop_charging :interval "2s" :initial false "bash ~/.config/eww/scripts/laptop-charging.sh")
 
 (defwidget battery []
   (box
- :visible {laptop_batlvl != 404}
-    :class "status"
-    :orientation "h"
+    :visible {laptop_batlvl != 404}
     :space-evenly false
-    :halign "end"
     :tooltip "${laptop_batlvl}%"
+    (revealer :transition "slideleft" :duration "100ms" :reveal laptop_charging
+      (progress :class "charge-indicator" :value 0))
     (progress
+      :valign "center"
       :class "progbar"
       :flipped true
       :value laptop_batlvl
       :class {
+        laptop_batlvl == 100 ? "progbar full" :
         laptop_batlvl < 21 ? "progbar low" : "progbar"}
       )
     )
 )
-;;TODO: add charging iconset
+
+;;TODO: condense scripts to 1 script?
+
+

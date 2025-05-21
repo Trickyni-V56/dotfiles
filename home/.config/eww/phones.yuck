@@ -1,12 +1,10 @@
-(defpoll phones_batlvl :initial 404 :interval "3s" 'bash ~/.config/eww/scripts/jotm-battery.sh')
+(defpoll phones_batlvl :initial 404 :interval "10s" 'bash ~/.config/eww/scripts/jotm-battery.sh')
 
 (defwidget phones []
   (revealer :transition "slideleft" :reveal {phones_batlvl != 404}
     (box
       :class "status"
-      :orientation "h"
       :space-evenly false
-      :halign "end"
       :tooltip "${phones_batlvl}%"
       (---)
       (label :class "icon" :text "")

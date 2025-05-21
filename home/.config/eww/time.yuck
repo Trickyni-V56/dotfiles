@@ -1,12 +1,8 @@
 (defpoll timevar :interval "2s" "date '+%H:%M'")
 
 (defwidget time []
-  (box
-    :class "status"
-    :orientation "h"
-    :space-evenly false
-    :halign "center"
+  (box :space-evenly false
     (---)
-    timevar
+    (label :text timevar :class "status")
   )
 )

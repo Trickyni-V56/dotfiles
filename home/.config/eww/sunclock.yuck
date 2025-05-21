@@ -5,7 +5,6 @@
     (box
       :class "status"
       :space-evenly false
-      :orientation "h"
       :tooltip "time till sunset"
       (---)
       (label :text "󰖚" :class "icon")

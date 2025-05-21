@@ -1,14 +1,13 @@
-(defpoll moonphase :interval "10s" "bash ~/.config/eww/scripts/moon.sh")
+(defpoll moonphase :interval "500s" "bash ~/.config/eww/scripts/moon.sh")
 
 (defwidget moon []
-  (box  :class "status"
-        :orientation "h"
+  (box  :orientation "h"
         :space-evenly false
         :tooltip "moonphase"
         :halign "end"
     (---)
     (label  :text moonphase
-            :class "moon"
-    )
+            :class "moon")
   )
 )
+

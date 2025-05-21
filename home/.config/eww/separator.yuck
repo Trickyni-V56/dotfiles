@@ -1,6 +1,3 @@
 (defwidget --- []
-  (label
-    :class "separator"
-    :text "|"
-  )
+  (label :class "separator" :text "|")
 )
