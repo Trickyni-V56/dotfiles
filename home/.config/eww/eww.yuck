@@ -1,13 +1,14 @@
-(include "time.yuck")
-(include "date.yuck")
-(include "sunclock.yuck")
-(include "separator.yuck")
-(include "ram.yuck")
-(include "volume.yuck")
-(include "phones.yuck")
-(include "moon.yuck")
 (include "battery-bar.yuck")
+(include "date.yuck")
+(include "moon.yuck")
+(include "phones.yuck")
+(include "time.yuck")
+(include "ram.yuck")
 (include "resize.yuck")
+(include "separator.yuck")
+(include "sunclock.yuck")
+(include "taskwarrior.yuck")
+(include "volume.yuck")
 (include "workspaces.yuck")
 
 (defwindow topbar
@@ -62,6 +63,7 @@
     :space-evenly false
     :halign "end"
     (phones)
+    (taskwarrior)
     (RAM)
     (vol)
     (sunclock)

@@ -158,7 +158,7 @@ bindsym $mod+r mode "resize" ; exec eww update _resize=true
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
     # Screenshot
-    bindsym $mod+shift+s exec flameshot
+    bindsym $mod+shift+s exec slurp | grim -g - - | wl-copy
 
 
 
