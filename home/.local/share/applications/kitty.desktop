@@ -7,5 +7,6 @@ Comment=Fast, feature-rich, GPU based terminal
 TryExec=kitty
 StartupNotify=true
 Exec=kitty
-Icon=whiskers_256x256
+Icon=terminal-pixel-desert
 Categories=System;TerminalEmulator;
+NoDisplay=true

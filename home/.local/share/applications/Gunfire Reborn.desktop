@@ -2,7 +2,7 @@
 Name=Gunfire Reborn
 Comment=Play this game on Steam
 Exec=steam steam://rungameid/1217060
-Icon=steam_icon_1217060
+Icon=gunfire-reborn-icon
 Terminal=false
 Type=Application
 Categories=Game;

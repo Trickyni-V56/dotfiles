@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Obsidian
-Exec=/usr/bin/obsidian
+Exec=/usr/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
 Terminal=false
 Type=Application
-Icon=obsidian
+Icon=obsidian-desert
 StartupWMClass=obsidian
 Comment=Obsidian
 MimeType=x-scheme-handler/obsidian;

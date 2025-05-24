@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Exec=krename -qwindowtitle "%c" %U
-Icon=krename
+Icon=rename-pixel-highlight
 Comment=A batch renamer
 Comment[ca]=Un canviador de noms de fitxers per lots
 Comment[ca@valencia]=Un canviador de noms de fitxer per lots
