@@ -15,12 +15,12 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-#data.location=/home/trickyni/.task
+data.location=/home/trickyni/.task
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
 
-data.location=~/.local/share/task
+#data.location=~/.local/share/task
 hooks.location=~/.config/task/hooks
 
 # Color theme (uncomment one to use)
