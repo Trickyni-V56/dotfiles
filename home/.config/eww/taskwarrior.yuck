@@ -1,0 +1,10 @@
+(defpoll task :interval "10s" "task rc.verbose: rc.report.next.columns:description rc.report.next.labels:1 limit:1 next")
+
+(defwidget taskwarrior []
+  (box
+   :space-evenly false
+    (---)
+    (label :class "icon" :text "")
+    (label :class "status" :text task)
+  )
+)
