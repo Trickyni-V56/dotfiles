@@ -22,6 +22,9 @@ input type:keyboard {
 
 ### Key bindings
 
+# Copy datestamp
+bindsym ctrl+shift+d exec ~/.shells/copy-date
+
 # Basics:
     # Start a terminal
     bindsym ctrl+alt+t exec $term

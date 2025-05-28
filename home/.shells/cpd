@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-date -I | xclip -sel c -in
-xdotool key --clearmodifiers ctrl+v
-
