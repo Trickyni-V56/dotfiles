@@ -4,7 +4,7 @@
   (box
    :space-evenly false
     (---)
-    (label :class "icon" :text "")
+    (label :class "topbar icon" :text "")
     (label :class "status" :text task)
   )
 )

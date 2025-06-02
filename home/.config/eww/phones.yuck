@@ -7,7 +7,7 @@
       :space-evenly false
       :tooltip "${phones_batlvl}%"
       (---)
-      (label :class "icon" :text "")
+      (label :class "topbar icon" :text "")
       (label
         :class "icon-display"
         :text {

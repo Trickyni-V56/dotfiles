@@ -6,8 +6,13 @@
     :visible {laptop_batlvl != 404}
     :space-evenly false
     :tooltip "${laptop_batlvl}%"
-    (revealer :transition "slideleft" :duration "100ms" :reveal laptop_charging
-      (progress :class "charge-indicator" :value 0))
+    (-V-)
+    (label
+     :valign "center"
+     :class {
+       laptop_charging == true ? "bottombar charging" :
+       "bottombar icon"}
+     :text " ")
     (progress
       :valign "center"
       :class "progbar"
@@ -17,6 +22,7 @@
         laptop_batlvl == 100 ? "progbar full" :
         laptop_batlvl < 21 ? "progbar low" : "progbar"}
       )
+
     )
 )
 

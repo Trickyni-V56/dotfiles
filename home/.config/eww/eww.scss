@@ -3,7 +3,7 @@
     // box-shadow: inset 3px 3px black, 2px 2px #444444;
 // TODO:consider using 3D effect on selected workspaces
 @import "progressbar.scss"
-
+@import "bottombar.scss"
 @import "workspaces.scss"
 
 .bar {
@@ -16,7 +16,7 @@
     font-family: "ProggyCleanSZ Nerd Font Mono";
     // text-shadow:3px 3px black, 2px 2px #444444;
 }
-.separator {
+.topbar-separator {
     color: #C1A387;
     margin: -99px 8px;
     font-size: 16px;
@@ -37,12 +37,15 @@ tooltip label{
     font-family: "ProggyCleanSZ Nerd Font Mono";
     color: #AFD2E9;
 }
-.icon {
-    color: #E68D53;
+
+.topbar {
     font-family: "Symbols Nerd Font Mono";
     font-size: 16px;
     padding: 0px;
     padding-right: 12px;
+}
+.icon {
+    color: #E68D53;
 }
 .indicator {
     color: #3b3228;
@@ -71,3 +74,5 @@ tooltip label{
     font-size: 40px;
     padding-right: 6px;
 }
+
+

@@ -5,7 +5,7 @@
     :class "status"
     :space-evenly false
     (---)
-    (label  :class "icon"
+    (label  :class "topbar icon"
             :text {volume == 0 ? "" :
                    volume < 39 ? "" :
                    volume < 59 ? "" : "" }

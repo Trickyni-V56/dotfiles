@@ -1,3 +1,13 @@
 (defwidget --- []
-  (label :class "separator" :text "|")
+  (label
+   :class "topbar-separator"
+   :text "|"
+   :valign "center")
+)
+
+(defwidget -V- []
+ (label
+  :class "bottombar-separator"
+  :text "|"
+  :valign "center")
 )

@@ -68,3 +68,6 @@ fi
 #   hachiko
 alias hachisync='ssh -L 8385:localhost:8384 hachiko'
 alias hachiko-login='ssh root@192.168.0.3'
+
+#   pablotronica
+alias pablosync='ssh -L 8386:localhost:8384 pablotronica'

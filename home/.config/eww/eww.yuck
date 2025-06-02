@@ -1,7 +1,7 @@
-(include "battery-bar.yuck")
+(include "battery.yuck")
 (include "date.yuck")
 (include "moon.yuck")
-(include "phones.yuck")
+(include "phonesbar.yuck")
 (include "time.yuck")
 (include "ram.yuck")
 (include "resize.yuck")
@@ -40,13 +40,10 @@
 )
 
 (defwidget topstatus []
-  (centerbox
-    :space-evenly false
-    :class "bar"
+  (centerbox :space-evenly false :class "bar"
     (top-left)
     (top-center)
     (top-right)
-
   )
 )
 
@@ -62,7 +59,7 @@
   (box
     :space-evenly false
     :halign "end"
-    (phones)
+;;     (phones)
     (taskwarrior)
     (RAM)
     (vol)
@@ -95,19 +92,9 @@
     :space-evenly false
     :halign "end"
     :valign "center"
-    ;;(phones)
+    (phonesbar)
     (battery)
   )
 )
-;; TODO add phosphor icons
-;; TODO workspaces
-;; TODO Taskwarrior
-;; TODO Volume
-
-
-
-
-
-
 
 
