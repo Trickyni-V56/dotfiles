@@ -30,6 +30,7 @@ ssh_only = true
 format = '$hostname($style) '
 aliases = {"hachiko" = "󰩄", "IrregularNotes" = "󰎌", "pablotronica" = "󰩃"}
 style = '#C1A387'
+
 [git_branch]
 symbol = '𖣂'
 always_show_remote = true
