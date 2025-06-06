@@ -174,9 +174,13 @@ prepend_exts = [
 	{ name = "log", text = "", fg = "#AFD2E9" },
 	{ name = "sqlite3", text = "", fg = "#AFD2E9" },
 
-# mp4
+# vid
 	{ name = "mp4", text = "", fg = "#3ECCBE" },
 	{ name = "mkv", text = "", fg = "#3ECCBE" },
+# audio
+	{ name = "mp3", text = "", fg = "#f8e2a0" },
+	{ name = "wav", text = "", fg = "#f8e2a0" },
+	{ name = "FLAC", text = "", fg = "#f8e2a0" },
 
 ]
 conds = [

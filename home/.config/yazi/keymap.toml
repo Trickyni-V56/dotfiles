@@ -6,3 +6,7 @@ desc = "Chmod on selected files"
 on   = [ "g", "i" ]
 run  = "plugin lazygit"
 desc = "run lazygit"
+[[mgr.prepend_keymap]]
+on   = "R"
+run  = "plugin rsync"
+desc = "Copy files using rsync"
