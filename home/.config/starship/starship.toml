@@ -27,7 +27,7 @@ truncate_to_repo = true # truncates directory to root folder if in github repo
 
 [hostname]
 ssh_only = true
-format = '$hostname($style) '
+format = '$hostname '
 aliases = {"hachiko" = "󰩄", "IrregularNotes" = "󰎌", "pablotronica" = "󰩃"}
 style = '#C1A387'
 
