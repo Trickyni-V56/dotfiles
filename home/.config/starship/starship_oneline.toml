@@ -1,38 +1,36 @@
-format='''
-[󰝾 ]()$hostname$directory$git_branch$git_status'''
+format='''[󰝾 ]()$hostname$directory$git_branch$git_status'''
 
 [directory]
-style='bright-black'
+style='#C1A387'
 read_only=''
-read_only_style='red'
+read_only_style='#E86045'
 truncation_length=3
 truncation_symbol='.../'
 truncate_to_repo = true # truncates directory to root folder if in github repo
 
 [hostname]
-ssh_only = true
+ssh_only = false
 format = '$hostname '
-aliases = {"hachiko" = "\u001B[97m󰩄", "IrregularNotes" = "\u001B[90m󰎌", "pablotronica" = "\u001B[90m󰩃"}
+aliases = {"hachiko" = "\u001B[38;2;62;204;190m󰩄", "IrregularNotes" = "\u001B[38;2;193;163;135m󰎌", "pablotronica" = "\u001B[38;2;193;163;135m󰩃"}
 
 [git_branch]
 symbol = '𖣂'
 always_show_remote = true
 format='[$symbol $branch ]($style)'
-style = 'green'
+style = '#92a650'
 
 [git_status]
 format = '([$ahead_behind$staged$deleted$modified$untracked$stashed]($style))'
-style = 'green'
-untracked = '[?](yellow)'
-stashed = '[ ](bright-white)'
-modified = '[*$count](yellow)'
-staged = '[+$count](green)'
-deleted = '[-$count](red)'
-up_to_date = '[󰺕](bright-green)'
-ahead = '[⇡$count](green)'
-behind = '[⇣$count|](red)'
-conflicted = '[!!](red)'
-
+style = '#92a650'
+untracked = '[?](#E68D53)'
+stashed = '[ ](#3ECCBE)'
+modified = '[*$count](#E68D53)'
+staged = '[+$count](#92a650)'
+deleted = '[-$count](#E86045)'
+up_to_date = '[󰺕](#ace1af)'
+ahead = '[⇡$count](#92a650)'
+behind = '[⇣$count|](#E86045)'
+conflicted = '[!!](#E86045)'
 
 #󰝾
 #𖢊𖦋𖢏𖢴𖤲𖤱𖦹𖧻
