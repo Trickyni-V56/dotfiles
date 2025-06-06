@@ -1,26 +1,26 @@
 # ~/.config/starship.toml
 
 format='''
-[┌](white)${custom.glyphs}
+[┌](#AFD2E9)${custom.glyphs}
 [ ]()$hostname$directory$git_branch$git_status
 [└]()$status'''
 
 add_newline = true
 [status]
 format = '$symbol'
-symbol = '[󰝾](red) '
-not_executable_symbol = '[󰝾](red) '
-success_symbol = '[󰝾](white) '
-not_found_symbol = '[󰝾](white) '
-signal_symbol = '[󰝾](white) '
-sigint_symbol = '[󰝾](white) '
+symbol = '[󰝾](#E86045) '
+not_executable_symbol = '[󰝾](#E86045) '
+success_symbol = '[󰝾](#AFD2E9) '
+not_found_symbol = '[󰝾](#AFD2E9) '
+signal_symbol = '[󰝾](#AFD2E9) '
+sigint_symbol = '[󰝾](#AFD2E9) '
 map_symbol = true
 disabled = false
 
 [directory]
-style='bright-black'
+style='#C1A387'
 read_only=''
-read_only_style='red'
+read_only_style='#E86045'
 truncation_length=3
 truncation_symbol='.../'
 truncate_to_repo = true # truncates directory to root folder if in github repo
@@ -34,23 +34,23 @@ aliases = {"hachiko" = "\u001B[97m󰩄", "IrregularNotes" = "\u001B[90m󰎌", "p
 symbol = '𖣂'
 always_show_remote = true
 format='[$symbol $branch ]($style)'
-style = 'green'
+style = '#92a650'
 
 [git_status]
 format = '([$ahead_behind$staged$deleted$modified$untracked$stashed]($style))'
-style = 'green'
-untracked = '[?](yellow)'
-stashed = '[ ](bright-white)'
-modified = '[*$count](yellow)'
-staged = '[+$count](green)'
-deleted = '[-$count](red)'
-up_to_date = '[󰺕](bright-green)'
-ahead = '[⇡$count](green)'
-behind = '[⇣$count|](red)'
-conflicted = '[!!](red)'
+style = '#92a650'
+untracked = '[?](#E68D53)'
+stashed = '[ ](#3ECCBE)'
+modified = '[*$count](#E68D53)'
+staged = '[+$count](#92a650)'
+deleted = '[-$count](#E86045)'
+up_to_date = '[󰺕](#ace1af)'
+ahead = '[⇡$count](#92a650)'
+behind = '[⇣$count|](#E86045)'
+conflicted = '[!!](#E86045)'
 
 [custom.glyphs]
-format="[$output](white)"
+format="[$output](#AFD2E9)"
 command='python3 ~/.config/starship/glyphs_long.py'
 shell = ["bash", "--noprofile", "--norc"]
 when=true
