@@ -10,3 +10,7 @@ desc = "run lazygit"
 on   = "R"
 run  = "plugin rsync"
 desc = "Copy files using rsync"
+[[mgr.prepend_keymap]]
+on   = [ "u", "d" ]
+run  = "plugin restore"
+desc = "Restore last deleted files/folders"

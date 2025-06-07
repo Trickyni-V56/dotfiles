@@ -2,4 +2,3 @@ exec eww open-many topbar bottombar
 exec qbittorrent
 assign [app_id="qbittorrent"] workspace 0
 
-

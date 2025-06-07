@@ -113,6 +113,7 @@ rules = [
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#E86045" },
 # Documents
 	{ mime = "application/{pdf,doc,rtf}", fg = "#AFD2E9" },
+	{ mime = "text/shellscript", fg = "#AFD2E9" },
 # Fallback
 	{ name = "*", fg = "#AFD2E9" },
 	{ name = "*/", fg = "#E68D53" }
@@ -154,10 +155,11 @@ files = [
 
 globs = [
 	{ name = "*steam*", text = ""},
-	{ name = "*bash*", text = "󱆃"},
+	{ name = "*bash*", text = "󱆃", fg = "#AFD2E9"},
 ]
 prepend_exts = [
 	{ name = "py", text = "󰳗" },
+	{ name = "sh", text = "󱆃", fg = "#AFD2E9" },
 # images
 	{ name = "jpg", text = "", fg = "#92a650" },
 	{ name = "jpeg", text = "", fg = "#92a650" },
