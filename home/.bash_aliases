@@ -56,13 +56,14 @@ alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
 alias todo='task add'
 alias now='task now'
 
-#-------   home setup   ----------------------------------------------------------------------
-if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
 #   yt-dlp
 alias ytdlp='yt-dlp'
 alias ytmp3='yt-dlp --config-location ~/.config/yt-dlp/mp3'
 
-#   git
+#-------   home setup   ----------------------------------------------------------------------
+if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
+
+#   homeshick
 alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
 fi
 
@@ -72,3 +73,6 @@ alias hachiko-login='ssh root@192.168.0.3'
 
 #   pablotronica
 alias pablosync='ssh -L 8386:localhost:8384 pablotronica'
+
+#   IrregularNotes
+alias notesync='ssh -L 8387:localhost:8384 irregularnotes'
