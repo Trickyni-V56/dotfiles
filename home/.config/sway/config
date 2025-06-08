@@ -23,7 +23,7 @@ input type:keyboard {
 ### Key bindings
 
 # Copy datestamp
-bindsym ctrl+shift+d exec date -I | wl-copy && notify-send "date copied!"
+bindsym $mod+shift+d exec date -I | wl-copy && notify-send "date copied!"
 
 # Basics:
     # Start a terminal

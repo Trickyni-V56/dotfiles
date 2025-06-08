@@ -78,6 +78,15 @@ eval $(thefuck --alias)
 #   zoxide
 eval "$(zoxide init bash)"
 
+#   yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 echo -e -n "\x1b[\x35 q" # changes to blinking bar
 
 # export RESTIC_REPOSITORY=~/restic-repo

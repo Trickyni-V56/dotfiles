@@ -14,3 +14,13 @@ desc = "Copy files using rsync"
 on   = [ "u", "d" ]
 run  = "plugin restore"
 desc = "Restore last deleted files/folders"
+[[mgr.prepend_keymap]]
+on   = "!"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
+
+

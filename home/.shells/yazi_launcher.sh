@@ -1,2 +1,2 @@
 #!/bin/sh
-exec bash --rcfile <(echo '. ~/.bashrc; yazi')
+exec bash --rcfile <(echo '. ~/.bashrc; y')

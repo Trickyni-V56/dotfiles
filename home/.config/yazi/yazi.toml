@@ -7,10 +7,35 @@ prepend_previewers = [
 	{ mime = "application/x-bzip2",         run = "ouch" },
 	{ mime = "application/x-7z-compressed", run = "ouch" },
 	{ mime = "application/x-rar",           run = "ouch" },
-    { mime = "application/x-xz",            run = "ouch" },
+	{ mime = "application/x-xz",            run = "ouch" },
 	{ mime = "application/xz",              run = "ouch" },
 ]
 [opener]
 extract = [
-	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
+	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch" },
+]
+micro = [
+	{ run = 'micro "$@"', desc = "Edit", block = true},
+]
+vim = [
+	{ run = 'vim "$@"', desc = "Edit", block = true},
+]
+open = [
+	{ run = 'xdg-open "$1"', desc = "Open" },
+]
+play = [
+	{ run = 'mpv --force-window "$@"', orphan = true, desc = "Play" },
+]
+kate = [
+	{ run = 'kate "$0"', orphan = true, desc = "Kate" },
+]
+[open]
+append_rules = [
+	{ mime = "audio/*", use = "play" },
+	{ mime = "inode/directory", use = "open" },
+	{ mime = "text/*", use = "open, micro, kate, vim" },
+]
+prepend_rules = [
+	{ mime = "text/*", use = "open, micro, kate, vim" },
+
 ]
