@@ -18,9 +18,9 @@ local selected_or_hovered = ya.sync(function()
 end)
 
 return {
-	entry = function(_, args)
+	entry = function(_, arg)
 		ya.manager_emit("escape", { visual = true })
-		local remote_target = #args >= 1 and args[1] or nil
+		local remote_target = #arg >= 1 and arg[1] or nil
 
 		local files = selected_or_hovered()
 		if #files == 0 then
@@ -43,10 +43,10 @@ return {
 			return
 		end
 
-		-- local cmd, err = Command("rsync"):args(files):arg(dest):stderr(Command.PIPED):output()
+		-- local cmd, err = Command("rsync"):arg(files):arg(dest):stderr(Command.PIPED):output()
 		local cmd, err = Command("rsync")
-			:args({ "-ahP", "--no-motd" })
-			:args(files)
+			:arg({ "-ahP", "--no-motd" })
+			:arg(files)
 			:arg(dest)
 			:stdout(Command.PIPED)
 			:stderr(Command.PIPED)

@@ -60,12 +60,8 @@ alias now='task now'
 alias ytdlp='yt-dlp'
 alias ytmp3='yt-dlp --config-location ~/.config/yt-dlp/mp3'
 
-#-------   home setup   ----------------------------------------------------------------------
-if [[ "$(cat /etc/hostname)" == "IrregularNotes" ]]; then
-
 #   homeshick
 alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
-fi
 
 #   hachiko
 alias hachisync='ssh -L 8385:localhost:8384 hachiko'

@@ -2,7 +2,7 @@
 Type=Application
 Name=wscript
 MimeType=text/vbscript;
-Exec=env WINEPREFIX="/home/trickyni/Games/tiny-rogues-2.8.5" /home/ubuntu/buildbot/runners/wine/lutris-5.21-x86_64/bin/wine start /ProgIDOpen VBSFile %f
+Exec=env WINEPREFIX="/home/trickyni/Games/shapes-2" wine start /ProgIDOpen VBSFile %f
 NoDisplay=true
 StartupNotify=true
-Icon=B13E_wscript.0
+Icon=2905_wscript.0

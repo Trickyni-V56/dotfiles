@@ -19,3 +19,9 @@ hide_edge_borders none
 gaps inner 8
 gaps top -99
 gaps bottom -99
+
+#font pango: Reconstructed Matoran alphabet 12
+titlebar_padding 2 0
+title_align center
+
+seat seat0 xcursor_theme Bibata-Modern-Classic 20
