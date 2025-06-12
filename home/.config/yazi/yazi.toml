@@ -14,11 +14,11 @@ prepend_previewers = [
 extract = [
 	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch" },
 ]
-micro = [
-	{ run = 'micro "$@"', desc = "Edit", block = true},
+edit = [
+	{ run = '${EDITOR:-vi} "$@"', desc = "Edit", block = true, for = "unix" },
 ]
 vim = [
-	{ run = 'vim "$@"', desc = "Edit", block = true},
+	{ run = 'vim "$0"', desc = "Vim", block = true},
 ]
 open = [
 	{ run = 'xdg-open "$1"', desc = "Open" },
@@ -30,12 +30,22 @@ kate = [
 	{ run = 'kate "$0"', orphan = true, desc = "Kate" },
 ]
 [open]
-append_rules = [
-	{ mime = "audio/*", use = "play" },
-	{ mime = "inode/directory", use = "open" },
-	{ mime = "text/*", use = "open, micro, kate, vim" },
-]
-prepend_rules = [
-	{ mime = "text/*", use = "open, micro, kate, vim" },
-
+rules = [
+	# Folder
+	{ name = "*/", use = [ "open", "reveal" ] },
+	# Text"edit",
+	{ mime = "text/*", use = [ "edit", "reveal", "kate", "vim" ] },
+	# Image
+	{ mime = "image/*", use = [ "open", "reveal" ] },
+	# Media
+	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [ "extract", "reveal" ] },
+	# JSON
+	{ mime = "application/{json,ndjson}", use = [ "edit", "reveal" ] },
+	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
+	# Empty file
+	{ mime = "inode/empty", use = [ "edit", "reveal" ] },
+	# Fallback
+	{ name = "*", use = [ "open", "reveal" ] },
 ]

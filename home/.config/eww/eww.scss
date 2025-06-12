@@ -5,6 +5,7 @@
 @import "progressbar.scss"
 @import "bottombar.scss"
 @import "workspaces.scss"
+@import "tooltip.scss"
 
 .bar {
     background-color: #3b3228;
@@ -21,21 +22,6 @@
     margin: -99px 8px;
     font-size: 16px;
     font-family: "ProggyCleanSZ Nerd Font Mono";
-}
-tooltip {
-    background-color: #3b3228;
-    font-size: 16px;
-    border-radius: 0px;
-    border-width: 2px;
-    margin: -3px 3px -3px;
-    border-color: #C1A387 #C1A387 #3b3228;
-    //     TODO: differentiate up/down tooltip.
-    //     TODO: make tooltip match widget width
-}
-tooltip label{
-    font-size: 16px;
-    font-family: "ProggyCleanSZ Nerd Font Mono";
-    color: #AFD2E9;
 }
 
 .topbar {
@@ -54,25 +40,11 @@ tooltip label{
     font-size: 16px;
     padding: 2px 8px 2px;
 }
-.icon-display {
-    color: #AFD2E9;
-    font-family: "Symbols Nerd Font Mono";
-    font-size: 16px;
-    padding-right: 8px;
-    // margin-top: -99px;
-    // margin-bottom: -99px;
-}
 .moon {
     color: #f8e2a0;
     font-family: "Symbols Nerd Font Mono";
     font-size: 22px;
     margin: -99px 0px;
-}
-.phosphor-icon {
-    color: #E68D53;
-    font-family: "phosphor-light";
-    font-size: 40px;
-    padding-right: 6px;
 }
 
 

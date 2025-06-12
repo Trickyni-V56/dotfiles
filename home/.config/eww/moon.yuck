@@ -1,9 +1,7 @@
 (defpoll moonphase :interval "500s" "bash ~/.config/eww/scripts/moon.sh")
 
 (defwidget moon []
-  (box  :orientation "h"
-        :space-evenly false
-        :tooltip "moonphase"
+  (box  :space-evenly false
         :halign "end"
     (---)
     (label  :text moonphase

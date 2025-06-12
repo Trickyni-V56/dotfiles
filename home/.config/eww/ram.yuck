@@ -1,14 +1,10 @@
 (defpoll _ram :interval "1s" "bash scripts/ram.sh")
-
+(defvar show-ram-tooltip false)
 (defwidget RAM []
-  (box
-    :class "status"
-    :space-evenly false
-    :tooltip "ram"
+  (box  :class "status" :space-evenly false
     (---)
-    (label :class "topbar icon" :text "")
-    (label
-        :text "${_ram}%"
-    )
+    (label :class "topbar icon" :text "󰍛")
+    (label :text "${_ram}%")
   )
 )
+

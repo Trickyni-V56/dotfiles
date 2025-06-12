@@ -5,7 +5,7 @@ alias obsidian='obsidian --ozone-platform=wayland'
 #   core
 alias shut='sudo poweroff'
 alias o='xdg-open'
-alias e='micro'
+alias e='${EDITOR:-vim}'
 # alias y='yazi'
 alias bk='cd ..'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'

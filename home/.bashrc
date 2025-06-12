@@ -53,7 +53,8 @@ fi
 export PATH="$PATH:~/.shells"
 export PYTHONPATH="${PYTHONPATH}:~/.shells"
 export PATH="$HOME/.cargo/bin:$PATH"
-export EDITOR='/usr/bin/micro'
+export EDITOR=nvim
+export VISUAL=kate
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
