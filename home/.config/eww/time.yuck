@@ -1,6 +1,6 @@
-(defwidget time []
+(defwidget clock []
   (box :space-evenly false
     (---)
-    (label :text timevar :class "status")
+    (label :text time :class "status")
   )
 )
