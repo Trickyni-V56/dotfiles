@@ -1,6 +1,1 @@
-(defwidget clock []
-  (box :space-evenly false
-    (---)
-    (label :text time :class "status")
-  )
-)
+time.yuck

@@ -1,0 +1,23 @@
+(defwidget clock []
+  (box :space-evenly false
+    (---)
+    (label :text time :class "status")
+  )
+)
+
+(defwidget sunclock []
+  (revealer :transition "slideleft" :reveal {sunset != "night"}
+    (box :space-evenly false
+      (---)
+      (label :text "󰖚" :class "topbar icon")
+      (label :text sunset :class "status")
+    )
+  )
+)
+
+(defwidget date []
+  (box :class "status" :space-evenly false
+    (---)
+    (label :text "${month-name} ${day}" :truncate false)
+  )
+)

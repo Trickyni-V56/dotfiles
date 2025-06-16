@@ -1,9 +1,1 @@
-(defwidget sunclock []
-  (revealer :transition "slideleft" :reveal {sunset != "night"}
-    (box :class "status" :space-evenly false
-      (---)
-      (label :text "󰖚" :class "topbar icon")
-      (label :text sunset :class "status")
-    )
-  )
-)
+sunclock.yuck
