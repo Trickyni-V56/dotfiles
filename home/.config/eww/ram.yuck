@@ -1,4 +1,3 @@
-(defpoll _ram :interval "1s" "bash scripts/ram.sh")
 (defvar show-ram-tooltip false)
 (defwidget RAM []
   (box  :class "status" :space-evenly false

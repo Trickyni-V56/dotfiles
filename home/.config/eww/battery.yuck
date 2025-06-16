@@ -1,1 +1,28 @@
-battery-bar.yuck
+(defwidget battery []
+  (box
+    :visible {laptop_batlvl != 404}
+    :space-evenly false
+    :tooltip "${laptop_batlvl}%"
+    (-V-)
+    (label
+     :valign "center"
+     :class {
+       laptop_charging == true ? "bottombar charging" :
+       "bottombar icon"}
+     :text " ")
+    (progress
+      :valign "center"
+      :class "progbar"
+      :flipped true
+      :value laptop_batlvl
+      :class {
+        laptop_batlvl == 100 ? "progbar full" :
+        laptop_batlvl < 21 ? "progbar low" : "progbar"}
+      )
+
+    )
+)
+
+;;TODO: condense scripts to 1 script?
+
+

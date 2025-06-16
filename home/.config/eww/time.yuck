@@ -1,5 +1,3 @@
-(defpoll timevar :interval "2s" "date '+%H:%M'")
-
 (defwidget time []
   (box :space-evenly false
     (---)

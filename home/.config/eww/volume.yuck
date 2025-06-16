@@ -1,6 +1,5 @@
 ;; (defpoll volume :interval "100ms" "qalc -t $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2) to percent | tr -d '%' ")
-(defpoll volume :initial 50 :interval "100ms" "pamixer --get-volume")
-(defpoll mute :interval "100ms" "pamixer --get-mute")
+
 
 (defwidget vol []
   (box

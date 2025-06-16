@@ -1,5 +1,3 @@
-(defpoll moonphase :interval "500s" "bash ~/.config/eww/scripts/moon.sh")
-
 (defwidget moon []
   (box  :space-evenly false
         :halign "end"

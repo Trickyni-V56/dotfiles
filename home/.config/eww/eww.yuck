@@ -10,6 +10,7 @@
 (include "taskwarrior.yuck")
 (include "volume.yuck")
 (include "workspaces.yuck")
+(include "variables.yuck")
 
 (defwindow topbar
   :monitor 0

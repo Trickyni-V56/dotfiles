@@ -1,5 +1,3 @@
-(defpoll sunset :interval "10s" "~/.shells/suntime.sh || echo night")
-
 (defwidget sunclock []
   (revealer :transition "slideleft" :reveal {sunset != "night"}
     (box

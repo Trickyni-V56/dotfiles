@@ -1,4 +1,3 @@
-(defvar _resize false)
 
 (defwidget resize []
   (revealer
