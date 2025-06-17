@@ -18,6 +18,6 @@
 (defwidget date []
   (box :class "status" :space-evenly false
     (---)
-    (label :text "${month-name} ${day}" :truncate false)
+    (label :text "${month} ${day}" :truncate false)
   )
 )

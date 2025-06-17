@@ -1,13 +1,12 @@
+(defvar _resize false)
 
 (defwidget resize []
-  (revealer
-    :transition "slideright"
-    :reveal _resize
-        (label
-          :halign "center"
-          :class "indicator"
-          :text "󰩨 "
+  (revealer :transition "slideright"
+            :reveal _resize
+        (label  :halign "center"
+                :class "indicator"
+                :text "󰩨 "
         )
-    )
   )
+)
 

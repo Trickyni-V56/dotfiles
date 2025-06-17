@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-set -eux
-
+set -eu
+pamixer --get-$1
 pactl subscribe | grep --line-buffered 'change.*sink' | while read -r line; do
-	echo $(pamixer --get-volume) $(pamixer --get-mute)
+	pamixer --get-$1
 done
 

@@ -1,12 +1,3 @@
-;;    Resize
-(defvar _resize false)
-
-;;    Volume
-;; (defpoll volume :initial 50 :interval "100ms" "pamixer --get-volume")
-;; (defpoll mute :interval "100ms" "pamixer --get-mute")
-(deflisten volume :initial 50 'scripts/listen-volume.sh volu')
-(deflisten mute false)
-
 ;;    Laptop Battery
 (defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
 (defpoll laptop_charging :interval "2s" :initial false "bash ~/.config/eww/scripts/laptop-charging.sh")
@@ -18,14 +9,8 @@
 ;;    Moon
 (defpoll moonphase :interval "500s" "bash ~/.config/eww/scripts/moon.sh")
 
-;;    Time
-(defpoll time :interval "2s" "date '+%H:%M'")
-
 ;;    Taskwarrior
 (defpoll task :interval "10s" "task rc.verbose: rc.report.next.columns:description rc.report.next.labels:1 limit:1 next")
-
-;;    Sunclock
-(defpoll sunset :interval "10s" "~/.shells/suntime.sh || echo night")
 
 ;;    Ram
 (defpoll _ram :interval "1s" "bash scripts/ram.sh")
@@ -33,7 +18,8 @@
 ;;    Headphones
 (defpoll phones_batlvl :initial 404 :interval "10s" 'bash ~/.config/eww/scripts/jotm-battery.sh')
 
-;;    Date
+;;    clocks
+(defpoll time :interval "2s" "date '+%H:%M'")
 (defpoll day :interval "10s" "date '+%d'")
-(defpoll month-name :interval "100s" "date '+%b'")
-
+(defpoll month :interval "100s" "date '+%b'")
+(defpoll sunset :initial "night" :interval "10s" "~/.shells/suntime.sh || echo night")

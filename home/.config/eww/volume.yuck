@@ -1,20 +1,19 @@
-;; (defpoll volume :interval "100ms" "qalc -t $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2) to percent | tr -d '%' ")
+(deflisten vol :initial "404" "scripts/listen-volume.sh volume")
+(deflisten mute :initial "false" "scripts/listen-volume.sh mute")
 
-
-(defwidget vol []
+(defwidget volume []
   (box
     :class "status"
     :space-evenly false
     (---)
     (label  :class "topbar icon"
-            :text {volume == 0 || mute ? "" :
-                   volume < 39 ? "" :
-                   volume < 59 ? "" : "" }
-            :style {volume == 0 || mute ? "color: #E86045;" : ""})
+            :text {vol == 0 || mute ? "" :
+                   vol < 39 ? "" :
+                   vol < 59 ? "" : "" }
+            :style {vol == 0 || mute ? "color: #E86045;" : ""})
     (revealer :transition "slideleft"
               :reveal {mute == "false"}
-      (label :text "${volume}%")
+      (label :text "${vol}%")
     )
   )
 )
-;; TODO: make variable only poll on que
