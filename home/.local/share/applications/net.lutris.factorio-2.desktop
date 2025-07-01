@@ -1,8 +1,8 @@
-
 [Desktop Entry]
 Type=Application
 Name=Factorio
-Icon=lutris_factorio
+Icon=factorio-icon
+TryExec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2
 Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2
 Categories=Game
 TryExec=lutris
