@@ -1,9 +1,1 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=factorio
-#TryExec=/home/trickyni/Games/factorio/bin/x64/factorio
-StartupNotify=true
-Exec=/home/trickyni/Games/factorio/bin/x64/factorio
-Icon=factorio-icon
-Categories=game
+factorio.desktop

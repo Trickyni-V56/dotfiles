@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=bluetui
+Exec=bluetui
+Icon=bluetooth-pixel-bg
+Terminal=true
+Type=Application
+Keywords=bluetooth, blue, bt
+

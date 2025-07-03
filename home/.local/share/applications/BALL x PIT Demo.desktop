@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=BALL x PIT Demo
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/3651790
+Icon=steam_icon_3651790
+Terminal=false
+Type=Application
+Categories=Game;
