@@ -7,10 +7,9 @@ indicator-thickness=2
 hide-keyboard-layout
 indicator-idle-visible
 
-
-line-clear-color=#f8e2a0
-text-clear-color=#000000
-inside-clear-color=#000000
+line-clear-color=#5D4F40
+text-clear-color=#5D4F40
+inside-clear-color=#5D4F40
 
 line-ver-color=#C1A387
 text-ver-color=#000000
