@@ -36,14 +36,21 @@
 
     (revealer :transition "slideright" :reveal {wse =~ "9"} :duration "100ms"
      (eventbox :onclick "sway workspace 9"
-      (label :text "󰗣 " :class {wsf == 9 ? "focused ws-icon" : "ws-icon"})))
+      (label :text "9" :class {wsf == 9 ? "focused ws-text" : "ws-text"})))
 
-    (revealer :transition "slideright" :reveal {wse =~ "0"} :duration "100ms"
-     (eventbox :onclick "sway workspace 0"
-      (label :text " " :class {wsf == 0 ? "focused ws-icon" : "ws-icon"})))
+    (revealer :transition "slideright" :reveal {wse =~ "o"} :duration "100ms"
+     (eventbox :onclick "sway workspace o"
+      (label :text "󰗣 " :class {wsf == "o" ? "focused ws-icon" : "ws-icon"})))
+
+    (revealer :transition "slideright" :reveal {wse =~ "d"} :duration "100ms"
+     (eventbox :onclick "sway workspace d"
+      (label :text " " :class {wsf == "d" ? "focused ws-icon" : "ws-icon"})))
+
+    (revealer :transition "slideright" :reveal {wse =~ "v"} :duration "100ms"
+    (eventbox :onclick "sway workspace v"
+      (label :text " " :class {wsf == "v" ? "focused ws-icon" : "ws-icon"})))
   )
 )
-
 
 
 ;;"","󰺕","","󱥔","","󰀘","","🜨","🜔","🜕","🜖","🜗","𖢨","𖣐","𖣠","𖢵","𖢨","𖤪","𖤞","𖣨","𖣵","𖤊","𖤪","𖥚","𖥞","𖥕","𐀤","𐃏"

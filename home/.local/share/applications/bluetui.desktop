@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=bluetui
-Exec=bluetui
+Exec=kitty -T bluetui -e bluetui
 Icon=bluetooth-pixel-bg
-Terminal=true
+Terminal=false
 Type=Application
 Keywords=bluetooth, blue, bt
 
