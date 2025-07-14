@@ -5,7 +5,7 @@
       :space-evenly false
       :tooltip "${phones_batlvl}%"
       (-V-)
-      (label :class "bottombar icon" :text " " :valign "center")
+      (label :class "bottombar-icon" :text " " :valign "center")
       (progress
        :valign "center"
        :class "progbar"

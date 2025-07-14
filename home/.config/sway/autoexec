@@ -1,5 +1,6 @@
 exec eww open-many topbar bottombar
 exec qbittorrent
+exec pavucontrol
 assign [app_id="obsidian"] workspace o
 assign [app_id="qbittorrent"] workspace d
 assign [app_id="org.pulseaudio.pavucontrol"] workspace v

@@ -1,8 +1,10 @@
 (defwidget taskwarrior []
-  (box
-   :space-evenly false
-    (---)
-    (label :class "topbar icon" :text "")
-    (label :class "status" :text task)
+  (revealer :transition "slideleft" :reveal {zen != true}
+    (box
+    :space-evenly false
+      (---)
+      (label :class "topbar icon" :text "")
+      (label :class "status" :text task)
+    )
   )
 )

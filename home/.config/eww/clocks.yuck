@@ -16,8 +16,10 @@
 )
 
 (defwidget date []
-  (box :class "status" :space-evenly false
-    (---)
-    (label :text "${month} ${day}" :truncate false)
+ (revealer :transition "slideleft" :reveal {zen != true}
+    (box :class "status" :space-evenly false
+      (---)
+      (label :text "${month} ${day}" :truncate false)
+    )
   )
 )

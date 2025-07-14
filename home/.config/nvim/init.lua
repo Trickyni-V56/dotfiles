@@ -10,6 +10,10 @@ vim.keymap.set('v', 'k', 'h', { noremap = true })
 vim.keymap.set('v', 'l', 'j', { noremap = true })
 vim.keymap.set('v', ';', 'l', { noremap = true })
 
+-- Remapping O's functionality back unto J'
+vim.keymap.set('n', 'j', 'o', { noremap = true })
+vim.keymap.set('v', 'j', 'o', { noremap = true })
+
 -- Ctrl-Backspace: delete word before cursor
 vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true })
 

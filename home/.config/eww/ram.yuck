@@ -1,9 +1,10 @@
-(defvar show-ram-tooltip false)
 (defwidget RAM []
-  (box  :class "status" :space-evenly false
-    (---)
-    (label :class "topbar icon" :text "󰍛")
-    (label :text "${_ram}%")
+  (revealer :transition "slideleft" :reveal {zen != true}
+    (box  :class "status" :space-evenly false
+      (---)
+      (label :class "topbar icon" :text "󰍛")
+      (label :text "${_ram}%")
+    )
   )
 )
 

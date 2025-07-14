@@ -1,6 +1,10 @@
 #!/bin/bash
 
 alias obsidian='obsidian --ozone-platform=wayland'
+alias zen='~/.config/eww/scripts/zenmode.sh'
+zenmsg(){
+eww update zenmsg="$*"
+}
 
 #   core
 alias shut='sudo poweroff'

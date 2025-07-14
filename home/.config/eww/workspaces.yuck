@@ -38,6 +38,10 @@
      (eventbox :onclick "sway workspace 9"
       (label :text "9" :class {wsf == 9 ? "focused ws-text" : "ws-text"})))
 
+    (revealer :transition "slideright" :reveal {wse =~ "0"} :duration "100ms"
+     (eventbox :onclick "sway workspace 0"
+      (label :text "0" :class {wsf == "0" ? "focused ws-text" : "ws-text"})))
+
     (revealer :transition "slideright" :reveal {wse =~ "o"} :duration "100ms"
      (eventbox :onclick "sway workspace o"
       (label :text "󰗣 " :class {wsf == "o" ? "focused ws-icon" : "ws-icon"})))
