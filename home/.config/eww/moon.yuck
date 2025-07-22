@@ -1,7 +1,6 @@
 (defwidget moon []
  (revealer :transition "slideleft" :reveal {zen != true}
     (box  :space-evenly false
-          :halign "end"
       (---)
       (label  :text moonphase
               :class "moon")

@@ -46,6 +46,10 @@
      (eventbox :onclick "sway workspace o"
       (label :text "󰗣 " :class {wsf == "o" ? "focused ws-icon" : "ws-icon"})))
 
+    (revealer :transition "slideright" :reveal {wse =~ "p"} :duration "100ms"
+     (eventbox :onclick "sway workspace p"
+      (label :text " " :class {wsf == "p" ? "focused ws-icon" : "ws-icon"})))
+
     (revealer :transition "slideright" :reveal {wse =~ "d"} :duration "100ms"
      (eventbox :onclick "sway workspace d"
       (label :text " " :class {wsf == "d" ? "focused ws-icon" : "ws-icon"})))
@@ -53,6 +57,7 @@
     (revealer :transition "slideright" :reveal {wse =~ "v"} :duration "100ms"
     (eventbox :onclick "sway workspace v"
       (label :text " " :class {wsf == "v" ? "focused ws-icon" : "ws-icon"})))
+
   )
 )
 

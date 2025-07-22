@@ -63,6 +63,7 @@ alias now='task now'
 #   yt-dlp
 alias ytdlp='yt-dlp'
 alias ytmp3='yt-dlp --config-location ~/.config/yt-dlp/mp3'
+alias subbox='yt-dlp --config-location ~/.config/yt-dlp/subbox'
 
 #   homeshick
 alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
