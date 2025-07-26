@@ -3,6 +3,7 @@
     (box  :space-evenly false
       (---)
       (label  :text moonphase
+              :valign "center"
               :class "moon")
     )
   )
