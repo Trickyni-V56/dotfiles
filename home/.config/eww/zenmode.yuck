@@ -1,3 +1,8 @@
+;;    Zen mode
+(defvar zen false)
+(defvar zenmsg "")
+
+
 (defwidget zenmode []
   (revealer :transition "crossfade" :reveal zen
     (box :class "status" :space-evenly false

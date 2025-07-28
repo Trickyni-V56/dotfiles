@@ -1,3 +1,6 @@
+(defpoll phones_batlvl :initial 404 :interval "10s" 'bash ~/.config/eww/scripts/jotm-battery.sh')
+
+
 (defwidget phonesbar []
   (revealer :transition "slideleft" :reveal {phones_batlvl != 404}
     (box

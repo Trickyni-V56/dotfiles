@@ -1,3 +1,5 @@
+(defpoll moonphase :interval "1s" "bash ~/.config/eww/scripts/moon.sh")
+
 (defwidget moon []
  (revealer :transition "slideleft" :reveal {zen != true}
     (box  :space-evenly false

@@ -1,8 +1,14 @@
+(defpoll time :interval "2s" "date '+%H:%M'")
+(defpoll day :interval "10s" "date '+%d'")
+(defpoll month :interval "100s" "date '+%b'")
+(defpoll sunset :initial "night" :interval "10s" "~/.shells/suntime.sh || echo night")
+
+
 (defwidget clock []
-  (box :space-evenly false
-    (---)
-    (label :text time :class "status")
-  )
+    (box :space-evenly false
+      (---)
+      (label :text time :class "status")
+    )
 )
 
 (defwidget sunclock []

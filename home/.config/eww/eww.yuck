@@ -8,7 +8,6 @@
 (include "taskwarrior.yuck")
 (include "volume.yuck")
 (include "workspaces.yuck")
-(include "variables.yuck")
 (include "mew.yuck")
 (include "zenmode.yuck")
 

@@ -1,3 +1,5 @@
+(defpoll task :interval "10s" "task rc.verbose: rc.report.next.columns:description rc.report.next.labels:1 limit:1 next")
+
 (defwidget taskwarrior []
   (revealer :transition "slideleft" :reveal {zen != true}
     (box

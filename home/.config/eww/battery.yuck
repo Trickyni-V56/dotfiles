@@ -1,3 +1,7 @@
+;;    Laptop Battery
+(defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
+(defpoll laptop_charging :interval "2s" :initial false "bash ~/.config/eww/scripts/laptop-charging.sh")
+
 (defwidget battery []
   (box
     :visible {laptop_batlvl != 404}

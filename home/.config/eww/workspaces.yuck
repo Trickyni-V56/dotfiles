@@ -1,3 +1,8 @@
+;;    Workspaces
+(defpoll wsf :interval "100ms" "scripts/workspace-focus.sh")
+(defpoll wse :interval "100ms" :initial "" "scripts/workspace-exist.sh")
+
+
 (defwidget workspaces []
   (box
     :space-evenly false

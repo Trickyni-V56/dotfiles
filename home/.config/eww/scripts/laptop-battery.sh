@@ -7,4 +7,3 @@ battery=${battery:-404}
 echo $battery
 
 
-# TODO: add an if condition that adds +1000 if thing is charging
