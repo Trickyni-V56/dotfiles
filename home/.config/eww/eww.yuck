@@ -1,14 +1,14 @@
 (include "battery.yuck")
 (include "clocks.yuck")
+(include "mew.yuck")
 (include "moon.yuck")
-(include "phonesbar.yuck")
+(include "phones-bar.yuck")
 (include "ram.yuck")
 (include "resize.yuck")
 (include "separator.yuck")
 (include "taskwarrior.yuck")
 (include "volume.yuck")
 (include "workspaces.yuck")
-(include "mew.yuck")
 (include "zenmode.yuck")
 
 
@@ -42,7 +42,9 @@
 )
 
 (defwidget topstatus []
-  (centerbox :space-evenly false :class "bar"
+  (centerbox
+    ;;:space-evenly false
+    :class "bar"
     (top-left)
     (top-center)
     (top-right)
@@ -65,7 +67,7 @@
     (volume)
     (sunclock)
     (moon)
-    (date)
+;;     (date)
     (clock)
   )
 )
