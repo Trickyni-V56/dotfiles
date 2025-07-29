@@ -1,4 +1,4 @@
-(defpoll moonphase :interval "1s" "bash ~/.config/eww/scripts/moon.sh")
+(defpoll moonphase :interval "1s" "/home/trickyni/.cargo/bin/moon-phases -t")
 
 (defwidget moon []
  (revealer :transition "slideleft" :reveal {zen != true}
