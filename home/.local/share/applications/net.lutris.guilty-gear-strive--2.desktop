@@ -1,4 +1,3 @@
-
 [Desktop Entry]
 Type=Application
 Name=GUILTY GEAR -STRIVE-
@@ -6,3 +5,4 @@ Icon=lutris_guilty-gear-strive-
 Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2
 Categories=Game
 TryExec=lutris
+NoDisplay=true
