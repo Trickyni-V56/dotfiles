@@ -13,7 +13,7 @@
 #   variable=$VALUE
 
 # Use the command 'task show' to see all defaults and overrides
-
+editor=nvim
 # Files
 data.location=/home/trickyni/.task
 
