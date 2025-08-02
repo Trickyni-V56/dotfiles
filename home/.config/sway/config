@@ -37,6 +37,7 @@ bindsym $mod+shift+d exec date -I | wl-copy && notify-send "date copied!"
 # Basics:
     # Start a terminal
     bindsym ctrl+alt+t exec $term
+    bindsym $mod+return exec $term
     bindsym ctrl+alt+y exec $term ~/.shells/yazi_launcher.sh
 
     # Kill focused window
