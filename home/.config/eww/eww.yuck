@@ -2,7 +2,7 @@
 (include "clocks.yuck")
 (include "mew.yuck")
 (include "moon.yuck")
-(include "phones-bar.yuck")
+(include "phonesbar.yuck")
 (include "ram.yuck")
 (include "resize.yuck")
 (include "separator.yuck")
