@@ -1,12 +1,1 @@
-[Desktop Entry]
-Name=OpenJDK Java 17 Console
-Name[fi]=OpenJDK Java 17 - konsoli
-Comment=OpenJDK Java 17 Monitoring & Management Console
-Comment[fi]=OpenJDK Java 17 - valvonta- ja hallintakonsoli
-Keywords=java;console;monitoring
-Exec=/usr/lib/jvm/java-17-openjdk/bin/jconsole
-Terminal=false
-Type=Application
-Icon=java17-openjdk
-NoDisplay=true
-Categories=Application;System;
+../../../.homesick/repos/dotfiles/home/.local/share/applications/jconsole-java17-openjdk.desktop

@@ -1,10 +1,1 @@
-[Desktop Entry]
-Name=Obsidian
-Exec=/usr/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
-Terminal=false
-Type=Application
-Icon=obsidian-desert
-StartupWMClass=obsidian
-Comment=Obsidian
-MimeType=x-scheme-handler/obsidian;
-Categories=Office;
+../../../.homesick/repos/dotfiles/home/.local/share/applications/obsidian.desktop

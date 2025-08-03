@@ -1,7 +1,1 @@
-[Desktop Entry]
-Name=swaylock
-Exec=swaylock
-Icon=lock-pixel-bg
-Terminal=false
-Type=Application
-Keyword=lock
+../../../.homesick/repos/dotfiles/home/.local/share/applications/swaylock.desktop

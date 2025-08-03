@@ -1,8 +1,1 @@
-[Desktop Entry]
-Type=Application
-Name=wscript
-MimeType=text/vbscript;
-Exec=env WINEPREFIX="/home/trickyni/Games/shapes-2" wine start /ProgIDOpen VBSFile %f
-NoDisplay=true
-StartupNotify=true
-Icon=2905_wscript.0
+../../../.homesick/repos/dotfiles/home/.local/share/applications/wine-extension-vbs.desktop

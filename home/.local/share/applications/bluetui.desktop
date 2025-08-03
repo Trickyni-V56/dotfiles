@@ -1,8 +1,1 @@
-[Desktop Entry]
-Name=bluetui
-Exec=kitty -T bluetui -e bluetui
-Icon=bluetooth-pixel-bg
-Terminal=false
-Type=Application
-Keywords=bluetooth, blue, bt
-
+../../../.homesick/repos/dotfiles/home/.local/share/applications/bluetui.desktop

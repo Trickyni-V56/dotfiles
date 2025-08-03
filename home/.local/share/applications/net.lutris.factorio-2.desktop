@@ -1,8 +1,1 @@
-
-[Desktop Entry]
-Type=Application
-Name=Factorio
-Icon=factorio-icon
-Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2
-Categories=Game
-TryExec=lutris
+../../../.homesick/repos/dotfiles/home/.local/share/applications/net.lutris.factorio-2.desktop

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=swaylock
+Exec=swaylock
+Icon=lock-pixel-bg
+Terminal=false
+Type=Application
+Keyword=lock

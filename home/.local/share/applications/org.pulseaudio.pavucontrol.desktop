@@ -1,12 +1,1 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Version=1.0
-Name=Volume Control
-GenericName=Volume Control
-Comment=Adjust the volume level
-Exec=pavucontrol
-Icon=volume-pixel-bg
-StartupNotify=true
-Type=Application
-Categories=AudioVideo;Audio;Mixer;GTK;Settings;X-XFCE-SettingsDialog;X-XFCE-HardwareSettings;
-Keywords=pavucontrol;PulseAudio;Microphone;Volume;Fade;Balance;Headset;Speakers;Headphones;Audio;Mixer;Output;Input;Devices;Playback;Recording;System Sounds;Sound Card;Settings;Preferences;
+../../../.homesick/repos/dotfiles/home/.local/share/applications/org.pulseaudio.pavucontrol.desktop

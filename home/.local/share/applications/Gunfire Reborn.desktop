@@ -1,8 +1,1 @@
-[Desktop Entry]
-Name=Gunfire Reborn
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/1217060
-Icon=gunfire-reborn-icon
-Terminal=false
-Type=Application
-Categories=Game;
+../../../.homesick/repos/dotfiles/home/.local/share/applications/Gunfire Reborn.desktop

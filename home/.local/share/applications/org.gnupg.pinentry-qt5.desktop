@@ -1,10 +1,1 @@
-[Desktop Entry]
-Name=Pinentry
-Type=Application
-Categories=Qt;Utility;
-Exec=/usr/bin/pinentry-qt5
-NoDisplay=true
-Icon=pinentry
-GenericName=Utility for entering GnuPG secrets
-X-KDE-Wayland-Interfaces=org_kde_kwin_keystate
-NoDisplay=true
+../../../.homesick/repos/dotfiles/home/.local/share/applications/org.gnupg.pinentry-qt5.desktop

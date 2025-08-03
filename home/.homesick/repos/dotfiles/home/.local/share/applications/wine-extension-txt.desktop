@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=notepad
+MimeType=text/plain;
+Exec=env WINEPREFIX="/home/trickyni/Games/tiny-rogues-2.8.5" /home/ubuntu/buildbot/runners/wine/lutris-5.21-x86_64/bin/wine start /ProgIDOpen txtfile %f
+NoDisplay=true
+StartupNotify=true
+Icon=1E64_notepad.0
