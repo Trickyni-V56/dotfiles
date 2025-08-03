@@ -1,6 +1,8 @@
 ;;    Laptop Battery
-(defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
-(defpoll laptop_charging :interval "2s" :initial false "bash ~/.config/eww/scripts/laptop-charging.sh")
+;;(defpoll laptop_batlvl :interval "10s" :initial 404 "bash ~/.config/eww/scripts/laptop-battery.sh")
+(defvar laptop_batlvl 100)
+(defvar laptop_charging false)
+;;(defpoll laptop_charging :interval "2s" :initial false "bash ~/.config/eww/scripts/laptop-charging.sh")
 
 (defwidget battery []
   (box
@@ -11,8 +13,8 @@
     (label
      :valign "center"
      :class {
-       laptop_charging == true ? "bottombar charging" :
-       "bottombar icon"}
+       laptop_charging == true ? "bottombar-icon charging" :
+       "bottombar-icon"}
      :text " ")
     (progress
       :valign "center"
