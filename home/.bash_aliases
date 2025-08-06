@@ -30,7 +30,6 @@ alias cd='z'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias untar='sudo tar -xvzf'
-alias gg='goto-ssh'
 
 #   Arch linux
 if grep arch /etc/os-release >/dev/null; then
