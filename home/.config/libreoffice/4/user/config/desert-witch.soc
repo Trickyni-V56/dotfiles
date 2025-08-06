@@ -8,8 +8,8 @@
 <draw:color draw:name="Orange"            draw:color="#E68D53"/>
 <draw:color draw:name="Saffron"           draw:color="#f8e2a0"/>
 <draw:color draw:name="Sand"              draw:color="#C1A387"/>
-<draw:color draw:name="Moss"              draw:color="#ace1af"/>
-<draw:color draw:name="Celadon"           draw:color="#92a650"/>
+<draw:color draw:name="Celadon"           draw:color="#ace1af"/>
+<draw:color draw:name="Moss"              draw:color="#92a650"/>
 <draw:color draw:name="Cyan"              draw:color="#3ECCBE"/>
 <draw:color draw:name="Black"             draw:color="#000000"/>
 <draw:color draw:name="White"             draw:color="#FFFFFF"/>

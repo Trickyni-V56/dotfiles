@@ -11,7 +11,7 @@ truncate_to_repo = true # truncates directory to root folder if in github repo
 [hostname]
 ssh_only = false
 format = '$hostname '
-aliases = {"hachiko" = "\u001B[38;2;62;204;190m󰩄", "IrregularNotes" = "\u001B[38;2;193;163;135m󰎌", "pablotronica" = "\u001B[38;2;193;163;135m󰩃"}
+aliases = {"hachiko" = "\u001B[38;2;62;204;190m󰩄", "IrregularNotes" = "\u001B[38;2;193;163;135m󰎌", "pablotronica" = "\u001B[38;2;193;163;135m󰩃", "twister"="\u001B[38;2;62;204;190m𖦹"}
 
 [git_branch]
 symbol = '𖣂'
