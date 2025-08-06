@@ -146,6 +146,11 @@ dirs = [
 	{ name = ".ssh", text = "󰣀", fg = "#E68D53" },
 	{ name = ".vim", text = "", fg = "#E68D53" },
 	{ name = "desktop", text = "", fg = "#E68D53" },
+	{ name = ".cargo", text = "󱣘", fg = "#E68D53" },
+	{ name = ".android", text = "", fg = "#E68D53" },
+	{ name = ".minecraft", text = "󰍳", fg = "#E68D53" },
+	{ name = ".thunderbird", text = "", fg = "#E68D53" },
+	{ name = "paru", text = "󰣇", fg = "#E68D53" },
 
 ]
 files = [

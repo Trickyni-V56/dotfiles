@@ -36,10 +36,37 @@ broken_symlink:
   is_strikethrough: true
 broken_path_overlay:
   foreground: "#E86045"
+
+filenames:
+  Downloads:    {icon: {glyph: }}
+  Games:        {icon: {glyph: 󰊗}}
+  Pictures:     {icon: {glyph: }}
+  Music:        {icon: {glyph: }}
+  Desktop:      {icon: {glyph: }}
+  books:        {icon: {glyph: }}
+  audiobooks:   {icon: {glyph: 󱚓}}
+  Videos:       {icon: {glyph: }}
+  .config:      {icon: {glyph: }}
+  .local:       {icon: {glyph: }}
+  .task:        {icon: {glyph: }}
+  .steam:       {icon: {glyph: }}
+  .shells:      {icon: {glyph: }}
+  .homesick:    {icon: {glyph: 󰟑}}
+  .mozilla:     {icon: {glyph: 󰈹}}
+  .ssh:         {icon: {glyph: 󰣀}}
+  .vim:         {icon: {glyph: }}
+  .cargo:       {icon: {glyph: 󱣘}}
+  .android:     {icon: {glyph: }}
+  .minecraft:   {icon: {glyph: 󰍳}}
+  .thunderbird: {icon: {glyph: }}
+  git:          {icon: {glyph: }}
+  paru:         {icon: {glyph: 󰣇}}
+  ..:           {icon: {glyph: }}
 extensions:
-  flac:
-    filename:
-      foreground: "#f8e2a0"
-    icon:
-      style:
-        foreground: "#f8e2a0"
+  m4b:
+    {filename:
+      {foreground: "#f8e2a0"},
+    icon: {
+      glyph: 󱚓,
+      style: {foreground: "#f8e2a0"}}}
+
