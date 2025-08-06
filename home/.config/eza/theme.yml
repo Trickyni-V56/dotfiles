@@ -62,11 +62,37 @@ filenames:
   git:          {icon: {glyph: }}
   paru:         {icon: {glyph: 󰣇}}
   ..:           {icon: {glyph: }}
+  .bashrc:      {icon: {glyph: }}
+
 extensions:
   m4b:
-    {filename:
-      {foreground: "#f8e2a0"},
-    icon: {
-      glyph: 󱚓,
-      style: {foreground: "#f8e2a0"}}}
+    filename:
+      foreground: "#f8e2a0"
+    icon:
+      glyph: 󱚓
+      style:
+        foreground: "#f8e2a0"
+  py:
+    filename:
+      foreground: "#AFD2E9"
+    icon:
+      glyph: 󰳗
+      style:
+        foreground: "#ace1af"
+  css:
+    filename:
+      foreground: "#AFD2E9"
+    icon:
+      glyph: 
+      style:
+        foreground: "#AFD2E9"
+  sh:           {icon: {glyph: 󱆃}}
+  epub:         {icon: {glyph: }}
+  txt:          {icon: {glyph: }}
+  pdf:          {icon: {glyph: }}
+  log:          {icon: {glyph: }}
+  sqlite3:      {icon: {glyph: }}
+  json:         {icon: {glyph: }}
+  odt:          {icon: {glyph: }}
+
 

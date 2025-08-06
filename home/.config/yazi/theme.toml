@@ -165,6 +165,7 @@ globs = [
 prepend_exts = [
 	{ name = "py", text = "󰳗" },
 	{ name = "sh", text = "󱆃", fg = "#AFD2E9" },
+	{ name = "css", text = "", fg = "#AFD2E9" },
 # images
 	{ name = "jpg", text = "", fg = "#92a650" },
 	{ name = "jpeg", text = "", fg = "#92a650" },
@@ -180,6 +181,7 @@ prepend_exts = [
 	{ name = "txt", text = "", fg = "#AFD2E9" },
 	{ name = "log", text = "", fg = "#AFD2E9" },
 	{ name = "sqlite3", text = "", fg = "#AFD2E9" },
+	{ name = "odt", text = "", fg = "#AFD2E9" },
 
 # vid
 	{ name = "mp4", text = "", fg = "#3ECCBE" },
