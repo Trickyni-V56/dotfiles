@@ -179,10 +179,12 @@ prepend_exts = [
 # vid
 	{ name = "mp4", text = "", fg = "#3ECCBE" },
 	{ name = "mkv", text = "", fg = "#3ECCBE" },
+
 # audio
 	{ name = "mp3", text = "", fg = "#f8e2a0" },
 	{ name = "wav", text = "", fg = "#f8e2a0" },
 	{ name = "FLAC", text = "", fg = "#f8e2a0" },
+	{ name = "m4b", text = "󱚓", fg = "#f8e2a0" },
 
 ]
 conds = [
