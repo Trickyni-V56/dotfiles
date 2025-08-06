@@ -10,10 +10,10 @@ eww update zenmsg="$*"
 alias shut='sudo poweroff'
 alias o='xdg-open'
 alias e='${EDITOR:-vim}'
-# alias y='yazi'
+alias y='yazi'
 alias bk='cd ..'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
-alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || micro ~/.bash_aliases'
+alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || e ~/.bash_aliases'
 
 #   security
 alias lockdown='sudo rfkill block all'
@@ -30,6 +30,7 @@ alias cd='z'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias untar='sudo tar -xvzf'
+alias gg='goto-ssh'
 
 #   Arch linux
 if grep arch /etc/os-release >/dev/null; then
