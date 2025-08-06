@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=linguini
-Icon=hebrew
-Comment=Temporarily activate Hebrew layout
-Exec=swaymsg 'input type:keyboard xkb_layout "us,il"'
-Type=Application
-Keywords=hebrew;keyboard;layout;language

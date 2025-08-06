@@ -1,1 +1,8 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/Team Fortress 2.desktop
+[Desktop Entry]
+Name=Team Fortress 2
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/440
+Icon=steam_icon_440
+Terminal=false
+Type=Application
+Categories=Game;

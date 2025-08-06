@@ -1,1 +1,8 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/net.lutris.lorelei-and-the-laser-eyes-17.desktop
+
+[Desktop Entry]
+Type=Application
+Name=lorelei-and-the-Laser-Eyes
+Icon=lutris_lorelei-and-the-laser-eyes
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/17
+Categories=Game
+TryExec=lutris

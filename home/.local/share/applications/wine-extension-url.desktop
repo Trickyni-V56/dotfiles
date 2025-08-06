@@ -1,1 +1,8 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/wine-extension-url.desktop
+[Desktop Entry]
+Type=Application
+Name=rundll32
+MimeType=application/x-mswinurl;
+Exec=env WINEPREFIX="/home/trickyni/Games/tiny-rogues-2.8.5/dosdevices/x:/Games/tiny-rogues-2.8.5" wine start /ProgIDOpen InternetShortcut %f
+NoDisplay=true
+StartupNotify=true
+Icon=5742_rundll32.0

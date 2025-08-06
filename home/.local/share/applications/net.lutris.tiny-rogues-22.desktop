@@ -1,1 +1,8 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/net.lutris.tiny-rogues-22.desktop
+
+[Desktop Entry]
+Type=Application
+Name=Tiny Rogues
+Icon=lutris_tiny-rogues
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/22
+Categories=Game
+TryExec=lutris

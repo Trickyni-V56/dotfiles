@@ -1,1 +1,6 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/zenmode.desktop
+[Desktop Entry]
+Name=zen
+Icon=zen-3
+Exec=/home/trickyni/.config/eww/scripts/zenmode.sh
+Type=Application
+Keywords=zen

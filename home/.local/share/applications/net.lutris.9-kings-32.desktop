@@ -1,1 +1,8 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/net.lutris.9-kings-32.desktop
+
+[Desktop Entry]
+Type=Application
+Name=9 kings
+Icon=lutris_9-kings
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/32
+Categories=Game
+TryExec=lutris

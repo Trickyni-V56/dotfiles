@@ -1,1 +1,12 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/steam.desktop
+[Desktop Entry]
+Name=Steam
+Comment=Application for managing and playing games on Steam
+Exec=/usr/bin/steam %U --enable-features=UseOzonePlatform --ozone-platform=wayland
+Icon=steam-pixel-bg
+Terminal=false
+Type=Application
+Categories=Network;FileTransfer;Game;
+MimeType=x-scheme-handler/steam;x-scheme-handler/steamlink;
+Actions=Store;Community;Library;Servers;Screenshots;News;Settings;BigPicture;Friends;
+PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true

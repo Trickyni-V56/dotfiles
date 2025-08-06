@@ -1,1 +1,12 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/kitty.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=kitty
+GenericName=Terminal emulator
+Comment=Fast, feature-rich, GPU based terminal
+TryExec=kitty
+StartupNotify=true
+Exec=kitty
+Icon=terminal-pixel-desert
+Categories=System;TerminalEmulator;
+NoDisplay=true

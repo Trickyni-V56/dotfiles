@@ -1,1 +1,8 @@
-../../../.homesick/repos/dotfiles/home/.local/share/applications/net.lutris.phoenotopia-19.desktop
+
+[Desktop Entry]
+Type=Application
+Name=Phoenotopia: Awakening
+Icon=lutris_phoenotopia
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/19
+Categories=Game
+TryExec=lutris
