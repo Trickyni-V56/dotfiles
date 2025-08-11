@@ -42,6 +42,7 @@ bindsym $mod+shift+d exec date -I | wl-copy && notify-send "date copied!"
     # Kill focused window
     bindsym shift+$mod+q kill
     bindsym ctrl+$mod+q kill
+    bindsym $mod+escape kill
 
     # Start your launcher
     bindsym $mod+tab exec $menu
