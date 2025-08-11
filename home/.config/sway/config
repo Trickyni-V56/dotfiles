@@ -36,15 +36,14 @@ bindsym $mod+shift+d exec date -I | wl-copy && notify-send "date copied!"
 
 # Basics:
     # Start a terminal
-    bindsym ctrl+alt+t exec $term
     bindsym $mod+return exec $term
-    bindsym ctrl+alt+y exec $term ~/.shells/yazi_launcher.sh
+    bindsym $mod+y exec $term ~/.shells/yazi_launcher.sh
 
     # Kill focused window
     bindsym shift+$mod+q kill
+    bindsym ctrl+$mod+q kill
 
     # Start your launcher
-    bindsym ctrl+$mod exec $menu
     bindsym $mod+tab exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
