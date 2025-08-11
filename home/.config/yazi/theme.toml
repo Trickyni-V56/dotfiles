@@ -110,6 +110,7 @@ rules = [
 # Archives
 	{ mime = "application/epub+zip", fg = "#AFD2E9" },
 	{ mime = "application/*zip", fg = "#E86045" },
+	{ mime = "application/rar", fg = "#E86045" },
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#E86045" },
 # Documents
 	{ mime = "application/{pdf,doc,rtf}", fg = "#AFD2E9" },
@@ -181,7 +182,9 @@ prepend_exts = [
 	{ name = "txt", text = "", fg = "#AFD2E9" },
 	{ name = "log", text = "", fg = "#AFD2E9" },
 	{ name = "sqlite3", text = "", fg = "#AFD2E9" },
+	{ name = "json", text = "", fg = "#AFD2E9" },
 	{ name = "odt", text = "", fg = "#AFD2E9" },
+	{ name = "html", text = "", fg = "#AFD2E9" },
 
 # vid
 	{ name = "mp4", text = "", fg = "#3ECCBE" },
@@ -192,6 +195,11 @@ prepend_exts = [
 	{ name = "wav", text = "", fg = "#f8e2a0" },
 	{ name = "FLAC", text = "", fg = "#f8e2a0" },
 	{ name = "m4b", text = "󱚓", fg = "#f8e2a0" },
+
+	{ name = "zip", text = "", fg = "#E86045" },
+	{ name = "rar", text = "", fg = "#E86045" },
+	{ name = "tar", text = "", fg = "#E86045" },
+
 
 ]
 conds = [

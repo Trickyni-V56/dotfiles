@@ -2,7 +2,7 @@
 Type=Application
 Name=Wine Internet Explorer
 MimeType=image/jpeg;
-Exec=env WINEPREFIX="/home/trickyni/Games/tiny-rogues-2.8.5/dosdevices/x:/Games/tiny-rogues-2.8.5" wine start /ProgIDOpen jpegfile %f
+Exec=env WINEPREFIX="/home/trickyni/Games/abiotic-factor" wine start /ProgIDOpen jpegfile %f
 NoDisplay=true
 StartupNotify=true
 Icon=ECB7_iexplore.0
