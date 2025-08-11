@@ -14,6 +14,7 @@ alias y='yazi'
 alias bk='cd ..'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || e ~/.bash_aliases'
+alias nmtui='NEWT_COLORS=$(<~/.config/nmtui/palette) nmtui'
 
 #   security
 alias lockdown='sudo rfkill block all'
