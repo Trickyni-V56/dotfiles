@@ -31,7 +31,7 @@ alias cd='z'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias untar='sudo tar -xvzf'
-
+alias {tailscale-tui,tailscaletui}='tsui'
 #   Arch linux
 if grep arch /etc/os-release >/dev/null; then
     alias invoke='sudo pacman -Su'
