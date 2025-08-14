@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=THE FINALS
+Name=Abiotic Factor
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/2073850
-Icon=steam_icon_2073850
+Exec=steam steam://rungameid/427410
+Icon=steam_icon_427410
 Terminal=false
 Type=Application
 Categories=Game;
