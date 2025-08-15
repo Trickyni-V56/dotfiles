@@ -29,7 +29,7 @@ rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,sc
 # General decoration
 color.label=yellow
 color.label.sort=color15
-color.alternate=on color8
+color.alternate=
 color.header=
 color.footnote=
 color.warning=
@@ -50,7 +50,7 @@ color.blocking=green
 color.project.none=
 
 # Priority
-color.uda.priority.@=color15
+color.uda.priority.@=color12
 
 # Tags
 color.tag.next=black on yellow
