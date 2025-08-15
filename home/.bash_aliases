@@ -39,6 +39,9 @@ if grep arch /etc/os-release >/dev/null; then
     alias commune='sudo pacman -Syu'
 fi
 
+
+alias ydotool-daemon='sudo ydotoold -p /run/user/1000/.ydotool_socket -P 777'
+
 #   ls
 alias {eza,ls}='eza -1 --group-directories-first'
 alias lt='eza -T'
