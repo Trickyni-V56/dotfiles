@@ -1,8 +1,15 @@
 exec eww open-many topbar bottombar
-exec qbittorrent
+#   volume control
 exec pavucontrol
-assign [app_id="obsidian"] workspace o
-assign [app_id="qbittorrent"] workspace d
 assign [app_id="org.pulseaudio.pavucontrol"] workspace v
+
+#   Obsidian
+assign [app_id="obsidian"] workspace o
+
+#   qbittorrent
+exec qbittorrent
+assign [app_id="qbittorrent"] workspace d
+
 for_window [title="bluetui"] floating enable, resize set 80 ppt 40 ppt, move position center, sticky enable
 
+assign [title="Steam"] workspace number 3
