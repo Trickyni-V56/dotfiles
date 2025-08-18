@@ -29,7 +29,7 @@ rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,sc
 # General decoration
 color.label=yellow
 color.label.sort=color15
-color.alternate=
+color.alternate=on color14
 color.header=
 color.footnote=
 color.warning=
@@ -41,7 +41,7 @@ color.completed=white
 color.deleted=color6 on red
 color.active=black on color11
 color.recurring=
-color.scheduled=black on color14
+color.scheduled=black on color4
 color.until=
 color.blocked=white on color6
 color.blocking=green
