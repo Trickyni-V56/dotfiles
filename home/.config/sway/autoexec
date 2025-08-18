@@ -12,4 +12,5 @@ assign [app_id="qbittorrent"] workspace d
 
 for_window [title="bluetui"] floating enable, resize set 80 ppt 40 ppt, move position center, sticky enable
 
+assign [app_id="firefox"] workspace number 1
 assign [title="Steam"] workspace number 3
