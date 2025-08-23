@@ -50,6 +50,8 @@ color.blocking=green
 color.project.none=
 
 # Priority
+color.uda.priority.o=color10
+color.uda.priority.x=color15
 color.uda.priority.@=color12
 
 # Tags

@@ -186,8 +186,8 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 
 
 include /etc/sway/config.d/*
-include ~/.config/sway/bar
 include ~/.config/sway/input
 include ~/.config/sway/theme
 include ~/.config/sway/autoexec
+include ~/.config/sway/output
 

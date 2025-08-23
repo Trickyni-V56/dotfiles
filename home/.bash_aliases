@@ -11,6 +11,7 @@ alias shut='sudo poweroff'
 alias o='xdg-open'
 alias e='${EDITOR:-vim}'
 alias y='yazi'
+alias t='task'
 alias bk='cd ..'
 alias S='sudo !!'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
@@ -60,10 +61,6 @@ alias gitscum='git add . && git commit -m "0" && git push && echo -e "\033[93mgi
 
 #   Devices
 alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
-
-#   taskwarrior
-alias todo='task add'
-alias now='task now'
 
 #   yt-dlp
 alias ytdlp='yt-dlp'
