@@ -2,6 +2,7 @@
 (include "clocks.yuck")
 (include "mew.yuck")
 (include "moon.yuck")
+(include "network.yuck")
 (include "phones.yuck")
 (include "ram.yuck")
 (include "resize.yuck")
@@ -43,7 +44,7 @@
 
 (defwidget topstatus []
   (centerbox
-    ;;:space-evenly false
+    :space-evenly false
     :class "bar"
     (top-left)
     (top-center)
@@ -52,8 +53,10 @@
 )
 
 (defwidget bottom-status []
-  (box :class "bar"
-    (bottom-right)
+  (centerbox :class "bar"
+     (bottom-left)
+     (bottom-mid)
+     (bottom-right)
   )
 )
 
@@ -102,3 +105,21 @@
 )
 
 
+(defwidget bottom-mid []
+  (box
+    :space-evenly false
+    :halign "end"
+    :valign "center"
+    (label :text "")
+  )
+)
+
+
+(defwidget bottom-left []
+  (box
+    :space-evenly false
+    :halign "start"
+    :valign "center"
+    (network)
+  )
+)
