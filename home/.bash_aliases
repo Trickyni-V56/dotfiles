@@ -36,7 +36,7 @@ alias untar='sudo tar -xvzf'
 alias {tailscale-tui,tailscaletui}='tsui'
 #   Arch linux
 if grep arch /etc/os-release >/dev/null; then
-    alias invoke='sudo pacman -Su'
+    alias invoke='sudo pacman -S'
     alias banish='sudo pacman -R'
     alias commune='sudo pacman -Syu'
 fi
