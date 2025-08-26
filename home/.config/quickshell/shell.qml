@@ -8,5 +8,9 @@ Scope {
     id: fontProggy
     source: "fonts/ProggyCleanSZNerdFontMono-Regular.ttf"
   }
+  FontLoader {
+    id: fontIcons
+    source: "fonts/SymbolsNerdFontMono-Regular.ttf"
+  }
   Bar {}
 }
