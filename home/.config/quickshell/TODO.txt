@@ -1,0 +1,19 @@
+Main:
+  Time/date
+  sunset timer
+  ram
+  volume
+  taskwarrior
+  workspaces
+  headset battery
+  laptop battery
+  network
+
+low priority:
+  moon
+  zen mode
+
+expansion:
+  notification
+  app launcher
+  bluetooth launcher
