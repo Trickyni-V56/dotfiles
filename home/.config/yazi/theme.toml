@@ -101,8 +101,10 @@ title_error = { fg = "#e78284" }
 
 [filetype]
 rules = [
+	{ name = "*", is = "orphan", fg = "#E86045", crossed = true },
 	{ name = "*", is = "link", fg = "#C1A387" },
-	{ name = "*", is = "orphan", fg = "#E86045" },
+# Orphan
+
 # Media
 	{ mime = "image/*", fg = "#92a650" },
 	{ mime = "audio/*", fg = "#f8e2a0" },
