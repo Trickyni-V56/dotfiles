@@ -13,4 +13,5 @@ Scope {
     source: "fonts/SymbolsNerdFontMono-Regular.ttf"
   }
   Bar {}
+  Workspaces {}
 }

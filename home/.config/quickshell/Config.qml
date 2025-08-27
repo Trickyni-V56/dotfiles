@@ -5,8 +5,7 @@ import Quickshell.Io
 
 Singleton {
   id: root
-
-property var palette: {
+  property var palette: {
     "fg": "#afd2e9",
     "bg": "#3b3228",
     "bg95": "#43392d",
@@ -23,3 +22,4 @@ property var palette: {
     "grey": "#868686"
   }
 }
+

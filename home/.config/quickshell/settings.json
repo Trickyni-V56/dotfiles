@@ -10,8 +10,6 @@
             "files": "nemo",
             "terminal": "kitty"
         },
-        "militaryTimeClockFormat": true,
-        "setWallpaperToThemeWallpaper": true,
         "systemDetails": {
             "cpu": "CPU Name",
             "gpu": "GPU Name",
