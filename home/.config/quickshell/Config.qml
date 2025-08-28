@@ -2,6 +2,7 @@ pragma Singleton
 import QtQuick
 import Quickshell
 import Quickshell.Io
+import ".."
 
 Singleton {
   id: root
@@ -20,6 +21,11 @@ Singleton {
     "saffron": "#f8e2a0",
     "cyan": "#3eccbe",
     "grey": "#868686"
+  }
+  property var font: {
+    "family": fontProggy,
+    "icon": "fontIcon.name",
+    "size": 12
   }
 }
 

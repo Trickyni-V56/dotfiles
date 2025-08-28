@@ -5,19 +5,34 @@ import QtQuick.Controls.Basic
 import QtQuick.Layouts
 import ".."
 
-// RowLayout {
-//   id: workspaces
-//   spacing: 3                                    // space between workspace buttons
-//   anchors.left: parent.left                     // align to left edge of the parent
-//   anchors.verticalCenter: parent.verticalCenter // vertically center within parent
-// }
+//TODO
 
-Text {
-  text: I3.workspaces.number
-  color: Config.palette.fg
+RowLayout {
+  id: workspaces
   anchors.left: parent.left
   anchors.verticalCenter: parent.verticalCenter
-  //font.family: fontProggy.name
-  // font.pixelSize: 16
-  font.pixelSize: 12
+  property var wsList: I3.workspaces.values
+  Repeater {
+    model: parent.wsList
+    // Button {
+    Text {
+      id: wsLabel
+      anchors.verticalCenter: parent.verticalCenter
+      // contentItem: Text {
+        // horizontalAlignment: Text.AlignHCenter
+        // verticalAlignment: Text.AlignVCenter
+        height: 8
+        width: 8
+        text: modelData.name
+        color: Config.palette.fg
+        // font.pixelSize: Config.font.size
+        // font.family: Config.font.family
+          // onPressed: event => {
+          //   I3.dispatch(`workspace ` + modelData.number);
+          //   event.accepted = true;
+          // }
+      // }
+    }
+  }
 }
+

@@ -2,6 +2,7 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import ".."
 
 Scope {
   FontLoader {
@@ -13,5 +14,4 @@ Scope {
     source: "fonts/SymbolsNerdFontMono-Regular.ttf"
   }
   Bar {}
-  Workspaces {}
 }

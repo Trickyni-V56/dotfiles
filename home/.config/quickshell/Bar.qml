@@ -1,10 +1,11 @@
 // Bar.qml
 import Quickshell
+import QtQuick
 import ".."
 
 Scope {
   PanelWindow {
-    required property var modelData
+    // required property var modelData
     anchors {
       top: true
       left: true
@@ -12,13 +13,12 @@ Scope {
     }
     implicitHeight: 24
     color: Config.palette.bg
-    ClockWidget {
-      anchors {
-        right: parent.right
-        verticalCenter: parent.verticalCenter
-        rightMargin: 8
-      }
+    Timedate {
+      anchors.rightMargin: 8
     }
+    // Workspaces {
+    //   anchors.leftMargin: 8
+    // }
   }
 }
 
