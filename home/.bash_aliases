@@ -24,8 +24,7 @@ alias lockdown-lift='sudo rfkill unblock all'
 alias lock='swaylock'
 
 #   renames
-alias dust='dust -riC'
-alias watch='viddy'
+alias 'dust= dust -r'
 alias cat='bat'
 alias enkidu='ncdu --color dark'
 alias diff='delta'
