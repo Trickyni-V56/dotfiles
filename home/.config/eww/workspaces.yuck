@@ -47,21 +47,13 @@
      (eventbox :onclick "sway workspace 0"
       (label :text "0" :class {wsf == "0" ? "focused ws-text" : "ws-text"})))
 
-    (revealer :transition "slideright" :reveal {wse =~ "o"} :duration "100ms"
-     (eventbox :onclick "sway workspace o"
-      (label :text "󰗣 " :class {wsf == "o" ? "focused ws-icon" : "ws-icon"})))
+    (revealer :transition "slideright" :reveal {wse =~ "11"} :duration "100ms"
+     (eventbox :onclick "sway workspace 11"
+      (label :text " " :class {wsf == "11" ? "focused ws-icon" : "ws-icon"})))
 
-    (revealer :transition "slideright" :reveal {wse =~ "p"} :duration "100ms"
-     (eventbox :onclick "sway workspace p"
-      (label :text " " :class {wsf == "p" ? "focused ws-icon" : "ws-icon"})))
-
-    (revealer :transition "slideright" :reveal {wse =~ "d"} :duration "100ms"
-     (eventbox :onclick "sway workspace d"
-      (label :text " " :class {wsf == "d" ? "focused ws-icon" : "ws-icon"})))
-
-    (revealer :transition "slideright" :reveal {wse =~ "v"} :duration "100ms"
-    (eventbox :onclick "sway workspace v"
-      (label :text " " :class {wsf == "v" ? "focused ws-icon" : "ws-icon"})))
+    (revealer :transition "slideright" :reveal {wse =~ "12"} :duration "100ms"
+    (eventbox :onclick "sway workspace 12"
+      (label :text " " :class {wsf == "12" ? "focused ws-icon" : "ws-icon"})))
 
   )
 )
