@@ -159,10 +159,10 @@ mode "resize" {
     bindsym Right resize grow width 10px
 
     # Return to default mode
-    bindsym Return mode "default" ; exec eww update _resize=false
-    bindsym Escape mode "default" ; exec eww update _resize=false
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize" ; exec eww update _resize=true
+bindsym $mod+r mode "resize"
 
 # Utilities:
 
