@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=swaylock
-Exec=swaylock
+Exec=swaylock -f
 Icon=lock-pixel-bg
 Terminal=false
 Type=Application
