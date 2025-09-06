@@ -1,0 +1,7 @@
+[Unit]
+Description=sync taskwarrior to server
+
+[Service]
+Type=oneshot
+ExecStart=task sync
+
