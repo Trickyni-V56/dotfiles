@@ -102,7 +102,4 @@ report.due.description = "Timeline view"
 
 
 
-sync.server.url=https://taskwarrior.trickyni.com
-sync.server.client_id=820bc514-811b-441b-a858-28fc7f2f2ce7
-sync.encryption_secret=5C^9#&%1M#y*5*E30ot38@&#LR2t&4%
-
+include ./twsync
