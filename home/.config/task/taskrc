@@ -102,4 +102,4 @@ report.due.description = "Timeline view"
 
 
 
-include ./twsync
+include ~/.config/task/twsync
