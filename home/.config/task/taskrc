@@ -46,6 +46,7 @@ urgency.tags.coefficient = 0.0
 urgency.annotations.coefficient = 0.0
 urgency.project.coefficient = 0.0
 urgency.age.coefficient = 0.0
+urgency.blocked.coefficient = -50.0
 
 # user-defined attributes
 uda.priority.values=x,@,o
