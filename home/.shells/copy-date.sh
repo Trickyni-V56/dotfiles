@@ -4,4 +4,6 @@
 # date -I | xclip -sel c -in
 # xdotool key --clearmodifiers ctrl+v
 
-date -I | wl-copy
+# date -I | tr -d '\n' | wl-copy
+echo -n $(date -I) | wl-copy
+

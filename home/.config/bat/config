@@ -1,2 +1,3 @@
 --theme="ansi"
 --map-syntax='*.yuck:Lisp'
+--style='header,grid'

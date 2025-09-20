@@ -1,5 +1,5 @@
 configuration {
-modes: "window,drun,filebrowser";
+modes: "window,drun,ssh";
 font: "ProggyCleanSZ Nerd Font 24";
 /*	location: 0;*/
 /*	yoffset: 0;*/

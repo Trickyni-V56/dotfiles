@@ -1,4 +1,5 @@
 #!/bin/bash
+alias goto_silksong='cd "/home/trickyni/Games/hollow-knight-silksong/drive_c/users/trickyni/AppData/LocalLow/Team Cherry" && y'
 
 alias obsidian='obsidian --ozone-platform=wayland'
 alias zen='~/.config/eww/scripts/zenmode.sh'
