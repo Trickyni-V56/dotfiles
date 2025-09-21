@@ -23,6 +23,9 @@ vim = [
 open = [
 	{ run = 'xdg-open "$1"', desc = "Open" },
 ]
+view = [
+	{ run = 'geeqie "$1"', desc = "View" },
+]
 play = [
 	{ run = 'mpv --force-window "$@"', orphan = true, desc = "Play" },
 ]
@@ -36,7 +39,7 @@ rules = [
 	# Text"edit",
 	{ mime = "text/*", use = [ "edit", "reveal", "kate", "vim" ] },
 	# Image
-	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "image/*", use = [ "view", "reveal" ] },
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
 	# Archive
