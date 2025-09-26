@@ -20,11 +20,12 @@ alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || e ~/.bash_al
 alias nmtui='NEWT_COLORS=$(<~/.config/nmtui/palette) nmtui'
 
 #   security
-alias lockdown='sudo rfkill block all'
+alias lockdown='rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
 alias lock='swaylock'
 
 #   renames
+alias quickshell='swaymsg exec quickshell'
 alias cat='bat'
 alias enkidu='ncdu --color dark'
 alias diff='delta'

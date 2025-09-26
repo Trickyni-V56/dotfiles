@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Quickshell
+Exec=swaymsg exec quickshell
+Icon=UI-pixel-bg
+Terminal=false
+Type=Application
+Categories=UI;
