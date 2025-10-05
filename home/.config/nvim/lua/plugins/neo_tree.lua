@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<Bslash>", "<Cmd>Neotree toggle<CR>")
+--
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -8,5 +10,11 @@ return {
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
-  }
+    opts = {
+      close_if_last_window = true,
+      window = {
+        width = 30,
+      },
+    },
+  },
 }

@@ -5,6 +5,7 @@ require("config.lazy")
 
 vim.g.have_nerd_font = true
 vim.o.relativenumber = true
+vim.o.number = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.tabstop = 4
@@ -36,9 +37,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-require("bufferline").setup{}
+require("bufferline").setup()
+require('nvim-toggler').setup()
+require('Comment').setup()
+require('guess-indent').setup()
+-- require('autopairs').setup()
 
 -- theme
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd.colorscheme 'gruvbox'
 

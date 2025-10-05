@@ -9,3 +9,4 @@
 
 #	sponsorblock options
 --sponsorblock-remove sponsor --sponsorblock-mark selfpromo,interaction
+--cookies-from-browser firefox
