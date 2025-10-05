@@ -188,8 +188,8 @@ exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # blur
-blur enable
-blur_radius 3
+# blur enable
+# blur_radius 3
 
 include /etc/sway/config.d/*
 include ~/.config/sway/input
