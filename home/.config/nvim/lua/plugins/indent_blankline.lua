@@ -2,8 +2,18 @@ return {
   "lukas-reineke/indent-blankline.nvim",
   main = "ibl",
   opts = {
-    indent = { char = "│", tab_char = "»", },
-    scope = { enabled = true },
+    indent = {
+      char = "▏", 
+      tab_char = "»",
+    },
+    scope = {
+      enabled = true,
+      highlight = { "Function", "Label" },
+      show_start = true,
+      show_end = false,
+      show_exact_scope = true,
+      priority = 500,
+    },
   },
   config = function(_, opts)
     local highlight = {
@@ -27,9 +37,10 @@ return {
       vim.api.nvim_set_hl(0, "RainbowCyan",   { fg = "#56B6C2" })
     end)
 
-    vim.g.rainbow_delimiters = { highlight = highlight }
-    require("ibl").setup { scope = { highlight = highlight } }
-    hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
+vim.g.rainbow_delimiters = { highlight = highlight }
+require("ibl").setup { scope = { highlight = highlight } }
+hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
+
     -- merge your custom opts with rainbow highlights
     opts.indent.highlight = highlight
     opts.scope.highlight = highlight

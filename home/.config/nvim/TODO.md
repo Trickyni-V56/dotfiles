@@ -32,4 +32,5 @@
 
 ## UI
 - [ ] bar
+- [ ] blank indent/rainbow/scope
 - [ ] greeter
