@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
 require("config.lazy")
 
 vim.g.have_nerd_font = true
@@ -38,10 +37,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 require("bufferline").setup()
-require('nvim-toggler').setup()
 require('Comment').setup()
 require('guess-indent').setup()
--- require('autopairs').setup()
+require('nvim-toggler').setup({
+    inverses = {
+    ['vim'] = 'emacs'
+  },
+})
 
 -- theme
 vim.o.background = "dark" -- or "light" for light mode

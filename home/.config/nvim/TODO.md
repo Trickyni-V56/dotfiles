@@ -3,8 +3,17 @@
 - [-] [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim/wiki/Checkboxes)
 - [-] [TODO comments](https://github.com/folke/todo-comments.nvim)
 - [-] [comments](https://github.com/numToStr/Comment.nvim) 
+- [-] [twilight](https://github.com/folke/twilight.nvim) 
+- [-] [zenmode](https://github.com/folke/zen-mode.nvim) 
+- [-] [which-key](https://github.com/folke/which-key.nvim) 
+- [-] [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) 
+- [-] [yazi](https://github.com/mikavilpas/yazi.nvim) 
+- [-] []() 
 
-## project manager
+## other tasks
+- [ ] integrate autopairs/tags with autocomplete
+- [ ] project manager
+- [ ] telescope?
 
 ## Code structure
 - [ ] LSP
@@ -14,11 +23,11 @@
 - [ ] trouble.nvim
 - [ ] diagnostics?
 - [ ] autotags
-- [ ] rainbow 
-  - [ ] tags
-  - [ ] pairs
 - [ ] surround
 
 ## UI
 - [ ] bar
 - [ ] greeter
+- [ ] rainbow 
+  - [ ] tags
+  - [ ] pairs
