@@ -1,0 +1,13 @@
+- autocomplete
+  - blink.cmp vs nvim.cmp
+  - make it work with autopairs
+  - autotags?
+- LSP
+  - trouble.nvim
+- Telescope
+- linter setup
+- greeter
+- conform.nvim
+- surround
+- project manager
+- bars
