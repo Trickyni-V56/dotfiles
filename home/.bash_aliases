@@ -1,5 +1,4 @@
 #!/bin/bash
-alias goto_silksong='cd "/home/trickyni/Games/hollow-knight-silksong/drive_c/users/trickyni/AppData/LocalLow/Team Cherry" && y'
 
 alias obsidian='obsidian --ozone-platform=wayland'
 alias zen='~/.config/eww/scripts/zenmode.sh'
@@ -14,10 +13,11 @@ alias e='${EDITOR:-vim}'
 alias y='yazi'
 alias t='task'
 alias bk='cd ..'
-alias S='sudo !!'
+# alias S='sudo !!'
 alias s='sshs'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
-alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || e ~/.bash_aliases'
+# alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || e ~/.bash_aliases'
+alias bashr='e ~/.bash_aliases'
 alias nmtui='NEWT_COLORS=$(<~/.config/nmtui/palette) nmtui'
 
 #   security
@@ -66,10 +66,10 @@ alias jotm='bluetoothctl connect AC:80:0A:2E:C9:07'
 #   yt-dlp
 alias ytdlp='yt-dlp'
 alias ytmp3='yt-dlp --config-location ~/.config/yt-dlp/mp3'
-alias subbox='yt-dlp --config-location ~/.config/yt-dlp/subbox'
 
 #   homeshick
 alias homescum='homeshick cd dotfiles && git add . && git commit -m "0" && git push && echo -e "\033[93mhome successfully scummed\033[0m"'
+alias hometrack='homeshick track dotfiles'
 
 #   hachiko
 alias hachisync='ssh -L 8385:localhost:8384 hachiko'

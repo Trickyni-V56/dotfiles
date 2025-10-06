@@ -1,13 +1,24 @@
-- autocomplete
-  - blink.cmp vs nvim.cmp
-  - make it work with autopairs
-  - autotags?
-- LSP
-  - trouble.nvim
-- Telescope
-- linter setup
-- greeter
-- conform.nvim
-- surround
-- project manager
-- bars
+## config
+- [-] [blink.cmp](https://cmp.saghen.dev/configuration/general.html)
+- [-] [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim/wiki/Checkboxes)
+- [-] [TODO comments](https://github.com/folke/todo-comments.nvim)
+- [-] [comments](https://github.com/numToStr/Comment.nvim) 
+
+## project manager
+
+## Code structure
+- [ ] LSP
+- [ ] linter
+- [ ] formatter
+  - [ ] conform.nvim
+- [ ] trouble.nvim
+- [ ] diagnostics?
+- [ ] autotags
+- [ ] rainbow 
+  - [ ] tags
+  - [ ] pairs
+- [ ] surround
+
+## UI
+- [ ] bar
+- [ ] greeter
