@@ -8,12 +8,17 @@
 - [-] [which-key](https://github.com/folke/which-key.nvim) 
 - [-] [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) 
 - [-] [yazi](https://github.com/mikavilpas/yazi.nvim) 
+- [-] [Rainbow Delimiters](https://gitlab.com/HiPhish/rainbow-delimiters.nvim) 
+- [-] []() 
+- [-] []() 
 - [-] []() 
 
 ## other tasks
 - [ ] integrate autopairs/tags with autocomplete
 - [ ] project manager
 - [ ] telescope?
+- [ ] open recently closed
+- [ ] number/bullet increaser
 
 ## Code structure
 - [ ] LSP
@@ -28,6 +33,3 @@
 ## UI
 - [ ] bar
 - [ ] greeter
-- [ ] rainbow 
-  - [ ] tags
-  - [ ] pairs
