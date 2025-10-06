@@ -2,6 +2,11 @@ return {
   "lukas-reineke/indent-blankline.nvim",
   main = "ibl",
   opts = {
+    exclude = {
+      filetypes = {
+        "md"
+      },
+    },
     indent = {
       char = "▏", 
       tab_char = "»",

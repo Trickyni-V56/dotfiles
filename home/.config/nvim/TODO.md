@@ -28,6 +28,7 @@
 - [ ] trouble.nvim
 - [ ] diagnostics?
 - [ ] autotags
+  - [ ] treesitter integration?
 - [ ] surround
 
 ## UI
