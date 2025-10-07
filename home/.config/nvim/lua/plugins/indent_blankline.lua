@@ -30,7 +30,12 @@ return {
     indent = {
       highlight = highlight,
       char = "▏"
-    }
+    },
+    exclude = {
+      filetypes = {
+        "markdown",
+      },
+    },
   })
     hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
   end
