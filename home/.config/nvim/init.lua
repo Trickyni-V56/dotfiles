@@ -38,14 +38,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-require("bufferline").setup()
-require('Comment').setup()
-require('guess-indent').setup()
-require('nvim-toggler').setup({
-    inverses = {
-    ['- [ ]'] = '- [x]'
-  },
-})
 
 -- theme
 vim.o.background = "dark" -- or "light" for light mode

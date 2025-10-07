@@ -1,3 +1,10 @@
-return {
-	"nguyenvukhang/nvim-toggler"
-}
+-- return {
+--     "nguyenvukhang/nvim-toggler",
+--     opts = {
+--         inverses = {
+--             ["- [ ]"] = "- [x]",
+--         },
+--     },
+-- }
+--
+--

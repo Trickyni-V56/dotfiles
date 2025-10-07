@@ -1,4 +1,5 @@
 return {
+  {
   "lukas-reineke/indent-blankline.nvim", -- Add indentation guides
   main = "ibl",
   event = "VimEnter",
@@ -39,4 +40,8 @@ return {
   })
     hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
   end
+},
+{ -- colors brackets in matching sets
+		'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
+}
 }
