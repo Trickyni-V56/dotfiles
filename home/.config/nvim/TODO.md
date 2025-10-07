@@ -8,14 +8,13 @@
 - [zenmode](https://github.com/folke/zen-mode.nvim) 
 - [which-key](https://github.com/folke/which-key.nvim) 
 - [yazi](https://github.com/mikavilpas/yazi.nvim) 
-- []() 
-- []() 
+- [notifier](https://github.com/folke/snacks.nvim/blob/main/docs/notifier.md) 
+- [lualine]() 
 - []() 
 
 ## other tasks
-- [ ] integrate autopairs/tags with autocomplete
 - [ ] project manager
-- [ ] telescope?
+- [ ] telescope? / fzflua?
 - [ ] open recently closed
 - [ ] number/bullet increaser
 - [ ] make indent guide ignore markdown files 
@@ -33,9 +32,7 @@
 - [ ] diagnostics?
 - [ ] autotags
   - [ ] treesitter integration?
-- [ ] surround
 
 ## UI
-- [ ] bar
-- [ ] blank indent/rainbow/scope
 - [ ] greeter
+

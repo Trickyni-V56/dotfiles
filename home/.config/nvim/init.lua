@@ -10,7 +10,7 @@ vim.o.smartcase = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
-
+vim.o.showmode = false -- hides mode indicator, since we have a status line
 -- whitespace characters
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
@@ -41,4 +41,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- theme
 vim.o.background = "dark" -- or "light" for light mode
+
+
 
