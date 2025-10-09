@@ -4,7 +4,8 @@
 -- 'numToStr/Comment.nvim',
 
 return {
-    { -- inverts value (true -> false, etc.)
+    { -- INFO: Inverts value (true -> false, etc.) 
+      --       space-i to invert
         "nguyenvukhang/nvim-toggler",
         opts = {
             inverses = {
@@ -12,15 +13,24 @@ return {
             },
         },
     },
-    { -- automatically match bracket pairs
+    { -- INFO: Automatically match bracket pairs.
         'nvim-mini/mini.pairs',
         opts = {}
     },
-    { -- commentate/uncomment text blocks
+    { -- INFO: Commentate/uncomment text blocks.
+      --       g-c-c to comment/uncomment
         'numToStr/Comment.nvim',
     },
-    { -- adds brackets around text object
+    { -- INFO: Adds brackets around text object. 
+      --       s-a to add
+      --       s-d to delete
+      --       s-r to replace
         'nvim-mini/mini.surround', 
-        opts = {}
+        opts = {},
+    },
+    {  
+        'nvim-mini/mini.splitjoin',
+        version = '*',
+        opts= {},
     },
 }

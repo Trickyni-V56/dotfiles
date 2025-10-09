@@ -1,3 +1,5 @@
+-- INFO: integrates yazi into nvim. 
+--       space-y to activate
 return {
   "mikavilpas/yazi.nvim",
   version = "*", -- use the latest stable version

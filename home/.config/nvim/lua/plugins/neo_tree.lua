@@ -1,8 +1,9 @@
-vim.keymap.set("n", "<Bslash>", "<Cmd>Neotree toggle<CR>")
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
 --
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
