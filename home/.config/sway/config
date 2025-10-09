@@ -6,7 +6,8 @@ bindsym $mod+return exec $term
 bindsym $mod+y exec $term ~/.shells/yazi_launcher.sh
 
 #   Application Launcher
-set $menu ~/.shells/rofi-wrapper.sh
+# set $menu ~/.shells/rofi-wrapper.sh
+set $menu fuzzel
 bindsym $mod+tab exec $menu
 
 #   Idle
