@@ -17,10 +17,10 @@
 - [ ] number/bullet increaser
 - [ ] make indent guide ignore markdown files 
 - [ ] help/doc viewer  
-- [ ] better buffer tabbing
   - [ ] maybe kill splits/tabs?
 - [ ] make everything lazyload on correct events
 - [ ] make the lazy startup notif shuttup
+- [ ] better buffer closing
 
 ## Code structure
 - [ ] LSP

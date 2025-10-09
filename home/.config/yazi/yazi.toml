@@ -35,7 +35,7 @@ kate = [
 [open]
 rules = [
 	# Folder
-	{ name = "*/", use = [ "open", "reveal" ] },
+	# { name = "*/", use = [ "open", "reveal" ] },
 	# Text"edit",
 	{ mime = "text/*", use = [ "edit", "reveal", "kate", "vim" ] },
 	# Image

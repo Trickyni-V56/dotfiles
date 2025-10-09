@@ -38,6 +38,10 @@ vim.keymap.set('n', '<S-left>', '<<')
 vim.keymap.set('v', '<S-right>', '>gv')
 vim.keymap.set('v', '<S-left>', '<gv')
 
+vim.keymap.set('n', '<C-n>', ':enew<CR>') -- creates new buffer
+vim.keymap.set('n', '<C-]>', ':bn<CR>')
+vim.keymap.set('n', '<C-[>', ':bp<CR>')
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
