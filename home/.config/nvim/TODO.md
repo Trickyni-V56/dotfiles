@@ -20,6 +20,7 @@
 - [ ] better buffer tabbing
   - [ ] maybe kill splits/tabs?
 - [ ] make everything lazyload on correct events
+- [ ] make the lazy startup notif shuttup
 
 ## Code structure
 - [ ] LSP
