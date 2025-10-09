@@ -34,4 +34,5 @@
 
 ## UI
 - [ ] greeter
+- [ ] wilder popup menu
 
