@@ -5,7 +5,7 @@
 return {
     { -- colors the background of hex color text #ace1c2
         "catgoose/nvim-colorizer.lua",
-        event = "BufReadPre",
+        event = {"BufReadPre", "BufNewFile"},
         opts = {},
     },
     { -- renders markdown inline

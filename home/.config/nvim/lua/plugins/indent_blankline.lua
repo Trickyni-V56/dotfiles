@@ -1,3 +1,5 @@
+-- HiPhish/rainbow-delimiters.nvim',
+-- lukas-reineke/indent-blankline.nvim
 return {
   { -- colors brackets in matching sets
     'https://gitlab.com/HiPhish/rainbow-delimiters.nvim',

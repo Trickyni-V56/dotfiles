@@ -1,3 +1,5 @@
+-- blink.cmp
+-- wilder.nvim
 return {
   {
     'saghen/blink.cmp',

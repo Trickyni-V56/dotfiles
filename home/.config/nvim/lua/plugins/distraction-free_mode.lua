@@ -1,3 +1,5 @@
+-- zen-mode
+-- twilight
 return {
   {
     "folke/zen-mode.nvim",

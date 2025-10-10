@@ -1,3 +1,4 @@
+--conform  
 return {
   {
   "stevearc/conform.nvim",
