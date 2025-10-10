@@ -33,4 +33,8 @@ return {
         version = '*',
         opts= {},
     },
+    {
+        'windwp/nvim-ts-autotag',
+        opts = {},
+    }
 }
