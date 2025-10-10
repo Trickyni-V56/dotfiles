@@ -1,6 +1,7 @@
 return {
   {
     'saghen/blink.cmp',
+    event = {"BufReadPre", "BufNewFile"},
     dependencies = { 'rafamadriz/friendly-snippets' },
     version = '1.*',
     ---@module 'blink.cmp'
@@ -20,6 +21,7 @@ return {
   },
   {
     'gelguy/wilder.nvim',
+    enabled = false,
     dependencies = {
       'nvim-tree/nvim-web-devicons',
     },

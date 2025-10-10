@@ -12,6 +12,8 @@
 
 ## other tasks
 - [ ] project manager
+- [ ] rainbow indent/delimiter
+  - using mini/snacks?
 - [ ] telescope? / fzflua? / snacks picker? 
 - [ ] open recently closed
 - [ ] number/bullet increaser
@@ -24,13 +26,14 @@
 
 ## Code structure
 - [ ] LSP
+  - mason
 - [ ] linter
 - [ ] formatter
   - [ ] conform.nvim
+  - [ ] remove trailing whitespaces on save
 - [ ] trouble.nvim
 - [ ] diagnostics?
-- [ ] autotags
-  - [ ] treesitter integration?
+
 
 ## UI
 - [ ] greeter

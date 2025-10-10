@@ -1,3 +1,4 @@
 return {
-    'mfussenegger/nvim-lint'
+    'mfussenegger/nvim-lint',
+    event = {"BufReadPre", "BufNewFile"},
 }

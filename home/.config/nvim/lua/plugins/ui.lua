@@ -25,5 +25,11 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {},
   },
+  {
+    'stevearc/dressing.nvim',
+    enabled = false,
+    opts = {},
+
+  },
 }
 
