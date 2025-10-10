@@ -1,4 +1,4 @@
--- INFO: integrates yazi into nvim. 
+-- INFO: integrates yazi into nvim.
 --       space-y to activate
 return {
   "mikavilpas/yazi.nvim",

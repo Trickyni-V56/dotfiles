@@ -10,7 +10,12 @@ return {
     },
   },
   keys = {
-      { "<Bslash>", function() Snacks.explorer() end, desc = "File Explorer" },
+    {
+      "<Bslash>",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "File Explorer",
+    },
   },
 }
-

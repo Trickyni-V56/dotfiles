@@ -22,5 +22,5 @@ done
 #color
 
 
-jumpspace=$(($moonlength-$infolength))
+jumpspace=$(("$moonlength"-"$infolength"))
 echo -e "\033[${jumpspace}B"
