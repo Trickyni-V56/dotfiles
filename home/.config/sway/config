@@ -6,16 +6,17 @@ bindsym $mod+return exec $term
 bindsym $mod+y exec $term ~/.shells/yazi_launcher.sh
 
 #   Application Launcher
-set $menu ~/.shells/rofi-wrapper.sh
+# set $menu ~/.shells/rofi-wrapper.sh
+set $menu ~/.shells/fuzzel-wrapper.sh
 bindsym $mod+tab exec $menu
 
 #   Idle
 
 exec swayidle -w \
-        lock 'systemctl suspend' \
-        timeout 600 'swaylock -f' \
-        timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-        before-sleep 'swaylock -f'
+    lock 'systemctl suspend' \
+    timeout 600 'swaylock -f' \
+    timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f'
 
 for_window [all] inhibit_idle fullscreen
 
@@ -188,8 +189,8 @@ exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # blur
-blur enable
-blur_radius 3
+# blur enable
+# blur_radius 3
 
 include /etc/sway/config.d/*
 include ~/.config/sway/input

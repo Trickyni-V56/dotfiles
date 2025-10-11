@@ -7,3 +7,4 @@
 
 #	metadata/thumbnail
 --embed-metadata --embed-chapters --no-write-info-json --embed-thumbnail
+--cookies-from-browser firefox

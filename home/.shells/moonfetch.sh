@@ -11,7 +11,7 @@ awk '{print length}' $temp > $linecount
 awk '{print}' $linecount > $temp
 moonlength=$(wc -l $temp | cut -f1 -d ' ')
 echo -e "\033[${moonlength}A"
-
+iii
 for i in $(seq 1 "$infolength"); do #find how many lines in details.txt
     xpos=$(sed -n "$((i+1))p" $temp) # finds the X-axis position for the new line
     xpos=$((xpos+2))
@@ -22,5 +22,5 @@ done
 #color
 
 
-jumpspace=$(($moonlength-$infolength))
+jumpspace=$(("$moonlength"-"$infolength"))
 echo -e "\033[${jumpspace}B"

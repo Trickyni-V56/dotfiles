@@ -47,9 +47,6 @@ bind -s 'set completion-ignore-case on' > /dev/null
 #--------------
 
 #   paths
-if grep void /etc/os-release >/dev/null; then
-  export XBPS_DISTDIR=~trickyni/git/void-packages
-fi
 export PATH="$PATH:~/.shells"
 export PYTHONPATH="${PYTHONPATH}:~/.shells"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -72,9 +69,6 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 #   homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-
-#   thefuck
-eval $(thefuck --alias)
 
 #   zoxide
 eval "$(zoxide init bash)"

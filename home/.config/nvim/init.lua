@@ -1,26 +1,64 @@
--- Movement remap in normal mode
---vim.keymap.set('n', 'o', 'k', { noremap = true })
---vim.keymap.set('n', 'k', 'h', { noremap = true })
---vim.keymap.set('n', 'l', 'j', { noremap = true })
---vim.keymap.set('n', ';', 'l', { noremap = true })
+local vim = vim --shuts up lua LSP about the vim global variable
 
--- Movement remap in visual mode
---vim.keymap.set('v', 'o', 'k', { noremap = true })
---vim.keymap.set('v', 'k', 'h', { noremap = true })
---vim.keymap.set('v', 'l', 'j', { noremap = true })
---vim.keymap.set('v', ';', 'l', { noremap = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+require("config.lazy")
 
--- Remapping O's functionality back unto J'
---vim.keymap.set('n', 'j', 'o', { noremap = true })
---vim.keymap.set('v', 'j', 'o', { noremap = true })
+vim.g.have_nerd_font = true
+vim.o.relativenumber = true
+vim.o.number = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.showmode = false -- hides mode indicator, since we have a status line
+vim.o.cursorline = true -- highlights cursor line
+vim.o.scrolloff = 10 -- keeps 10 lines above/below the cursor when scrolling
+vim.o.breakindent = true
+vim.o.signcolumn = "yes"
+vim.o.inccommand = "nosplit" -- shows find/replace results live
+vim.opt.backspace = { "start", "eol", "indent" }
+-- whitespace characters
+vim.o.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- Ctrl-Backspace: delete word before cursor
---vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true })
+vim.o.winborder = "none"
+-- sync clipboard between OS and nvim
+-- vim.schedule(function()
+--   vim.o.clipboard = 'unnamedplus'
+-- end)
 
--- Ctrl-Delete: delete word after cursor
---vim.api.nvim_set_keymap("i", "<C-Del>", "<C-o>dw", { noremap = true })
+-- move line up/down
+vim.keymap.set("n", "<S-up>", ":m-2<CR>")
+vim.keymap.set("n", "<S-down>", ":m+1<CR>")
+vim.keymap.set("v", "<S-up>", ":'<,'>m '<-2<CR>gv")
+vim.keymap.set("v", "<S-down>", ":'<,'>m '>+1<CR>gv")
 
---vim.keymap.set('n', '<C-Up>', 'gg', { noremap = true })
---vim.keymap.set('n', '<C-Down>', 'G', { noremap = true })
---vim.keymap.set('n', '<C-Left>', '^', { noremap = true })
---vim.keymap.set('n', '<C-Right>', '$', { noremap = true })
+-- indent/unindent
+vim.keymap.set("n", "<S-right>", ">>")
+vim.keymap.set("n", "<S-left>", "<<")
+vim.keymap.set("v", "<S-right>", ">gv")
+vim.keymap.set("v", "<S-left>", "<gv")
+
+vim.keymap.set("n", "<C-n>", ":enew<CR>") -- creates new buffer
+vim.keymap.set("n", "<C-]>", ":bn<CR>")
+vim.keymap.set("n", "<C-[>", ":bp<CR>")
+
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Highlight when yanking (copying) text
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
+
+-- theme
+vim.o.background = "dark" -- or "light" for light mode
+
+-- opens diagnostic panel
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
