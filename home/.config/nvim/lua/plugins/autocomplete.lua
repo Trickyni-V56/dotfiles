@@ -2,10 +2,10 @@
 -- wilder.nvim
 return {
   {
-    'saghen/blink.cmp',
-    event = {"BufReadPre", "BufNewFile"},
-    dependencies = { 'rafamadriz/friendly-snippets' },
-    version = '1.*',
+    "saghen/blink.cmp",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = { "rafamadriz/friendly-snippets" },
+    version = "1.*",
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
@@ -13,23 +13,22 @@ return {
       -- 'super-tab' for mappings similar to vscode (tab to accept)
       -- 'enter' for enter to accept
       -- C-e: Hide menu
-      keymap = { preset = 'super-tab' },
+      keymap = { preset = "enter" },
       cmdline = { enabled = false },
-      appearance = {nerd_font_variant = 'mono'},
-      completion = {documentation = { auto_show = false },},
-      sources = {default = { 'lsp', 'path', 'snippets', 'buffer' },},
-      },
-    opts_extend = { "sources.default" }
+      appearance = { nerd_font_variant = "mono" },
+      completion = { documentation = { auto_show = false } },
+      sources = { default = { "lsp", "path", "snippets", "buffer" } },
+    },
+    opts_extend = { "sources.default" },
   },
   {
-    'gelguy/wilder.nvim',
+    "gelguy/wilder.nvim",
     enabled = false,
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {
-      modes = {':', '/', '?'},
+      modes = { ":", "/", "?" },
     },
   },
 }
-

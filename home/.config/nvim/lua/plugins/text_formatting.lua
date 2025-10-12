@@ -10,6 +10,7 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         bash = { "shfmt" },
+        javascript = { "prettier" },
       },
       formatters = {
         stylua = {
@@ -27,6 +28,7 @@ return {
       lint.linters_by_ft = {
         lua = { "selene" },
         bash = { "shellcheck" },
+        javascript = { "eslint_d" },
       }
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

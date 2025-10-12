@@ -20,7 +20,9 @@
 -  make everything lazyload on correct events
 -  make the lazy startup notif shuttup
 -  better buffer closing
-
+- run code command for each language
+- better splits?
+- better diagnostics split/window/thing (trouble?)
 ## Code structure
 -  LSP
 - keybinds
