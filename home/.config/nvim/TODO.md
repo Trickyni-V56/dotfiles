@@ -10,7 +10,7 @@
 ## other tasks
 -  project manager
 -  rainbow indent/delimiter
-  - using mini/snacks?
+  - using mini/snacks/blink?
   - https://github.com/Saghen/blink.pairs
 -  open recently closed
 -  number/bullet increaser
@@ -29,10 +29,8 @@
      - can potentially use telescope to go through errors?
      - connect blink.cmp?
      - markdown insert new checkbox on enter
-     - conform.nvim formatter
      - remove trailing whitespaces on save
 -  trouble.nvim
--  diagnostics?
 - snippets?
 
 - [linter](https://github.com/mfussenegger/nvim-lint)
@@ -42,7 +40,7 @@
 ## considering
 [noice](https://github.com/folke/noice.nvim)
 telescope? / fzflua? / snacks picker? 
-
 [nvim biscuits](https://github.com/code-biscuits/nvim-biscuits)
+
 
 

@@ -1,5 +1,4 @@
-local vim = vim --shuts up lua LSP about the vim global variable
-
+local vim = vim
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 require("config.lazy")
