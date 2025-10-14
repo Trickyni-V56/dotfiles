@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 #   bash history stuff
@@ -43,7 +43,7 @@ if ! shopt -oq posix; then
   fi
 fi
 # case-insensitive completion
-bind -s 'set completion-ignore-case on' > /dev/null
+bind -s 'set completion-ignore-case on' >/dev/null
 #--------------
 
 #   paths
@@ -53,7 +53,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR=nvim
 export VISUAL=kate
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 #   eza
@@ -75,11 +75,11 @@ eval "$(zoxide init bash)"
 
 #   yazi
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd <"$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 echo -e -n "\x1b[\x35 q" # changes to blinking bar
@@ -104,7 +104,6 @@ export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export XDG_FILE_MANAGER=nemo
-
 
 # wayland
 export QT_QPA_PLATFORM=wayland-egl

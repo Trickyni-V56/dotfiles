@@ -35,10 +35,4 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
     enabled = false,
     opts = {},
   },
-  {
-    "goolord/alpha-nvim",
-    enabled = false,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
-  },
 }

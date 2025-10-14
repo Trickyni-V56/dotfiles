@@ -13,20 +13,22 @@ alias e='${EDITOR:-vim}'
 alias y='yazi'
 alias t='task'
 alias bk='cd ..'
-# alias S='sudo !!'
-alias s='sshs'
 alias reload='source ~/.bashrc && echo "ka-clunk~"'
-# alias bashr='command -v kate &>/dev/null && kate ~/.bash_aliases || e ~/.bash_aliases'
 alias bashr='e ~/.bash_aliases'
 alias nmtui='NEWT_COLORS=$(<~/.config/nmtui/palette) nmtui'
+alias s='sshs'
+function s(){
+    ssh "$1" || sshs
+}  
 
 #   security
 alias lockdown='rfkill block all'
 alias lockdown-lift='sudo rfkill unblock all'
 alias lock='swaylock'
 
-#   renames
+#   renames/config loads
 alias quickshell='swaymsg exec quickshell'
+alias vim='nvim'
 alias cat='bat'
 alias enkidu='ncdu --color dark'
 alias diff='delta'

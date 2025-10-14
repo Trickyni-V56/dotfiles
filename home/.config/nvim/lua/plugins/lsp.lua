@@ -36,6 +36,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
+    dependencies = { "saghen/blink.cmp" },
     config = function()
       vim.diagnostic.config({
         severity_sort = true,
@@ -49,8 +50,12 @@ return {
             [vim.diagnostic.severity.HINT] = "󰌶 ",
           },
         },
-        virtual_text = true,
+        virtual_text = {
+          spacing = 2,
+          prefix = "𖦹",
+        },
         update_in_insert = true,
+        inlay_hints = true,
       })
     end,
   },
@@ -77,16 +82,28 @@ return {
     "stevearc/conform.nvim",
     dependencies = { "mason.nvim" },
     event = { "BufReadPre", "BufNewFile" },
+    keys = {
+      {
+        "nnoremap <leader>ff",
+        function()
+          require("conform").format({ async = true })
+        end,
+        mode = "",
+      },
+    },
     opts = {
       format_on_save = true,
       formatters_by_ft = {
         lua = { "stylua" },
-        bash = { "shfmt" },
+        sh = { "shfmt" },
         javascript = { "prettier" },
       },
       formatters = {
         stylua = {
           prepend_args = { "--indent-type", "Spaces", "--indent-width", "2" },
+        },
+        shfmt = {
+          prepend_args = { "-i=2" },
         },
       },
     },

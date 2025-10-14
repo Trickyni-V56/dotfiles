@@ -13,7 +13,7 @@ return {
       -- 'super-tab' for mappings similar to vscode (tab to accept)
       -- 'enter' for enter to accept
       -- C-e: Hide menu
-      keymap = { preset = "enter" },
+      keymap = { preset = "default" },
       cmdline = { enabled = false },
       appearance = { nerd_font_variant = "mono" },
       completion = { documentation = { auto_show = false } },

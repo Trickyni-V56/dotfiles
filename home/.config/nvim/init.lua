@@ -56,8 +56,24 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- sync OS/nvim clipboards
+vim.schedule(function()
+  vim.o.clipboard = "unnamedplus"
+end)
+
 -- theme
 vim.o.background = "dark" -- or "light" for light mode
 
--- opens diagnostic panel
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+-- opens diagnostic panel (replaced with trouble.nvim)
+-- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+
+-- vim.lsp.enable({ "lua_ls" })
+-- vim.lsp.config("lua_ls", {
+--   settings = {
+--     lua = {
+--       workspace = {
+--         library = vim.api.nvim_get_runtime_file("", true),
+--       },
+--     },
+--   },
+-- })

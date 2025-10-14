@@ -1,9 +1,28 @@
--- "nguyenvukhang/nvim-toggler",
--- 'windwp/nvim-autopairs',
--- 'nvim-mini/mini.surround',
--- 'numToStr/Comment.nvim',
+-- chrisgrieser/nvim-rip-substitute
+-- nguyenvukhang/nvim-toggler
+-- numToStr/Comment.nvim
+-- abecodes/tabout.nvim
+-- nvim-mini/mini.pairs
+-- nvim-mini/mini.surround
+-- nvim-mini/mini.splitjoin
+-- [DISABLED] windwp/nvim-ts-autotag
 
 return {
+  {
+    "chrisgrieser/nvim-rip-substitute",
+    cmd = "Rg",
+    opts = {},
+    keys = {
+      {
+        "<leader>s",
+        function()
+          require("rip-substitute").sub()
+        end,
+        mode = { "n", "x" },
+        desc = " rip substitute",
+      },
+    },
+  },
   { -- INFO: Inverts value (true -> false, etc.)
     --       space-i to invert
     "nguyenvukhang/nvim-toggler",
@@ -13,13 +32,18 @@ return {
       },
     },
   },
-  { -- INFO: Automatically match bracket pairs.
-    "nvim-mini/mini.pairs",
-    opts = {},
-  },
   { -- INFO: Commentate/uncomment text blocks.
     --       g-c-c to comment/uncomment
     "numToStr/Comment.nvim",
+  },
+  {
+    "nvim-mini/mini.pairs",
+    enabled = false,
+    opts = {},
+  },
+  {
+    "abecodes/tabout.nvim",
+    opts = {},
   },
   { -- INFO: Adds brackets around text object.
     --       s-a to add
@@ -35,6 +59,7 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
+    enabled = false,
     opts = {},
   },
 }
