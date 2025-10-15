@@ -1,0 +1,5 @@
+2025-10-15 09:05:26[ERROR] Formatter 'stylua' error: error: could not format from stdin: failed to format from stdin: error parsing: 
+ - unexpected token `,` (80:4 to 80:5), trailing commas are not allowed
+ - unexpected token `(` (13:28 to 13:29), expected `)` to close function call
+ - unexpected token `}` (81:1 to 81:2), unexpected token, this needs to be a statement
+

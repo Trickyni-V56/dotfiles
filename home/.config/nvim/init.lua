@@ -9,7 +9,7 @@ vim.o.number = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+-- vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.showmode = false -- hides mode indicator, since we have a status line
 vim.o.cursorline = true -- highlights cursor line
@@ -23,10 +23,6 @@ vim.o.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 vim.o.winborder = "none"
--- sync clipboard between OS and nvim
--- vim.schedule(function()
---   vim.o.clipboard = 'unnamedplus'
--- end)
 
 -- move line up/down
 vim.keymap.set("n", "<S-up>", ":m-2<CR>")
@@ -63,17 +59,3 @@ end)
 
 -- theme
 vim.o.background = "dark" -- or "light" for light mode
-
--- opens diagnostic panel (replaced with trouble.nvim)
--- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
-
--- vim.lsp.enable({ "lua_ls" })
--- vim.lsp.config("lua_ls", {
---   settings = {
---     lua = {
---       workspace = {
---         library = vim.api.nvim_get_runtime_file("", true),
---       },
---     },
---   },
--- })
