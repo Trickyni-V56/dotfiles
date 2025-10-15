@@ -23,6 +23,9 @@ return {
       },
     },
   },
+  {
+    "bullets-vim/bullets.vim",
+  },
   { -- INFO: Inverts value (true -> false, etc.)
     --       space-i to invert
     "nguyenvukhang/nvim-toggler",

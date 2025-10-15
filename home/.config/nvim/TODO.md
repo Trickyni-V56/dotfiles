@@ -1,58 +1,44 @@
+## Learn
+what's a quickfix window?
+
 ## config
-- [blink.cmp](https://cmp.saghen.dev/configuration/general.html)
-- [comments](https://github.com/numToStr/Comment.nvim) 
 - [yazi](https://github.com/mikavilpas/yazi.nvim) 
-- [notifier](https://github.com/folke/snacks.nvim/blob/main/docs/notifier.md) 
-- [lualine]() 
+- [bullets.vim](https://github.com/bullets-vim/bullets.vim)
 - wilder
 - Dressing
 
 ## other tasks
--  project manager
--  open recently closed
--  number/bullet increaser
--  make the lazy startup notif shuttup
+- review nvim.awesome
+- project manager
 
 - help/doc viewer 
-- maybe kill splits/tabs?
-- better buffer closing
-- better splits?
-- better diagnostics split/window/thing (trouble?)
+- better splits/tabs/navigation/closing setup
 
 - Make LSP setup minimal/based
 
+## markdown
+-  number/bullet increaser
+
 ## greeter
-
-header
-recent files
-
-new
-explorer
-recents picker
-config
-lazy
-quit
-
 - picker
 - session restorer (also picker?)
 - terminal??
 
 ## Code structure
 - can potentially use telescope to go through errors?
-- connect blink.cmp to LSP
-- markdown insert new checkbox on enter
 - snippets?
 
 - [dressing](https://github.com/stevearc/dressing.nvim) 
 
 ## considering
 [noice](https://github.com/folke/noice.nvim)
-telescope? / fzflua? / snacks picker? 
+- telescope? / fzflua? / snacks picker? 
 [nvim biscuits](https://github.com/code-biscuits/nvim-biscuits)
 
 ## desertwitch
 - base
-- scope.lua
+- notifier
+- render-markdown
 - lualine
 - bufferline
 - ICONS 
