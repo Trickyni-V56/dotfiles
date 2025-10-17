@@ -1,6 +1,6 @@
 -- guess-indent
 return {
-  enabled = false,
+  enabled = true,
   "nmac427/guess-indent.nvim",
   config = function()
     require("guess-indent").setup({})

@@ -4,7 +4,14 @@ what's a quickfix window?
 ## config
 - [yazi](https://github.com/mikavilpas/yazi.nvim) 
 - [bullets.vim](https://github.com/bullets-vim/bullets.vim)
-
+- [satellite](https://github.com/lewis6991/satellite.nvim/blob/main/doc/satellite.txt)
+- [Trouble]()
+- [snacks.picker]()
+    * session
+    * recents (floating layout, from dash)
+    * integrate trouble (diagnostics bottom layout)
+    * zpxode (layout)
+    * explorer (opts)
 ## other tasks
 - review nvim.awesome
 - project manager
@@ -15,9 +22,8 @@ what's a quickfix window?
 - Make LSP setup minimal/based
 - todo manager (trouble??)
 
-### ideas
-- rss??
-- url opener?
+- snippets?
+
 ## writing
 - translation?
 - thesaurus
@@ -32,22 +38,22 @@ what's a quickfix window?
 - images are a thing
 ## greeter
 [snacks.dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md)
-- picker
-- session restorer (also picker?)
-- terminal??
 
 ## Code structure
-- can potentially use telescope to go through errors?
-- snippets?
 
 
 ## considering
 - [dressing](https://github.com/stevearc/dressing.nvim) 
-[noice](https://github.com/folke/noice.nvim)
-- telescope? / fzflua? / snacks picker? 
-[nvim biscuits](https://github.com/code-biscuits/nvim-biscuits)
+- [noice](https://github.com/folke/noice.nvim)
+- [nvim biscuits](https://github.com/code-biscuits/nvim-biscuits)
 - [wilder](https://github.com/gelguy/wilder.nvim)
+- [rss feed](https://github.com/neo451/feed.nvim)
+- [weather](https://github.com/athar-qadri/weather.nvim)
 
+### csv viewers
+- [](https://github.com/hat0uma/csvview.nvim)
+- [](https://github.com/theKnightsOfRohan/csvlens.nvim?tab=readme-ov-file) 
+- 
 ## desertwitch
 - base
 - notifier

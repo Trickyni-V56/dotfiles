@@ -82,15 +82,6 @@ return {
     "stevearc/conform.nvim",
     dependencies = { "mason.nvim" },
     event = { "BufReadPre", "BufNewFile" },
-    keys = {
-      {
-        "nnoremap <leader>ff",
-        function()
-          require("conform").format({ async = true })
-        end,
-        mode = "",
-      },
-    },
     opts = {
       format_on_save = true,
       formatters_by_ft = {

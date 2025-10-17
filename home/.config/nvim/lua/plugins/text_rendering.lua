@@ -28,12 +28,22 @@ return {
         after = "fg",
       },
       colors = {
-        aerror = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+        error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
         warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
         info = { "DiagnosticInfo", "#2563EB" },
         hint = { "DiagnosticHint", "#10B981" },
         default = { "Identifier", "#7C3AED" },
         test = { "Identifier", "#FF00FF" },
+      },
+    },
+  },
+  {
+    "smjonas/live-command.nvim",
+    -- live-command supports semantic versioning via Git tags
+    -- tag = "2.*",
+    opts = {
+      commands = {
+        Norm = { cmd = "norm" },
       },
     },
   },

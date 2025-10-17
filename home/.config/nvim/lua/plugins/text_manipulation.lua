@@ -10,7 +10,8 @@
 return {
   {
     "chrisgrieser/nvim-rip-substitute",
-    cmd = "Rg",
+    enabled = true,
+    cmd = "RipSubstitute",
     opts = {},
     keys = {
       {

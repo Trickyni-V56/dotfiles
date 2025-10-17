@@ -1,7 +1,10 @@
--- 'stevearc/dressing.nvim',
--- 'nvim-lualine/lualine.nvim',
--- "sitiom/nvim-numbertoggle"
--- 'goolord/alpha-nvim',
+-- lewis6991/gitsigns.nvim
+-- sitiom/nvim-numbertoggle
+-- akinsho/bufferline.nvim
+-- nvim-lualine/lualine.nvim
+-- stevearc/dressing.nvim
+-- karb94/neoscroll.nvim
+-- lewis6991/satellite.nvim"
 
 return { -- Adds git related signs to the gutter, as well as utilities for managing changes
   { -- adds a row for git changes sumbols
@@ -34,5 +37,32 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
     "stevearc/dressing.nvim",
     enabled = false,
     opts = {},
+  },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {
+      easing = "quintic",
+    },
+  },
+  --nnoremap
+  {
+    "lewis6991/satellite.nvim",
+    opts = {
+      width = 1,
+      handlers = {
+        cursor = { enable = true, symbols = { "█" } },
+        search = {
+          enable = true,
+          symbols = { "▓" },
+        },
+        diagnostics = {
+          enabled = true,
+          symbols = { "▓" },
+          signs = { "▓" },
+          min_severity = vim.diagnostic.severity.HINT,
+        },
+        gitsigns = { enable = false },
+      },
+    },
   },
 }
