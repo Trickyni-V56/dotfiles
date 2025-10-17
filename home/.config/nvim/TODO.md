@@ -24,6 +24,7 @@ what's a quickfix window?
 
 - snippets?
 
+- make hide lint keybind
 ## writing
 - translation?
 - thesaurus
