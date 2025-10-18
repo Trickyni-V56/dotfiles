@@ -4,6 +4,7 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
+    toggle = { enabled = true },
     explorer = { enabled = true },
     picker = { enabled = true },
   },

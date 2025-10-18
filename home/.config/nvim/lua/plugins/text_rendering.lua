@@ -39,8 +39,6 @@ return {
   },
   {
     "smjonas/live-command.nvim",
-    -- live-command supports semantic versioning via Git tags
-    -- tag = "2.*",
     opts = {
       commands = {
         Norm = { cmd = "norm" },

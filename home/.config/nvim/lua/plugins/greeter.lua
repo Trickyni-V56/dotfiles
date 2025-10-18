@@ -43,5 +43,14 @@ return {
         },
       },
     },
+    keys = {
+      {
+        "<leader>g",
+        function()
+          Snacks.dashboard()
+        end,
+        desc = "Bring up the greeter",
+      },
+    },
   },
 }

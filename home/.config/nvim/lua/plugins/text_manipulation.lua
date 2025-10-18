@@ -41,11 +41,6 @@ return {
     "numToStr/Comment.nvim",
   },
   {
-    "nvim-mini/mini.pairs",
-    enabled = false,
-    opts = {},
-  },
-  {
     "abecodes/tabout.nvim",
     opts = {},
   },
