@@ -2,7 +2,6 @@
 vim.g.mapleader = " " -- leader key (spacebar)
 vim.g.maplocalleader = " " -- leader key (spacebar)
 require("config.lazy")
-
 vim.g.have_nerd_font = true
 vim.o.number = true -- number column
 vim.o.relativenumber = true -- relative number column
