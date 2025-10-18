@@ -6,12 +6,11 @@ what's a quickfix window?
 
 - [yazi](https://github.com/mikavilpas/yazi.nvim)
 - [bullets.vim](https://github.com/bullets-vim/bullets.vim)
-- [satellite](https://github.com/lewis6991/satellite.nvim/blob/main/doc/satellite.txt)
-- [snacks.dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md)
 
 ## other tasks
 
 - Project manager
+- Todo manager (trouble??)
 
 - session manager?
 
@@ -19,7 +18,6 @@ what's a quickfix window?
 - Better splits/tabs/navigation/closing setup
 
 - Make LSP setup minimal/based
-- Todo manager (trouble??)
 
 - Snippets?
 
