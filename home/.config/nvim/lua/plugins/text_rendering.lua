@@ -1,7 +1,7 @@
--- "catgoose/nvim-colorizer.lua",
--- 'MeanderingProgrammer/render-markdown.nvim',
--- "folke/todo-comments.nvim",
-
+-- catgoose/nvim-colorizer.lua
+-- MeanderingProgrammer/render-markdown.nvim
+-- folke/todo-comments.nvim
+-- smjonas/live-command.nvim
 return {
   { -- colors the background of hex color text #ace1c2
     "catgoose/nvim-colorizer.lua",

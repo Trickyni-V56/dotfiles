@@ -4,17 +4,15 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    explorer = { enabled = true },
     notifier = { enabled = true },
-    picker = {
-      layout = { preset = "sidebar" },
-    },
+    explorer = { enabled = true },
+    picker = { enabled = true },
   },
   keys = {
     {
       "<Bslash>",
       function()
-        Snacks.explorer()
+        Snacks.explorer({ layout = { preset = "sidebar" } })
       end,
       desc = "File Explorer",
     },
@@ -28,16 +26,23 @@ return {
     {
       "<leader>h",
       function()
-        Snacks.picker.notifications()
+        Snacks.picker.notifications({ layout = { preset = "select" } })
       end,
       desc = "Notification History",
     },
     {
       "<leader>z",
       function()
-        Snacks.picker.zoxide()
+        Snacks.picker.zoxide({ layout = { preset = "select" } })
       end,
-      desc = "Notification History",
+      desc = "Zoxide",
+    },
+    {
+      "<leader>d",
+      function()
+        Snacks.picker.diagnostics({ layout = { preset = "right" } })
+      end,
+      desc = "Diagnostics",
     },
   },
 }

@@ -1,5 +1,6 @@
 -- saghen/blink.pairs
 -- saghen/blink.indent
+-- nmac427/guess-indent.nvim
 
 return {
   {
@@ -82,5 +83,9 @@ return {
       vim.api.nvim_set_hl(0, "BlinkIndentThree", { fg = "#f8e2a0" })
       vim.api.nvim_set_hl(0, "BlinkIndentFour", { fg = "#c1a387" })
     end,
+  },
+  {
+    "nmac427/guess-indent.nvim",
+    opts = {},
   },
 }

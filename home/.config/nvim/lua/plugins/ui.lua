@@ -5,6 +5,7 @@
 -- stevearc/dressing.nvim
 -- karb94/neoscroll.nvim
 -- lewis6991/satellite.nvim"
+-- folke/which-key.nvim
 
 return { -- Adds git related signs to the gutter, as well as utilities for managing changes
   { -- adds a row for git changes sumbols
@@ -44,25 +45,26 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
       easing = "quintic",
     },
   },
-  --nnoremap
   {
     "lewis6991/satellite.nvim",
     opts = {
       width = 1,
       handlers = {
-        cursor = { enable = true, symbols = { "█" } },
-        search = {
-          enable = true,
-          symbols = { "▓" },
-        },
-        diagnostics = {
-          enabled = true,
-          symbols = { "▓" },
-          signs = { "▓" },
-          min_severity = vim.diagnostic.severity.HINT,
-        },
+        cursor = { enable = false, symbols = { "█" } },
+        search = { enable = true, symbols = { "━" } },
+        diagnostic = { enable = false },
         gitsigns = { enable = false },
       },
     },
+    config = function(_, opts)
+      require("satellite").setup(opts)
+      -- vim.api.nvim_set_hl(0, "SatelliteSearch", { fg = "#f8e2a0", bg = "NONE" })
+      vim.api.nvim_set_hl(0, "SatelliteSearchCurrent", { fg = "#3eccbe", bg = "NONE" })
+    end,
+  },
+  {
+    "folke/which-key.nvim",
+    event = VeryLazy,
+    opts = {},
   },
 }

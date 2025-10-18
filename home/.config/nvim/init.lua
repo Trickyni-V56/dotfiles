@@ -66,3 +66,6 @@ end)
 
 -- theme
 vim.o.background = "dark" -- or "light" for light mode
+
+vim.lsp.config("lua_ls", { settings = { Lua = { diagnostics = { globals = { "vim" } } } } })
+vim.lsp.enable("lua_ls")

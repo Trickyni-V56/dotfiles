@@ -35,6 +35,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    enabled = true,
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "saghen/blink.cmp" },
     config = function()
@@ -51,12 +52,18 @@ return {
           },
         },
         virtual_text = {
+          severity = { min = vim.diagnostic.severity.ERROR },
           spacing = 2,
-          prefix = "𖦹",
+          -- prefix = "𖦹",
+          prefix = "║",
+          suffix = " ║",
+          current_line = nil,
         },
         update_in_insert = true,
         inlay_hints = true,
       })
+      vim.lsp.config("lua_ls", { settings = { Lua = { diagnostics = { globals = { "vim" } } } } })
+      vim.lsp_enable({ "lua_ls" })
     end,
   },
   {
@@ -76,6 +83,16 @@ return {
           lint.try_lint()
         end,
       })
+      local toggle_lint = function()
+        linting = not linting
+        if linting then
+          vim.diagnostic.show()
+        else
+          vim.diagnostic.hide()
+        end
+      end
+
+      vim.keymap.set({ "n" }, "<leader>l", toggle_lint, { noremap = true })
     end,
   },
   {
@@ -88,6 +105,7 @@ return {
         lua = { "stylua" },
         sh = { "shfmt" },
         javascript = { "prettier" },
+        markdown = { "prettier" },
       },
       formatters = {
         stylua = {
