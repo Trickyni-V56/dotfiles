@@ -6,7 +6,7 @@
 -- karb94/neoscroll.nvim
 -- lewis6991/satellite.nvim"
 -- folke/which-key.nvim
-
+-- snacks.notifier
 return { -- Adds git related signs to the gutter, as well as utilities for managing changes
   { -- adds a row for git changes sumbols
     "lewis6991/gitsigns.nvim",
@@ -67,4 +67,5 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
     event = VeryLazy,
     opts = {},
   },
+  { "folke/snacks.nvim", opts = { notifier = { enabled = true } } },
 }
