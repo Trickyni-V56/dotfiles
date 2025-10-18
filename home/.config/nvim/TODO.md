@@ -21,6 +21,8 @@ what's a quickfix window?
 
 - Snippets?
 
+- some better parentheses matches jfc
+
 ## writing
 
 - Translation?

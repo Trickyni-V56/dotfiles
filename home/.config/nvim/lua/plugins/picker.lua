@@ -1,4 +1,3 @@
--- snacks-explorer
 return {
   "folke/snacks.nvim",
   lazy = false,
@@ -6,13 +5,28 @@ return {
   opts = {
     toggle = { enabled = true },
     explorer = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      sources = {
+        explorer = { layout = { preset = "sidebar" } },
+        recent = { layout = { preset = "select" } },
+        projects = { layout = { preset = "select" } },
+        zoxide = { layout = { preset = "select" } },
+        diagnostics = {
+          layout = { preset = "right" },
+          win = { list = { wo = { wrap = true } } },
+        },
+        notifications = {
+          layout = { preset = "select" },
+          win = { list = { wo = { wrap = true } } },
+        },
+      },
+    },
   },
   keys = {
     {
       "<Bslash>",
       function()
-        Snacks.explorer({ layout = { preset = "sidebar" } })
+        Snacks.explorer()
       end,
       desc = "File Explorer",
     },
@@ -26,7 +40,7 @@ return {
     {
       "<leader>h",
       function()
-        Snacks.picker.notifications({ layout = { preset = "select" } })
+        Snacks.picker.notifications()
       end,
       desc = "Notification History",
     },
@@ -40,9 +54,30 @@ return {
     {
       "<leader>d",
       function()
-        Snacks.picker.diagnostics({ layout = { preset = "right" } })
+        Snacks.picker.diagnostics()
       end,
       desc = "Diagnostics",
+    },
+    {
+      "<leader>;",
+      function()
+        Snacks.picker.lsp_config()
+      end,
+      desc = "LSP config list",
+    },
+    {
+      "<leader>p",
+      function()
+        Snacks.picker.projects()
+      end,
+      desc = "Projects",
+    },
+    {
+      "<leader>r",
+      function()
+        Snacks.picker.recent()
+      end,
+      desc = "Recent Files",
     },
   },
 }

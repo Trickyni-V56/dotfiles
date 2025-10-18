@@ -1,5 +1,4 @@
-local vim = vim
--- OPTIONS ----------------------------------------------------
+-- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
 vim.g.maplocalleader = " " -- leader key (spacebar)
 require("config.lazy")
@@ -11,7 +10,8 @@ vim.o.ignorecase = true -- search ignores case
 vim.o.smartcase = true -- search ignores case unless uppercase letter exists
 vim.opt.grepprg = "rg --vimgrep" -- external grep
 vim.opt.grepformat = "%f:%l:%c:%m"
-
+vim.o.wrap = true
+vim.opt.linebreak = true
 vim.o.tabstop = 2 -- tab width
 -- vim.o.shiftwidth = 2 -- indentation width
 vim.o.expandtab = true -- turns tabs into spaces
@@ -54,7 +54,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set(
   { "n", "x", "v" },
   "<leader>l",
-  ":lua vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })<CR>",
+  ":lua vim.diagnostic.config({ virtual_lines =  not vim.diagnostic.config().virtual_lines})<CR>",
   { desc = "Toggle Virtual Text", silent = true }
 )
 
@@ -62,10 +62,6 @@ vim.keymap.set(
 -- Bring up the greeter
 vim.api.nvim_create_user_command("Greeter", function()
   require("snacks").dashboard()
-end, {})
-
-vim.api.nvim_create_user_command("Lint", function()
-  lint.try_lint()
 end, {})
 
 -- AUTOCMDS ---------------------------------------------------
@@ -95,36 +91,26 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "󰌶 ",
     },
   },
-  virtual_text = {
-    severity = { min = vim.diagnostic.severity.ERROR },
-    spacing = 2,
-    -- prefix = "𖦹",
-    prefix = "║",
-    suffix = " ║",
-    current_line = nil,
-  },
+  virtual_lines = true,
+  -- virtual_text = {
+  --   severity = { min = vim.diagnostic.severity.ERROR },
+  --   spacing = 2,
+  --  prefix = "𖦹",
+  --   current_line = nil,
+  -- },
   update_in_insert = true,
   inlay_hints = true,
 })
 
 -- LSP --------------------------------------------------------
-vim.lsp.config["luals"] = {
-  -- Command and arguments to start the server.
-  cmd = { "lua-language-server" },
-  -- Filetypes to automatically attach to.
+vim.lsp.config("lua_ls", {
   filetypes = { "lua" },
-  -- Sets the "workspace" to the directory where any of these files is found.
-  -- Files that share a root directory will reuse the LSP server connection.
-  -- Nested lists indicate equal priority, see |vim.lsp.Config|.
-  root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
-  -- Specific settings to send to the server. The schema is server-defined.
-  -- Example: https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
+  cmd = { "lua-language-server" },
   settings = {
     Lua = {
-      diagnostics = { globals = "vim" },
       runtime = { version = "LuaJIT" },
-      workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+      diagnostics = { globals = "vim" },
     },
   },
-}
+})
 vim.lsp.enable({ "lua_ls", "bashls" })

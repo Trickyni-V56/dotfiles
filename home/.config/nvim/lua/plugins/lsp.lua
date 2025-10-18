@@ -2,19 +2,8 @@
 -- mason
 -- mfussenegger/nvim-lint
 -- stevearc/conform.nvim
+-- folke/lazydev.nvim
 return {
-  {
-    "mason-org/mason.nvim",
-    opts = {
-      ui = {
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
-        },
-      },
-    },
-  },
   {
     "neovim/nvim-lspconfig",
     enabled = true,
@@ -44,8 +33,22 @@ return {
     },
   },
   {
+    "mason-org/mason.nvim",
+    enabled = true,
+    opts = {
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
+      },
+    },
+  },
+  {
     "mfussenegger/nvim-lint",
-    -- event = { "BufReadPre", "BufNewFile" },
+    enabled = true,
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       local lint = require("lint")
       lint.linters_by_ft = {
@@ -61,5 +64,15 @@ return {
         end,
       })
     end,
+  },
+  {
+    "folke/lazydev.nvim",
+    enabled = true,
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
   },
 }

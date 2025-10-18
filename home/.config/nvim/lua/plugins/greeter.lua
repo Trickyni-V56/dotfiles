@@ -9,7 +9,13 @@ return {
           keys = {
             { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
             { icon = " ", key = "y", desc = "File Explorer", action = ":Yazi" },
-            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.picker.recent()" },
+            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('recent')" },
+            {
+              icon = " ",
+              key = "p",
+              desc = "Projects",
+              action = ":lua Snacks.dashboard.pick('projects')",
+            },
             {
               icon = " ",
               key = "c",
