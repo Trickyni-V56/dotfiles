@@ -1,8 +1,7 @@
----@diagnostic disable
 return {
   { "stevearc/dressing.nvim", enabled = false },
   { "code-biscuits/nvim-biscuits", enabled = false },
-  { "gelguy/wilder.nvim", enabled = false },
+  -- { "gelguy/wilder.nvim", enabled = false },
   { "neo451/feed.nvim", enabled = false },
   { "athar-qadri/weather.nvim", enabled = false },
   { "nvim-mini/mini.align", enabled = false },

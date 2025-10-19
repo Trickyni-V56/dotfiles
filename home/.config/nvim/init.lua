@@ -90,16 +90,14 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "󰌶 ",
     },
   },
-  virtual_lines = true,
-  -- virtual_text = {
-  --   severity = { min = vim.diagnostic.severity.ERROR },
-  --   spacing = 2,
-  --  prefix = "𖦹",
-  --   current_line = nil,
-  -- },
+  virtual_lines = { severity = { min = vim.diagnostic.severity.ERROR }},
   update_in_insert = true,
   inlay_hints = true,
 })
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#e86045", bold = true })
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#e68d53" })
+vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#ace1af" })
+vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#92a650" })
 
 -- LSP --------------------------------------------------------
 vim.lsp.config("lua_ls", {
@@ -113,3 +111,12 @@ vim.lsp.config("lua_ls", {
   },
 })
 vim.lsp.enable({ "lua_ls", "bashls" })
+
+vim.api.nvim_create_user_command("ProjectRoot", function()
+  local root = vim.fs.root(0, { ".root", ".git", "package.json", "pyproject.toml", "Cargo.toml" })
+  if root then
+    print(root)
+  else
+    print("No project root found")
+  end
+end, { desc = "Print the project root directory" })

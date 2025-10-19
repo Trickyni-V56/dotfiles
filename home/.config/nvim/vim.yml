@@ -5,9 +5,9 @@ lua_versions:
 globals:
   vim:
     any: true
-  Snacks:
+  snacks:
     any: true
-  VeryLazy:
+  Snacks:
     any: true
   jit:
     any: true

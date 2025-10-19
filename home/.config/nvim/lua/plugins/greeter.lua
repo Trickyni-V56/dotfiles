@@ -1,6 +1,8 @@
 return {
   {
     "folke/snacks.nvim",
+    -- commit = "a4de830",
+    priority = 1000,
     opts = {
       dashboard = {
         enabled = true,

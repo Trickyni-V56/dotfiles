@@ -64,8 +64,8 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
   },
   {
     "folke/which-key.nvim",
-    event = VeryLazy,
+    event = "VeryLazy",
     opts = { preset = "helix" },
   },
-  { "folke/snacks.nvim", opts = { notifier = { enabled = true } } },
+  { "folke/snacks.nvim", priority = 1000, opts = { notifier = { enabled = true } } },
 }

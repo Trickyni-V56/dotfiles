@@ -3,7 +3,7 @@
 -- folke/todo-comments.nvim
 -- smjonas/live-command.nvim
 return {
-  { -- colors the background of hex color text #ace1c2
+  { -- colors the background of hex color text #afd2e9
     "catgoose/nvim-colorizer.lua",
     event = { "BufReadPre", "BufNewFile" },
     opts = {},
@@ -23,15 +23,16 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       highlight = {
+        multiline = false,
         before = "",
-        keyword = "wide_bg",
+        keyword = "bg",
         after = "fg",
       },
       colors = {
-        error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
-        info = { "DiagnosticInfo", "#2563EB" },
-        hint = { "DiagnosticHint", "#10B981" },
+        error = { "DiagnosticError", "ErrorMsg", "#e86045" },
+        warning = { "DiagnosticWarn", "WarningMsg", "#e68d53" },
+        info = { "DiagnosticInfo", "#ace1af" },
+        hint = { "DiagnosticHint", "#92a650" },
         default = { "Identifier", "#7C3AED" },
         test = { "Identifier", "#FF00FF" },
       },
@@ -46,3 +47,8 @@ return {
     },
   },
 }
+-- INFO:
+-- WARN:
+-- FIX:
+-- XXX:
+-- TODO

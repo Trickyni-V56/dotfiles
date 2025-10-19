@@ -1,7 +1,7 @@
 return {
   "folke/snacks.nvim",
+  priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
     toggle = { enabled = true },
     explorer = { enabled = true },
@@ -19,6 +19,7 @@ return {
           layout = { preset = "select" },
           win = { list = { wo = { wrap = true } } },
         },
+        grep = { enabled = true },
       },
     },
   },
@@ -79,5 +80,15 @@ return {
       end,
       desc = "Recent Files",
     },
+    {
+      "<leader>t",
+      function()
+        Snacks.picker.todo_comments({
+          cwd = vim.fs.root(0, { ".git", "package.json", "pyproject.toml", "Cargo.toml", ".root" }),
+        })
+      end,
+      desc = "List TODO comments",
+    },
   },
 }
+--TODO:

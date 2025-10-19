@@ -1,3 +1,5 @@
+<!-- TODO: -->
+
 ## Learn
 
 what's a quickfix window?
@@ -12,19 +14,17 @@ registers [https://www.youtube.com/watch?v=AC_DyfUcTsw]
 ## other tasks
 
 - go over considering list
-- Project manager
-- Todo manager (trouble??)
 
-- session manager?
+- pick through TODO comments inside project CWD
 
 - Help/doc viewer
 - Better splits/tabs/navigation/closing setup
 
-- Make LSP setup minimal/based
-
 - Snippets?
 
 - some better parentheses matches jfc
+
+- mess with devicon configs
 
 ## writing
 
