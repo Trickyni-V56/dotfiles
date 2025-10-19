@@ -9,7 +9,10 @@ return {
       sources = {
         explorer = { layout = { preset = "sidebar" } },
         recent = { layout = { preset = "select" } },
-        projects = { layout = { preset = "select" } },
+        projects = {
+          layout = { preset = "select" },
+          patterns = { ".git", "package.json", "Makefile", ".root", "stylua.toml" },
+        },
         zoxide = { layout = { preset = "select" } },
         diagnostics = {
           layout = { preset = "right" },
@@ -19,7 +22,9 @@ return {
           layout = { preset = "select" },
           win = { list = { wo = { wrap = true } } },
         },
-        grep = { enabled = true },
+        todo_comment = {
+          cwd = vim.fs.root(0, { ".git", ".root" }),
+        },
       },
     },
   },
@@ -83,7 +88,7 @@ return {
     {
       "<leader>t",
       function()
-        Snacks.picker.todo_comments()
+        Snacks.picker.todo_comments({ follow = true })
       end,
       desc = "List TODO comments",
     },
