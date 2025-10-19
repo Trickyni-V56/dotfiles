@@ -11,6 +11,7 @@ registers [https://www.youtube.com/watch?v=AC_DyfUcTsw]
 
 ## other tasks
 
+- go over considering list
 - Project manager
 - Todo manager (trouble??)
 

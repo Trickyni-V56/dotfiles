@@ -1,7 +1,6 @@
 ---@diagnostic disable
 return {
   { "stevearc/dressing.nvim", enabled = false },
-  { "folke/noice.nvim", enabled = false },
   { "code-biscuits/nvim-biscuits", enabled = false },
   { "gelguy/wilder.nvim", enabled = false },
   { "neo451/feed.nvim", enabled = false },
@@ -17,4 +16,6 @@ return {
   --CSV viwerers
   { "hat0uma/csvview.nvim", enabled = false },
   { "theKnightsOfRohan/csvlens.nvim", enabled = false },
+  { "nvim-mini/mini.nvim/", enabled = false },
+  { "rcarriga/nvim-notify", enabled = false },
 }
