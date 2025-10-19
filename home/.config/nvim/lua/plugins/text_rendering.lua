@@ -18,7 +18,7 @@ return {
       bullet = { icons = { "─" } },
     },
   },
-  { -- highlights TODO: tags
+  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
@@ -47,8 +47,3 @@ return {
     },
   },
 }
--- INFO:
--- WARN:
--- FIX:
--- XXX:
--- TODO

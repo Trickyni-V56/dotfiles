@@ -83,12 +83,9 @@ return {
     {
       "<leader>t",
       function()
-        Snacks.picker.todo_comments({
-          cwd = vim.fs.root(0, { ".git", "package.json", "pyproject.toml", "Cargo.toml", ".root" }),
-        })
+        Snacks.picker.todo_comments()
       end,
       desc = "List TODO comments",
     },
   },
 }
---TODO:
