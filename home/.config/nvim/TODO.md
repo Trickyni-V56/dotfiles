@@ -1,6 +1,8 @@
 ## Learn
 
 what's a quickfix window?
+[digraphs](https://neovim.io/doc/user/digraph.html)
+registers [https://www.youtube.com/watch?v=AC_DyfUcTsw]
 
 ## config
 

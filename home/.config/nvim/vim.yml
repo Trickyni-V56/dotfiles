@@ -3,9 +3,11 @@ lua_versions:
   - luajit
 
 globals:
+  vim:
+    any: true
   Snacks:
     any: true
-  vim:
+  VeryLazy:
     any: true
   jit:
     any: true
