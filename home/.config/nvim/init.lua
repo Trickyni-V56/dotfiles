@@ -57,13 +57,26 @@ vim.keymap.set(
   { desc = "Toggle Virtual Text", silent = true }
 )
 
--- Custom Commands --------------------------------------------
+-- Behaviors --------------------------------------------------
 -- Bring up the greeter
 vim.api.nvim_create_user_command("Greeter", function()
   require("snacks").dashboard()
 end, {})
 
--- AUTOCMDS ---------------------------------------------------
+-- defines markers to determine a project's root dir
+local project_markers = { ".git", ".root", "cargo.toml", "selene.toml", "stylua.toml" }
+-- Finds a project's root directory
+vim.api.nvim_create_user_command("Root", function()
+  print(vim.fs.root(0, project_markers))
+end, {})
+
+-- automatically stay on root directory
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePre" }, {
+  callback = function()
+    vim.cmd.lcd(vim.fs.root(0, project_markers))
+  end,
+})
+
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
@@ -90,7 +103,7 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "󰌶 ",
     },
   },
-  virtual_lines = { severity = { min = vim.diagnostic.severity.ERROR } },
+  virtual_lines = { false, severity = { min = vim.diagnostic.severity.ERROR } },
   update_in_insert = true,
   inlay_hints = true,
 })
@@ -111,3 +124,12 @@ vim.lsp.config("lua_ls", {
   },
 })
 vim.lsp.enable({ "lua_ls", "bashls" })
+----------------------------
+--FIX: move this to text_rendering.lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function(args)
+    -- explicitly start treesitter for markdown
+    vim.treesitter.start(args.buf, "markdown")
+  end,
+})

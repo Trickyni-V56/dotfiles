@@ -34,6 +34,7 @@ return {
       "toml",
       "xml",
       "yaml",
+      "vim",
     },
     auto_install = true,
   },

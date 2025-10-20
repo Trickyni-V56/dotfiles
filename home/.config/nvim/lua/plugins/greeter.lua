@@ -16,7 +16,7 @@ return {
               icon = " ",
               key = "p",
               desc = "Projects",
-              action = ":lua Snacks.dashboard.pick('projects')",
+              action = ":lua Snacks.picker.projects()",
             },
             {
               icon = " ",
@@ -46,7 +46,6 @@ return {
         sections = {
           { section = "header", indent = 5 },
           { title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-          { title = "Projects", section = "projects", indent = 2, padding = 1 },
           { section = "keys", indent = 2, padding = 1 },
         },
       },

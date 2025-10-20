@@ -2,6 +2,8 @@
 -- MeanderingProgrammer/render-markdown.nvim
 -- folke/todo-comments.nvim
 -- smjonas/live-command.nvim
+-- code-biscuits/nvim-biscuits
+
 return {
   { -- colors the background of hex color text #afd2e9
     "catgoose/nvim-colorizer.lua",
@@ -16,6 +18,7 @@ return {
       completions = { lsp = { enabled = true } },
       checkbox = { checked = { scope_highlight = "@markup.strikethrough" } },
       bullet = { icons = { "─" } },
+      latex = { enabled = false },
     },
   },
   {
@@ -44,6 +47,15 @@ return {
       commands = {
         Norm = { cmd = "norm" },
       },
+    },
+  },
+  {
+    "code-biscuits/nvim-biscuits",
+    enabled = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      cursor_line_only = true,
+      default_config = { prefix_string = " 𖦹 " },
     },
   },
 }

@@ -4,7 +4,6 @@ return {
   lazy = false,
   opts = {
     toggle = { enabled = true },
-    explorer = { enabled = true },
     picker = {
       sources = {
         explorer = { layout = { preset = "sidebar" } },
@@ -12,6 +11,7 @@ return {
         projects = {
           layout = { preset = "select" },
           patterns = { ".git", "package.json", "Makefile", ".root", "stylua.toml" },
+          dev = { "~/git", "~/.shells", "~/.config/nvim" },
         },
         zoxide = { layout = { preset = "select" } },
         diagnostics = {
@@ -29,13 +29,6 @@ return {
     },
   },
   keys = {
-    {
-      "<Bslash>",
-      function()
-        Snacks.explorer()
-      end,
-      desc = "File Explorer",
-    },
     {
       "<leader><space>",
       function()

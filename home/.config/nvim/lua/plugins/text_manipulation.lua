@@ -5,6 +5,7 @@
 -- nvim-mini/mini.pairs
 -- nvim-mini/mini.surround
 -- nvim-mini/mini.splitjoin
+-- nvim-mini/mini.align
 -- [DISABLED] windwp/nvim-ts-autotag
 
 return {
@@ -55,6 +56,14 @@ return {
     "nvim-mini/mini.splitjoin",
     version = "*",
     opts = {},
+  },
+  {
+    "nvim-mini/mini.align",
+    enabled = true,
+    opts = { mappings = {
+      start = "gA",
+      start_with_preview = "ga",
+    } },
   },
   {
     "windwp/nvim-ts-autotag",
