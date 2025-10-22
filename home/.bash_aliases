@@ -2,8 +2,8 @@
 
 alias obsidian='obsidian --ozone-platform=wayland'
 alias zen='~/.config/eww/scripts/zenmode.sh'
-zenmsg(){
-eww update zenmsg="$*"
+zenmsg() {
+    eww update zenmsg="$*"
 }
 
 #   core
@@ -17,9 +17,9 @@ alias reload='source ~/.bashrc && echo "ka-clunk~"'
 alias bashr='e ~/.bash_aliases'
 alias nmtui='NEWT_COLORS=$(<~/.config/nmtui/palette) nmtui'
 alias s='sshs'
-function s(){
+function s() {
     ssh "$1" || sshs
-}  
+}
 
 #   security
 alias lockdown='rfkill block all'
@@ -43,7 +43,6 @@ if grep arch /etc/os-release >/dev/null; then
     alias banish='sudo pacman -R'
     alias commune='sudo pacman -Syu'
 fi
-
 
 alias ydotool-daemon='sudo ydotoold -p /run/user/1000/.ydotool_socket -P 777'
 
