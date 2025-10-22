@@ -32,7 +32,7 @@ what's a quickfix window?
 
 [blogpost abt markdown setup](https://linkarzu.com/posts/neovim/markdown-setup-2025/#bullets-vimbulletsvim)
 [accompanying video](https://www.youtube.com/watch?v=1YEbKDlxfss)
-[lazyvim](https://www.lazyvim.org/extras/lang/markdown)
+[lazyvim section abt markdown](https://www.lazyvim.org/extras/lang/markdown)
 [nvim.awesome](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#note-taking)
 
 [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
