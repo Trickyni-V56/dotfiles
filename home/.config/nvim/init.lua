@@ -125,7 +125,9 @@ vim.lsp.config("lua_ls", {
 })
 vim.lsp.enable({ "lua_ls", "bashls" })
 ----------------------------
---FIX: move this to text_rendering.lua
+-- Calls the right treeitter for markdown
+--FIX: move this to text_rendering.lua or treesitter.lua
+--
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   callback = function(args)

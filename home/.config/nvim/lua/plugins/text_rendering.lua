@@ -56,6 +56,11 @@ return {
     opts = {
       cursor_line_only = true,
       default_config = { prefix_string = " 𖦹 " },
+      language_config = {
+        markdown = {
+          disabled = true,
+        },
+      },
     },
   },
 }
