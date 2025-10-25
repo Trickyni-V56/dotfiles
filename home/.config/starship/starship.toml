@@ -1,9 +1,9 @@
 # ~/.config/starship.toml
 
 format='''
-[┌](#AFD2E9)${custom.glyphs}
+[╭](#AFD2E9)${custom.glyphs}
 [ ]()$hostname$directory$git_branch$git_status
-[└]()$status'''
+[╰]()$status'''
 
 add_newline = true
 [status]

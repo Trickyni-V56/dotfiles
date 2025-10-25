@@ -3,6 +3,7 @@
 -- folke/todo-comments.nvim
 -- smjonas/live-command.nvim
 -- code-biscuits/nvim-biscuits
+-- OXY2DEV/markview.nvim [DISABLED]
 
 return {
   { -- colors the background of hex color text #afd2e9
@@ -12,12 +13,26 @@ return {
   },
   { -- renders markdown inline
     "MeanderingProgrammer/render-markdown.nvim",
+    enabled = true,
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
+    lazy = false,
     opts = {
       render_modes = true,
       completions = { lsp = { enabled = true } },
-      checkbox = { checked = { scope_highlight = "@markup.strikethrough" } },
-      bullet = { icons = { "─" } },
+      checkbox = { checked = { scope_highlight = "RenderMarkdownCheckedItem" } },
+      bullet = { icons = { "󰆧" } },
+      pipe_table = {
+        preset = "round",
+        -- border = { "┌", "┬", "┐", "├", "┼", "┤", "└", "┴", "┘", "│", "─" },
+        alignment_indicator = "┈",
+      },
+      dash = {
+        enabled = true,
+        render_modes = false,
+        icon = "─",
+        width = "full",
+        left_margin = 0,
+      },
       latex = { enabled = false },
     },
   },
@@ -61,6 +76,15 @@ return {
           disabled = true,
         },
       },
+    },
+  },
+  {
+    "OXY2DEV/markview.nvim",
+    enabled = false,
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    lazy = false,
+    opts = {
+      markdown = { enable = false },
     },
   },
 }

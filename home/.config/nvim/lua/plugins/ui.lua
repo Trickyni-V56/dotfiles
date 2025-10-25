@@ -25,6 +25,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
   },
   { -- shows open buffers as tabs
     "akinsho/bufferline.nvim",
+    enabled = true,
     config = function()
       require("bufferline").setup()
     end,

@@ -1,6 +1,6 @@
 --TODO:
 return {
-  { "uga-rosa/ccc.nvim", enabled = false }, -- replaces nvim.colorizer
+  { "uga-rosa/ccc.nvim", enabled = true, opts = {} }, -- replaces nvim.colorizer
   --CSV viwerers
   { "hat0uma/csvview.nvim", enabled = false },
   { "theKnightsOfRohan/csvlens.nvim", enabled = false },

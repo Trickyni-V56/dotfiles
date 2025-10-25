@@ -22,6 +22,7 @@ return {
         sh = { "shfmt" },
         javascript = { "prettier" },
         markdown = { "prettier" },
+        -- typst = {"typstyle"},
       },
       formatters = {
         stylua = {

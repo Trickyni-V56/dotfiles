@@ -10,7 +10,13 @@ bindsym $mod+y exec $term ~/.shells/yazi_launcher.sh
 set $menu ~/.shells/fuzzel-wrapper.sh
 bindsym $mod+tab exec $menu
 
-#   Idle
+# Notification Daemon
+exec swaync
+
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
+# Idle
 
 exec swayidle -w \
     lock 'systemctl suspend' \
@@ -22,7 +28,7 @@ for_window [all] inhibit_idle fullscreen
 
 bindswitch lid:on exec systemctl suspend
 
-#   Keyboard
+# Keyboard
 
 input type:keyboard {
 	xkb_options "caps:escape,grp:alt_shift_toggle,compose:ralt"
@@ -43,9 +49,6 @@ input type:keyboard {
 
 # toggle scaling
     bindsym shift+$mod+backslash exec ~/.shells/sway-scale-toggle.sh
-
-# toggle HDR
-    bindsym $mod+shift+h swaymsg 'output DP-1 hdr toggle' && notify-send "HDR toggled"
 
 # Copy datestamp
     bindsym $mod+shift+d exec date -I | wl-copy && notify-send "date copied!"
@@ -80,6 +83,16 @@ floating_modifier $mod normal
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+    bindsym $mod+h focus left
+    bindsym $mod+j focus down
+    bindsym $mod+k focus up
+    bindsym $mod+l focus right
+
+    bindsym $mod+Shift+h move left
+    bindsym $mod+Shift+j move down
+    bindsym $mod+Shift+k move up
+    bindsym $mod+Shift+l move right
 
     focus_wrapping no
 
@@ -120,12 +133,6 @@ floating_modifier $mod normal
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-     bindsym $mod+h splith
-     bindsym $mod+l splitv
-
     #   Fullscreen
         bindsym $mod+f fullscreen
 
@@ -138,19 +145,8 @@ floating_modifier $mod normal
     # Move focus to the parent container
     #bindsym $mod+a focus parent
 
-# Scratchpad:
 
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-
-    # Move the currently focused window to the scratchpad
-    #bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    #bindsym $mod+minus scratchpad show
-
-# Resizing containers:
+# Resize 
 
 mode "resize" {
     # left will shrink the containers width
@@ -183,11 +179,7 @@ bindsym $mod+r mode "resize"
     # Screenshot
     bindsym $mod+shift+s exec slurp | grim -g - - | wl-copy
 
-# Notification Daemon
-exec swaync
 
-# Toggle control center
-bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # blur
 # blur enable
@@ -195,7 +187,42 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 
 include /etc/sway/config.d/*
 include ~/.config/sway/input
-include ~/.config/sway/theme
 include ~/.config/sway/autoexec
 include ~/.config/sway/output
+#-----------------------------------------------
+# theme
+#-----------------------------------------------
+# wallpaper
+output * bg #3b3228 solid_color
+# colors: titlebar border, split border, text, split indicator
+client.focused #3b3228 #e68d53 #3b3228 #3eccbe
+# client.unfocused #3b3228 #c1a387 #3b3228 #e86045
+client.unfocused #FF00FF #3b3228 #afd2e9 #0000FF
+client.urgent #3b3228 #e86045 #3b3228
+client.focused_inactive #3b3228 #c1a387 #3b3228 #e86045
+
+# borders
+default_border pixel 2
+hide_edge_borders none
+smart_borders on
+# default_floating_border pixel 0
+
+titlebar_border_thickness 0
+title_align center
+titlebar_padding 0
+
+# gaps
+smart_gaps on
+# gaps inner 8
+gaps top -99
+gaps bottom -99
+
+
+# #font pango: Reconstructed Matoran alphabet 12
+seat seat0 xcursor_theme Bibata-Modern-Classic 20
+
+
+
+
+
 

@@ -26,7 +26,8 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.timeoutlen = 300 --timeout on keys with followups
 vim.o.winborder = "none" --border for floating windows
 vim.o.background = "dark" -- dark mode
-
+vim.g.gruvbox_bold = 0
+vim.g.gruvbox_italic = 0
 -- KEYMAPS ----------------------------------------------------
 -- move line up/down
 vim.keymap.set("n", "<S-up>", ":m-2<CR>")
@@ -123,7 +124,7 @@ vim.lsp.config("lua_ls", {
     },
   },
 })
-vim.lsp.enable({ "lua_ls", "bashls" })
+vim.lsp.enable({ "lua_ls", "bashls", "tinymist" })
 ----------------------------
 -- Calls the right treeitter for markdown
 --FIX: move this to text_rendering.lua or treesitter.lua
@@ -135,3 +136,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.treesitter.start(args.buf, "markdown")
   end,
 })
+
+--override random highlights FIX: move to text-rendering.lua or make new file/section. organize anyhow.
+vim.api.nvim_set_hl(0, "RenderMarkdownBullet", { fg = "#92a650" })
+vim.api.nvim_set_hl(0, "RenderMarkdownCheckedItem", { fg = "#868686", strikethrough = true })
+

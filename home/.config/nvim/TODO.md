@@ -28,6 +28,12 @@ what's a quickfix window?
 - Dictionary
 - Wikipedia?
 
+- typst
+  - snippets
+  - [typst-preview ](https://github.com/chomosuke/typst-preview.nvim)
+  - [markview](https://github.com/OXY2DEV/markview.nvim)
+  - [img-clip](https://github.com/HakonHarnes/img-clip.nvim)
+
 ## markdown
 
 [blogpost abt markdown setup](https://linkarzu.com/posts/neovim/markdown-setup-2025/#bullets-vimbulletsvim)
