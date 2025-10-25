@@ -6,20 +6,6 @@ what's a quickfix window?
 [digraphs](https://neovim.io/doc/user/digraph.html)
 [registers](https://www.youtube.com/watch?v=AC_DyfUcTsw)
 
-## other tasks
-
-- highlight log keywords
-- jump to matching brakcet?
-
-- Help/doc viewer
-- Better splits/tabs/navigation/closing setup
-
-- Snippets?
-
-- some better parentheses matches jfc
-
-- mess with devicon configs
-
 ## writing
 
 - Translation?
@@ -44,6 +30,19 @@ what's a quickfix window?
 [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
 - images are a thing
+
+## other tasks
+
+- highlight log keywords
+
+- Help/doc viewer
+- Better splits/tabs/navigation/closing setup
+
+- Snippets?
+
+- some better parentheses matches jfc
+
+- mess with devicon configs
 
 ## desertwitch
 
