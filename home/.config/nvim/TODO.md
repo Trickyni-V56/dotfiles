@@ -1,5 +1,10 @@
 <!-- TODO: -->
 
+## UI
+
+lualine, bufferline, CMD line, scrollbar
+blend into background so who gives a shit about the border?!
+
 ## Learn
 
 what's a quickfix window?

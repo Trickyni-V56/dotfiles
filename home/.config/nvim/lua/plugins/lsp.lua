@@ -3,7 +3,6 @@
 -- mfussenegger/nvim-lint
 -- stevearc/conform.nvim
 -- folke/lazydev.nvim
--- TODO
 return {
   {
     "neovim/nvim-lspconfig",
