@@ -18,9 +18,11 @@ what's a quickfix window?
 - Rhymer
 - Dictionary
 - Wikipedia?
+- configure zenmode
 
+- [lecure on vim novelwriting](https://www.youtube.com/watch?v=2ORWaIqyj7k)
 - typst
-  - snippets
+  - [snippets](https://github.com/rafamadriz/friendly-snippets)
   - [typst-preview ](https://github.com/chomosuke/typst-preview.nvim)
   - [markview](https://github.com/OXY2DEV/markview.nvim)
   - [img-clip](https://github.com/HakonHarnes/img-clip.nvim)
@@ -35,6 +37,8 @@ what's a quickfix window?
 [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
 - images are a thing
+- [vim-pencil](https://github.com/preservim/vim-pencil)
+- [neorg](https://github.com/nvim-neorg/neorg)
 
 ## other tasks
 
@@ -48,8 +52,9 @@ what's a quickfix window?
 - some better parentheses matches jfc
 
 - mess with devicon configs
+- [mini.icons](https://github.com/nvim-mini/mini.icons)
+- [nvim-devicons](github.com/nvim-tree/nvim-web-devicons)
 
-- configure zenmode
 - markdown bullets should be more key efficient
 
 ## desertwitch
