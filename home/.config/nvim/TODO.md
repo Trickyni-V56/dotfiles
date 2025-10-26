@@ -49,6 +49,9 @@ what's a quickfix window?
 
 - mess with devicon configs
 
+- configure zenmode
+- markdown bullets should be more key efficient
+
 ## desertwitch
 
 - Base
