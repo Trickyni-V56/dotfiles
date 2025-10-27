@@ -8,13 +8,13 @@ vim.o.relativenumber = true -- relative number column
 vim.o.ignorecase = true -- search ignores case
 vim.o.smartcase = true -- search ignores case unless uppercase letter exists
 vim.opt.grepprg = "rg --vimgrep" -- external grep
-vim.opt.grepformat = "%f:%l:%c:%m"
 vim.o.wrap = true
 vim.opt.linebreak = true
 vim.o.tabstop = 2 -- tab width
 -- vim.o.shiftwidth = 2 -- indentation width
 vim.o.expandtab = true -- turns tabs into spaces
 vim.o.showmode = false -- hides mode indicator, since we have a status line
+vim.opt.statusline = " %F %m %r| [%l,%c]"
 vim.o.cursorline = true -- highlights cursor line
 vim.o.scrolloff = 10 -- keeps 10 lines above/below the cursor when scrolling
 vim.o.breakindent = true
@@ -141,3 +141,48 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_set_hl(0, "RenderMarkdownBullet", { fg = "#92a650" })
 vim.api.nvim_set_hl(0, "RenderMarkdownCheckedItem", { fg = "#868686", strikethrough = true })
 
+-- Status Line --------------------------------------------------------
+-- TODO:
+vim.api.nvim_set_hl(0, "StatusLineNormal", { fg = "#1e1e2e", bg = "#89b4fa", bold = true })
+vim.api.nvim_set_hl(0, "StatusLineInsert", { fg = "#1e1e2e", bg = "#a6e3a1", bold = true })
+vim.api.nvim_set_hl(0, "StatusLineVisual", { fg = "#1e1e2e", bg = "#f5c2e7", bold = true })
+vim.api.nvim_set_hl(0, "StatusLineReplace", { fg = "#1e1e2e", bg = "#f38ba8", bold = true })
+vim.api.nvim_set_hl(0, "StatusLineCommand", { fg = "#1e1e2e", bg = "#f9e2af", bold = true })
+
+-- Function to get mode highlight
+function _G.mode_highlight()
+  local mode = vim.api.nvim_get_mode().mode
+  local mode_hl = {
+    ["n"] = "%#StatusLineNormal#",
+    ["i"] = "%#StatusLineInsert#",
+    ["v"] = "%#StatusLineVisual#",
+    ["V"] = "%#StatusLineVisual#",
+    [""] = "%#StatusLineVisual#", -- Visual block
+    ["R"] = "%#StatusLineReplace#",
+    ["c"] = "%#StatusLineCommand#",
+  }
+  return mode_hl[mode] or "%#StatusLine#"
+end
+
+function _G.mode_name()
+  local mode = vim.api.nvim_get_mode().mode
+  local mode_map = {
+    ["n"] = "NORMAL",
+    ["i"] = "INSERT",
+    ["v"] = "VISUAL",
+    ["V"] = "V-LINE",
+    [""] = "V-BLOCK",
+    ["R"] = "REPLACE",
+    ["c"] = "COMMAND",
+  }
+  return " " .. (mode_map[mode] or mode) .. " "
+end
+
+vim.opt.statusline = table.concat({
+  "%{%v:lua.mode_highlight()%}",
+  " %{%v:lua.mode_name()%}",
+  "%#StatusLine#",
+  " %f %m",
+  "| [%l:%c]",
+})
+-- vim.opt.statusline = " %{%v:lua.statusline_mode()%} | %f %m | [%l:%c]"
