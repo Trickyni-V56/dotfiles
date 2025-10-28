@@ -24,8 +24,8 @@ vim.opt.backspace = { "start", "eol", "indent" }
 vim.o.list = true -- whow trailing whitespaces and tab characters
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.timeoutlen = 300 --timeout on keys with followups
-vim.o.winborder = "none" --border for floating windows
 vim.o.background = "dark" -- dark mode
+vim.o.winborder = "none" --border for floating windows
 vim.g.gruvbox_bold = 0
 vim.g.gruvbox_italic = 0
 -- KEYMAPS ----------------------------------------------------
@@ -108,7 +108,7 @@ vim.diagnostic.config({
   update_in_insert = true,
   inlay_hints = true,
 })
-vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#e86045", bold = true })
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#e86045" })
 vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#e68d53" })
 vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#ace1af" })
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#92a650" })
@@ -143,12 +143,13 @@ vim.api.nvim_set_hl(0, "RenderMarkdownCheckedItem", { fg = "#868686", strikethro
 
 -- Status Line --------------------------------------------------------
 -- TODO:
-vim.api.nvim_set_hl(0, "StatusLineNormal", { fg = "#1e1e2e", bg = "#89b4fa", bold = true })
-vim.api.nvim_set_hl(0, "StatusLineInsert", { fg = "#1e1e2e", bg = "#a6e3a1", bold = true })
-vim.api.nvim_set_hl(0, "StatusLineVisual", { fg = "#1e1e2e", bg = "#f5c2e7", bold = true })
-vim.api.nvim_set_hl(0, "StatusLineReplace", { fg = "#1e1e2e", bg = "#f38ba8", bold = true })
-vim.api.nvim_set_hl(0, "StatusLineCommand", { fg = "#1e1e2e", bg = "#f9e2af", bold = true })
-
+vim.api.nvim_set_hl(0, "StatusLineNormal", { bg = "#afd2e9", fg = "#3b3228" })
+vim.api.nvim_set_hl(0, "StatusLineInsert", { bg = "#f8e2a0", fg = "#3b3228" })
+vim.api.nvim_set_hl(0, "StatusLineVisual", { bg = "#e68d53", fg = "#3b3228" })
+vim.api.nvim_set_hl(0, "SiatusLineReplace", { bg = "#e86045", fg = "#3b3228" }) --FIX: not displaying
+vim.api.nvim_set_hl(0, "StatusLineCommand", { bg = "#92a650", fg = "#3b3228" })
+vim.api.nvim_set_hl(0, "StatusLine", { fg = "#3b3228", bg = "#c1a387" })
+vim.api.nvim_set_hl(0, "StatusLinebg", { bg = "#3b3228" })
 -- Function to get mode highlight
 function _G.mode_highlight()
   local mode = vim.api.nvim_get_mode().mode
@@ -157,8 +158,7 @@ function _G.mode_highlight()
     ["i"] = "%#StatusLineInsert#",
     ["v"] = "%#StatusLineVisual#",
     ["V"] = "%#StatusLineVisual#",
-    [""] = "%#StatusLineVisual#", -- Visual block
-    ["R"] = "%#StatusLineReplace#",
+    ["r"] = "%#StatusLineReplace#",
     ["c"] = "%#StatusLineCommand#",
   }
   return mode_hl[mode] or "%#StatusLine#"
@@ -179,10 +179,16 @@ function _G.mode_name()
 end
 
 vim.opt.statusline = table.concat({
+  "%#StatusLineBg#",
+  "  ",
   "%{%v:lua.mode_highlight()%}",
-  " %{%v:lua.mode_name()%}",
+  "%{%v:lua.mode_name()%}",
   "%#StatusLine#",
-  " %f %m",
-  "| [%l:%c]",
+  " %F",
+  "%{&modified ? ' [+] ' : ' '}", -- Custom text
+  "| [%l:%c] ",
+  "%#StatusLineBg#",
+  "%=",
 })
--- vim.opt.statusline = " %{%v:lua.statusline_mode()%} | %f %m | [%l:%c]"
+-- Change the command line (bottom line) color
+vim.opt.cmdheight = 0
