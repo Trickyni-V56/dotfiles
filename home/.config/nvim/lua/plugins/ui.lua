@@ -26,9 +26,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
   { -- shows open buffers as tabs
     "akinsho/bufferline.nvim",
     enabled = true,
-    config = function()
-      require("bufferline").setup()
-    end,
+    opts = {},
   },
   {
     "stevearc/dressing.nvim",
@@ -43,10 +41,11 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
   },
   {
     "lewis6991/satellite.nvim",
+    enabled = true,
     opts = {
       width = 1,
       handlers = {
-        cursor = { enable = false, symbols = { "█" } },
+        cursor = { enable = false },
         search = { enable = true, symbols = { "━" } },
         diagnostic = { enable = false },
         gitsigns = { enable = false },
