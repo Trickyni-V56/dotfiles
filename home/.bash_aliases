@@ -28,7 +28,6 @@ alias lock='swaylock'
 
 #   renames/config loads
 alias quickshell='swaymsg exec quickshell'
-alias vim='nvim'
 alias cat='bat'
 alias enkidu='ncdu --color dark'
 alias diff='delta'

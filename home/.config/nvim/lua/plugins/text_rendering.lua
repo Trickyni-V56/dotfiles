@@ -87,4 +87,5 @@ return {
       markdown = { enable = false },
     },
   },
+  { "preservim/vim-pencil", enabled = true, config = function() end },
 }

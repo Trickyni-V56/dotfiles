@@ -66,6 +66,22 @@ return {
     } },
   },
   {
+    "nvim-mini/mini.snippets",
+    config = function()
+      local ms = require("mini.snippets")
+      ms.setup({
+        mappings = { expand = "<C-e>" },
+      })
+      snippets = {
+        ms.gen_loader.from_lang({
+          markdown_inline = {
+            { prefix = "-[]", body = "- [ ] $1$0" },
+          },
+        }),
+      }
+    end,
+  },
+  {
     "windwp/nvim-ts-autotag",
     enabled = false,
     opts = {},

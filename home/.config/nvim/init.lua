@@ -2,6 +2,8 @@
 vim.g.mapleader = " " -- leader key (spacebar)
 vim.g.maplocalleader = " " -- leader key (spacebar)
 require("config.lazy")
+vim.g.gruvbox_bold = 0
+vim.g.gruvbox_italic = 0
 vim.g.have_nerd_font = true
 vim.o.number = true -- number column
 vim.o.relativenumber = true -- relative number column
@@ -9,25 +11,24 @@ vim.o.ignorecase = true -- search ignores case
 vim.o.smartcase = true -- search ignores case unless uppercase letter exists
 vim.opt.grepprg = "rg --vimgrep" -- external grep
 vim.o.wrap = true
+vim.o.textwidth = 80
 vim.opt.linebreak = true
 vim.o.tabstop = 2 -- tab width
--- vim.o.shiftwidth = 2 -- indentation width
+vim.o.shiftwidth = 2 -- indentation width
 vim.o.expandtab = true -- turns tabs into spaces
 vim.o.showmode = false -- hides mode indicator, since we have a status line
 -- vim.opt.statusline = " %F %m %r| [%l,%c]"
 vim.o.cursorline = true -- highlights cursor line
 vim.o.scrolloff = 10 -- keeps 10 lines above/below the cursor when scrolling
 vim.o.breakindent = true
-vim.o.signcolumn = "yes" -- gutter to the left of the number column
+vim.o.signcolumn = "yes:1" -- gutter to the left of the number column
 vim.o.inccommand = "nosplit" -- shows find/replace results live
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.o.list = true -- whow trailing whitespaces and tab characters
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { leadmultispace = "▏ ", tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.timeoutlen = 300 --timeout on keys with followups
 vim.o.background = "dark" -- dark mode
 vim.o.winborder = "none" --border for floating windows
-vim.g.gruvbox_bold = 0
-vim.g.gruvbox_italic = 0
 -- KEYMAPS ----------------------------------------------------
 -- move line up/down
 vim.keymap.set("n", "<S-up>", ":m-2<CR>")
@@ -51,13 +52,7 @@ vim.keymap.set("n", "<C-[>", ":bp<CR>")
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set(
-  { "n", "x", "v" },
-  "<leader>l",
-  ":lua vim.diagnostic.config({ virtual_lines =  not vim.diagnostic.config().virtual_lines})<CR>",
-  { desc = "Toggle Virtual Text", silent = true }
-)
-
+vim.keymap.set("n", "zm", ":ZenMode<CR>")
 -- Behaviors --------------------------------------------------
 -- Bring up the greeter
 vim.api.nvim_create_user_command("Greeter", function()
@@ -104,7 +99,6 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "󰌶 ",
     },
   },
-  virtual_lines = { false, severity = { min = vim.diagnostic.severity.ERROR } },
   update_in_insert = true,
   inlay_hints = true,
 })
@@ -190,5 +184,3 @@ vim.opt.statusline = table.concat({
   "%#StatusLineBg#",
   "%=",
 })
--- Change the command line (bottom line) color
-vim.opt.cmdheight = 0
