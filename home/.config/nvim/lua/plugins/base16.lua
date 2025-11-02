@@ -1,7 +1,7 @@
 return {
   {
     "nvim-mini/mini.base16",
-    enabled = false,
+    enabled = true,
     opts = {
       palette = {
         base00 = "#3b3228", -- bg
