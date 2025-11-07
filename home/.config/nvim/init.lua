@@ -118,7 +118,7 @@ vim.lsp.config("lua_ls", {
     },
   },
 })
-vim.lsp.enable({ "lua_ls", "bashls", "tinymist" })
+vim.lsp.enable({ "lua_ls", "bashls", "tinymist", "eslint", "djlint" })
 ----------------------------
 -- Calls the right treeitter for markdown
 --FIX: move this to text_rendering.lua or treesitter.lua
