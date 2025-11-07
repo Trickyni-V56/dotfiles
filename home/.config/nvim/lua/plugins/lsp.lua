@@ -21,6 +21,10 @@ return {
         sh = { "shfmt" },
         javascript = { "prettier" },
         markdown = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        yaml = { "prettier" },
+        nunjucks = { "djlint" },
         -- typst = {"typstyle"},
       },
       formatters = {
