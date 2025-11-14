@@ -184,3 +184,9 @@ vim.opt.statusline = table.concat({
   "%#StatusLineBg#",
   "%=",
 })
+
+vim.filetype.add({
+  extension = {
+    njk = "htmldjango",
+  },
+})

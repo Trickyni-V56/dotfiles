@@ -1,7 +1,7 @@
 -- chrisgrieser/nvim-rip-substitute
 -- nguyenvukhang/nvim-toggler
--- numToStr/Comment.nvim
 -- abecodes/tabout.nvim
+-- nvim-mini/mini.comment
 -- nvim-mini/mini.pairs
 -- nvim-mini/mini.surround
 -- nvim-mini/mini.splitjoin
@@ -39,7 +39,8 @@ return {
   },
   { -- INFO: Commentate/uncomment text blocks.
     --       g-c-c to comment/uncomment
-    "numToStr/Comment.nvim",
+    "nvim-mini/mini.comment",
+    opts = {},
   },
   {
     "abecodes/tabout.nvim",

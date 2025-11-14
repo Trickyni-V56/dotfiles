@@ -34,6 +34,10 @@ return {
         left_margin = 0,
       },
       latex = { enabled = false },
+      html = {
+        enabled = true,
+        comment = { conceal = false },
+      },
     },
   },
   {
@@ -66,13 +70,17 @@ return {
   },
   {
     "code-biscuits/nvim-biscuits",
-    enabled = true,
+    enabled = false,
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
       cursor_line_only = true,
       default_config = { prefix_string = " 𖦹 " },
       language_config = {
         markdown = {
+          disabled = true,
+        },
+        css = {
           disabled = true,
         },
       },

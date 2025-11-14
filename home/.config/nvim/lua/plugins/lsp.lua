@@ -26,9 +26,15 @@ return {
         markdown = { "prettier" },
         html = { "prettier" },
         css = { "prettier" },
+<<<<<<< HEAD
         yaml = { "prettier" },
         nunjucks = { "djlint" },
         jinja = { "djlint" },
+=======
+        htmldjango = { "prettier" },
+        django = { "prettier" },
+        jinja = { "prettier" },
+>>>>>>> 5b27cc1 (0)
         -- typst = {"typstyle"},
       },
       formatters = {
@@ -38,8 +44,13 @@ return {
         shfmt = {
           prepend_args = { "-i=2" },
         },
+<<<<<<< HEAD
         djlint = {
           prepend_args = { "--indent", "2" },
+=======
+        prettier = {
+          prepend_args = { "--tab-width", "2" },
+>>>>>>> 5b27cc1 (0)
         },
       },
     },
@@ -66,7 +77,8 @@ return {
       lint.linters_by_ft = {
         lua = { "selene" },
         bash = { "shellcheck" },
-        javascript = { "eslint_d" },
+        javascript = { "eslint" },
+        nunjucks = { "djlint" },
       }
       local selene = require("lint").linters.selene
       selene.args = {
