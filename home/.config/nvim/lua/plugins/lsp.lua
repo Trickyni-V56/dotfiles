@@ -5,6 +5,9 @@
 -- folke/lazydev.nvim
 return {
   {
+    "lepture/vim-jinja",
+  },
+  {
     "neovim/nvim-lspconfig",
     enabled = true,
     event = { "BufReadPre", "BufNewFile" },
@@ -25,6 +28,7 @@ return {
         css = { "prettier" },
         yaml = { "prettier" },
         nunjucks = { "djlint" },
+        jinja = { "djlint" },
         -- typst = {"typstyle"},
       },
       formatters = {
@@ -33,6 +37,9 @@ return {
         },
         shfmt = {
           prepend_args = { "-i=2" },
+        },
+        djlint = {
+          prepend_args = { "--indent", "2" },
         },
       },
     },
