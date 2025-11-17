@@ -184,9 +184,20 @@ prepend_exts = [
 	{ name = "txt", text = "", fg = "#AFD2E9" },
 	{ name = "log", text = "", fg = "#AFD2E9" },
 	{ name = "sqlite3", text = "", fg = "#AFD2E9" },
-	{ name = "json", text = "", fg = "#AFD2E9" },
 	{ name = "odt", text = "", fg = "#AFD2E9" },
-	{ name = "html", text = "", fg = "#AFD2E9" },
+
+# code
+	{ name = "json", text = "󰘦", fg = "#AFD2E9" },
+	{ name = "html", text = "", fg = "#AFD2E9" },
+	{ name = "njk", text = "", fg = "#AFD2E9" },
+	{ name = "js", text = "", fg = "#AFD2E9" },
+	{ name = "sh", text = "󱆃", fg = "#AFD2E9" },
+	{ name = "py", text = "", fg = "#AFD2E9" },
+	{ name = "css", text = "", fg = "#AFD2E9" },
+	{ name = "md", text = "", fg = "#AFD2E9" },
+	{ name = "qml", text = "", fg = "#AFD2E9" },
+	{ name = "toml", text = "", fg = "#AFD2E9" },
+	{ name = "yaml", text = "", fg = "#AFD2E9" },
 
 # vid
 	{ name = "mp4", text = "", fg = "#3ECCBE" },

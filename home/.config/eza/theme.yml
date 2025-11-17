@@ -38,31 +38,31 @@ broken_path_overlay:
   foreground: "#E86045"
 
 filenames:
-  Downloads:    {icon: {glyph: }}
-  Games:        {icon: {glyph: 󰊗}}
-  Pictures:     {icon: {glyph: }}
-  Music:        {icon: {glyph: }}
-  Desktop:      {icon: {glyph: }}
-  books:        {icon: {glyph: }}
-  audiobooks:   {icon: {glyph: 󱚓}}
-  Videos:       {icon: {glyph: }}
-  .config:      {icon: {glyph: }}
-  .local:       {icon: {glyph: }}
-  .task:        {icon: {glyph: }}
-  .steam:       {icon: {glyph: }}
-  .shells:      {icon: {glyph: }}
-  .homesick:    {icon: {glyph: 󰟑}}
-  .mozilla:     {icon: {glyph: 󰈹}}
-  .ssh:         {icon: {glyph: 󰣀}}
-  .vim:         {icon: {glyph: }}
-  .cargo:       {icon: {glyph: 󱣘}}
-  .android:     {icon: {glyph: }}
-  .minecraft:   {icon: {glyph: 󰍳}}
-  .thunderbird: {icon: {glyph: }}
-  git:          {icon: {glyph: }}
-  paru:         {icon: {glyph: 󰣇}}
-  ..:           {icon: {glyph: }}
-  .bashrc:      {icon: {glyph: }}
+  Downloads: { icon: { glyph:  } }
+  Games: { icon: { glyph: 󰊗 } }
+  Pictures: { icon: { glyph:  } }
+  Music: { icon: { glyph:  } }
+  Desktop: { icon: { glyph:  } }
+  books: { icon: { glyph:  } }
+  audiobooks: { icon: { glyph: 󱚓 } }
+  Videos: { icon: { glyph:  } }
+  .config: { icon: { glyph:  } }
+  .local: { icon: { glyph:  } }
+  .task: { icon: { glyph:  } }
+  .steam: { icon: { glyph:  } }
+  .shells: { icon: { glyph:  } }
+  .homesick: { icon: { glyph: 󰟑 } }
+  .mozilla: { icon: { glyph: 󰈹 } }
+  .ssh: { icon: { glyph: 󰣀 } }
+  .vim: { icon: { glyph:  } }
+  .cargo: { icon: { glyph: 󱣘 } }
+  .android: { icon: { glyph:  } }
+  .minecraft: { icon: { glyph: 󰍳 } }
+  .thunderbird: { icon: { glyph:  } }
+  git: { icon: { glyph:  } }
+  paru: { icon: { glyph: 󰣇 } }
+  ..: { icon: { glyph:  } }
+  .bashrc: { icon: { glyph:  } }
 
 extensions:
   m4b:
@@ -86,14 +86,22 @@ extensions:
       glyph: 
       style:
         foreground: "#AFD2E9"
-  sh:           {icon: {glyph: 󱆃}}
-  epub:         {icon: {glyph: }}
-  txt:          {icon: {glyph: }}
-  pdf:          {icon: {glyph: }}
-  log:          {icon: {glyph: }}
-  sqlite3:      {icon: {glyph: }}
-  json:         {icon: {glyph: }}
-  odt:          {icon: {glyph: }}
-  htol:         {icon: {glyph: }}
-
-
+  sh: { icon: { glyph: 󱆃 } }
+  epub: { icon: { glyph:  } }
+  txt: { icon: { glyph:  } }
+  pdf: { icon: { glyph:  } }
+  log: { icon: { glyph:  } }
+  sqlite3: { icon: { glyph:  } }
+  json: { icon: { glyph:  } }
+  odt: { icon: { glyph:  } }
+  htol: { icon: { glyph:  } }
+  json: { icon: { glyph: 󰘦 } }
+  html: { icon: { glyph:  } }
+  njk: { icon: { glyph:  } }
+  js: { icon: { glyph:  } }
+  sh: { icon: { glyph: 󱆃 } }
+  py: { icon: { glyph:  } }
+  md: { icon: { glyph:  } }
+  qml: { icon: { glyph:  } }
+  toml: { icon: { glyph:  } }
+  yaml: { icon: { glyph:  } }
