@@ -5,9 +5,6 @@
 -- folke/lazydev.nvim
 return {
   {
-    "lepture/vim-jinja",
-  },
-  {
     "neovim/nvim-lspconfig",
     enabled = true,
     event = { "BufReadPre", "BufNewFile" },
@@ -27,40 +24,8 @@ return {
     },
   },
   {
-    "mfussenegger/nvim-lint",
-    enabled = true,
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      local lint = require("lint")
-      lint.linters_by_ft = {
-        lua = { "selene" },
-        bash = { "shellcheck" },
-        javascript = { "eslint" },
-        nunjucks = { "djlint" },
-      }
-      local selene = require("lint").linters.selene
-      selene.args = {
-        "--config ~/.config/nvim/selene.toml",
-      }
-      local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave", "TextChanged" }, {
-        group = lint_augroup,
-        callback = function()
-          lint.try_lint()
-        end,
-      })
-    end,
-  },
-  {
     "folke/lazydev.nvim",
-    enabled = true,
     ft = "lua",
-    opts = {
-      library = {
-        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-      },
-    },
+    opts = { library = { { path = "${3rd}/luv/library", words = { "vim%.uv" } } } },
   },
 }
-
-

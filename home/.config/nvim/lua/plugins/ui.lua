@@ -1,8 +1,6 @@
 -- lewis6991/gitsigns.nvim
 -- sitiom/nvim-numbertoggle
 -- akinsho/bufferline.nvim
--- nvim-mini/mini.statusline
--- stevearc/dressing.nvim
 -- karb94/neoscroll.nvim
 -- lewis6991/satellite.nvim"
 -- folke/which-key.nvim
@@ -14,9 +12,7 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
       signs = {
         add = { text = "+" },
         change = { text = "~" },
-        delete = { text = "_" },
-        topdelete = { text = "‾" },
-        changedelete = { text = "~" },
+        delete = { text = "-" },
       },
     },
   },

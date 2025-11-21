@@ -2,9 +2,7 @@
 -- MeanderingProgrammer/render-markdown.nvim
 -- folke/todo-comments.nvim
 -- smjonas/live-command.nvim
--- code-biscuits/nvim-biscuits
--- OXY2DEV/markview.nvim [DISABLED]
-
+-- preservim/vim-pencil
 return {
   { -- colors the background of hex color text #afd2e9
     "catgoose/nvim-colorizer.lua",
@@ -64,35 +62,8 @@ return {
     "smjonas/live-command.nvim",
     opts = {
       commands = {
-        Norm = { cmd = "norm" },
+        norm = { cmd = "norm" },
       },
-    },
-  },
-  {
-    "code-biscuits/nvim-biscuits",
-    enabled = false,
-    event = { "BufReadPost", "BufNewFile" },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {
-      cursor_line_only = true,
-      default_config = { prefix_string = " 𖦹 " },
-      language_config = {
-        markdown = {
-          disabled = true,
-        },
-        css = {
-          disabled = true,
-        },
-      },
-    },
-  },
-  {
-    "OXY2DEV/markview.nvim",
-    enabled = false,
-    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-    lazy = false,
-    opts = {
-      markdown = { enable = false },
     },
   },
   { "preservim/vim-pencil", enabled = true, config = function() end },
