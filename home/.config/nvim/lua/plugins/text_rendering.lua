@@ -59,12 +59,8 @@ return {
     },
   },
   {
-    "smjonas/live-command.nvim",
-    opts = {
-      commands = {
-        norm = { cmd = "norm" },
-      },
-    },
+    "chentoast/live.nvim",
+    opts = {},
   },
   { "preservim/vim-pencil", enabled = true, config = function() end },
 }
