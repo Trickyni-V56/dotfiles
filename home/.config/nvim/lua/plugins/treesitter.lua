@@ -16,8 +16,6 @@ return {
       "dockerfile",
       "html",
       "javascript",
-      "jinja",
-      "jinja_inline",
       "jq",
       "json",
       "lua",
