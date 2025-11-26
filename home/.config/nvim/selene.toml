@@ -1,8 +1,0 @@
-std="vim"
-
-[lints]
-mixed_table="allow"
-undefined_variable={ignore_pattern = ".*vim.*"}
-unscoped_variables= {ignore_pattern = ".*vim.*"}
-# undefined_variabl="allow"
-# unscoped_variables="allow" 

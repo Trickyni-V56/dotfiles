@@ -1,8 +1,5 @@
 -- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
-require("config.lazy")
-vim.g.gruvbox_bold = 0
-vim.g.gruvbox_italic = 0
 vim.g.have_nerd_font = true
 vim.o.number = true -- number column
 vim.o.relativenumber = true -- relative number column
@@ -16,7 +13,6 @@ vim.o.tabstop = 2 -- tab width
 vim.o.shiftwidth = 2 -- indentation width
 vim.o.expandtab = true -- turns tabs into spaces
 vim.o.showmode = false -- hides mode indicator, since we have a status line
--- vim.opt.statusline = " %F %m %r| [%l,%c]"
 vim.o.cursorline = true -- highlights cursor line
 vim.o.scrolloff = 10 -- keeps 10 lines above/below the cursor when scrolling
 vim.o.breakindent = true
@@ -28,6 +24,7 @@ vim.opt.listchars = { leadmultispace = "▏ ", tab = "» ", trail = "·", nbsp =
 vim.opt.timeoutlen = 300 --timeout on keys with followups
 vim.o.background = "dark" -- dark mode
 vim.o.winborder = "rounded" --border for floating windows
+
 -- KEYMAPS ----------------------------------------------------
 -- move line up/down
 vim.keymap.set("n", "<S-up>", ":m-2<CR>")
@@ -133,3 +130,52 @@ vim.api.nvim_create_autocmd("FileType", {
 --override random highlights FIX: move to text-rendering.lua or make new file/section. organize anyhow.
 vim.api.nvim_set_hl(0, "RenderMarkdownBullet", { fg = "#92a650" })
 vim.api.nvim_set_hl(0, "RenderMarkdownCheckedItem", { fg = "#868686", strikethrough = true })
+
+
+vim.pack.add({
+  { src = "https://github.com/nvim-mini/mini.base16"}
+})
+require("mini.base16").setup({      
+  palette = {
+        base00 = "#3b3228", -- bg
+        base01 = "#4c4134", -- bg75
+        base02 = "#5d4f40", -- altbg
+        base03 = "#6b6055", -- bg25
+        base04 = "#c1a387", -- sand
+        base05 = "#afd2e9", -- fg
+        base06 = "#FF00FF",
+        base07 = "#00FF00",
+        base08 = "#e86045",
+        base09 = "#e68d53",
+        base0A = "#f8e2a0",
+        base0B = "#92a650",
+        base0C = "#ace1af",
+        base0D = "#3eccbe",
+        base0E = "#FF0000",
+        base0F = "#f8e2a0",
+      },
+    })
+vim.pack.add({  
+  {src= "https://github.com/mason-org/mason.nvim"},
+  {src="https://github.com/stevearc/conform.nvim"}
+})
+require("conform").setup({
+      format_on_save = true,
+      formatters_by_ft = {
+        lua = { "stylua" },
+        sh = { "shfmt" },
+        javascript = { "prettier" },
+        markdown = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        yaml = { "prettier" },
+        json = { "prettier" },
+      },
+      formatters = {
+        stylua = { prepend_args = { "--indent-type", "Spaces", "--indent-width", "2" } },
+        shfmt = { prepend_args = { "-i=2" } },
+        prettier = { prepend_args = { "--tab-width", "2" } },
+      },
+    })
+
+
