@@ -1,6 +1,5 @@
 -- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
-vim.g.maplocalleader = " " -- leader key (spacebar)
 require("config.lazy")
 vim.g.gruvbox_bold = 0
 vim.g.gruvbox_italic = 0
@@ -28,7 +27,7 @@ vim.o.list = true -- whow trailing whitespaces and tab characters
 vim.opt.listchars = { leadmultispace = "▏ ", tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.timeoutlen = 300 --timeout on keys with followups
 vim.o.background = "dark" -- dark mode
-vim.o.winborder = "none" --border for floating windows
+vim.o.winborder = "rounded" --border for floating windows
 -- KEYMAPS ----------------------------------------------------
 -- move line up/down
 vim.keymap.set("n", "<S-up>", ":m-2<CR>")
@@ -60,7 +59,7 @@ vim.api.nvim_create_user_command("Greeter", function()
 end, {})
 
 -- defines markers to determine a project's root dir
-local project_markers = { ".git", ".root", "cargo.toml", "selene.toml", "stylua.toml" }
+local project_markers = { ".git", ".root", "cargo.toml", "selene.toml", "stylua.toml", "package.json" }
 -- Finds a project's root directory
 vim.api.nvim_create_user_command("Root", function()
   print(vim.fs.root(0, project_markers))
