@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "conform.nvim": {
+      "rev": "4993e07fac6679d0a5005aa7499e0bad2bd39f19",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "mason.nvim": {
+      "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.base16": {
+      "rev": "96b8afc93ad318d321474378be74f9fb0ad6b4e4",
+      "src": "https://github.com/nvim-mini/mini.base16"
+    }
+  }
+}
