@@ -1,3 +1,13 @@
+# fix!
+
+- autocomplete
+- lsp
+- todo comments picker
+
+---
+
+- unsnacks greeter/picker
+
 ## writing
 
 - Translation?
@@ -43,6 +53,7 @@
 - Lualine
 - Bufferline
 - Icons
+- rainbow delemiters
 
 - mess with devicon configs
 - [mini.icons](https://github.com/nvim-mini/mini.icons)
