@@ -388,21 +388,33 @@ function M.colorscheme()
   -- vim.api.nvim_set_hl(0, "HelpviewTaglink", {})
   -- vim.api.nvim_set_hl(0, "HelpviewTitle", {})
   --
-  -- vim.api.nvim_set_hl(0, "MasonError", {})
-  -- vim.api.nvim_set_hl(0, "MasonHeader", {})
-  -- vim.api.nvim_set_hl(0, "MasonHeaderSecondary", {})
-  -- vim.api.nvim_set_hl(0, "MasonHeading", {})
-  -- vim.api.nvim_set_hl(0, "MasonHighlight", {})
-  -- vim.api.nvim_set_hl(0, "MasonHighlightBlock", {})
-  -- vim.api.nvim_set_hl(0, "MasonHighlightBlockBold", {})
-  -- vim.api.nvim_set_hl(0, "MasonHighlightBlockBoldSecondary", {})
-  -- vim.api.nvim_set_hl(0, "MasonHighlightBlockSecondary", {})
-  -- vim.api.nvim_set_hl(0, "MasonHighlightSecondary", {})
-  -- vim.api.nvim_set_hl(0, "MasonLink", {})
-  -- vim.api.nvim_set_hl(0, "MasonMuted", {})
-  -- vim.api.nvim_set_hl(0, "MasonMutedBlock", {})
-  -- vim.api.nvim_set_hl(0, "MasonMutedBlockBold", {})
 
+  vim.api.nvim_set_hl(0, "MasonBackdrop", { bg = p.bg })
+  vim.api.nvim_set_hl(0, "MasonError", { fg = p.scarlet })
+  vim.api.nvim_set_hl(0, "MasonHeader", { fg = p.bg, bg = p.cyan })
+  vim.api.nvim_set_hl(0, "MasonHeaderSecondary", { fg = p.bg, bg = p.cyan })
+  vim.api.nvim_set_hl(0, "MasonHeading", {})
+  vim.api.nvim_set_hl(0, "MasonHighlight", {})
+  vim.api.nvim_set_hl(0, "MasonHighlightBlock", {})
+  vim.api.nvim_set_hl(0, "MasonHighlightBlockBold", {})
+  vim.api.nvim_set_hl(0, "MasonHighlightBlockBoldSecondary", {})
+  vim.api.nvim_set_hl(0, "MasonHighlightBlockSecondary", {})
+  vim.api.nvim_set_hl(0, "MasonHighlightSecondary", {})
+  vim.api.nvim_set_hl(0, "MasonLink", {})
+  vim.api.nvim_set_hl(0, "MasonMuted", {})
+  vim.api.nvim_set_hl(0, "MasonMutedBlock", {})
+  vim.api.nvim_set_hl(0, "MasonMutedBlockBold", {})
+
+  -- hi('MasonHighlight',                   {fg=p.base0F
+  -- hi('MasonHighlightBlock',              {fg=p.base00, bg=p.base0F,
+  -- hi('MasonHighlightBlockBold',          {link='MasonHeaderSecondary
+  -- hi('MasonHighlightBlockBoldSecondary', {link='MasonHeader'})
+  -- hi('MasonHighlightBlockSecondary',     {fg=p.base00, bg=p.base0D,
+  -- hi('MasonHighlightSecondary',          {fg=p.base0D,
+  -- hi('MasonLink',                        {link='MasonHighlight'})
+  -- hi('MasonMuted',                       {link='Comment'})
+  -- hi('MasonMutedBlock',                  {fg=p.base00, bg=p.base03,
+  -- hi('MasonMutedBlockBold',              {fg=p.base00, bg=p.base03,
   -- -- Terminal colors
   -- vim.g.terminal_color_0 = palette.base00
   -- vim.g.terminal_color_1 = palette.base08
