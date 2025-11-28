@@ -120,7 +120,6 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.pack.add({ "https://github.com/nvim-lua/plenary.nvim" })
 vim.pack.add({ "https://github.com/sitiom/nvim-numbertoggle" })
 vim.pack.add({ "https://github.com/nvim-tree/nvim-web-devicons" })
-vim.pack.add({ "https://github.com/chentoast/live.nvim" })
 vim.pack.add({ "https://github.com/preservim/vim-pencil" })
 vim.pack.add({ "https://github.com/bullets-vim/bullets.vim" })
 vim.pack.add({ "https://github.com/folke/zen-mode.nvim" })
@@ -148,7 +147,11 @@ vim.pack.add({ "https://github.com/folke/twilight.nvim" })
 --   },
 -- })
 
-require("desert-witch").colorscheme()
+require("desert-witch").setup()
+
+vim.pack.add({ "https://github.com/smjonas/live-command.nvim" })
+require("live-command").setup({ commands = { Norm = { cmd = "norm" } } })
+vim.cmd("cnoreabbrev norm Norm")
 
 vim.pack.add({ "https://github.com/mason-org/mason.nvim" })
 require("mason").setup()
@@ -208,6 +211,7 @@ vim.keymap.set({ "n", "v" }, "<Bslash>", "<cmd>Yazi<CR>")
 
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
 require("nvim-treesitter.configs").setup({
+  highlight = { enable = false },
   ensure_installed = {
     "bash",
     "caddy",
@@ -284,18 +288,20 @@ require("mini.hipatterns").setup({
   },
 })
 
-vim.pack.add({ "https://github.com/nvim-mini/mini.comment" })
-require("mini.comment").setup()
-
 vim.pack.add({ "https://github.com/abecodes/tabout.nvim" })
 require("tabout").setup()
+
+vim.pack.add({ "https://github.com/nvim-mini/mini.comment" })
+require("mini.comment").setup()
 
 vim.pack.add({ "https://github.com/nvim-mini/mini.pairs" })
 require("mini.pairs").setup()
 
 vim.pack.add({ "https://github.com/nvim-mini/mini.surround" })
-
 require("mini.surround").setup()
+
+vim.pack.add({ "https://github.com/nvim-mini/mini.align" })
+require("mini.align").setup()
 
 vim.pack.add({ "https://github.com/chrisgrieser/nvim-rip-substitute" })
 vim.keymap.set({ "n", "x" }, "<leader>s", "<Cmd>RipSubstitute<CR>", { desc = " rip substitutdde" })
