@@ -177,19 +177,19 @@ require("conform").setup({
   },
 })
 
--- vim.pack.add({ { src = "https://github.com/saghen/blink.cmp", version = "1.*" } })
--- require("blink.cmp").setup({
---   keymap = { preset = "super-tab" },
---   fuzzy = { implementation = "prefer_rust", prebuilt_binaries = { force_version = "0.6.0" } },
---   appearance = { nerd_font_variant = "mono" },
---   completion = {
---     accept = { auto_brackets = { enabled = true } },
---     documentation = { auto_show = true },
---   },
---   sources = { default = { "lsp", "path", "snippets", "buffer" } },
---   cmdline = { enabled = true },
---   signature = { enabled = false },
--- })
+vim.pack.add({ { src = "https://github.com/saghen/blink.cmp", version = "1.*" } })
+require("blink.cmp").setup({
+  keymap = { preset = "super-tab" },
+  fuzzy = { implementation = "prefer_rust", prebuilt_binaries = { force_version = "0.6.0" } },
+  appearance = { nerd_font_variant = "mono" },
+  completion = {
+    accept = { auto_brackets = { enabled = true } },
+    documentation = { auto_show = true },
+  },
+  sources = { default = { "lsp", "path", "snippets", "buffer" } },
+  cmdline = { enabled = true },
+  signature = { enabled = false },
+})
 
 vim.pack.add({ "https://github.com/akinsho/bufferline.nvim" }) --TODO:
 require("bufferline").setup()
