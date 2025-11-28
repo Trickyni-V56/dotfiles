@@ -2,30 +2,28 @@
 -- https://neovim.io/doc/user/syntax.html#_8.-syntax-patterns
 -- https://neovim.io/doc/user/syntax.html#_13.-highlight-command
 local M = {}
-local p = {
 --stylua: ignore start
-  bg      = "#3b3228", --background
-  bg95    = "#43392d", --barely use! near-invisible, subtle highlighting
-  bg75    = "#4c4134", --comments,
-  bg25    = "#6b6055",
-  altbg   = "#5d4f40",
-  sand    = "#c1a387",
-  fg      = "#afd2e9",
-  cyan    = "#3eccbe",
-  scarlet = "#e86045", --variables
-  orange  = "#e68d53", --integers
-  saffron = "#f8e2a0", --selection
-  moss    = "#92a650",
-  celadon = "#ace1af",
-  grey    = "#868686",
-}
+   local bg      = "#3b3228" --background
+   local bg95    = "#43392d" --barely use! near-invisible subtle highlighting
+   local bg75    = "#4c4134" --comments
+   local bg25    = "#6b6055"
+   local altbg   = "#5d4f40"
+   local sand    = "#c1a387"
+   local fg      = "#afd2e9"
+   local cyan    = "#3eccbe"
+   local scarlet = "#e86045" --variables
+   local orange  = "#e68d53" --integers
+   local saffron = "#f8e2a0" --selection
+   local moss    = "#92a650"
+   local celadon = "#ace1af"
+   local grey    = "#868686"
 --stylua: ignore end
 function M.setup()
   vim.cmd("highlight clear")
   vim.o.background = "dark"
   local hl_groups = {
-    Normal = { fg = p.fg, bg = p.bg },
-    Visual = { fg = p.bg, bg = p.saffron },
+    Normal = { fg = fg, bg = bg },
+    Visual = { fg = bg, bg = saffron },
 
     MiniHiPatternsBase00 = { bg = "#3b3228" },
     MiniHiPatternsBase01 = { bg = "#4c4134" },
@@ -45,63 +43,62 @@ function M.setup()
     MiniHiPatternsBase0F = { bg = "#f8e2a0" },
     ComplMatchIns = { bg = "#FF0000" },
     Conceal = { bg = "#FF0000" },
-    CurSearch = { fg = p.bg, bg = p.orange },
+    CurSearch = { fg = bg, bg = orange },
     Cursor = { link = "Normal" },
     CursorColumn = { link = "CursorLine" },
     --  CursorIM       = {},
-    CursorLine = { bg = p.bg75 },
-    CursorLineNr = { fg = p.sand, bg = p.bg75 },
+    CursorLine = { bg = bg75 },
+    CursorLineNr = { fg = sand, bg = bg75 },
     CursorLineFold = { bg = "#FF0000" },
-    CursorLineSign = { bg = p.bg75 },
-    DiffAdd = { bg = p.moss, fg = p.bg },
-    DiffChange = { bg = p.orange, fg = p.bg },
-    DiffDelete = { bg = p.scarlet, fg = p.bg },
-    DiffText = { fg = p.cyan },
-    Directory = { fg = p.orange, underline = true },
-    EndOfBuffer = { fg = p.sand, bg = p.bg },
-    ErrorMsg = { fg = p.scarlet },
-    WarnMsg = { fg = p.orange },
-    OkMsg = { fg = p.moss },
-    StderrMsg = { fg = p.scarlet },
-    StdoutMsg = { fg = p.fg },
-    FloatBorder = { fg = p.sand, bg = p.bg },
+    CursorLineSign = { bg = bg75 },
+    DiffAdd = { bg = moss, fg = bg },
+    DiffChange = { bg = orange, fg = bg },
+    DiffDelete = { bg = scarlet, fg = bg },
+    DiffText = { fg = cyan },
+    Directory = { fg = orange, underline = true },
+    EndOfBuffer = { fg = sand, bg = bg },
+    ErrorMsg = { fg = scarlet },
+    WarnMsg = { fg = orange },
+    OkMsg = { fg = moss },
+    StderrMsg = { fg = scarlet },
+    StdoutMsg = { fg = fg },
+    FloatBorder = { fg = sand, bg = bg },
     --  FoldColumn     = {},
     --  Folded         = {},
     IncSearch = { link = "Visual" },
     --  lCursor        = {},
-    LineNr = { bg = p.bg, fg = p.altbg },
-    LineNrAbove = { bg = p.bg, fg = p.altbg },
-    LineNrBelow = { bg = p.bg, fg = p.altbg },
-    MatchParen = { bg = p.sand, fg = p.celadon },
-    ModeMsg = { fg = p.saffron },
-    MoreMsg = { fg = p.orange },
+    LineNr = { bg = bg, fg = altbg },
+    LineNrAbove = { bg = bg, fg = altbg },
+    LineNrBelow = { bg = bg, fg = altbg },
+    MatchParen = { bg = bg25, fg = celadon },
+    ModeMsg = { fg = saffron },
+    MoreMsg = { fg = orange },
     MsgArea = { link = "Normal" },
     MsgSeparator = { fg = "#FF0000", bg = "#0000ff" },
-    --  NonText        = {},
-    --  NormalFloat    = {},
-    --  NormalNC       = {},
-    --  OkMsg          = {},
-    --  Pmenu          = {},
-    --  PmenuExtra     = {},
-    --  PmenuExtraSel  = {},
-    --  PmenuKind      = {},
-    --  PmenuKindSel   = {},
-    --  PmenuMatch     = {},
-    --  PmenuMatchSel  = {},
-    --  PmenuSbar      = {},
-    --  PmenuSel       = {},
-    --  PmenuThumb     = {},
-    --  Question       = {},
-    --  QuickFixLine   = {},
+    NonText = { fg = altbg },
+    NormalFloat = { link = "Normal" },
+    NormalNC = { fg = sand, bg = bg },
+    --Popup-Menu----------------------------------------
+    -- Pmenu = {},
+    -- PmenuExtra = {},
+    -- PmenuExtraSel = {},
+    -- PmenuKind = {},
+    -- PmenuKindSel = {},
+    -- PmenuMatch = {},
+    -- PmenuMatchSel = {},
+    -- PmenuSbar = {},
+    -- PmenuSel = {},
+    -- PmenuThumb = {},
+    -- ------------------------------------------
+    Question = { fg = orange },
+    QuickFixLine = { link = "MsgSeparator" },
     Search = { link = "Visual" },
-    SignColumn = { bg = p.bg },
-    --  SpecialKey     = {},
-    --  SpellBad       = {},
-    --  SpellCap       = {},
-    --  SpellLocal     = {},
-    --  SpellRare      = {},
-    --  StatusLine     = {},
-    --  StatusLineNC   = {},
+    SignColumn = { bg = bg },
+    SpecialKey = { fg = sand },
+    SpellBad = { undercurl = true, sp = scarlet },
+    SpellCap = { undercurl = true, sp = cyan },
+    StatusLine = { bg = altbg, fg = fg },
+    StatusLineNC = { bg = altbg, fg = sand },
     Substitute = { link = "Visual" },
     --  TabLine        = {},
     --  TabLineFill    = {},
@@ -110,8 +107,7 @@ function M.setup()
     --  TermCursorNC   = {},
     --  Title          = {},
     --  VertSplit      = {},
-    --  Visual         = {},
-    --  VisualNOS      = {},
+    VisualNOS = { bg = scarlet, fg = bg },
     --  WarningMsg     = {},
     --  Whitespace     = {},
     --  WildMenu       = {},
@@ -120,20 +116,20 @@ function M.setup()
     --  WinSeparator   = {},
 
     --Syntax -----------------------------------
-    Comment = { fg = p.bg25 },
-    Constant = { fg = p.fg },
-    String = { fg = p.moss },
+    Comment = { fg = bg25 },
+    Constant = { fg = fg },
+    String = { fg = moss },
     -- Character       = {},
-    Number = { fg = p.orange },
-    Boolean = { fg = p.orange },
-    Float = { fg = p.orange },
-    Identifier = { fg = p.fg },
-    Function = { fg = p.fg },
-    -- Statement = { fg = p.sand },
-    -- Conditional = { fg = p.scarlet },
+    Number = { fg = orange },
+    Boolean = { fg = orange },
+    Float = { fg = orange },
+    Identifier = { fg = fg },
+    Function = { fg = fg },
+    -- Statement = { fg = sand },
+    -- Conditional = { fg = scarlet },
     -- Repeat          = {},
-    -- Label = { fg = p.fg },
-    Operator = { fg = p.fg },
+    -- Label = { fg = fg },
+    Operator = { fg = fg },
     --  Keyword        = {},
     --  Exception      = {},
     -- PreProc         = {},
@@ -145,9 +141,9 @@ function M.setup()
     -- StorageClass    = {},
     --  Structure      = {},
     -- Typedef         = {},
-    Special = { fg = p.celadon },
+    Special = { fg = celadon },
     -- SpecialChar     = {  },
-    Tag = { fg = p.orange },
+    Tag = { fg = orange },
     -- Delimiter       = {},
     --  SpecialComment = {},
     --  Debug          = {},
@@ -205,19 +201,19 @@ function M.setup()
     --["@keyword.return"]={},
     --["@keyword.debug"]={},
     --["@keyword.exception"]={},
-    ["@keyword.conditional"] = { fg = p.sand },
-    ["@keyword.conditional.ternary"] = { fg = p.sand },
+    ["@keyword.conditional"] = { fg = sand },
+    ["@keyword.conditional.ternary"] = { fg = sand },
     --["@keyword.directive"]={},
     --["@keyword.directive.define"]={},
-    ["@punctuation.delimiter"] = { fg = p.fg },
+    ["@punctuation.delimiter"] = { fg = fg },
     -- ["@punctuation.bracket"]={},
     -- ["@punctuation.special"]={},
     ["@comment"] = { link = "Comment" },
     -- ["@comment.documentation"] = {},
-    ["@comment.error"] = { bg = p.scarlet, fg = p.bg }, -- error-type comments (e.g.moss`ERROR`, `FIXME`, `DEPRECATED`)
-    ["@comment.warning"] = { bg = p.orange, fg = p.bg }, -- warning-type comments (e.g.moss`WARNING`, `FIX`, `HACK`)
-    ["@comment.todo"] = { bg = p.saffron, fg = p.bg }, -- todo-type comments (e.g.moss`TODO`, `WIP`)
-    ["@comment.note"] = { bg = p.scarlet, fg = p.bg }, -- note-type comments (e.g.moss`NOTE`, `INFO`, `XXX`)
+    ["@comment.error"] = { bg = scarlet, fg = bg }, -- error-type comments (e.g.moss`ERROR`, `FIXME`, `DEPRECATED`)
+    ["@comment.warning"] = { bg = orange, fg = bg }, -- warning-type comments (e.g.moss`WARNING`, `FIX`, `HACK`)
+    ["@comment.todo"] = { bg = saffron, fg = bg }, -- todo-type comments (e.g.moss`TODO`, `WIP`)
+    ["@comment.note"] = { bg = scarlet, fg = bg }, -- note-type comments (e.g.moss`NOTE`, `INFO`, `XXX`)
     ["@diff.plus"] = { link = "Added" },
     ["@diff.minus"] = { link = "Removed" },
     ["@diff.delta"] = { link = "Changed" },
@@ -226,9 +222,9 @@ function M.setup()
     --["@tag.attribute"]={},
     --["@tag.delimiter"]={},
     --Diff--------------------------------------------
-    Added = { fg = p.moss },
-    Changed = { fg = p.orange },
-    Removed = { fg = p.scarlet },
+    Added = { fg = moss },
+    Changed = { fg = orange },
+    Removed = { fg = scarlet },
     --
     -- -- Git commit
     --  gitcommitBranch         = {},
@@ -248,11 +244,11 @@ function M.setup()
     --  gitcommitUntrackedFile  = {},
 
     --Diagnostics----------------------------------------
-    DiagnosticError = { fg = p.scarlet },
-    DiagnosticWarn = { fg = p.orange },
-    DiagnosticInfo = { fg = p.celadon },
-    DiagnosticHint = { fg = p.cyan },
-    DiagnosticOk = { fg = p.moss },
+    DiagnosticError = { fg = scarlet },
+    DiagnosticWarn = { fg = orange },
+    DiagnosticInfo = { fg = celadon },
+    DiagnosticHint = { fg = cyan },
+    DiagnosticOk = { fg = moss },
 
     -- DiagnosticFloatingError = {},
     -- DiagnosticFloatingHint = {},
@@ -260,17 +256,17 @@ function M.setup()
     -- DiagnosticFloatingOk = {},
     -- DiagnosticFloatingWarn = {},
 
-    DiagnosticSignError = { bg = p.bg, fg = p.scarlet },
-    DiagnosticSignWarn = { bg = p.bg, fg = p.orange },
-    DiagnosticSignInfo = { bg = p.bg, fg = p.celadon },
-    DiagnosticSignHint = { bg = p.bg, fg = p.cyan },
-    DiagnosticSignOk = { bg = p.bg, fg = p.moss },
+    DiagnosticSignError = { bg = bg, fg = scarlet },
+    DiagnosticSignWarn = { bg = bg, fg = orange },
+    DiagnosticSignInfo = { bg = bg, fg = celadon },
+    DiagnosticSignHint = { bg = bg, fg = cyan },
+    DiagnosticSignOk = { bg = bg, fg = moss },
 
-    DiagnosticUnderlineError = { bg = nil, fg = nil, underdotted = true, sp = p.scarlet },
-    DiagnosticUnderlineWarn = { bg = nil, fg = nil, underdouble = true, sp = p.orange },
-    DiagnosticUnderlineInfo = { bg = nil, fg = nil, underline = true, sp = p.celadon },
-    DiagnosticUnderlineHint = { bg = nil, fg = nil, underdashed = true, sp = p.cyan },
-    DiagnosticUnderlineOk = { bg = nil, fg = nil, underline = true, sp = p.moss },
+    DiagnosticUnderlineError = { bg = nil, fg = nil, underdotted = true, sp = scarlet },
+    DiagnosticUnderlineWarn = { bg = nil, fg = nil, underdouble = true, sp = orange },
+    DiagnosticUnderlineInfo = { bg = nil, fg = nil, underline = true, sp = celadon },
+    DiagnosticUnderlineHint = { bg = nil, fg = nil, underdashed = true, sp = cyan },
+    DiagnosticUnderlineOk = { bg = nil, fg = nil, underline = true, sp = moss },
     --LSP------------------------------------------------
     --  LspReferenceText              = {},
     --  LspReferenceRead              = {},
@@ -305,10 +301,10 @@ function M.setup()
     --  MiniDiffOverDelete            = {},
     --
     --
-    MiniHipatternsFixme = { bg = p.scarlet, fg = p.bg },
-    MiniHipatternsHack = { bg = p.orange, fg = p.bg },
-    MiniHipatternsNote = { bg = p.cyan, fg = p.bg },
-    MiniHipatternsTodo = { bg = p.saffron, fg = p.bg },
+    MiniHipatternsFixme = { bg = scarlet, fg = bg },
+    MiniHipatternsHack = { bg = orange, fg = bg },
+    MiniHipatternsNote = { bg = cyan, fg = bg },
+    MiniHipatternsTodo = { bg = saffron, fg = bg },
     --
     --  MiniSurround                  = {},
     --
@@ -339,21 +335,21 @@ function M.setup()
     --  TroubleTextInformation        = {},
     --  TroubleTextWarning            = {},
     ---folke/which-key.nvim--------------------------------------
-    WhichKey = { fg = p.orange },
-    WhichKeyNormal = { fg = p.fg, bg = p.bg },
+    WhichKey = { fg = orange },
+    WhichKeyNormal = { fg = fg, bg = bg },
     WhichKeyBorder = { link = "FloatBorder" },
-    WhichKeyDesc = { fg = p.fg },
-    WhichKeyTitle = { bg = p.bg, fg = p.orange },
-    WhichKeySeparator = { fg = p.sand, bg = p.bg },
-    WhichKeyGroup = { bg = p.bg, fg = p.celadon },
+    WhichKeyDesc = { fg = fg },
+    WhichKeyTitle = { bg = bg, fg = orange },
+    WhichKeySeparator = { fg = sand, bg = bg },
+    WhichKeyGroup = { bg = bg, fg = celadon },
     --HiPhish/rainbow-delimiters.nvim----------------------------
     RainbowDelimiterBlue = {},
     RainbowDelimiterGreen = {},
     RainbowDelimiterOrange = {},
-    RainbowDelimiterRed = { fg = p.scarlet },
-    RainbowDelimiterCyan = { fg = p.cyan },
-    RainbowDelimiterYellow = { fg = p.saffron },
-    RainbowDelimiterViolet = { fg = p.sand },
+    RainbowDelimiterRed = { fg = scarlet },
+    RainbowDelimiterCyan = { fg = cyan },
+    RainbowDelimiterYellow = { fg = saffron },
+    RainbowDelimiterViolet = { fg = sand },
     --lewis6991/gitsigns.nvim-------------------------------------
     GitSignsAdd = { link = "Added" },
     --  GitSignsAddLn                  = {},
@@ -371,10 +367,10 @@ function M.setup()
     --  GitSignsUntrackedLn            = {},
     --  GitSignsUntrackedInline        = {},
     --RenderMarkdown----------------------------------------------
-    RerMarkdownBullet = { fg = p.moss },
+    RerMarkdownBullet = { fg = moss },
     --  RerMarkdownBullet              = {},
     --  RerMarkdownChecked             = {},
-    RerMarkdownCheckedItem = { fg = p.grey, strikethrough = true },
+    RerMarkdownCheckedItem = { fg = grey, strikethrough = true },
     --  RerMarkdownCode                = {},
     --  RerMarkdownCodeInline          = {},
     --  RerMarkdownDash                = {},
@@ -403,10 +399,10 @@ function M.setup()
     --  HelpviewTitle                  = {},
     --
 
-    -- MasonBackdrop                   = { bg   = p.bg },
-    -- MasonError                      = { fg   = p.scarlet },
-    -- MasonHeader                     = { fg   = p.bg, bg              = p.cyan },
-    -- MasonHeaderSecondary            = { fg   = p.bg, bg              = p.cyan },
+    -- MasonBackdrop                   = { bg   = bg },
+    -- MasonError                      = { fg   = scarlet },
+    -- MasonHeader                     = { fg   = bg, bg              = cyan },
+    -- MasonHeaderSecondary            = { fg   = bg, bg              = cyan },
     -- MasonHeading                    = {},
     -- MasonHighlight                  = {},
     -- MasonHighlightBlock             = {},
@@ -421,16 +417,16 @@ function M.setup()
     --stylua: ignore end
   }
 
-  -- hi('MasonHighlight',                   {fg=p.base0F
-  -- hi('MasonHighlightBlock',              {fg=p.base00, bg=p.base0F,
+  -- hi('MasonHighlight',                   {fg=base0F
+  -- hi('MasonHighlightBlock',              {fg=base00, bg=base0F,
   -- hi('MasonHighlightBlockBold',          {link='MasonHeaderSecondary
   -- hi('MasonHighlightBlockBoldSecondary', {link='MasonHeader'},)
-  -- hi('MasonHighlightBlockSecondary',     {fg=p.base00, bg=p.base0D,
-  -- hi('MasonHighlightSecondary',          {fg=p.base0D,
+  -- hi('MasonHighlightBlockSecondary',     {fg=base00, bg=base0D,
+  -- hi('MasonHighlightSecondary',          {fg=base0D,
   -- hi('MasonLink',                        {link='MasonHighlight'},)
   -- hi('MasonMuted',                       {link='Comment'},)
-  -- hi('MasonMutedBlock',                  {fg=p.base00, bg=p.base03,
-  -- hi('MasonMutedBlockBold',              {fg=p.base00, bg=p.base03,
+  -- hi('MasonMutedBlock',                  {fg=base00, bg=base03,
+  -- hi('MasonMutedBlockBold',              {fg=base00, bg=base03,
   -- -- Terminal colors
   -- vim.g.terminal_color_0 = palette.base00
   -- vim.g.terminal_color_1 = palette.base08
