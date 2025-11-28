@@ -147,6 +147,7 @@ vim.pack.add({ "https://github.com/folke/twilight.nvim" })
 --   },
 -- })
 
+package.path = package.path .. ";/home/trickyni/.config/nvim/desert-witch.lua"
 require("desert-witch").setup()
 
 vim.pack.add({ "https://github.com/smjonas/live-command.nvim" })
