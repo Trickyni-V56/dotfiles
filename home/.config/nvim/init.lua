@@ -176,9 +176,7 @@ require("conform").setup({
   },
 })
 
-vim.pack.add({
-  { src = "https://github.com/saghen/blink.cmp", version = "1.*" },
-})
+vim.pack.add({ { src = "https://github.com/saghen/blink.cmp", version = "1.*" } })
 require("blink.cmp").setup({
   keymap = { preset = "super-tab" },
   fuzzy = { implementation = "prefer_rust", prebuilt_binaries = { force_version = "0.6.0" } },
