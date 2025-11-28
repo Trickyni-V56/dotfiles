@@ -1,5 +1,6 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
 -- https://neovim.io/doc/user/syntax.html#_8.-syntax-patterns
+-- https://neovim.io/doc/user/syntax.html#_13.-highlight-command
 local M = {}
 local p = {
 --stylua: ignore start
@@ -24,6 +25,7 @@ function M.setup()
   vim.o.background = "dark"
   local hl_groups = {
     Normal = { fg = p.fg, bg = p.bg },
+    Visual = { fg = p.bg, bg = p.saffron },
 
     MiniHiPatternsBase00 = { bg = "#3b3228" },
     MiniHiPatternsBase01 = { bg = "#4c4134" },
@@ -41,37 +43,40 @@ function M.setup()
     MiniHiPatternsBase0D = { bg = "#3eccbe" },
     MiniHiPatternsBase0E = { bg = "#FF0000" },
     MiniHiPatternsBase0F = { bg = "#f8e2a0" },
-    --  ComplMatchIns  = {},
-    --  Conceal        = {},
-    --  CurSearch      = {},
-    --  Cursor         = {},
-    --  CursorColumn   = {},
+    ComplMatchIns = { bg = "#FF0000" },
+    Conceal = { bg = "#FF0000" },
+    CurSearch = { fg = p.bg, bg = p.orange },
+    Cursor = { link = "Normal" },
+    CursorColumn = { link = "CursorLine" },
     --  CursorIM       = {},
     CursorLine = { bg = p.bg75 },
     CursorLineNr = { fg = p.sand, bg = p.bg75 },
-    --  CursorLineFold = {},
+    CursorLineFold = { bg = "#FF0000" },
     CursorLineSign = { bg = p.bg75 },
-    DiffAdd = { fg = p.moss },
-    DiffChange = { fg = p.orange },
-    DiffDelete = { fg = p.scarlet },
-    --  DiffText       = {},
-    --  DiffTextAdd    = {},
-    --  Directory      = {},
-    --  EndOfBuffer    = {},
+    DiffAdd = { bg = p.moss, fg = p.bg },
+    DiffChange = { bg = p.orange, fg = p.bg },
+    DiffDelete = { bg = p.scarlet, fg = p.bg },
+    DiffText = { fg = p.cyan },
+    Directory = { fg = p.orange, underline = true },
+    EndOfBuffer = { fg = p.sand, bg = p.bg },
     ErrorMsg = { fg = p.scarlet },
+    WarnMsg = { fg = p.orange },
+    OkMsg = { fg = p.moss },
+    StderrMsg = { fg = p.scarlet },
+    StdoutMsg = { fg = p.fg },
     FloatBorder = { fg = p.sand, bg = p.bg },
     --  FoldColumn     = {},
     --  Folded         = {},
-    --  IncSearch      = {},
+    IncSearch = { link = "Visual" },
     --  lCursor        = {},
     LineNr = { bg = p.bg, fg = p.altbg },
     LineNrAbove = { bg = p.bg, fg = p.altbg },
     LineNrBelow = { bg = p.bg, fg = p.altbg },
-    --  MatchParen     = {},
-    --  ModeMsg        = {},
-    --  MoreMsg        = {},
-    --  MsgArea        = {},
-    --  MsgSeparator   = {},
+    MatchParen = { bg = p.sand, fg = p.celadon },
+    ModeMsg = { fg = p.saffron },
+    MoreMsg = { fg = p.orange },
+    MsgArea = { link = "Normal" },
+    MsgSeparator = { fg = "#FF0000", bg = "#0000ff" },
     --  NonText        = {},
     --  NormalFloat    = {},
     --  NormalNC       = {},
@@ -88,7 +93,7 @@ function M.setup()
     --  PmenuThumb     = {},
     --  Question       = {},
     --  QuickFixLine   = {},
-    --  Search         = {},
+    Search = { link = "Visual" },
     SignColumn = { bg = p.bg },
     --  SpecialKey     = {},
     --  SpellBad       = {},
@@ -97,9 +102,7 @@ function M.setup()
     --  SpellRare      = {},
     --  StatusLine     = {},
     --  StatusLineNC   = {},
-    --  StderrMsg      = {},
-    --  StdoutMsg      = {},
-    --  Substitute     = {},
+    Substitute = { link = "Visual" },
     --  TabLine        = {},
     --  TabLineFill    = {},
     --  TabLineSel     = {},
@@ -211,10 +214,10 @@ function M.setup()
     -- ["@punctuation.special"]={},
     ["@comment"] = { link = "Comment" },
     -- ["@comment.documentation"] = {},
-    ["@comment.error"] = { bg = p.scarlet, fg = p.bg }, -- error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
-    ["@comment.warning"] = { bg = p.orange, fg = p.bg }, -- warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
-    ["@comment.todo"] = { bg = p.saffron, fg = p.bg }, -- todo-type comments (e.g. `TODO`, `WIP`)
-    ["@comment.note"] = { bg = p.scarlet, fg = p.bg }, -- note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
+    ["@comment.error"] = { bg = p.scarlet, fg = p.bg }, -- error-type comments (e.g.moss`ERROR`, `FIXME`, `DEPRECATED`)
+    ["@comment.warning"] = { bg = p.orange, fg = p.bg }, -- warning-type comments (e.g.moss`WARNING`, `FIX`, `HACK`)
+    ["@comment.todo"] = { bg = p.saffron, fg = p.bg }, -- todo-type comments (e.g.moss`TODO`, `WIP`)
+    ["@comment.note"] = { bg = p.scarlet, fg = p.bg }, -- note-type comments (e.g.moss`NOTE`, `INFO`, `XXX`)
     ["@diff.plus"] = { link = "Added" },
     ["@diff.minus"] = { link = "Removed" },
     ["@diff.delta"] = { link = "Changed" },
@@ -263,11 +266,11 @@ function M.setup()
     DiagnosticSignHint = { bg = p.bg, fg = p.cyan },
     DiagnosticSignOk = { bg = p.bg, fg = p.moss },
 
-    DiagnosticUnderlineError = { link = "DiagnosticError" },
-    DiagnosticUnderlineWarn = { link = "DiagnosticWarn" },
-    DiagnosticUnderlineInfo = { link = "DiagnosticInfo" },
-    DiagnosticUnderlineOk = { link = "DiagnosticOk" },
-    DiagnosticUnderlineHint = { link = "DiagnosticHint" },
+    DiagnosticUnderlineError = { bg = nil, fg = nil, underdotted = true, sp = p.scarlet },
+    DiagnosticUnderlineWarn = { bg = nil, fg = nil, underdouble = true, sp = p.orange },
+    DiagnosticUnderlineInfo = { bg = nil, fg = nil, underline = true, sp = p.celadon },
+    DiagnosticUnderlineHint = { bg = nil, fg = nil, underdashed = true, sp = p.cyan },
+    DiagnosticUnderlineOk = { bg = nil, fg = nil, underline = true, sp = p.moss },
     --LSP------------------------------------------------
     --  LspReferenceText              = {},
     --  LspReferenceRead              = {},
