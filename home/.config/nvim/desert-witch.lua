@@ -1,5 +1,5 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
--- https://tonsky.me/blog/syntax-highlighting/
+-- https://neovim.io/doc/user/syntax.html#_8.-syntax-patterns
 local M = {}
 local p = {
 --stylua: ignore start

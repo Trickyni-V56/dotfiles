@@ -420,3 +420,4 @@ vim.keymap.set("n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { desc =
 --     starter.gen_hook.aligning("center", "center"),
 --   },
 -- })
+vim.pack.add({ "https://github.com/rktjmp/lush.nvim" })
