@@ -1,12 +1,16 @@
-# fix!
+## desertwitch
 
-- autocomplete
-- lsp
+- Base
+- blink.cmp
+- Render-markdown
+- Lualine
+- Bufferline
+- Icons
+- rainbow delemiters
+
+## fix
+
 - todo comments picker
-
----
-
-- unsnacks greeter/picker
 
 ## writing
 
@@ -45,16 +49,6 @@
 
 - markdown bullets should be more key efficient
 
-## desertwitch
-
-- Base
-- Notifier
-- Render-markdown
-- Lualine
-- Bufferline
-- Icons
-- rainbow delemiters
-
 - mess with devicon configs
 - [mini.icons](https://github.com/nvim-mini/mini.icons)
 - [nvim-devicons](github.com/nvim-tree/nvim-web-devicons)
@@ -64,3 +58,4 @@
 what's a quickfix window?
 [digraphs](https://neovim.io/doc/user/digraph.html)
 [registers](https://www.youtube.com/watch?v=AC_DyfUcTsw)
+marks?
