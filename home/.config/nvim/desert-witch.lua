@@ -74,7 +74,7 @@ function M.setup()
     ModeMsg = { fg = saffron },
     MoreMsg = { fg = orange },
     MsgArea = { link = "Normal" },
-    MsgSeparator = { fg = "#FF0000", bg = "#0000ff" },
+    MsgSeparator = { fg = fg, bg = altbg },
     NonText = { fg = altbg },
     NormalFloat = { link = "Normal" },
     NormalNC = { fg = sand, bg = bg },
