@@ -1,4 +1,5 @@
 local vim = vim
+
 -- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
 vim.g.have_nerd_font = true
