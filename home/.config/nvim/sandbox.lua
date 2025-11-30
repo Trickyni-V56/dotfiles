@@ -678,7 +678,7 @@
   end
 
   -- nvim-lualine/lualine.nvim
-  -- Everything works correctly out of the box
+  -- Everything works lualine_x = {'encoding', 'fileformat', 'filetype'},correctly out of the box
 
   if H.has_integration('nvim-neo-tree/neo-tree.nvim') then
     hi('NeoTreeDimText',              {fg=p.base03, bg=nil,      attr=nil,    sp=nil})

@@ -109,6 +109,7 @@ vim.lsp.config("lua_ls", {
   },
 })
 vim.lsp.enable({ "lua_ls", "bashls", "tinymist", "eslint", "djlint", "ts_ls", "cssls" })
+
 ----------------------------
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
@@ -117,6 +118,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.treesitter.start(args.buf, "markdown")
   end,
 })
+
 --Plugins----------------------------------
 vim.pack.add({ "https://github.com/nvim-lua/plenary.nvim" })
 vim.pack.add({ "https://github.com/sitiom/nvim-numbertoggle" })
@@ -152,8 +154,18 @@ package.path = package.path .. ";/home/trickyni/.config/nvim/desert-witch.lua"
 require("desert-witch").setup()
 
 vim.pack.add({ "https://github.com/smjonas/live-command.nvim" })
-require("live-command").setup({ commands = { Norm = { cmd = "norm" } } })
+require("live-command").setup({
+  commands = {
+    Norm = {
+      cmd = "norm",
+    },
+    G = {
+      cmd = "g",
+    },
+  },
+})
 vim.cmd("cnoreabbrev norm Norm")
+vim.cmd("cnoreabbrev g G")
 
 vim.pack.add({ "https://github.com/mason-org/mason.nvim" })
 require("mason").setup()
@@ -237,6 +249,7 @@ require("render-markdown").setup({
   render_modes = true,
   completions = { lsp = { enabled = true } },
   checkbox = { checked = { scope_highlight = "RenderMarkdownCheckedItem" } },
+  wiki = { scope_highlight = "RenderMarkdownWikiLinkText" },
   bullet = { icons = { "󰆧" } },
   pipe_table = {
     preset = "round",
@@ -250,10 +263,6 @@ require("render-markdown").setup({
     left_margin = 0,
   },
   latex = { enabled = false },
-  html = {
-    enabled = true,
-    comment = { conceal = false },
-  },
 })
 
 vim.pack.add({ "https://github.com/nvim-mini/mini.hipatterns" })
@@ -320,9 +329,16 @@ require("nvim-toggler").setup({
     ["- [ ]"] = "- [x]",
   },
 })
-
+package.path = package.path .. ";/home/trickyni/.config/nvim/lua/lualine/themes/desert-witch.lua"
 vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
-require("lualine").setup({ sections = { lualine_y = { "searchcount" } } })
+require("lualine").setup({
+  -- options = { theme = desert_witch },
+  sections = {
+    lualine_x = { "encoding", "filetype" },
+    lualine_y = { "progress" },
+    lualine_z = { "searchcount", "location" },
+  },
+})
 
 vim.pack.add({ "https://github.com/NMAC427/guess-indent.nvim" })
 require("guess-indent").setup()

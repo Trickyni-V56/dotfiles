@@ -1,16 +1,13 @@
 ## desertwitch
 
 - Lualine
-- Render-markdown
+  - theme?
 
 ## config
 
 - lualine
-  - mode indicator
-  - eval features
   - separators
-  - theme?
-- blink.cmp
+- blin.cmp
   - ==kind names, not just icons==
   - remove spellcheck unless in writing mode
     - ==zen+twilight+blinkcmp spellchecker --- writing mode?==
