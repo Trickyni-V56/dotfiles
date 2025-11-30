@@ -17,6 +17,7 @@ local M = {}
    local moss    = "#92a650"
    local celadon = "#ace1af"
    local grey    = "#868686"
+   local nazar   = "#2c2c44"
 --stylua: ignore end
 function M.setup()
   vim.cmd("highlight clear")
@@ -24,7 +25,7 @@ function M.setup()
   local hl_groups = {
     Normal = { fg = fg, bg = bg },
     Visual = { fg = bg, bg = saffron },
-
+    NormalNC = { bg = bg75 },
     MiniHiPatternsBase00 = { bg = "#3b3228" },
     MiniHiPatternsBase01 = { bg = "#4c4134" },
     MiniHiPatternsBase02 = { bg = "#5d4f40" },
@@ -50,7 +51,7 @@ function M.setup()
     CursorLine = { bg = bg75 },
     CursorLineNr = { fg = sand, bg = bg75 },
     CursorLineFold = { bg = "#FF0000" },
-    CursorLineSign = { bg = bg75 },
+    CursorLineSign = { fg = nil, bg = bg75 },
     DiffAdd = { bg = moss, fg = bg },
     DiffChange = { bg = orange, fg = bg },
     DiffDelete = { bg = scarlet, fg = bg },
@@ -79,16 +80,16 @@ function M.setup()
     NormalFloat = { link = "Normal" },
     NormalNC = { fg = sand, bg = bg },
     --Popup-Menu----------------------------------------
-    -- Pmenu = {},
+    Pmenu = { link = "Normal" },
     -- PmenuExtra = {},
     -- PmenuExtraSel = {},
-    -- PmenuKind = {},
-    -- PmenuKindSel = {},
+    PmenuKind = { fg = orange },
+    PmenuKindSel = { link = "PmenuSel" },
     -- PmenuMatch = {},
     -- PmenuMatchSel = {},
     -- PmenuSbar = {},
-    -- PmenuSel = {},
-    -- PmenuThumb = {},
+    PmenuSel = { link = "Visual" },
+    PmenuThumb = { bg = orange },
     -- ------------------------------------------
     Question = { fg = orange },
     QuickFixLine = { link = "MsgSeparator" },
@@ -256,17 +257,18 @@ function M.setup()
     -- DiagnosticFloatingOk = {},
     -- DiagnosticFloatingWarn = {},
 
-    DiagnosticSignError = { bg = bg, fg = scarlet },
-    DiagnosticSignWarn = { bg = bg, fg = orange },
-    DiagnosticSignInfo = { bg = bg, fg = celadon },
-    DiagnosticSignHint = { bg = bg, fg = cyan },
-    DiagnosticSignOk = { bg = bg, fg = moss },
+    DiagnosticSignError = { bg = nil, fg = scarlet },
+    DiagnosticSignWarn = { bg = nil, fg = orange },
+    DiagnosticSignInfo = { bg = nil, fg = celadon },
+    DiagnosticSignHint = { bg = nil, fg = cyan },
+    DiagnosticSignOk = { bg = nil, fg = moss },
 
     DiagnosticUnderlineError = { bg = nil, fg = nil, underdotted = true, sp = scarlet },
     DiagnosticUnderlineWarn = { bg = nil, fg = nil, underdouble = true, sp = orange },
     DiagnosticUnderlineInfo = { bg = nil, fg = nil, underline = true, sp = celadon },
     DiagnosticUnderlineHint = { bg = nil, fg = nil, underdashed = true, sp = cyan },
     DiagnosticUnderlineOk = { bg = nil, fg = nil, underline = true, sp = moss },
+
     --LSP------------------------------------------------
     --  LspReferenceText              = {},
     --  LspReferenceRead              = {},
@@ -290,6 +292,28 @@ function M.setup()
     --  markdownH6                    = {},
     --
     --
+
+    --blink.cmp
+    BlinkCmpMenuBorder = { link = "FloatBorder" },
+    BlinkCmpDocBorder = { fg = orange },
+    -- MiniHipatterns
+    MiniHipatternsFixme = { bg = scarlet, fg = bg },
+    MiniHipatternsHack = { bg = orange, fg = bg },
+    MiniHipatternsNote = { bg = cyan, fg = bg },
+    MiniHipatternsTodo = { bg = saffron, fg = bg },
+    -- MiniSurround
+    MiniSurround = { link = "Visual" },
+    -- MiniTabline
+    MiniTablineCurrent = { fg = bg, bg = orange },
+    MiniTablineVisible = { fg = bg, bg = sand },
+    MiniTablineHidden = { fg = sand, bg = altbg },
+    MiniTablineModifiedCurrent = { link = "MiniTablineCurrent" },
+    MiniTablineModifiedVisible = { link = "MiniTablineVisible" },
+    MiniTablineModifiedHidden = { link = "MiniTablineHidden" },
+    MiniTablineFill = { bg = altbg },
+    MiniTablineTabpagesection = {},
+    MiniTablineTrunc = { fg = sand, bg = altbg },
+    --
     --  MiniDiffSignAdd               = {},
     --  MiniDiffSignChange            = {},
     --  MiniDiffSignDelete            = {},
@@ -299,27 +323,8 @@ function M.setup()
     --  MiniDiffOverContext           = {},
     --  MiniDiffOverContextBuf        = {},
     --  MiniDiffOverDelete            = {},
-    --
-    --
-    MiniHipatternsFixme = { bg = scarlet, fg = bg },
-    MiniHipatternsHack = { bg = orange, fg = bg },
-    MiniHipatternsNote = { bg = cyan, fg = bg },
-    MiniHipatternsTodo = { bg = saffron, fg = bg },
-    --
-    --  MiniSurround                  = {},
-    --
-    -- -- akinsho/bufferline.nvim
-    --  BufferLineBuffer              = {},
-    --  BufferLineBufferSelected      = {},
-    --  BufferLineBufferVisible       = {},
-    --  BufferLineCloseButton         = {},
-    --  BufferLineCloseButtonSelected = {},
-    --  BufferLineCloseButtonVisible  = {},
-    --  BufferLineFill                = {},
-    --  BufferLineTab                 = {},
-    --  BufferLineTabSelected         = {},
-    --
-    -- -- folke/trouble.nvim
+
+    -- folke/trouble.nvim
     --  TroubleCount                  = {},
     --  TroubleFoldIcon               = {},
     --  TroubleIndent                 = {},
@@ -334,7 +339,8 @@ function M.setup()
     --  TroubleTextHint               = {},
     --  TroubleTextInformation        = {},
     --  TroubleTextWarning            = {},
-    ---folke/which-key.nvim--------------------------------------
+
+    -- folke/which-key.nvim
     WhichKey = { fg = orange },
     WhichKeyNormal = { fg = fg, bg = bg },
     WhichKeyBorder = { link = "FloatBorder" },
@@ -342,31 +348,17 @@ function M.setup()
     WhichKeyTitle = { bg = bg, fg = orange },
     WhichKeySeparator = { fg = sand, bg = bg },
     WhichKeyGroup = { bg = bg, fg = celadon },
-    --HiPhish/rainbow-delimiters.nvim----------------------------
-    RainbowDelimiterBlue = {},
-    RainbowDelimiterGreen = {},
-    RainbowDelimiterOrange = {},
+
+    -- HiPhish/rainbow-delimiters.nvim
     RainbowDelimiterRed = { fg = scarlet },
-    RainbowDelimiterCyan = { fg = cyan },
-    RainbowDelimiterYellow = { fg = saffron },
-    RainbowDelimiterViolet = { fg = sand },
-    --lewis6991/gitsigns.nvim-------------------------------------
-    GitSignsAdd = { link = "Added" },
-    --  GitSignsAddLn                  = {},
-    --  GitSignsAddInline              = {},
+    RainbowDelimiterYellow = { fg = cyan },
+    RainbowDelimiterBlue = { fg = saffron },
+    RainbowDelimiterOrange = { fg = sand },
+    -- RainbowDelimiterGreen = {},
+    -- RainbowDelimiterViolet = {},
+    -- RainbowDelimiterCyan = {},
 
-    GitSignsChange = { link = "Changed" },
-    --  GitSignsChangeLn               = {},
-    --  GitSignsChangeInline           = {},
-
-    GitSignsDelete = { link = "Removed" },
-    --  GitSignsDeleteLn               = {},
-    --  GitSignsDeleteInline           = {},
-
-    --  GitSignsUntracked              = {},
-    --  GitSignsUntrackedLn            = {},
-    --  GitSignsUntrackedInline        = {},
-    --RenderMarkdown----------------------------------------------
+    -- RenderMarkdown
     RerMarkdownBullet = { fg = moss },
     --  RerMarkdownBullet              = {},
     --  RerMarkdownChecked             = {},
@@ -388,7 +380,8 @@ function M.setup()
     --  RerMarkdownH6Bg                = {},
     --  RerMarkdownTodo                = {},
     --  RerMarkdownUnchecked           = {},
-    --OXY2DEV/helpview.nvim---------------------------------------
+
+    --OXY2DEV/helpview.nvim
     --  HelpviewHeading1               = {},
     --  HelpviewHeading2               = {},
     --  HelpviewHeading3               = {},
@@ -397,53 +390,10 @@ function M.setup()
     --  HelpviewOptionlink             = {},
     --  HelpviewTaglink                = {},
     --  HelpviewTitle                  = {},
-    --
 
-    -- MasonBackdrop                   = { bg   = bg },
-    -- MasonError                      = { fg   = scarlet },
-    -- MasonHeader                     = { fg   = bg, bg              = cyan },
-    -- MasonHeaderSecondary            = { fg   = bg, bg              = cyan },
-    -- MasonHeading                    = {},
-    -- MasonHighlight                  = {},
-    -- MasonHighlightBlock             = {},
-    -- MasonHighlightBlockBold         = {},
-    -- MasonHighlightBlockBoldSecondary= {},
-    -- MasonHighlightBlockSecondary    = {},
-    -- MasonHighlightSecondary         = {},
-    -- MasonLink                       = {},
-    -- MasonMuted                      = {},
-    -- MasonMutedBlock                 = {},
     -- MasonMutedBlockBold             = {},
     --stylua: ignore end
   }
-
-  -- hi('MasonHighlight',                   {fg=base0F
-  -- hi('MasonHighlightBlock',              {fg=base00, bg=base0F,
-  -- hi('MasonHighlightBlockBold',          {link='MasonHeaderSecondary
-  -- hi('MasonHighlightBlockBoldSecondary', {link='MasonHeader'},)
-  -- hi('MasonHighlightBlockSecondary',     {fg=base00, bg=base0D,
-  -- hi('MasonHighlightSecondary',          {fg=base0D,
-  -- hi('MasonLink',                        {link='MasonHighlight'},)
-  -- hi('MasonMuted',                       {link='Comment'},)
-  -- hi('MasonMutedBlock',                  {fg=base00, bg=base03,
-  -- hi('MasonMutedBlockBold',              {fg=base00, bg=base03,
-  -- -- Terminal colors
-  -- vim.g.terminal_color_0 = palette.base00
-  -- vim.g.terminal_color_1 = palette.base08
-  -- vim.g.terminal_color_2 = palette.base0B
-  -- vim.g.terminal_color_3 = palette.base0A
-  -- vim.g.terminal_color_4 = palette.base0D
-  -- vim.g.terminal_color_5 = palette.base0E
-  -- vim.g.terminal_color_6 = palette.base0C
-  -- vim.g.terminal_color_7 = palette.base05
-  -- vim.g.terminal_color_8 = palette.base03
-  -- vim.g.terminal_color_9 = palette.base08
-  -- vim.g.terminal_color_10 = palette.base0B
-  -- vim.g.terminal_color_11 = palette.base0A
-  -- vim.g.terminal_color_12 = palette.base0D
-  -- vim.g.terminal_color_13 = palette.base0E
-  -- vim.g.terminal_color_14 = palette.base0C
-  -- vim.g.terminal_color_15 = palette.base07
   for name, hl in pairs(hl_groups) do
     vim.api.nvim_set_hl(0, name, hl)
   end

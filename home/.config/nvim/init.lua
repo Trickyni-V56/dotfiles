@@ -1,7 +1,7 @@
 local vim = vim
-
 -- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
+vim.opt.shortmess:append("Swl")
 vim.g.have_nerd_font = true
 vim.o.number = true -- number column
 vim.o.relativenumber = true -- relative number column
@@ -80,7 +80,7 @@ vim.schedule(function()
   vim.o.clipboard = "unnamedplus"
 end)
 
--- Diagnostic configs -----------------------------------------
+-- Diagnostic configs ----------------------------
 vim.diagnostic.config({
   severity_sort = true,
   float = { border = "rounded", source = "if_many" },
@@ -192,11 +192,8 @@ require("blink.cmp").setup({
   signature = { enabled = false },
 })
 
-vim.pack.add({ "https://github.com/akinsho/bufferline.nvim" }) --TODO:
-require("bufferline").setup()
-
 vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
-require("gitsigns").setup()
+require("gitsigns").setup({ signs = { delete = "─" } })
 
 vim.pack.add({ "https://github.com/folke/which-key.nvim" })
 require("which-key").setup({ preset = "helix", plugins = { presets = { motions = false } } })
@@ -287,8 +284,17 @@ require("mini.hipatterns").setup({
   },
 })
 
-vim.pack.add({ "https://github.com/abecodes/tabout.nvim" })
-require("tabout").setup()
+vim.pack.add({ "https://github.com/nvim-mini/mini.tabline" })
+
+require("mini.tabline").setup({
+  format = function(buf_id, label)
+    local suffix = vim.bo[buf_id].modified and "+ " or ""
+    return MiniTabline.default_format(buf_id, label) .. suffix
+  end,
+})
+
+vim.pack.add({ "https://github.com/nvim-mini/mini.comment" })
+require("mini.comment").setup()
 
 vim.pack.add({ "https://github.com/nvim-mini/mini.comment" })
 require("mini.comment").setup()
@@ -302,6 +308,9 @@ require("mini.surround").setup()
 vim.pack.add({ "https://github.com/nvim-mini/mini.align" })
 require("mini.align").setup()
 
+vim.pack.add({ "https://github.com/abecodes/tabout.nvim" })
+
+require("tabout").setup()
 vim.pack.add({ "https://github.com/chrisgrieser/nvim-rip-substitute" })
 vim.keymap.set({ "n", "x" }, "<leader>s", "<Cmd>RipSubstitute<CR>", { desc = " rip substitutdde" })
 
@@ -313,7 +322,7 @@ require("nvim-toggler").setup({
 })
 
 vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
-require("lualine").setup()
+require("lualine").setup({ sections = { lualine_y = { "searchcount" } } })
 
 vim.pack.add({ "https://github.com/NMAC427/guess-indent.nvim" })
 require("guess-indent").setup()
@@ -323,8 +332,11 @@ vim.g.rainbow_delimiters = {
   highlight = {
     "RainbowDelimiterRed",
     "RainbowDelimiterYellow",
-    "RainbowDelimiterCyan",
-    "RainbowDelimiterViolet",
+    "RainbowDelimiterBlue",
+    "RainbowDelimiterOrange",
+    -- "RainbowDelimiterGreen",
+    -- "RainbowDelimiterViolet",
+    -- "RainbowDelimiterCyan",
   },
 }
 
@@ -344,10 +356,6 @@ require("snacks").setup({
         dev = { "~/git", "~/.shells", "~/.config/nvim" },
       },
       zoxide = { layout = { preset = "select" } },
-      notifications = {
-        layout = { preset = "select" },
-        win = { list = { wo = { wrap = true } } },
-      },
     },
   },
   dashboard = {
@@ -403,20 +411,3 @@ vim.keymap.set("n", "<leader>z", "<cmd>lua Snacks.picker.zoxide()<CR>", { desc =
 vim.pack.add({ "https://github.com/folke/trouble.nvim" })
 require("trouble").setup({ focus = true, win = { position = "bottom" }, open_no_results = true })
 vim.keymap.set("n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
-
--- vim.pack.add({ "https://github.com/nvim-mini/mini.starter" })
--- local starter = require("mini.starter")
--- starter.setup({
---   evaluate_single = true,
---   items = {
---     starter.sections.recent_files(5, false),
---     starter.sections.builtin_actions(),
---   },
---   content_hooks = {
---     -- starter.gen_hook.adding_bullet(),
---     starter.gen_hook.indexing("all", { "Builtin actions" }),
---     starter.gen_hook.padding(3, 2),
---     starter.gen_hook.aligning("center", "center"),
---   },
--- })
-vim.pack.add({ "https://github.com/rktjmp/lush.nvim" })

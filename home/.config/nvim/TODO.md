@@ -1,15 +1,21 @@
 ## desertwitch
 
-- Base
-- blink.cmp
-- Render-markdown
 - Lualine
-- Bufferline
-- Icons
-- rainbow delemiters
+- Render-markdown
 
-## fix
+## config
 
+- lualine
+  - mode indicator
+  - eval features
+  - separators
+  - theme?
+- blink.cmp
+  - ==kind names, not just icons==
+  - remove spellcheck unless in writing mode
+    - ==zen+twilight+blinkcmp spellchecker --- writing mode?==
+- gitsigns
+  - add keybinds for diff mode
 - todo comments picker
 
 ## writing
@@ -30,7 +36,7 @@
   - [img-clip](https://github.com/HakonHarnes/img-clip.nvim)
 
 - [nvim.awesome notetaking section](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#note-taking)
-
+  https://cmp.saghen.dev/recipes#for-writers
 - plugins:
   - [neorg](https://github.com/nvim-neorg/neorg)
   - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
@@ -44,10 +50,6 @@
 - Better splits/tabs/navigation/closing setup
 
 - Snippets?
-
-- some better parentheses matches jfc
-
-- markdown bullets should be more key efficient
 
 - mess with devicon configs
 - [mini.icons](https://github.com/nvim-mini/mini.icons)

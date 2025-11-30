@@ -89,6 +89,10 @@
       "rev": "88c52297ed3e69ecf9f8652837888ecc727a28ee",
       "src": "https://github.com/nvim-mini/mini.surround"
     },
+    "mini.tabline": {
+      "rev": "caf23615b9b99bacc79ecd60f61c4e6a8ec18c84",
+      "src": "https://github.com/nvim-mini/mini.tabline"
+    },
     "neoscroll.nvim": {
       "rev": "f957373912e88579e26fdaea4735450ff2ef5c9c",
       "src": "https://github.com/karb94/neoscroll.nvim"
