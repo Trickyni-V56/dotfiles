@@ -1,4 +1,6 @@
- vim = vim
+vim = vim
+vim.pack.add({ "https://codeberg.org/trickyni/desert-witch.nvim" })
+vim.cmd.colorscheme("desert-witch")
 -- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
 vim.opt.shortmess:append("Swl")
@@ -24,7 +26,6 @@ vim.opt.backspace = { "start", "eol", "indent" }
 vim.o.list = true -- whow trailing whitespaces and tab characters
 vim.opt.listchars = { leadmultispace = "▏ ", tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.timeoutlen = 300 --timeout on keys with followups
-vim.o.background = "dark" -- dark mode
 vim.o.winborder = "rounded" --border for floating windows
 
 -- KEYMAPS ----------------------------------------------------
@@ -114,69 +115,56 @@ vim.lsp.enable({ "lua_ls", "bashls", "tinymist", "eslint", "djlint", "ts_ls", "c
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   callback = function(args)
-    -- explicitly start treesitter for markdown
     vim.treesitter.start(args.buf, "markdown")
   end,
 })
 
 --Plugins----------------------------------
-vim.pack.add({ "https://github.com/nvim-lua/plenary.nvim" })
-vim.pack.add({ "https://github.com/sitiom/nvim-numbertoggle" })
-vim.pack.add({ "https://github.com/nvim-tree/nvim-web-devicons" })
-vim.pack.add({ "https://github.com/preservim/vim-pencil" })
-vim.pack.add({ "https://github.com/bullets-vim/bullets.vim" })
-vim.pack.add({ "https://github.com/folke/zen-mode.nvim" })
-vim.pack.add({ "https://github.com/folke/twilight.nvim" })
-
--- vim.pack.add({ "https://github.com/nvim-mini/mini.base16" })
--- require("mini.base16").setup({ --TODO: theme
---   palette = {
---     base00 = "#3b3228", -- bg
---     base01 = "#4c4134", -- bg75
---     base02 = "#5d4f40", -- altbg
---     base03 = "#6b6055", -- bg25
---     base04 = "#c1a387", -- sand
---     base05 = "#afd2e9", -- fg
---     base06 = "#FF00FF",
---     base07 = "#00FF00",
---     base08 = "#e86045",
---     base09 = "#e68d53",
---     base0A = "#f8e2a0",
---     base0B = "#92a650",
---     base0C = "#ace1af",
---     base0D = "#3eccbe",
---     base0E = "#FF0000",
---     base0F = "#f8e2a0",
---   },
--- })
-
-vim.pack.add({ "https://codeberg.org/trickyni/desert-witch.nvim" })
--- require("desert-witch").setup()
-vim.cmd([[colorscheme desert-witch]])
-
--- vim.pack.add({ "https://github.com/shaunsingh/nord.nvim" })
--- vim.cmd([[colorscheme nord]])
-
--- vim.pack.add({ "https://github.com/ellisonleao/gruvbox.nvim" })
--- require("gruvbox").load()
-
-vim.pack.add({ "https://github.com/smjonas/live-command.nvim" })
-require("live-command").setup({
-  commands = {
-    Norm = {
-      cmd = "norm",
-    },
-    G = {
-      cmd = "g",
-    },
-  },
+vim.pack.add({
+  { src = "https://github.com/nvim-lua/plenary.nvim" },
+  { src = "https://github.com/sitiom/nvim-numbertoggle" },
+  { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+  { src = "https://github.com/preservim/vim-pencil" },
+  { src = "https://github.com/bullets-vim/bullets.vim" },
+  { src = "https://github.com/folke/zen-mode.nvim" },
+  { src = "https://github.com/folke/twilight.nvim" },
+  { src = "https://github.com/nvim-mini/mini.comment" },
+  { src = "https://github.com/nvim-mini/mini.surround" },
+  { src = "https://github.com/nvim-mini/mini.align" },
+  { src = "https://github.com/abecodes/tabout.nvim" },
+  { src = "https://github.com/nvim-mini/mini.pairs" },
+  { src = "https://github.com/lewis6991/gitsigns.nvim" },
+  { src = "https://github.com/folke/which-key.nvim" },
+  { src = "https://github.com/karb94/neoscroll.nvim" },
+  { src = "https://github.com/chrisgrieser/nvim-rip-substitute" },
+  { src = "https://github.com/mikavilpas/yazi.nvim" },
+  { src = "https://github.com/mason-org/mason.nvim" },
+  { src = "https://github.com/smjonas/live-command.nvim" },
+  { src = "https://github.com/NMAC427/guess-indent.nvim" },
+  { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
 })
+require("treesitter-context").setup()
+require("guess-indent").setup()
+require("mason").setup()
+require("mini.comment").setup()
+require("mini.pairs").setup()
+require("mini.surround").setup()
+require("mini.align").setup()
+require("tabout").setup()
+require("neoscroll").setup({ easing = "quintic" })
+require("which-key").setup({ preset = "helix", plugins = { presets = { motions = false } } })
+require("gitsigns").setup({ signs = { delete = "─" } })
+require("yazi").setup()
+require("ibl").setup({ indent = { char = "▏", highlight = none } })
+require("live-command").setup({ commands = { Norm = { cmd = "norm" }, G = { cmd = "g" } } })
+vim.keymap.set({ "n", "v" }, "<Bslash>", "<cmd>Yazi<CR>")
+vim.keymap.set({ "n", "x" }, "<leader>s", "<Cmd>RipSubstitute<CR>", { desc = " rip substitutdde" })
 vim.cmd("cnoreabbrev norm Norm")
 vim.cmd("cnoreabbrev g G")
 
-vim.pack.add({ "https://github.com/mason-org/mason.nvim" })
-require("mason").setup()
-
+----------------------------------------------------------------------
+---conform.nvim-------------------------------------------------------
 vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 require("conform").setup({
   format_on_save = true,
@@ -197,7 +185,11 @@ require("conform").setup({
   },
 })
 
-vim.pack.add({ { src = "https://github.com/saghen/blink.cmp", version = "1.*" } })
+--blink.cmp----------------------------------------------------------
+vim.pack.add({
+  { src = "https://github.com/MahanRahmati/blink-nerdfont.nvim" },
+  { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("*") },
+})
 require("blink.cmp").setup({
   keymap = { preset = "super-tab" },
   fuzzy = { implementation = "prefer_rust", prebuilt_binaries = { force_version = "0.6.0" } },
@@ -206,51 +198,36 @@ require("blink.cmp").setup({
     accept = { auto_brackets = { enabled = true } },
     documentation = { auto_show = true },
   },
-  sources = { default = { "lsp", "path", "snippets" } },
+  sources = {
+    default = { "lsp", "path", "snippets", "nerdfont" },
+    providers = {
+      nerdfont = {
+        module = "blink-nerdfont",
+        name = "Nerd Fonts",
+        score_offset = 15, -- Tune by preference
+        opts = { insert = true }, -- Insert nerdfont icon (default) or complete its name
+      },
+    },
+  },
   cmdline = { enabled = true },
   signature = { enabled = false },
 })
 
-vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
-require("gitsigns").setup({ signs = { delete = "─" } })
-
-vim.pack.add({ "https://github.com/folke/which-key.nvim" })
-require("which-key").setup({ preset = "helix", plugins = { presets = { motions = false } } })
-
-vim.pack.add({ "https://github.com/karb94/neoscroll.nvim" })
-require("neoscroll").setup({ easing = "quintic" })
-
-vim.pack.add({ "https://github.com/mikavilpas/yazi.nvim" })
-require("yazi").setup()
-vim.keymap.set({ "n", "v" }, "<Bslash>", "<cmd>Yazi<CR>")
-
+---treesitter---------------------------------------------------------
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
 require("nvim-treesitter.configs").setup({
   highlight = { enable = true },
+  -- stylua: ignore start
   ensure_installed = {
-    "bash",
-    "caddy",
-    "css",
-    "csv",
-    "diff",
-    "dockerfile",
-    "html",
-    "javascript",
-    "jq",
-    "json",
-    "lua",
-    "markdown",
-    "markdown_inline",
-    "qmljs",
-    "regex",
-    "sql",
-    "toml",
-    "typst",
-    "sway",
-    "yaml",
+    "bash",       "caddy", "css",  "csv",  "diff",     "dockerfile",      "html",
+    "javascript", "jq",    "json", "lua",  "markdown", "markdown_inline",
+    "qmljs",      "regex", "sql",  "toml", "typst",    "sway",            "yaml",
   },
+  -- stylua: ignore end
 })
 
+----------------------------------------------------------------------
+---RenderMarkdown-----------------------------------------------------
 vim.pack.add({ "https://github.com/MeanderingProgrammer/render-markdown.nvim" })
 require("render-markdown").setup({
   render_modes = true,
@@ -272,6 +249,7 @@ require("render-markdown").setup({
   latex = { enabled = false },
 })
 
+----mini.hipatterns----------------------------------------------------
 vim.pack.add({ "https://github.com/nvim-mini/mini.hipatterns" })
 require("mini.hipatterns").setup({
   highlighters = {
@@ -279,29 +257,12 @@ require("mini.hipatterns").setup({
     hack = { pattern = "HACK", group = "MiniHipatternsHack" },
     todo = { pattern = "TODO", group = "MiniHipatternsTodo" }, --TODO
     note = { pattern = "NOTE", group = "MiniHipatternsNote" },
-    base00 = { pattern = "base00", group = "MiniHiPatternsBase00" }, -- "#3b3228",
-    base01 = { pattern = "base01", group = "MiniHiPatternsBase01" }, -- "#4c4134",
-    base02 = { pattern = "base02", group = "MiniHiPatternsBase02" }, -- "#5d4f40",
-    base03 = { pattern = "base03", group = "MiniHiPatternsBase03" }, -- "#6b6055",
-    base04 = { pattern = "base04", group = "MiniHiPatternsBase04" }, -- "#c1a387",
-    base05 = { pattern = "base05", group = "MiniHiPatternsBase05" }, -- "#afd2e9",
-    base06 = { pattern = "base06", group = "MiniHiPatternsBase06" }, -- "#FF00FF",
-    base07 = { pattern = "base07", group = "MiniHiPatternsBase07" }, -- "#00FF00",
-    base08 = { pattern = "base08", group = "MiniHiPatternsBase08" }, -- "#e86045",
-    base09 = { pattern = "base09", group = "MiniHiPatternsBase09" }, -- "#e68d53",
-    base0A = { pattern = "base0A", group = "MiniHiPatternsBase0A" }, -- "#f8e2a0",
-    base0B = { pattern = "base0B", group = "MiniHiPatternsBase0B" }, -- "#92a650",
-    base0C = { pattern = "base0C", group = "MiniHiPatternsBase0C" }, -- "#ace1af",
-    base0D = { pattern = "base0D", group = "MiniHiPatternsBase0D" }, -- "#3eccbe",
-    base0E = { pattern = "base0E", group = "MiniHiPatternsBase0E" }, -- "#FF0000",
-    base0F = { pattern = "base0F", group = "MiniHiPatternsBase0F" }, -- "#f8e2a0",
-
     hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
   },
 })
 
+----mini.tabline------------------------------------------------------
 vim.pack.add({ "https://github.com/nvim-mini/mini.tabline" })
-
 require("mini.tabline").setup({
   format = function(buf_id, label)
     local suffix = vim.bo[buf_id].modified and "+ " or ""
@@ -309,62 +270,30 @@ require("mini.tabline").setup({
   end,
 })
 
-vim.pack.add({ "https://github.com/nvim-mini/mini.comment" })
-require("mini.comment").setup()
-
-vim.pack.add({ "https://github.com/nvim-mini/mini.comment" })
-require("mini.comment").setup()
-
-vim.pack.add({ "https://github.com/nvim-mini/mini.pairs" })
-require("mini.pairs").setup()
-
-vim.pack.add({ "https://github.com/nvim-mini/mini.surround" })
-require("mini.surround").setup()
-
-vim.pack.add({ "https://github.com/nvim-mini/mini.align" })
-require("mini.align").setup()
-
-vim.pack.add({ "https://github.com/abecodes/tabout.nvim" })
-
-require("tabout").setup()
-vim.pack.add({ "https://github.com/chrisgrieser/nvim-rip-substitute" })
-vim.keymap.set({ "n", "x" }, "<leader>s", "<Cmd>RipSubstitute<CR>", { desc = " rip substitutdde" })
-
-vim.pack.add({ "https://github.com/nguyenvukhang/nvim-toggler" })
-require("nvim-toggler").setup({
-  inverses = {
-    ["- [ ]"] = "- [x]",
-  },
-})
+----lualine-----------------------------------------------------------
 vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
 require("lualine").setup({
-  -- options = { theme = desert_witch },
   sections = {
     lualine_x = { "encoding", "filetype" },
     lualine_y = { "progress" },
     lualine_z = { "searchcount", "location" },
   },
 })
+----rainbow-delimeters----------------------------------------------------
+vim.pack.add({ "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" })
+vim.g.rainbow_delimiters = {
+  highlight = {
+    "RainbowDelimiterRed",
+    "RainbowDelimiterYellow",
+    "RainbowDelimiterBlue",
+    "RainbowDelimiterOrange",
+    -- "RainbowDelimiterGreen",
+    -- "RainbowDelimiterViolet",
+    -- "RainbowDelimiterCyan",
+  },
+}
 
-vim.pack.add({ "https://github.com/NMAC427/guess-indent.nvim" })
-require("guess-indent").setup()
-
--- vim.pack.add({ "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" })
--- vim.g.rainbow_delimiters = {
---   highlight = {
---     "RainbowDelimiterRed",
---     "RainbowDelimiterYellow",
---     "RainbowDelimiterBlue",
---     "RainbowDelimiterOrange",
---     -- "RainbowDelimiterGreen",
---     -- "RainbowDelimiterViolet",
---     -- "RainbowDelimiterCyan",
---   },
--- }
-
-vim.pack.add({ "https://github.com/lukas-reineke/indent-blankline.nvim" })
-require("ibl").setup({ indent = { char = "▏", highlight = none } })
-
+----snacks-----------------------------------------------------------------
 vim.pack.add({
   { src = "https://github.com/folke/snacks.nvim", { load = false } },
 })
@@ -435,8 +364,5 @@ vim.pack.add({ "https://github.com/folke/trouble.nvim" })
 require("trouble").setup({ focus = true, win = { position = "bottom" }, open_no_results = true })
 vim.keymap.set("n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
 
-vim.pack.add({ "https://github.com/rktjmp/lush.nvim" })
-require("lush").ify()
-
-vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter-context" })
-require("treesitter-context").setup({})
+vim.pack.add({ "https://github.com/toppair/peek.nvim" })
+require("peek").setup()
