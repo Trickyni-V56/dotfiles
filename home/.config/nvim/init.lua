@@ -2,44 +2,47 @@ vim = vim
 vim.pack.add({ "https://codeberg.org/trickyni/desert-witch.nvim" })
 vim.cmd.colorscheme("desert-witch")
 -- OPTION  ----------------------------------------------------
-vim.g.mapleader = " " -- leader key (spacebar)
+
+--stylua: ignore start
+vim.g.mapleader      = " " -- leader key (spacebar)
 vim.opt.shortmess:append("Swl")
 vim.g.have_nerd_font = true
-vim.o.number = true -- number column
+vim.o.number         = true -- number column
 vim.o.relativenumber = true -- relative number column
-vim.o.ignorecase = true -- search ignores case
-vim.o.smartcase = true -- search ignores case unless uppercase letter exists
-vim.opt.grepprg = "rg --vimgrep" -- external grep
-vim.o.wrap = true
-vim.o.textwidth = 80
-vim.opt.linebreak = true
-vim.o.tabstop = 2 -- tab width
-vim.o.shiftwidth = 2 -- indentation width
-vim.o.expandtab = true -- turns tabs into spaces
-vim.o.showmode = false -- hides mode indicator, since we have a status line
-vim.o.cursorline = true -- highlights cursor line
-vim.o.scrolloff = 10 -- keeps 10 lines above/below the cursor when scrolling
-vim.o.breakindent = true
-vim.o.signcolumn = "yes:1" -- gutter to the left of the number column
-vim.o.inccommand = "nosplit" -- shows find/replace results live
-vim.opt.backspace = { "start", "eol", "indent" }
-vim.o.list = true -- whow trailing whitespaces and tab characters
-vim.opt.listchars = { leadmultispace = "▏ ", tab = "» ", trail = "·", nbsp = "␣" }
-vim.opt.timeoutlen = 300 --timeout on keys with followups
-vim.o.winborder = "rounded" --border for floating windows
+vim.o.ignorecase     = true -- search ignores case
+vim.o.smartcase      = true -- search ignores case unless uppercase letter exists
+vim.opt.grepprg      = "rg --vimgrep" -- external grep
+vim.o.wrap           = true
+vim.o.textwidth      = 80
+vim.opt.linebreak    = true
+vim.o.tabstop        = 2 -- tab width
+vim.o.shiftwidth     = 2 -- indentation width
+vim.o.expandtab      = true -- turns tabs into spaces
+vim.o.showmode       = false -- hides mode indicator, since we have a status line
+vim.o.cursorline     = true -- highlights cursor line
+vim.o.scrolloff      = 10 -- keeps 10 lines above/below the cursor when scrolling
+vim.o.breakindent    = true
+vim.o.signcolumn     = "yes:1" -- gutter to the left of the number column
+vim.o.inccommand     = "nosplit" -- shows find/replace results live
+vim.opt.backspace    = { "start", "eol", "indent" }
+vim.o.list           = true -- whow trailing whitespaces and tab characters
+vim.opt.listchars    = { leadmultispace = "▏ ", tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.timeoutlen   = 300 --timeout on keys with followups
+vim.o.winborder      = "rounded" --border for floating windows
 
 -- KEYMAPS ----------------------------------------------------
 -- move line up/down
-vim.keymap.set("n", "<S-up>", ":m-2<CR>")
+vim.keymap.set("n", "<S-up>"  , ":m-2<CR>")
 vim.keymap.set("n", "<S-down>", ":m+1<CR>")
-vim.keymap.set("v", "<S-up>", ":'<,'>m '<-2<CR>gv")
-vim.keymap.set("v", "<S-down>", ":'<,'>m '>+1<CR>gv")
+vim.keymap.set("v", "<S-up>"  , ":'<, '>m '<-2<CR>gv")
+vim.keymap.set("v", "<S-down>", ":'<  , '>m '>+1<CR>gv")
 
 -- indent/unindent
 vim.keymap.set("n", "<S-right>", ">>")
-vim.keymap.set("n", "<S-left>", "<<")
-vim.keymap.set("v", "<S-left>", "<gv")
+vim.keymap.set("n", "<S-left>" , "<<")
+vim.keymap.set("v", "<S-left>" , "<gv")
 vim.keymap.set("v", "<S-right>", ">gv")
+--stylua: ignore end
 
 -- creates new buffer
 vim.keymap.set("n", "<C-n>", ":enew<CR>")
@@ -51,8 +54,29 @@ vim.keymap.set("n", "<C-[>", ":bp<CR>")
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Zen Mode
 vim.keymap.set("n", "zm", ":ZenMode<CR>")
 
+-- Yazi
+vim.keymap.set({ "n", "v" }, "<Bslash>", "<cmd>Yazi<CR>")
+
+-- Rip-substitute
+vim.keymap.set({ "n", "x" }, "<leader>s", "<Cmd>RipSubstitute<CR>", { desc = " rip substitutdde" })
+
+-- Diagnostics
+vim.keymap.set("n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
+
+-- snacks picker projects
+vim.keymap.set("n", "<leader>p", "<cmd>lua Snacks.picker.projects()<CR>", { desc = "Projects" })
+
+-- snacks picker recent files
+vim.keymap.set("n", "<leader>r", "<cmd>lua Snacks.picker.recent()<CR>", { desc = "Recent Files" })
+
+-- snacks picker zoxide
+vim.keymap.set("n", "<leader>z", "<cmd>lua Snacks.picker.zoxide()<CR>", { desc = "Zoxide" })
+
+-- snacks picker highlights
+vim.keymap.set("n", "<leader>h", "<cmd>lua Snacks.picker.highlights()<CR>", { desc = "highlights" })
 -- Behaviors --------------------------------------------------
 -- defines markers to determine a project's root dir
 local project_markers = { ".git", ".root", "cargo.toml", "selene.toml", "stylua.toml", "package.json" }
@@ -98,26 +122,7 @@ vim.diagnostic.config({
   inlay_hints = true,
 })
 
--- LSP --------------------------------------------------------
-vim.lsp.config("lua_ls", {
-  filetypes = { "lua" },
-  cmd = { "lua-language-server" },
-  settings = {
-    Lua = {
-      runtime = { version = "LuaJIT" },
-      diagnostics = { globals = "vim" },
-    },
-  },
-})
-vim.lsp.enable({ "lua_ls", "bashls", "tinymist", "eslint", "djlint", "ts_ls", "cssls" })
-
 ----------------------------
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function(args)
-    vim.treesitter.start(args.buf, "markdown")
-  end,
-})
 
 --Plugins----------------------------------
 vim.pack.add({
@@ -133,20 +138,27 @@ vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.align" },
   { src = "https://github.com/abecodes/tabout.nvim" },
   { src = "https://github.com/nvim-mini/mini.pairs" },
+  { src = "https://github.com/nvim-mini/mini.hipatterns" },
+  { src = "https://github.com/nvim-mini/mini.tabline" },
   { src = "https://github.com/lewis6991/gitsigns.nvim" },
   { src = "https://github.com/folke/which-key.nvim" },
   { src = "https://github.com/karb94/neoscroll.nvim" },
   { src = "https://github.com/chrisgrieser/nvim-rip-substitute" },
   { src = "https://github.com/mikavilpas/yazi.nvim" },
-  { src = "https://github.com/mason-org/mason.nvim" },
   { src = "https://github.com/smjonas/live-command.nvim" },
   { src = "https://github.com/NMAC427/guess-indent.nvim" },
   { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+  { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
+  { src = "https://github.com/nvim-lualine/lualine.nvim" },
+  { src = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" },
+  { src = "https://github.com/folke/trouble.nvim" },
+  { src = "https://github.com/stevearc/conform.nvim" },
+  { src = "https://github.com/neovim/nvim-lspconfig" },
+  { src = "https://github.com/OXY2DEV/helpview.nvim" },
 })
-require("treesitter-context").setup()
 require("guess-indent").setup()
-require("mason").setup()
 require("mini.comment").setup()
 require("mini.pairs").setup()
 require("mini.surround").setup()
@@ -157,34 +169,43 @@ require("which-key").setup({ preset = "helix", plugins = { presets = { motions =
 require("gitsigns").setup({ signs = { delete = "─" } })
 require("yazi").setup()
 require("ibl").setup({ indent = { char = "▏", highlight = none } })
+require("trouble").setup({ focus = true, win = { position = "bottom" }, open_no_results = true })
 require("live-command").setup({ commands = { Norm = { cmd = "norm" }, G = { cmd = "g" } } })
-vim.keymap.set({ "n", "v" }, "<Bslash>", "<cmd>Yazi<CR>")
-vim.keymap.set({ "n", "x" }, "<leader>s", "<Cmd>RipSubstitute<CR>", { desc = " rip substitutdde" })
 vim.cmd("cnoreabbrev norm Norm")
 vim.cmd("cnoreabbrev g G")
 
-----------------------------------------------------------------------
+vim.lsp.enable({
+  "lua_ls",
+  "cssls",
+  "ts_ls",
+  "bash_ls",
+  "qmlls",
+  "html",
+})
+vim.lsp.config("qmlls", { cmd = { "qmlls6" } })
 ---conform.nvim-------------------------------------------------------
-vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 require("conform").setup({
   format_on_save = true,
+  --stylua: ignore start
   formatters_by_ft = {
-    lua = { "stylua" },
-    sh = { "shfmt" },
+    sh         = { "shfmt" },
+    lua        = { "stylua" },
     javascript = { "prettier" },
-    markdown = { "prettier" },
-    html = { "prettier" },
-    css = { "prettier" },
-    yaml = { "prettier" },
-    json = { "prettier" },
+    markdown   = { "prettier" },
+    html       = { "prettier" },
+    css        = { "prettier" },
+    yaml       = { "prettier" },
+    json       = { "prettier" },
+    qml        = { "qmlformat" },
   },
   formatters = {
-    stylua = { prepend_args = { "--indent-type", "Spaces", "--indent-width", "2" } },
-    shfmt = { prepend_args = { "-i=2" } },
+    stylua   = { prepend_args = { "--indent-type", "Spaces", "--indent-width", "2" } },
+    shfmt    = { prepend_args = { "-i = 2" } },
     prettier = { prepend_args = { "--tab-width", "2" } },
   },
+  --stylua: ignore end
 })
-
+----------------------------------------------------------------------
 --blink.cmp----------------------------------------------------------
 vim.pack.add({
   { src = "https://github.com/MahanRahmati/blink-nerdfont.nvim" },
@@ -213,22 +234,21 @@ require("blink.cmp").setup({
   signature = { enabled = false },
 })
 
----treesitter---------------------------------------------------------
-vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
+----treesitter---------------------------------------------------------
 require("nvim-treesitter.configs").setup({
   highlight = { enable = true },
   -- stylua: ignore start
   ensure_installed = {
-    "bash",       "caddy", "css",  "csv",  "diff",     "dockerfile",      "html",
-    "javascript", "jq",    "json", "lua",  "markdown", "markdown_inline",
-    "qmljs",      "regex", "sql",  "toml", "typst",    "sway",            "yaml",
+    "bash", "caddy", "css",  "csv",      "diff",            "dockerfile", "html",  "javascript",
+    "jq",   "json",  "lua",  "markdown", "markdown_inline", "qmljs",      "regex", "sql",
+    "toml", "typst", "sway", "vimdoc",   "yaml",
   },
+
   -- stylua: ignore end
 })
+require("treesitter-context").setup()
 
-----------------------------------------------------------------------
 ---RenderMarkdown-----------------------------------------------------
-vim.pack.add({ "https://github.com/MeanderingProgrammer/render-markdown.nvim" })
 require("render-markdown").setup({
   render_modes = true,
   completions = { lsp = { enabled = true } },
@@ -248,9 +268,14 @@ require("render-markdown").setup({
   },
   latex = { enabled = false },
 })
-
+---
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function(args)
+    vim.treesitter.start(args.buf, "markdown")
+  end,
+})
 ----mini.hipatterns----------------------------------------------------
-vim.pack.add({ "https://github.com/nvim-mini/mini.hipatterns" })
 require("mini.hipatterns").setup({
   highlighters = {
     fixme = { pattern = "FIXME", group = "MiniHipatternsFixme" },
@@ -262,7 +287,6 @@ require("mini.hipatterns").setup({
 })
 
 ----mini.tabline------------------------------------------------------
-vim.pack.add({ "https://github.com/nvim-mini/mini.tabline" })
 require("mini.tabline").setup({
   format = function(buf_id, label)
     local suffix = vim.bo[buf_id].modified and "+ " or ""
@@ -271,16 +295,14 @@ require("mini.tabline").setup({
 })
 
 ----lualine-----------------------------------------------------------
-vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
 require("lualine").setup({
   sections = {
-    lualine_x = { "encoding", "filetype" },
+    lualine_x = { "lsp_status", "filetype" },
     lualine_y = { "progress" },
     lualine_z = { "searchcount", "location" },
   },
 })
 ----rainbow-delimeters----------------------------------------------------
-vim.pack.add({ "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" })
 vim.g.rainbow_delimiters = {
   highlight = {
     "RainbowDelimiterRed",
@@ -315,7 +337,7 @@ require("snacks").setup({
     preset = {
       keys = {
         { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-        { icon = " ", key = "y", desc = "File Explorer", action = ":Yazi" },
+        { icon = " ", key = "\\", desc = "File Explorer", action = ":Yazi" },
         { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('recent')" },
         {
           icon = " ",
@@ -323,13 +345,6 @@ require("snacks").setup({
           desc = "Projects",
           action = ":lua Snacks.picker.projects()",
         },
-        {
-          icon = " ",
-          key = "c",
-          desc = "Config",
-          action = ":cd ~/.config/nvim | Yazi",
-        },
-        { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
         { icon = " ", key = "q", desc = "Quit", action = ":qa" },
       },
       header = {
@@ -355,14 +370,3 @@ require("snacks").setup({
     },
   },
 })
-vim.keymap.set("n", "<leader>p", "<cmd>lua Snacks.picker.projects()<CR>", { desc = "Projects" })
-vim.keymap.set("n", "<leader>r", "<cmd>lua Snacks.picker.recent()<CR>", { desc = "Recent Files" })
-vim.keymap.set("n", "<leader>z", "<cmd>lua Snacks.picker.zoxide()<CR>", { desc = "Zoxide" })
-vim.keymap.set("n", "<leader>h", "<cmd>lua Snacks.picker.highlights()<CR>", { desc = "highlights" })
-
-vim.pack.add({ "https://github.com/folke/trouble.nvim" })
-require("trouble").setup({ focus = true, win = { position = "bottom" }, open_no_results = true })
-vim.keymap.set("n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
-
-vim.pack.add({ "https://github.com/toppair/peek.nvim" })
-require("peek").setup()
