@@ -1,4 +1,4 @@
-local vim = vim
+ vim = vim
 -- OPTION  ----------------------------------------------------
 vim.g.mapleader = " " -- leader key (spacebar)
 vim.opt.shortmess:append("Swl")
@@ -150,8 +150,15 @@ vim.pack.add({ "https://github.com/folke/twilight.nvim" })
 --   },
 -- })
 
-package.path = package.path .. ";/home/trickyni/.config/nvim/desert-witch.lua"
-require("desert-witch").setup()
+vim.pack.add({ "https://codeberg.org/trickyni/desert-witch.nvim" })
+-- require("desert-witch").setup()
+vim.cmd([[colorscheme desert-witch]])
+
+-- vim.pack.add({ "https://github.com/shaunsingh/nord.nvim" })
+-- vim.cmd([[colorscheme nord]])
+
+-- vim.pack.add({ "https://github.com/ellisonleao/gruvbox.nvim" })
+-- require("gruvbox").load()
 
 vim.pack.add({ "https://github.com/smjonas/live-command.nvim" })
 require("live-command").setup({
@@ -199,7 +206,7 @@ require("blink.cmp").setup({
     accept = { auto_brackets = { enabled = true } },
     documentation = { auto_show = true },
   },
-  sources = { default = { "lsp", "path", "snippets", "buffer" } },
+  sources = { default = { "lsp", "path", "snippets" } },
   cmdline = { enabled = true },
   signature = { enabled = false },
 })
@@ -219,7 +226,7 @@ vim.keymap.set({ "n", "v" }, "<Bslash>", "<cmd>Yazi<CR>")
 
 vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
 require("nvim-treesitter.configs").setup({
-  highlight = { enable = false },
+  highlight = { enable = true },
   ensure_installed = {
     "bash",
     "caddy",
@@ -329,7 +336,6 @@ require("nvim-toggler").setup({
     ["- [ ]"] = "- [x]",
   },
 })
-package.path = package.path .. ";/home/trickyni/.config/nvim/lua/lualine/themes/desert-witch.lua"
 vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
 require("lualine").setup({
   -- options = { theme = desert_witch },
@@ -343,18 +349,18 @@ require("lualine").setup({
 vim.pack.add({ "https://github.com/NMAC427/guess-indent.nvim" })
 require("guess-indent").setup()
 
-vim.pack.add({ "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" })
-vim.g.rainbow_delimiters = {
-  highlight = {
-    "RainbowDelimiterRed",
-    "RainbowDelimiterYellow",
-    "RainbowDelimiterBlue",
-    "RainbowDelimiterOrange",
-    -- "RainbowDelimiterGreen",
-    -- "RainbowDelimiterViolet",
-    -- "RainbowDelimiterCyan",
-  },
-}
+-- vim.pack.add({ "https://gitlab.com/HiPhish/rainbow-delimiters.nvim" })
+-- vim.g.rainbow_delimiters = {
+--   highlight = {
+--     "RainbowDelimiterRed",
+--     "RainbowDelimiterYellow",
+--     "RainbowDelimiterBlue",
+--     "RainbowDelimiterOrange",
+--     -- "RainbowDelimiterGreen",
+--     -- "RainbowDelimiterViolet",
+--     -- "RainbowDelimiterCyan",
+--   },
+-- }
 
 vim.pack.add({ "https://github.com/lukas-reineke/indent-blankline.nvim" })
 require("ibl").setup({ indent = { char = "▏", highlight = none } })
@@ -423,7 +429,14 @@ require("snacks").setup({
 vim.keymap.set("n", "<leader>p", "<cmd>lua Snacks.picker.projects()<CR>", { desc = "Projects" })
 vim.keymap.set("n", "<leader>r", "<cmd>lua Snacks.picker.recent()<CR>", { desc = "Recent Files" })
 vim.keymap.set("n", "<leader>z", "<cmd>lua Snacks.picker.zoxide()<CR>", { desc = "Zoxide" })
+vim.keymap.set("n", "<leader>h", "<cmd>lua Snacks.picker.highlights()<CR>", { desc = "highlights" })
 
 vim.pack.add({ "https://github.com/folke/trouble.nvim" })
 require("trouble").setup({ focus = true, win = { position = "bottom" }, open_no_results = true })
 vim.keymap.set("n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
+
+vim.pack.add({ "https://github.com/rktjmp/lush.nvim" })
+require("lush").ify()
+
+vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter-context" })
+require("treesitter-context").setup({})
